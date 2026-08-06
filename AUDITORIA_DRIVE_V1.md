@@ -63,18 +63,15 @@ Los IDs operativos quedaron registrados en `drive_sources.json`.
    - ganancia Octopus
    - estado de validacion
 7. Ante duda, marcar `requiere_revision`.
+8. El mes operativo se imputa por fecha de ECHEQ visible en el cuadro, no por fecha de carga en Drive ni por carpeta.
+9. No se renombraran carpetas de Drive. La automatizacion debe trabajar con IDs fijos registrados en `drive_sources.json`.
 
 ## Pendiente de validacion humana
 
-1. Confirmar si las imagenes con fecha de julio dentro de agosto deben moverse a julio o mantenerse en agosto por fecha de carga.
-2. Confirmar convencion oficial de mes:
-   - por fecha del mensaje/cuadro;
-   - por fecha del ECHEQ;
-   - por fecha de carga al Drive;
-   - por periodo comercial definido por Mariano/Martin.
-3. Confirmar si se deben renombrar carpetas a formato `01 - ...` y meses a `YYYY-MM`.
-4. Confirmar fuente oficial para alias de clientes.
-5. Reemplazar shortcut de facturacion por archivo real o ID destino.
+1. Confirmar fuente oficial para alias de clientes.
+2. Reemplazar shortcut de facturacion por archivo real o ID destino.
+3. Resolver cuadros donde la fecha de ECHEQ no sea visible o tenga multiples fechas.
+4. Validar imagenes con fecha julio ubicadas en carpeta agosto: por regla nueva, si el ECHEQ es de julio deben imputarse a julio aunque esten en agosto.
 
 ## Propuesta de modelo PostgreSQL
 
