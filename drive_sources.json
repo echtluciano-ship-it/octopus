@@ -24,7 +24,13 @@
       }
     },
     "facturacion_historica": {
-      "folder_id": "18SR5rMYOTFqNLOvpPtDY4u9yvVNp_Pf9"
+      "folder_id": "18SR5rMYOTFqNLOvpPtDY4u9yvVNp_Pf9",
+      "official_file": {
+        "file_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
+        "name": "FACTURACION OCTOPUS.xlsx",
+        "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
+      }
     },
     "chats_exportados": {
       "folder_id": "1j8KcwVT5ZbBRVK1Yp4S1GktmLwn8fN0X",

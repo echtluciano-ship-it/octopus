@@ -19,8 +19,10 @@ Los IDs operativos quedaron registrados en `drive_sources.json`.
    - Se ve `Facturación Historica`, no `02 - Facturación Histórica`.
    - Los meses aparecen como `julio 2026` / `agosto 2026`, no `2026-07` / `2026-08`.
 3. Esto no bloquea el trabajo porque la app puede usar IDs fijos, pero para automatizacion conviene estandarizar nombres.
-4. La carpeta `Facturación Historica` contiene un shortcut a `FACTURACION OCTOPUS.xlsx`.
-   - Para produccion conviene guardar el archivo real o resolver y guardar el ID destino del shortcut.
+4. La carpeta `Facturación Historica` contiene un shortcut, pero el archivo real oficial ya fue identificado:
+   - `FACTURACION OCTOPUS.xlsx`
+   - ID: `13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV`
+   - Este ID queda como fuente oficial de facturacion historica para automatizacion.
 5. `Clientes y alias` esta vacia. Todavia no existe una fuente oficial para alias aprobados.
 6. `Procesamiento Automatico` ya tiene subcarpetas utiles:
    - Procesados
@@ -71,9 +73,8 @@ Los IDs operativos quedaron registrados en `drive_sources.json`.
 ## Pendiente de validacion humana
 
 1. Confirmar fuente oficial para alias de clientes.
-2. Reemplazar shortcut de facturacion por archivo real o ID destino.
-3. Validar imagenes con fecha julio ubicadas en carpeta agosto: por regla nueva, si el ECHEQ es de julio deben imputarse a julio aunque esten en agosto.
-4. Generar y validar lista completa de clientes/alias.
+2. Validar imagenes con fecha julio ubicadas en carpeta agosto: por regla nueva, si el ECHEQ es de julio deben imputarse a julio aunque esten en agosto.
+3. Generar y validar lista completa de clientes/alias.
 
 ## Propuesta de modelo PostgreSQL
 
