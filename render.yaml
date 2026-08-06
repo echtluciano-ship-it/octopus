@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: octopus-clientes
+    env: docker
+    plan: starter
+    autoDeploy: false
+    envVars:
+      - key: OCTOPUS_APP_USER
+        sync: false
+      - key: OCTOPUS_APP_PASSWORD
+        sync: false

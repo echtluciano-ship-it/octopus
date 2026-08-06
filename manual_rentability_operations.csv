@@ -1,0 +1,11 @@
+received_date,reference,client_name,channel,billed_amount,octopus_profit,status,source_path,note
+2026-08-05,ECHEQ 29-7,Star Medical,HYF,15235404,737798,OK,C:\Users\Luciano\Downloads\83838de5-e2bf-4ff5-8cc0-17a2483ff340.jpeg,
+2026-08-05,ECHEQ 31-7,El Perro de la Luna,Sarten,5951876,370106,OK,C:\Users\Luciano\Downloads\72687683-d44c-49c7-8f39-42463e4e3548.jpeg,
+2026-08-05,ECHEQ 30/07 y 2/09/26,Mantovana,HYF,61061580,4083523,OK,C:\Users\Luciano\Downloads\1ed9e7fa-3c76-41a5-aec8-232e298e582b.jpeg,
+2026-08-05,ECHEQ 31/07 - 15 y 17/09/26,Mantovana,Espora,180974727,12115895,OK,C:\Users\Luciano\Downloads\9c04f560-2ee4-44b4-8ef9-ec45fd4eb7de.jpeg,
+2026-08-05,ECHEQ 03/08/26,Drogueria Meta,Espora,15296540,869545,OK,C:\Users\Luciano\Downloads\f813be53-0f4f-4aa0-a740-9ebaf4e6f205.jpeg,
+2026-08-05,ECHEQ 31/07/26,Managing,Espora,16531580,944614,OK,C:\Users\Luciano\Downloads\19c38cef-163e-4045-8f40-d1d3f8985263.jpeg,
+2026-08-05,ECHEQ 31/07/26,Alimentos Viandas,Espora,96637585,5699739,OK,C:\Users\Luciano\Downloads\e1a5b300-0e91-4174-b064-0baeda9c5369.jpeg,
+2026-08-05,ECHEQ 12/08/26,Comite Ejecutivo,Espora,106603710,5566557,REVISION,C:\Users\Luciano\Downloads\ef9a690a-3577-4234-b43d-133326d72d75 (1).jpeg,Cuadro indica Mayo-Julio 2026; revisar si corresponde imputarlo completo a agosto o como acumulado previo.
+2026-08-05,ECHEQ 12/08/26,Comite Ejecutivo,Espora,106603710,5566557,DUPLICADO,C:\Users\Luciano\Downloads\ef9a690a-3577-4234-b43d-133326d72d75.jpeg,Misma imagen y mismos importes que ef9a690a-3577-4234-b43d-133326d72d75 (1).jpeg; no se usa para acumular.
+2026-08-05,ECHEQ 07/08/26,Cocina y Patagonia,Espora,44893363,2233037,OK,C:\Users\Luciano\Downloads\28883798-ae92-41dd-af74-96e653ef7dd6.jpeg,

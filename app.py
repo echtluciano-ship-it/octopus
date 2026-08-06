@@ -1,0 +1,260 @@
+from __future__ import annotations
+
+import sqlite3
+import hmac
+import os
+from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+
+APP_DIR = Path(__file__).resolve().parent
+DB_PATH = APP_DIR / "octopus.db"
+
+
+st.set_page_config(page_title="Octopus - Base de Clientes", layout="wide")
+
+
+def get_secret(name: str) -> str:
+    value = os.getenv(name, "")
+    if value:
+        return value
+    try:
+        return st.secrets.get(name, "")
+    except Exception:
+        return ""
+
+
+def require_login() -> bool:
+    expected_password = get_secret("OCTOPUS_APP_PASSWORD")
+    expected_user = get_secret("OCTOPUS_APP_USER")
+    if not expected_password:
+        return True
+
+    if st.session_state.get("authenticated"):
+        return True
+
+    st.title("Octopus")
+    with st.form("login"):
+        user = st.text_input("Usuario")
+        password = st.text_input("Clave", type="password")
+        submitted = st.form_submit_button("Entrar")
+
+    if submitted:
+        user_ok = True if not expected_user else hmac.compare_digest(user, expected_user)
+        password_ok = hmac.compare_digest(password, expected_password)
+        if user_ok and password_ok:
+            st.session_state["authenticated"] = True
+            st.rerun()
+        st.error("Usuario o clave incorrectos.")
+    return False
+
+
+def money(value) -> str:
+    if value is None or pd.isna(value):
+        return "Pendiente"
+    return "$ " + f"{float(value):,.0f}".replace(",", ".")
+
+
+def percent(value) -> str:
+    if value is None or pd.isna(value):
+        return "Sin cuadros"
+    return f"{float(value) * 100:.2f}%"
+
+
+@st.cache_data(show_spinner=False)
+def read_sql(query: str, params: tuple = ()) -> pd.DataFrame:
+    with sqlite3.connect(DB_PATH) as conn:
+        return pd.read_sql_query(query, conn, params=params)
+
+
+def clear_cache() -> None:
+    read_sql.clear()
+
+
+if not require_login():
+    st.stop()
+
+st.title("Base de Clientes")
+
+if not DB_PATH.exists():
+    st.warning("La base todavia no esta cargada.")
+    st.stop()
+
+top_left, top_right = st.columns([3, 1])
+with top_right:
+    if st.button("Actualizar datos"):
+        clear_cache()
+        st.rerun()
+
+clients = read_sql(
+    """
+    SELECT client_key, display_name, status, last_operation, last_month, months_without_activity
+    FROM clients
+    ORDER BY display_name
+    """
+)
+
+if clients.empty:
+    st.info("Todavia no hay clientes cargados.")
+    st.stop()
+
+with top_left:
+    search = st.text_input("Buscar cliente", placeholder="Nombre del cliente")
+
+filtered = clients.copy()
+if search.strip():
+    query = search.strip().lower()
+    filtered = filtered[
+        filtered["display_name"].str.lower().str.contains(query, na=False)
+        | filtered["status"].str.lower().str.contains(query, na=False)
+    ]
+
+left, right = st.columns([1, 2.4])
+
+with left:
+    st.subheader("Clientes")
+    st.caption(f"{len(filtered)} encontrados")
+    if filtered.empty:
+        st.info("No hay coincidencias.")
+        st.stop()
+    selected_name = st.selectbox(
+        "Seleccionar",
+        options=filtered["display_name"].tolist(),
+        label_visibility="collapsed",
+    )
+
+selected = clients.loc[clients["display_name"] == selected_name].iloc[0]
+client_key = selected["client_key"]
+
+channel_summary = read_sql(
+    """
+    SELECT
+        channel AS Canal,
+        SUM(billing_total) AS facturacion_historica,
+        SUM(rentability_billed) AS facturado_rentabilidad,
+        SUM(octopus_profit) AS ganancia_octopus,
+        CASE
+            WHEN SUM(rentability_billed) > 0
+            THEN SUM(octopus_profit) / SUM(rentability_billed)
+            ELSE NULL
+        END AS rentabilidad,
+        MAX(month) AS ultimo_mes,
+        SUM(has_pending_data) AS pendientes
+    FROM monthly_metrics
+    WHERE client_key = ?
+    GROUP BY channel
+    ORDER BY channel
+    """,
+    (client_key,),
+)
+
+monthly = read_sql(
+    """
+    SELECT
+        month AS Mes,
+        channel AS Canal,
+        billing_total AS facturacion_historica,
+        rentability_billed AS facturado_rentabilidad,
+        octopus_profit AS ganancia_octopus,
+        rentability_pct AS rentabilidad,
+        billing_operations AS operaciones_facturacion,
+        rentability_operations AS cuadros_rentabilidad,
+        has_pending_data AS requiere_revision
+    FROM monthly_metrics
+    WHERE client_key = ?
+    ORDER BY Mes DESC, Canal
+    """,
+    (client_key,),
+)
+
+trace = read_sql(
+    """
+    SELECT
+        operation_date AS Fecha,
+        client_name AS Cliente,
+        channel AS Canal,
+        billed_amount AS Facturado,
+        octopus_profit AS Ganancia,
+        CASE
+            WHEN billed_amount > 0 AND status LIKE 'OK%'
+            THEN octopus_profit / billed_amount
+            ELSE NULL
+        END AS Rentabilidad,
+        status AS Estado,
+        reference AS Referencia,
+        source_file AS Cuadro,
+        source_path AS Archivo,
+        note AS Observacion
+    FROM rentability_operations
+    WHERE client_key = ?
+    ORDER BY operation_date DESC, id DESC
+    """,
+    (client_key,),
+)
+
+total_billing = channel_summary["facturacion_historica"].sum() if not channel_summary.empty else 0
+total_rent_billed = channel_summary["facturado_rentabilidad"].sum() if not channel_summary.empty else 0
+total_profit = channel_summary["ganancia_octopus"].sum() if not channel_summary.empty else 0
+current_rentability = total_profit / total_rent_billed if total_rent_billed else None
+channels = ", ".join(channel_summary["Canal"].dropna().astype(str).unique()) or "Pendiente"
+months = ", ".join(monthly["Mes"].dropna().drop_duplicates().sort_values().tolist()) or "Pendiente"
+loaded_rentability_cards = int(monthly["cuadros_rentabilidad"].sum()) if not monthly.empty else 0
+review_cards = int(monthly["requiere_revision"].sum()) if not monthly.empty else 0
+
+with right:
+    st.subheader(selected["display_name"])
+    cards = st.columns(4)
+    cards[0].metric("Estado", selected["status"])
+    cards[1].metric("Rentabilidad actual", percent(current_rentability))
+    cards[2].metric("Facturado en cuadros", money(total_rent_billed))
+    cards[3].metric("Ganancia acumulada", money(total_profit))
+
+    detail_cards = st.columns(4)
+    detail_cards[0].metric("Ultima operacion", selected["last_operation"] or "Pendiente")
+    detail_cards[1].metric("Ultimo mes", selected["last_month"] or "Pendiente")
+    detail_cards[2].metric("Canales", channels)
+    detail_cards[3].metric("Meses sin operar", selected["months_without_activity"])
+
+    source_cards = st.columns(3)
+    source_cards[0].metric("Facturacion historica", money(total_billing))
+    source_cards[1].metric("Cuadros cargados", loaded_rentability_cards)
+    source_cards[2].metric("Cuadros a revisar", review_cards)
+
+    st.caption("Meses en los que opero")
+    st.write(months)
+
+    st.subheader("Canales")
+    if channel_summary.empty:
+        st.info("Sin datos por canal.")
+    else:
+        display_channels = channel_summary.copy()
+        display_channels["facturacion_historica"] = display_channels["facturacion_historica"].map(money)
+        display_channels["facturado_rentabilidad"] = display_channels["facturado_rentabilidad"].map(money)
+        display_channels["ganancia_octopus"] = display_channels["ganancia_octopus"].map(money)
+        display_channels["rentabilidad"] = display_channels["rentabilidad"].map(percent)
+        st.dataframe(display_channels, use_container_width=True, hide_index=True)
+
+    st.subheader("Datos mensuales")
+    if monthly.empty:
+        st.info("Sin datos mensuales.")
+    else:
+        display_monthly = monthly.copy()
+        for col in ["facturacion_historica", "facturado_rentabilidad", "ganancia_octopus"]:
+            display_monthly[col] = display_monthly[col].map(money)
+        display_monthly["rentabilidad"] = display_monthly["rentabilidad"].map(percent)
+        display_monthly["requiere_revision"] = display_monthly["requiere_revision"].map(
+            lambda value: "Si" if value else "No"
+        )
+        st.dataframe(display_monthly, use_container_width=True, hide_index=True)
+
+    st.subheader("Trazabilidad")
+    if trace.empty:
+        st.info("Sin cuadros cargados para este cliente.")
+    else:
+        display_trace = trace.copy()
+        display_trace["Facturado"] = display_trace["Facturado"].map(money)
+        display_trace["Ganancia"] = display_trace["Ganancia"].map(money)
+        display_trace["Rentabilidad"] = display_trace["Rentabilidad"].map(percent)
+        st.dataframe(display_trace, use_container_width=True, hide_index=True)
