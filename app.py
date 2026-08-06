@@ -92,6 +92,7 @@ clients = read_sql(
     """
     SELECT client_key, display_name, status, last_operation, last_month, months_without_activity
     FROM clients
+    WHERE last_month IS NULL OR last_month >= '2026-01'
     ORDER BY display_name
     """
 )

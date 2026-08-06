@@ -37,3 +37,7 @@ OCTOPUS_APP_PASSWORD=una-clave-segura
 Con esto Mariano, tu papa y vos pueden entrar desde computadora o celular. La base queda protegida por login de la app y por control de acceso externo.
 
 Para la siguiente etapa conviene migrar `octopus.db` a PostgreSQL privado, asi todos ven una base compartida actualizable sin depender de un archivo local.
+
+## Regla operativa V1
+
+La lista principal oculta clientes cuya ultima operacion fue en 2025 o antes. No se borran de la base: solo se excluyen de la vista operativa para reducir ruido.
