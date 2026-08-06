@@ -1,0 +1,44 @@
+{
+  "official_root": {
+    "name": "Octopus Base De Clientes",
+    "folder_id": "1VzjdYgBrXA1zpYDWULw1RNGN6uN3SQbL",
+    "url": "https://drive.google.com/drive/folders/1VzjdYgBrXA1zpYDWULw1RNGN6uN3SQbL"
+  },
+  "folders": {
+    "cuadros": {
+      "folder_id": "1OD0lO-uY6tmZ0bydk6Khr96eRZ6HP2kj",
+      "pendientes": {
+        "folder_id": "1hrkaiIoIidXz9_PhtfaUX8iSrVsiDN3h",
+        "2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
+        "2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY"
+      },
+      "pagos": {
+        "folder_id": "17yADXN65kASfLu88XE9Xec0e_qVc-UkT",
+        "2026-07": "1F7pvsJ8wgxxIZ4O3doXH7F5tDntER8Vf",
+        "2026-08": "1MxMI04k8PXD2zzXYRS6sK5kFVAffe4oU"
+      }
+    },
+    "facturacion_historica": {
+      "folder_id": "18SR5rMYOTFqNLOvpPtDY4u9yvVNp_Pf9"
+    },
+    "chats_exportados": {
+      "folder_id": "1j8KcwVT5ZbBRVK1Yp4S1GktmLwn8fN0X",
+      "pendientes": "11G7J3VzTPu1NRer82nBv221OQxYqqrtP",
+      "pagos": "1hxfloAxdauTs73LOvsZM32QHQfrFnNNu"
+    },
+    "rentabilidad_mensual": {
+      "folder_id": "1P3TjnNRJai4K39KIPpFRhNov4jQw9TRJ",
+      "2026-07": "16sFyPOdyFomQa1G_kkQCGeFqqD6e5ASc",
+      "2026-08": "1wAvFKDKb4-E3QP4h8x6NxXR4cs-HnZuK"
+    },
+    "clientes_alias": {
+      "folder_id": "1osM0xEKLuyF8exFxWAw5Vq5WJ3wr9VIM"
+    },
+    "procesamiento_automatico": {
+      "folder_id": "1verqpAI0WrnT9i6g3urxGllORCOX45I6",
+      "procesados": "1C-4oi_V1CeO57S-PWN_VtoctCweq4K2b",
+      "requiere_revision": "1ZhXbV9JXxgfBZ7OMad-SmMw2nUw2u1X4",
+      "duplicados": "1rV8TA4TGQy1Q32ZNsNQ-OP6N3MFvXAWu"
+    }
+  }
+}
