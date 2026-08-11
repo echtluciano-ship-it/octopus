@@ -16,9 +16,10 @@ APP_DIR = ROOT / "app_octopus"
 DB_PATH = APP_DIR / "octopus.db"
 
 FACTURACION_CANDIDATES = [
+    ROOT / "00_fuentes_originales" / "facturacion_octopus_historica.xlsx",
+    ROOT / "outputs" / "alias_aplicado_2026_08_11" / "FACTURACION_OCTOPUS_2026_08_11.xlsx",
     Path(r"C:\Users\Luciano\Downloads\FACTURACION OCTOPUS.xlsx"),
     Path(r"C:\Users\Luciano\Downloads\FACTURACION OCTOPUS opa.xlsx"),
-    ROOT / "00_fuentes_originales" / "facturacion_octopus_historica.xlsx",
 ]
 
 RENTABILIDAD_FILES = [
@@ -27,8 +28,10 @@ RENTABILIDAD_FILES = [
 ]
 
 MANUAL_RENTABILITY_FILE = APP_DIR / "manual_rentability_operations.csv"
+CLIENT_ALIASES_FILE = APP_DIR / "client_aliases.csv"
 
 CURRENT_MONTH = "2026-08"
+ALIAS_BY_KEY: dict[str, str] = {}
 
 
 def clean_text(value) -> str:
@@ -44,13 +47,38 @@ def strip_accents(value: str) -> str:
 
 def normalize_name(value: str) -> str:
     text = strip_accents(clean_text(value)).upper()
-    text = text.replace("SOCIEDAD ANONIMA", "SA")
-    text = text.replace("SOCIEDAD DE RESPONSABILIDAD LIMITADA", "SRL")
-    text = text.replace("S.A.", "SA").replace("S. A.", "SA")
-    text = text.replace("S.R.L.", "SRL").replace("S. R. L.", "SRL")
+    text = text.replace("SOCIEDAD ANONIMA", " SA ")
+    text = text.replace("SOCIEDAD DE RESPONSABILIDAD LIMITADA", " SRL ")
+    text = re.sub(r"\bS\s*\.?\s*A\s*\.?\b", " SA ", text)
+    text = re.sub(r"\bS\s*\.?\s*R\s*\.?\s*L\s*\.?\b", " SRL ", text)
+    text = re.sub(r"\bS\s*\.?\s*A\s*\.?\s*S\s*\.?\b", " SAS ", text)
     text = re.sub(r"[^A-Z0-9 ]+", " ", text)
     text = re.sub(r"\b(SA|SRL|SAS|SC|SCA|SCS)\b", "", text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def load_alias_map() -> dict[str, str]:
+    aliases: dict[str, str] = {}
+    if not CLIENT_ALIASES_FILE.exists():
+        return aliases
+    with CLIENT_ALIASES_FILE.open("r", encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            decision = clean_text(row.get("decision")).lower()
+            if "unificar" not in decision:
+                continue
+            alias_name = clean_text(row.get("alias_name"))
+            official_name = clean_text(row.get("official_name"))
+            alias_key = normalize_name(alias_name)
+            if alias_key and official_name:
+                aliases[alias_key] = official_name
+    return aliases
+
+
+def canonical_client_name(value: str) -> str:
+    original = clean_text(value)
+    if not original:
+        return ""
+    return ALIAS_BY_KEY.get(normalize_name(original), original)
 
 
 def normalize_channel(value: str) -> str:
@@ -143,6 +171,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
         DROP TABLE IF EXISTS monthly_metrics;
         DROP TABLE IF EXISTS rentability_operations;
         DROP TABLE IF EXISTS billing_operations;
+        DROP TABLE IF EXISTS client_aliases;
         DROP TABLE IF EXISTS clients;
 
         CREATE TABLE clients (
@@ -156,10 +185,21 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             status TEXT NOT NULL
         );
 
+        CREATE TABLE client_aliases (
+            alias_key TEXT PRIMARY KEY,
+            alias_name TEXT NOT NULL,
+            official_key TEXT NOT NULL,
+            official_name TEXT NOT NULL,
+            decision TEXT NOT NULL,
+            source_group TEXT,
+            source_sheet TEXT
+        );
+
         CREATE TABLE billing_operations (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             client_key TEXT NOT NULL,
             client_name TEXT NOT NULL,
+            original_client_name TEXT,
             channel TEXT NOT NULL,
             period_date TEXT,
             month TEXT,
@@ -174,6 +214,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             client_key TEXT NOT NULL,
             client_name TEXT NOT NULL,
+            original_client_name TEXT,
             channel TEXT NOT NULL,
             operation_date TEXT,
             month TEXT,
@@ -204,6 +245,37 @@ def reset_schema(conn: sqlite3.Connection) -> None:
     )
 
 
+def seed_aliases(conn: sqlite3.Connection) -> None:
+    if not CLIENT_ALIASES_FILE.exists():
+        return
+    with CLIENT_ALIASES_FILE.open("r", encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            decision = clean_text(row.get("decision")) or "unificar"
+            alias_name = clean_text(row.get("alias_name"))
+            official_name = clean_text(row.get("official_name"))
+            alias_key = normalize_name(alias_name)
+            official_key = normalize_name(official_name)
+            if not alias_key or not official_key:
+                continue
+            conn.execute(
+                """
+                INSERT OR REPLACE INTO client_aliases (
+                    alias_key, alias_name, official_key, official_name,
+                    decision, source_group, source_sheet
+                ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    alias_key,
+                    alias_name,
+                    official_key,
+                    official_name,
+                    decision,
+                    clean_text(row.get("grupo")),
+                    clean_text(row.get("source_sheet")),
+                ),
+            )
+
+
 def load_billing(conn: sqlite3.Connection) -> None:
     source = pick_facturacion_file()
     wb = load_workbook(source, data_only=True, read_only=True)
@@ -214,13 +286,14 @@ def load_billing(conn: sqlite3.Connection) -> None:
         cliente_original = clean_text(values[2])
         if not cliente_original:
             continue
+        cliente_oficial = canonical_client_name(cliente_original)
         period = parse_date(values[5])
         if not period:
             continue
         month = period.strftime("%Y-%m")
         if month > CURRENT_MONTH:
             continue
-        client_key = normalize_name(cliente_original)
+        client_key = normalize_name(cliente_oficial)
         if not client_key:
             continue
         channel = normalize_channel(values[3])
@@ -231,12 +304,13 @@ def load_billing(conn: sqlite3.Connection) -> None:
         conn.execute(
             """
             INSERT INTO billing_operations (
-                client_key, client_name, channel, period_date, month, invoice_number,
-                net_amount, total_amount, is_credit_note, source
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                client_key, client_name, original_client_name, channel, period_date,
+                month, invoice_number, net_amount, total_amount, is_credit_note, source
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 client_key,
+                cliente_oficial,
                 cliente_original,
                 channel,
                 period.isoformat(),
@@ -267,6 +341,8 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             if not cliente_canal:
                 continue
             client_name, channel = parse_cliente_canal(cliente_canal)
+            original_client_name = client_name
+            client_name = canonical_client_name(original_client_name)
             client_key = normalize_name(client_name)
             op_date = parse_date(row[index.get("FECHA", 0)])
             month = op_date.strftime("%Y-%m") if op_date else file_path.stem[-7:]
@@ -280,13 +356,14 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
-                    client_key, client_name, channel, operation_date, month,
+                    client_key, client_name, original_client_name, channel, operation_date, month,
                     billed_amount, octopus_profit, status, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     client_key,
                     client_name,
+                    original_client_name,
                     channel,
                     op_date.isoformat() if op_date else None,
                     month,
@@ -309,6 +386,8 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
             client_name = clean_text(row.get("client_name"))
             if not client_name:
                 continue
+            original_client_name = client_name
+            client_name = canonical_client_name(original_client_name)
             op_date = parse_date(row.get("received_date"))
             if not op_date:
                 continue
@@ -320,13 +399,14 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
-                    client_key, client_name, channel, operation_date, month,
+                    client_key, client_name, original_client_name, channel, operation_date, month,
                     billed_amount, octopus_profit, status, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     normalize_name(client_name),
                     client_name,
+                    original_client_name,
                     channel,
                     op_date.isoformat(),
                     month,
@@ -443,8 +523,11 @@ def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
 
 
 def load_database() -> None:
+    global ALIAS_BY_KEY
+    ALIAS_BY_KEY = load_alias_map()
     with connect() as conn:
         reset_schema(conn)
+        seed_aliases(conn)
         load_billing(conn)
         load_rentability(conn)
         load_manual_rentability(conn)

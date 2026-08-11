@@ -90,10 +90,19 @@ with top_right:
 
 clients = read_sql(
     """
-    SELECT client_key, display_name, status, last_operation, last_month, months_without_activity
-    FROM clients
-    WHERE last_month IS NULL OR last_month >= '2026-01'
-    ORDER BY display_name
+    SELECT
+        c.client_key,
+        c.display_name,
+        c.status,
+        c.last_operation,
+        c.last_month,
+        c.months_without_activity,
+        COALESCE(GROUP_CONCAT(a.alias_name, ' | '), '') AS aliases
+    FROM clients c
+    LEFT JOIN client_aliases a ON a.official_key = c.client_key
+    WHERE c.last_month IS NULL OR c.last_month >= '2026-01'
+    GROUP BY c.client_key, c.display_name, c.status, c.last_operation, c.last_month, c.months_without_activity
+    ORDER BY c.display_name
     """
 )
 
@@ -109,6 +118,7 @@ if search.strip():
     query = search.strip().lower()
     filtered = filtered[
         filtered["display_name"].str.lower().str.contains(query, na=False)
+        | filtered["aliases"].str.lower().str.contains(query, na=False)
         | filtered["status"].str.lower().str.contains(query, na=False)
     ]
 
