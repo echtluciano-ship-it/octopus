@@ -133,6 +133,29 @@ def parse_date(value) -> date | None:
             return datetime.strptime(text, fmt).date()
         except ValueError:
             pass
+    spanish_months = {
+        "ENE": 1,
+        "FEB": 2,
+        "MAR": 3,
+        "ABR": 4,
+        "MAY": 5,
+        "JUN": 6,
+        "JUL": 7,
+        "AGO": 8,
+        "SEP": 9,
+        "SET": 9,
+        "OCT": 10,
+        "NOV": 11,
+        "DIC": 12,
+    }
+    match = re.fullmatch(r"([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{3})[-/](\d{2,4})", text)
+    if match:
+        month = spanish_months.get(strip_accents(match.group(1)).upper())
+        year = int(match.group(2))
+        if month:
+            if year < 100:
+                year += 2000
+            return date(year, month, 1)
     return None
 
 
@@ -151,11 +174,75 @@ def parse_cliente_canal(value: str) -> tuple[str, str]:
     return text, "Pendiente"
 
 
+def extract_invoice_numbers(value: str) -> list[str]:
+    text = clean_text(value)
+    match = re.search(r"FACT\s*([0-9][0-9\s,./-]*)", text, flags=re.IGNORECASE)
+    if not match:
+        return []
+    raw = match.group(1)
+    if "-" in raw:
+        nums = re.findall(r"\d+", raw)
+        if len(nums) >= 2:
+            start, end = int(nums[0]), int(nums[-1])
+            if end >= start and end - start <= 20:
+                return [str(n) for n in range(start, end + 1)]
+    return [n.lstrip("0") or "0" for n in re.findall(r"\d+", raw)]
+
+
 def pick_facturacion_file() -> Path:
     for path in FACTURACION_CANDIDATES:
         if path.exists():
             return path
     raise FileNotFoundError("No encontré Excel histórico de facturación.")
+
+
+def lookup_billed_from_history(
+    conn: sqlite3.Connection,
+    original_client_name: str,
+    channel: str,
+    cliente_canal: str,
+) -> tuple[float | None, str | None]:
+    invoice_numbers = extract_invoice_numbers(cliente_canal)
+    if not invoice_numbers:
+        return None, "No se ve Facturado y no hay número de factura para cruzar con Facturación Histórica."
+
+    invoice_keys = [("00000000" + number)[-8:] for number in invoice_numbers]
+    client_key = normalize_name(canonical_client_name(original_client_name))
+    resolved = []
+    missing = []
+
+    for invoice_key in invoice_keys:
+        matches = conn.execute(
+            """
+            SELECT total_amount, invoice_number
+            FROM billing_operations
+            WHERE client_key = ?
+              AND channel = ?
+              AND substr(replace(replace(replace(invoice_number, ' ', ''), '-', ''), '/', ''), -8) = ?
+              AND total_amount IS NOT NULL
+              AND total_amount > 0
+            """,
+            (client_key, channel, invoice_key),
+        ).fetchall()
+        if len(matches) == 1:
+            resolved.append(matches[0])
+        elif len(matches) == 0:
+            missing.append(invoice_key.lstrip("0") or "0")
+        else:
+            return None, (
+                "No se ve Facturado y la factura "
+                f"{invoice_key.lstrip('0') or '0'} tiene más de una coincidencia en Facturación Histórica."
+            )
+
+    if missing:
+        return None, (
+            "No se ve Facturado; no encontré en Facturación Histórica la factura "
+            f"{', '.join(missing)}."
+        )
+
+    total = sum(float(row[0]) for row in resolved)
+    invoices = ", ".join(clean_text(row[1]) for row in resolved)
+    return total, f"Facturado recuperado de Facturación Histórica por factura: {invoices}."
 
 
 def connect() -> sqlite3.Connection:
@@ -351,6 +438,19 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             status = clean_text(row[index.get("ESTADO", 5)]) or "PENDIENTE"
             note = clean_text(row[index.get("OBSERVACION", 7)])
             source_file = clean_text(row[index.get("FUENTE", 6)])
+            if facturado is None and ganancia is not None:
+                recovered, recovery_note = lookup_billed_from_history(
+                    conn,
+                    original_client_name,
+                    channel,
+                    cliente_canal,
+                )
+                if recovered is not None:
+                    facturado = recovered
+                    status = "OK_FC_HISTORICA"
+                    note = "; ".join(part for part in [note, recovery_note] if part)
+                elif recovery_note:
+                    note = "; ".join(part for part in [note, recovery_note] if part)
             if month > CURRENT_MONTH:
                 continue
             conn.execute(
