@@ -100,7 +100,6 @@ clients = read_sql(
         COALESCE(GROUP_CONCAT(a.alias_name, ' | '), '') AS aliases
     FROM clients c
     LEFT JOIN client_aliases a ON a.official_key = c.client_key
-    WHERE c.last_month IS NULL OR c.last_month >= '2026-01'
     GROUP BY c.client_key, c.display_name, c.status, c.last_operation, c.last_month, c.months_without_activity
     ORDER BY c.display_name
     """
