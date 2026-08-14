@@ -11,6 +11,7 @@ import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
+CURRENT_MONTH = "2026-08"
 
 
 st.set_page_config(page_title="Octopus - Base de Clientes", layout="wide")
@@ -63,6 +64,14 @@ def percent(value) -> str:
     return f"{float(value) * 100:.2f}%"
 
 
+def months_between(from_month: str, to_month: str = CURRENT_MONTH) -> int | None:
+    if not from_month:
+        return None
+    y1, m1 = map(int, from_month.split("-"))
+    y2, m2 = map(int, to_month.split("-"))
+    return (y2 - y1) * 12 + (m2 - m1)
+
+
 @st.cache_data(show_spinner=False)
 def read_sql(query: str, params: tuple = ()) -> pd.DataFrame:
     with sqlite3.connect(DB_PATH) as conn:
@@ -93,16 +102,24 @@ clients = read_sql(
     SELECT
         c.client_key,
         c.display_name,
-        c.status,
-        c.last_operation,
-        c.last_month,
-        c.months_without_activity,
-        COALESCE(GROUP_CONCAT(a.alias_name, ' | '), '') AS aliases
+        MAX(r.operation_date) AS last_operation,
+        MAX(r.month) AS last_month,
+        COALESCE(GROUP_CONCAT(DISTINCT a.alias_name), '') AS aliases
     FROM clients c
+    INNER JOIN rentability_operations r
+        ON r.client_key = c.client_key
+       AND r.status LIKE 'OK%'
+       AND r.billed_amount > 0
+       AND r.octopus_profit IS NOT NULL
     LEFT JOIN client_aliases a ON a.official_key = c.client_key
-    GROUP BY c.client_key, c.display_name, c.status, c.last_operation, c.last_month, c.months_without_activity
+    GROUP BY c.client_key, c.display_name
     ORDER BY c.display_name
     """
+)
+
+clients["months_without_activity"] = clients["last_month"].map(months_between)
+clients["status"] = clients["months_without_activity"].map(
+    lambda value: "Activo" if value is not None and value <= 3 else "Inactivo"
 )
 
 if clients.empty:
@@ -131,29 +148,28 @@ with left:
         st.stop()
     selected_name = st.selectbox(
         "Seleccionar",
-        options=filtered["display_name"].tolist(),
+        options=filtered["client_key"].tolist(),
+        format_func=lambda key: clients.loc[clients["client_key"] == key, "display_name"].iloc[0],
         label_visibility="collapsed",
     )
 
-selected = clients.loc[clients["display_name"] == selected_name].iloc[0]
+selected = clients.loc[clients["client_key"] == selected_name].iloc[0]
 client_key = selected["client_key"]
 
 channel_summary = read_sql(
     """
     SELECT
         channel AS Canal,
-        SUM(billing_total) AS facturacion_historica,
-        SUM(rentability_billed) AS facturado_rentabilidad,
+        SUM(billed_amount) AS facturado_rentabilidad,
         SUM(octopus_profit) AS ganancia_octopus,
-        CASE
-            WHEN SUM(rentability_billed) > 0
-            THEN SUM(octopus_profit) / SUM(rentability_billed)
-            ELSE NULL
-        END AS rentabilidad,
+        SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
         MAX(month) AS ultimo_mes,
-        SUM(has_pending_data) AS pendientes
-    FROM monthly_metrics
+        COUNT(*) AS cuadros_validos
+    FROM rentability_operations
     WHERE client_key = ?
+      AND status LIKE 'OK%'
+      AND billed_amount > 0
+      AND octopus_profit IS NOT NULL
     GROUP BY channel
     ORDER BY channel
     """,
@@ -165,15 +181,16 @@ monthly = read_sql(
     SELECT
         month AS Mes,
         channel AS Canal,
-        billing_total AS facturacion_historica,
-        rentability_billed AS facturado_rentabilidad,
-        octopus_profit AS ganancia_octopus,
-        rentability_pct AS rentabilidad,
-        billing_operations AS operaciones_facturacion,
-        rentability_operations AS cuadros_rentabilidad,
-        has_pending_data AS requiere_revision
-    FROM monthly_metrics
+        SUM(billed_amount) AS facturado_rentabilidad,
+        SUM(octopus_profit) AS ganancia_octopus,
+        SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
+        COUNT(*) AS cuadros_rentabilidad
+    FROM rentability_operations
     WHERE client_key = ?
+      AND status LIKE 'OK%'
+      AND billed_amount > 0
+      AND octopus_profit IS NOT NULL
+    GROUP BY month, channel
     ORDER BY Mes DESC, Canal
     """,
     (client_key,),
@@ -199,19 +216,20 @@ trace = read_sql(
         note AS Observacion
     FROM rentability_operations
     WHERE client_key = ?
+      AND status LIKE 'OK%'
+      AND billed_amount > 0
+      AND octopus_profit IS NOT NULL
     ORDER BY operation_date DESC, id DESC
     """,
     (client_key,),
 )
 
-total_billing = channel_summary["facturacion_historica"].sum() if not channel_summary.empty else 0
 total_rent_billed = channel_summary["facturado_rentabilidad"].sum() if not channel_summary.empty else 0
 total_profit = channel_summary["ganancia_octopus"].sum() if not channel_summary.empty else 0
 current_rentability = total_profit / total_rent_billed if total_rent_billed else None
 channels = ", ".join(channel_summary["Canal"].dropna().astype(str).unique()) or "Pendiente"
 months = ", ".join(monthly["Mes"].dropna().drop_duplicates().sort_values().tolist()) or "Pendiente"
 loaded_rentability_cards = int(monthly["cuadros_rentabilidad"].sum()) if not monthly.empty else 0
-review_cards = int(monthly["requiere_revision"].sum()) if not monthly.empty else 0
 
 with right:
     st.subheader(selected["display_name"])
@@ -227,10 +245,8 @@ with right:
     detail_cards[2].metric("Canales", channels)
     detail_cards[3].metric("Meses sin operar", selected["months_without_activity"])
 
-    source_cards = st.columns(3)
-    source_cards[0].metric("Facturacion historica", money(total_billing))
-    source_cards[1].metric("Cuadros cargados", loaded_rentability_cards)
-    source_cards[2].metric("Cuadros a revisar", review_cards)
+    source_cards = st.columns(1)
+    source_cards[0].metric("Cuadros validos", loaded_rentability_cards)
 
     st.caption("Meses en los que opero")
     st.write(months)
@@ -240,7 +256,6 @@ with right:
         st.info("Sin datos por canal.")
     else:
         display_channels = channel_summary.copy()
-        display_channels["facturacion_historica"] = display_channels["facturacion_historica"].map(money)
         display_channels["facturado_rentabilidad"] = display_channels["facturado_rentabilidad"].map(money)
         display_channels["ganancia_octopus"] = display_channels["ganancia_octopus"].map(money)
         display_channels["rentabilidad"] = display_channels["rentabilidad"].map(percent)
@@ -251,12 +266,9 @@ with right:
         st.info("Sin datos mensuales.")
     else:
         display_monthly = monthly.copy()
-        for col in ["facturacion_historica", "facturado_rentabilidad", "ganancia_octopus"]:
+        for col in ["facturado_rentabilidad", "ganancia_octopus"]:
             display_monthly[col] = display_monthly[col].map(money)
         display_monthly["rentabilidad"] = display_monthly["rentabilidad"].map(percent)
-        display_monthly["requiere_revision"] = display_monthly["requiere_revision"].map(
-            lambda value: "Si" if value else "No"
-        )
         st.dataframe(display_monthly, use_container_width=True, hide_index=True)
 
     st.subheader("Trazabilidad")
