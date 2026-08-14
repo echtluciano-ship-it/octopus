@@ -210,6 +210,7 @@ trace = read_sql(
             ELSE NULL
         END AS Rentabilidad,
         status AS Estado,
+        operation_type AS Tipo,
         reference AS Referencia,
         source_file AS Cuadro,
         source_path AS Archivo,

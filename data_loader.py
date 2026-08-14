@@ -27,6 +27,15 @@ RENTABILIDAD_FILES = [
     ROOT / "08_agosto_2026" / "Rentabilidad_Clientes_Agosto_2026.xlsx",
 ]
 
+TRANSFER_1_2_BY_SOURCE = {
+    "00003753-PHOTO-2026-07-01-13-00-18.jpg": 27205436.0,
+    "00003755-PHOTO-2026-07-01-14-31-36.jpg": 20703695.0,
+    "00003797-PHOTO-2026-07-03-12-49-44.jpg": 47212990.0,
+    "00003852-PHOTO-2026-07-08-11-46-09.jpg": 47204733.0,
+    "00003901-PHOTO-2026-07-14-11-35-06.jpg": 64670937.0,
+    "00004079-PHOTO-2026-07-26-20-13-53.jpg": 129828122.0,
+}
+
 MANUAL_RENTABILITY_FILE = APP_DIR / "manual_rentability_operations.csv"
 CLIENT_ALIASES_FILE = APP_DIR / "client_aliases.csv"
 
@@ -245,6 +254,23 @@ def lookup_billed_from_history(
     return total, f"Facturado recuperado de Facturación Histórica por factura: {invoices}."
 
 
+def lookup_transfer_1_2(source_file: str, ganancia: float | None) -> tuple[float | None, str | None]:
+    transfer_amount = TRANSFER_1_2_BY_SOURCE.get(Path(source_file).name)
+    if transfer_amount is None or ganancia is None:
+        return None, None
+    expected_profit = round(transfer_amount * 0.012)
+    if abs(expected_profit - float(ganancia)) <= 1:
+        return (
+            transfer_amount,
+            "Modalidad TRANSFERENCIA_1_2: costos pagados previamente; "
+            "base calculada desde ECHEQ/transferencia visible al 1,20%.",
+        )
+    return None, (
+        "Posible modalidad TRANSFERENCIA_1_2, pero la ganancia no coincide "
+        "con el 1,20% del importe transferido."
+    )
+
+
 def connect() -> sqlite3.Connection:
     APP_DIR.mkdir(exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
@@ -308,6 +334,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             billed_amount REAL,
             octopus_profit REAL,
             status TEXT NOT NULL,
+            operation_type TEXT NOT NULL DEFAULT 'NORMAL',
             source_file TEXT,
             source_path TEXT,
             reference TEXT,
@@ -438,16 +465,23 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             status = clean_text(row[index.get("ESTADO", 5)]) or "PENDIENTE"
             note = clean_text(row[index.get("OBSERVACION", 7)])
             source_file = clean_text(row[index.get("FUENTE", 6)])
+            operation_type = "NORMAL"
+            transfer_amount, transfer_note = lookup_transfer_1_2(source_file, ganancia)
+            if transfer_amount is not None:
+                facturado = transfer_amount
+                status = "OK_TRANSFERENCIA_1_2"
+                operation_type = "TRANSFERENCIA_1_2"
+                note = transfer_note or ""
+            elif transfer_note:
+                note = "; ".join(part for part in [note, transfer_note] if part)
             if facturado is None and ganancia is not None:
                 recovered, recovery_note = lookup_billed_from_history(
-                    conn,
-                    original_client_name,
-                    channel,
-                    cliente_canal,
+                    conn, original_client_name, channel, cliente_canal
                 )
                 if recovered is not None:
                     facturado = recovered
                     status = "OK_FC_HISTORICA"
+                    operation_type = "FACTURACION_HISTORICA"
                     note = "; ".join(part for part in [note, recovery_note] if part)
                 elif recovery_note:
                     note = "; ".join(part for part in [note, recovery_note] if part)
@@ -457,8 +491,8 @@ def load_rentability(conn: sqlite3.Connection) -> None:
                 """
                 INSERT INTO rentability_operations (
                     client_key, client_name, original_client_name, channel, operation_date, month,
-                    billed_amount, octopus_profit, status, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    billed_amount, octopus_profit, status, operation_type, source_file, source_path, reference, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     client_key,
@@ -470,6 +504,7 @@ def load_rentability(conn: sqlite3.Connection) -> None:
                     facturado,
                     ganancia,
                     status,
+                    operation_type,
                     file_path.name,
                     source_file,
                     "",
@@ -496,12 +531,13 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
                 continue
             channel = normalize_channel(row.get("channel"))
             status = clean_text(row.get("status")) or "PENDIENTE"
+            operation_type = clean_text(row.get("operation_type")) or "NORMAL"
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
                     client_key, client_name, original_client_name, channel, operation_date, month,
-                    billed_amount, octopus_profit, status, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    billed_amount, octopus_profit, status, operation_type, source_file, source_path, reference, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     normalize_name(client_name),
@@ -513,6 +549,7 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
                     parse_decimal(row.get("billed_amount")),
                     parse_decimal(row.get("octopus_profit")),
                     status,
+                    operation_type,
                     Path(clean_text(row.get("source_path"))).name,
                     clean_text(row.get("source_path")),
                     clean_text(row.get("reference")),
