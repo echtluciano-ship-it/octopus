@@ -527,8 +527,6 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
             if not op_date:
                 continue
             month = op_date.strftime("%Y-%m")
-            if month > CURRENT_MONTH:
-                continue
             channel = normalize_channel(row.get("channel"))
             status = clean_text(row.get("status")) or "PENDIENTE"
             operation_type = clean_text(row.get("operation_type")) or "NORMAL"
