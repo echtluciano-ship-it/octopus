@@ -12,6 +12,7 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
 CURRENT_MONTH = "2026-08"
+HIDDEN_CLIENT_KEYS = {"OVNIPLAST"}
 
 
 st.set_page_config(page_title="Octopus - Base de Clientes", layout="wide")
@@ -116,6 +117,8 @@ clients = read_sql(
     ORDER BY c.display_name
     """
 )
+
+clients = clients[~clients["client_key"].isin(HIDDEN_CLIENT_KEYS)].copy()
 
 clients["months_without_activity"] = clients["last_month"].map(months_between)
 clients["status"] = clients["months_without_activity"].map(
