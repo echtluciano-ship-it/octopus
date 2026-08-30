@@ -466,6 +466,15 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             note = clean_text(row[index.get("OBSERVACION", 7)])
             source_file = clean_text(row[index.get("FUENTE", 6)])
             operation_type = "NORMAL"
+            if client_key == "OVNIPLAST" and Path(source_file).name in {
+                "00003864-PHOTO-2026-07-08-19-11-01.jpg",
+                "00003865-PHOTO-2026-07-08-19-16-38.jpg",
+            }:
+                status = "DUPLICADO"
+                note = (
+                    "Duplicado heredado del Excel mensual; "
+                    "los cuadros validados se cargan desde manual_rentability_operations.csv."
+                )
             transfer_amount, transfer_note = lookup_transfer_1_2(source_file, ganancia)
             if transfer_amount is not None:
                 facturado = transfer_amount

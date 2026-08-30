@@ -12,7 +12,7 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
 CURRENT_MONTH = "2026-08"
-HIDDEN_CLIENT_KEYS = {"OVNIPLAST"}
+HIDDEN_CLIENT_KEYS: set[str] = set()
 
 
 st.set_page_config(page_title="Octopus - Base de Clientes", layout="wide")
