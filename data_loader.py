@@ -331,6 +331,8 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             channel TEXT NOT NULL,
             operation_date TEXT,
             month TEXT,
+            check_amount REAL,
+            net_billing_amount REAL,
             billed_amount REAL,
             octopus_profit REAL,
             status TEXT NOT NULL,
@@ -500,8 +502,9 @@ def load_rentability(conn: sqlite3.Connection) -> None:
                 """
                 INSERT INTO rentability_operations (
                     client_key, client_name, original_client_name, channel, operation_date, month,
-                    billed_amount, octopus_profit, status, operation_type, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    check_amount, net_billing_amount, billed_amount, octopus_profit, status,
+                    operation_type, source_file, source_path, reference, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     client_key,
@@ -510,6 +513,8 @@ def load_rentability(conn: sqlite3.Connection) -> None:
                     channel,
                     op_date.isoformat() if op_date else None,
                     month,
+                    facturado if operation_type == "TRANSFERENCIA_1_2" else None,
+                    None if operation_type == "TRANSFERENCIA_1_2" else facturado,
                     facturado,
                     ganancia,
                     status,
@@ -539,12 +544,19 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
             channel = normalize_channel(row.get("channel"))
             status = clean_text(row.get("status")) or "PENDIENTE"
             operation_type = clean_text(row.get("operation_type")) or "NORMAL"
+            net_billing_amount = parse_decimal(row.get("net_billing_amount"))
+            legacy_billed_amount = parse_decimal(row.get("billed_amount"))
+            billed_amount = net_billing_amount if net_billing_amount is not None else legacy_billed_amount
+            check_amount = parse_decimal(row.get("check_amount"))
+            if check_amount is None and operation_type == "TRANSFERENCIA_1_2":
+                check_amount = legacy_billed_amount
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
                     client_key, client_name, original_client_name, channel, operation_date, month,
-                    billed_amount, octopus_profit, status, operation_type, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    check_amount, net_billing_amount, billed_amount, octopus_profit, status,
+                    operation_type, source_file, source_path, reference, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     normalize_name(client_name),
@@ -553,7 +565,9 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
                     channel,
                     op_date.isoformat(),
                     month,
-                    parse_decimal(row.get("billed_amount")),
+                    check_amount,
+                    net_billing_amount,
+                    billed_amount,
                     parse_decimal(row.get("octopus_profit")),
                     status,
                     operation_type,

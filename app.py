@@ -163,7 +163,7 @@ channel_summary = read_sql(
     """
     SELECT
         channel AS Canal,
-        SUM(billed_amount) AS facturado_rentabilidad,
+        SUM(billed_amount) AS facturacion_neta,
         SUM(octopus_profit) AS ganancia_octopus,
         SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
         MAX(month) AS ultimo_mes,
@@ -184,7 +184,7 @@ monthly = read_sql(
     SELECT
         month AS Mes,
         channel AS Canal,
-        SUM(billed_amount) AS facturado_rentabilidad,
+        SUM(billed_amount) AS facturacion_neta,
         SUM(octopus_profit) AS ganancia_octopus,
         SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
         COUNT(*) AS cuadros_rentabilidad
@@ -205,7 +205,8 @@ trace = read_sql(
         operation_date AS Fecha,
         client_name AS Cliente,
         channel AS Canal,
-        billed_amount AS Facturado,
+        check_amount AS ECHEQ,
+        billed_amount AS "Facturacion Neta",
         octopus_profit AS Ganancia,
         CASE
             WHEN billed_amount > 0 AND status LIKE 'OK%'
@@ -228,7 +229,7 @@ trace = read_sql(
     (client_key,),
 )
 
-total_rent_billed = channel_summary["facturado_rentabilidad"].sum() if not channel_summary.empty else 0
+total_rent_billed = channel_summary["facturacion_neta"].sum() if not channel_summary.empty else 0
 total_profit = channel_summary["ganancia_octopus"].sum() if not channel_summary.empty else 0
 current_rentability = total_profit / total_rent_billed if total_rent_billed else None
 channels = ", ".join(channel_summary["Canal"].dropna().astype(str).unique()) or "Pendiente"
@@ -240,7 +241,7 @@ with right:
     cards = st.columns(4)
     cards[0].metric("Estado", selected["status"])
     cards[1].metric("Rentabilidad actual", percent(current_rentability))
-    cards[2].metric("Facturado en cuadros", money(total_rent_billed))
+    cards[2].metric("Facturacion neta", money(total_rent_billed))
     cards[3].metric("Ganancia acumulada", money(total_profit))
 
     detail_cards = st.columns(4)
@@ -260,7 +261,7 @@ with right:
         st.info("Sin datos por canal.")
     else:
         display_channels = channel_summary.copy()
-        display_channels["facturado_rentabilidad"] = display_channels["facturado_rentabilidad"].map(money)
+        display_channels["facturacion_neta"] = display_channels["facturacion_neta"].map(money)
         display_channels["ganancia_octopus"] = display_channels["ganancia_octopus"].map(money)
         display_channels["rentabilidad"] = display_channels["rentabilidad"].map(percent)
         st.dataframe(display_channels, use_container_width=True, hide_index=True)
@@ -270,7 +271,7 @@ with right:
         st.info("Sin datos mensuales.")
     else:
         display_monthly = monthly.copy()
-        for col in ["facturado_rentabilidad", "ganancia_octopus"]:
+        for col in ["facturacion_neta", "ganancia_octopus"]:
             display_monthly[col] = display_monthly[col].map(money)
         display_monthly["rentabilidad"] = display_monthly["rentabilidad"].map(percent)
         st.dataframe(display_monthly, use_container_width=True, hide_index=True)
@@ -280,7 +281,8 @@ with right:
         st.info("Sin cuadros cargados para este cliente.")
     else:
         display_trace = trace.copy()
-        display_trace["Facturado"] = display_trace["Facturado"].map(money)
+        display_trace["ECHEQ"] = display_trace["ECHEQ"].map(money)
+        display_trace["Facturacion Neta"] = display_trace["Facturacion Neta"].map(money)
         display_trace["Ganancia"] = display_trace["Ganancia"].map(money)
         display_trace["Rentabilidad"] = display_trace["Rentabilidad"].map(percent)
         st.dataframe(display_trace, use_container_width=True, hide_index=True)

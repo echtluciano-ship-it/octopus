@@ -12,7 +12,8 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 
 - Ovniplast fue validado manualmente y puede publicarse.
 - Sus cuadros validos de julio con rentabilidades cercanas a 10,43% y 9,84% son correctos.
-- No cargar porcentajes manuales: calcular desde facturado total y ganancia total.
+- No cargar porcentajes manuales: calcular desde Facturacion Neta total y Ganancia Octopus total.
+- En los cuadros nuevos donde aparece ECHEQ arriba y `FC neta` debajo, el ECHEQ no es el denominador. Usar `FC neta` para rentabilidad y conservar el ECHEQ solo como dato trazable.
 
 ## LX - Espora
 

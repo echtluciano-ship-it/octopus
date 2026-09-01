@@ -35,6 +35,8 @@ Los archivos de Pagos se revisan como validacion/contexto, pero no se cargan com
 ## 5. Carga de Datos
 
 - Agregar operaciones validadas a `manual_rentability_operations.csv` conservando el `drive_id`.
+- Cuando el cuadro tenga ECHEQ/cheque y Facturacion Neta, guardar ambos campos separados y usar Facturacion Neta como base de rentabilidad.
+- No completar Facturacion Neta con ECHEQ para forzar un calculo; si falta y no aplica una regla especial validada, dejar el cuadro en `REVISION`.
 - No modificar manualmente resultados agregados de Render.
 - Regenerar `octopus.db` ejecutando `data_loader.py` con el Python del workspace si el Python del sistema no tiene dependencias.
 - Verificar conteos de estados, operaciones nuevas y clientes publicados.
