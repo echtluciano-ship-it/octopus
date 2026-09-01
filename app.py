@@ -11,7 +11,7 @@ import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
-CURRENT_MONTH = "2026-08"
+CURRENT_MONTH = "2026-09"
 HIDDEN_CLIENT_KEYS: set[str] = set()
 
 

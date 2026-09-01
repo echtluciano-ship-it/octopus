@@ -39,7 +39,7 @@ TRANSFER_1_2_BY_SOURCE = {
 MANUAL_RENTABILITY_FILE = APP_DIR / "manual_rentability_operations.csv"
 CLIENT_ALIASES_FILE = APP_DIR / "client_aliases.csv"
 
-CURRENT_MONTH = "2026-08"
+CURRENT_MONTH = "2026-09"
 ALIAS_BY_KEY: dict[str, str] = {}
 
 
