@@ -22,6 +22,7 @@
 - No contabilizar dos veces el mismo cuadro.
 - Si el duplicado es confirmado, registrar `DUPLICADO` y conservar referencia al archivo duplicado.
 - Si hay mismo nombre pero distinto tamano/contenido, revisar visualmente antes de marcar como duplicado.
+- Si una validacion humana definitiva indica que un cuadro no debe alimentar calculos, registrar `EXCLUIDO` y conservar trazabilidad para que no se reincorpore.
 
 ## Clientes y Alias
 
@@ -60,5 +61,5 @@ Cada operacion incorporada debe permitir responder:
 - ECHEQ/cheque o transferencia visible cuando exista.
 - Facturacion Neta usada como denominador.
 - Ganancia Octopus utilizada.
-- Estado: `OK`, `OK_TRANSFERENCIA_1_2`, `OK_FC_NETA`, `OK_FC_HISTORICA`, `REVISION`, `DUPLICADO` o `NO_PROCESAR`.
+- Estado: `OK`, `OK_TRANSFERENCIA_1_2`, `OK_FC_NETA`, `OK_FC_HISTORICA`, `REVISION`, `DUPLICADO`, `NO_PROCESAR` o `EXCLUIDO`.
 

@@ -11,9 +11,10 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 ## Ovniplast
 
 - Ovniplast fue validado manualmente y puede publicarse.
-- Sus cuadros validos de julio con rentabilidades cercanas a 10,43% y 9,84% son correctos.
 - No cargar porcentajes manuales: calcular desde Facturacion Neta total y Ganancia Octopus total.
 - En los cuadros nuevos donde aparece ECHEQ arriba y `FC neta` debajo, el ECHEQ no es el denominador. Usar `FC neta` para rentabilidad y conservar el ECHEQ solo como dato trazable.
+- Los cuadros viejos `PHOTO-2026-07-08-19-11-01.jpg` / `00003864-PHOTO-2026-07-08-19-11-01.jpg` y `PHOTO-2026-07-08-19-16-38.jpg` / `00003865-PHOTO-2026-07-08-19-16-38.jpg` fueron revisados por Luciano y su padre el 2026-09-02 y quedaron excluidos definitivamente por error de retenciones en origen. No contabilizarlos ni reincorporarlos aunque reaparezcan en Drive.
+- Los cuadros nuevos de Ovniplast cargados en septiembre de 2026 con rentabilidades aproximadas de 5-6% estan validados y deben mantenerse.
 
 ## LX - Espora
 
