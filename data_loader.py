@@ -16,6 +16,7 @@ APP_DIR = ROOT / "app_octopus"
 DB_PATH = APP_DIR / "octopus.db"
 
 FACTURACION_CANDIDATES = [
+    APP_DIR / "data" / "FACTURACION OCTOPUS.xlsx",
     ROOT / "00_fuentes_originales" / "facturacion_octopus_historica.xlsx",
     ROOT / "outputs" / "alias_aplicado_2026_08_11" / "FACTURACION_OCTOPUS_2026_08_11.xlsx",
     Path(r"C:\Users\Luciano\Downloads\FACTURACION OCTOPUS.xlsx"),
@@ -157,9 +158,28 @@ def parse_date(value) -> date | None:
         "NOV": 11,
         "DIC": 12,
     }
-    match = re.fullmatch(r"([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{3})[-/](\d{2,4})", text)
+    match = re.fullmatch(r"([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{3,10})[-/](\d{2,4})", text)
     if match:
-        month = spanish_months.get(strip_accents(match.group(1)).upper())
+        month_token = strip_accents(match.group(1)).upper()
+        month_aliases = {
+            **spanish_months,
+            "ENERO": 1,
+            "FEBRERO": 2,
+            "MARZO": 3,
+            "ABRIL": 4,
+            "MAYO": 5,
+            "JUNIO": 6,
+            "JULIO": 7,
+            "AGOS": 8,
+            "AGOSTO": 8,
+            "SEPT": 9,
+            "SEPTIEMBRE": 9,
+            "SETIEMBRE": 9,
+            "OCTUBRE": 10,
+            "NOVIEMBRE": 11,
+            "DICIEMBRE": 12,
+        }
+        month = month_aliases.get(month_token)
         year = int(match.group(2))
         if month:
             if year < 100:
@@ -284,6 +304,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
         DROP TABLE IF EXISTS monthly_metrics;
         DROP TABLE IF EXISTS rentability_operations;
         DROP TABLE IF EXISTS billing_operations;
+        DROP TABLE IF EXISTS data_quality_issues;
         DROP TABLE IF EXISTS client_aliases;
         DROP TABLE IF EXISTS clients;
 
@@ -314,13 +335,30 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             client_name TEXT NOT NULL,
             original_client_name TEXT,
             channel TEXT NOT NULL,
+            load_date TEXT,
             period_date TEXT,
             month TEXT,
+            period_raw TEXT,
+            echeq_date TEXT,
+            contact_name TEXT,
             invoice_number TEXT,
             net_amount REAL,
             total_amount REAL,
             is_credit_note INTEGER DEFAULT 0,
             source TEXT NOT NULL
+        );
+
+        CREATE TABLE data_quality_issues (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            source TEXT NOT NULL,
+            source_row INTEGER,
+            issue_type TEXT NOT NULL,
+            raw_client_name TEXT,
+            raw_channel TEXT,
+            raw_period TEXT,
+            raw_invoice_number TEXT,
+            raw_value TEXT,
+            note TEXT
         );
 
         CREATE TABLE rentability_operations (
@@ -397,41 +435,139 @@ def load_billing(conn: sqlite3.Connection) -> None:
     wb = load_workbook(source, data_only=True, read_only=True)
     ws = wb[wb.sheetnames[0]]
     rows = ws.iter_rows(min_row=2, values_only=True)
-    for raw in rows:
+    for row_number, raw in enumerate(rows, start=2):
         values = list(raw) + [None] * 13
         cliente_original = clean_text(values[2])
+        channel_raw = clean_text(values[3])
+        period_raw = clean_text(values[5])
+        invoice_number = clean_text(values[4])
+        total = parse_decimal(values[10])
+        net = parse_decimal(values[6])
+        row_has_business_data = any(
+            [
+                cliente_original,
+                channel_raw,
+                invoice_number,
+                period_raw,
+                total not in (None, 0),
+                net not in (None, 0),
+            ]
+        )
+        if not row_has_business_data:
+            continue
         if not cliente_original:
+            conn.execute(
+                """
+                INSERT INTO data_quality_issues (
+                    source, source_row, issue_type, raw_client_name, raw_channel,
+                    raw_period, raw_invoice_number, raw_value, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    str(source),
+                    row_number,
+                    "BILLING_MISSING_CLIENT",
+                    cliente_original,
+                    channel_raw,
+                    period_raw,
+                    invoice_number,
+                    clean_text(values[10]),
+                    "Fila de Facturación Histórica con datos pero sin cliente.",
+                ),
+            )
             continue
         cliente_oficial = canonical_client_name(cliente_original)
         period = parse_date(values[5])
         if not period:
+            conn.execute(
+                """
+                INSERT INTO data_quality_issues (
+                    source, source_row, issue_type, raw_client_name, raw_channel,
+                    raw_period, raw_invoice_number, raw_value, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    str(source),
+                    row_number,
+                    "BILLING_UNPARSEABLE_PERIOD",
+                    cliente_original,
+                    channel_raw,
+                    period_raw,
+                    invoice_number,
+                    clean_text(values[10]),
+                    "No se pudo interpretar el período de Facturación Histórica.",
+                ),
+            )
             continue
         month = period.strftime("%Y-%m")
         if month > CURRENT_MONTH:
+            conn.execute(
+                """
+                INSERT INTO data_quality_issues (
+                    source, source_row, issue_type, raw_client_name, raw_channel,
+                    raw_period, raw_invoice_number, raw_value, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    str(source),
+                    row_number,
+                    "BILLING_FUTURE_PERIOD",
+                    cliente_original,
+                    channel_raw,
+                    period_raw,
+                    invoice_number,
+                    clean_text(values[10]),
+                    "Período posterior al mes operativo configurado; no se carga hasta confirmar corte.",
+                ),
+            )
             continue
         client_key = normalize_name(cliente_oficial)
         if not client_key:
             continue
         channel = normalize_channel(values[3])
-        total = parse_decimal(values[10])
-        net = parse_decimal(values[6])
         if total is None and net is None:
+            conn.execute(
+                """
+                INSERT INTO data_quality_issues (
+                    source, source_row, issue_type, raw_client_name, raw_channel,
+                    raw_period, raw_invoice_number, raw_value, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    str(source),
+                    row_number,
+                    "BILLING_MISSING_AMOUNT",
+                    cliente_original,
+                    channel_raw,
+                    period_raw,
+                    invoice_number,
+                    clean_text(values[10]),
+                    "Fila de Facturación Histórica sin Neto ni Total interpretable.",
+                ),
+            )
             continue
+        load_date = parse_date(values[0])
+        echeq_date = parse_date(values[12])
         conn.execute(
             """
             INSERT INTO billing_operations (
-                client_key, client_name, original_client_name, channel, period_date,
-                month, invoice_number, net_amount, total_amount, is_credit_note, source
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                client_key, client_name, original_client_name, channel, load_date,
+                period_date, month, period_raw, echeq_date, contact_name,
+                invoice_number, net_amount, total_amount, is_credit_note, source
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 client_key,
                 cliente_oficial,
                 cliente_original,
                 channel,
+                load_date.isoformat() if load_date else None,
                 period.isoformat(),
                 month,
-                clean_text(values[4]),
+                period_raw,
+                echeq_date.isoformat() if echeq_date else None,
+                clean_text(values[1]),
+                invoice_number,
                 net,
                 total,
                 1 if (total is not None and total < 0) or (net is not None and net < 0) else 0,
