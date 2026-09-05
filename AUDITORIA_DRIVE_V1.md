@@ -110,7 +110,21 @@ La finalidad es comercial: detectar clientes que redujeron fuertemente su activi
 
 Antes de implementarla en Render queda pendiente una definicion: que campo exacto de Facturacion Historica representa mejor ese "total facturado". No se debe asumir automaticamente que es la columna `TOTAL`. La recomendacion tecnica inicial es usar `Neto`, porque representa mejor actividad comercial sin impuestos/percepciones, pero requiere validacion de negocio.
 
-Tambien queda pendiente definir como evaluar meses abiertos para no comparar los primeros dias de un mes contra todo el mes anterior y generar alertas falsas.
+Andy confirmo que no quiere esperar necesariamente al cierre del mes. Cuando el cliente haga su pedido/facturacion del mes, si el monto total facturado resulta igual o inferior al 50% del mes anterior, OCTOPUS debe generar alerta.
+
+Tambien debe existir una segunda alerta aproximadamente los dias 26/27 de cada mes para casos relevantes, con el objetivo de contactar al cliente y preguntarle si necesita algo mas.
+
+Queda pendiente definir como detectar correctamente que el cliente ya hizo su pedido/facturacion del mes, para no generar alertas prematuras.
+
+### Fecha habitual de pago
+
+Andy confirmo que para patrones de pago/contacto se debe utilizar la Fecha de orden de Pagos Octopus. Representa la fecha en que se genera la orden de pago.
+
+No debe confundirse con fecha de acreditacion, vencimiento, ECHEQ, fecha de valor/tesoreria ni Fecha Carga.
+
+### Fecha Carga y resumen hasta hoy
+
+Fecha Carga queda como corte administrativo de informacion registrada. Para el resumen "hasta hoy", la propuesta V2 es incluir informacion registrada hasta hoy y excluir periodos futuros, para evitar sumar movimientos futuros simplemente porque ya fueron cargados.
 
 ### Etapa 1 - Auditoria Drive y calidad de datos
 

@@ -13,7 +13,14 @@ Definicion validada por Andy:
 
 Regla conceptual:
 
-- Si un cliente factura menos del 50% de lo facturado el mes anterior, debe quedar marcado como alerta comercial.
+- Si un cliente hace su pedido/facturacion del mes y el monto total facturado resulta igual o inferior al 50% del monto facturado el mes anterior, debe quedar marcado como alerta comercial.
+- No hace falta esperar necesariamente al cierre del mes para generar la alerta.
+
+Ejemplo validado:
+
+- Mes anterior: $100M.
+- Mes actual: el cliente hace su pedido/facturacion por $40M.
+- Resultado: generar alerta comercial.
 
 Pendiente de definicion antes de implementar:
 
@@ -24,15 +31,36 @@ Pendiente de definicion antes de implementar:
 
 Mes abierto:
 
-- Todavia falta definir cuando evaluar la alerta durante un mes en curso.
-- No debe compararse automaticamente, por ejemplo, los primeros dias de septiembre contra todo agosto, porque generaria falsos positivos.
-- Opciones a definir con Mariano/Andy:
-  - evaluar solo meses cerrados;
-  - evaluar mes abierto solo despues de cierto dia;
-  - comparar contra el mismo corte del mes anterior.
+- Andy confirmo que no quiere esperar necesariamente al cierre del mes.
+- Queda pendiente definir como detectar correctamente que el cliente ya hizo su pedido/facturacion del mes, para no generar alertas prematuras.
+- Tambien debe existir una segunda alerta aproximadamente los dias 26/27 de cada mes para casos relevantes, con el objetivo de contactar al cliente y preguntarle si necesita algo mas.
+- No debe compararse automaticamente un mes abierto incompleto contra todo el mes anterior si todavia no hay evidencia de pedido/facturacion del cliente.
+
+## Fecha habitual de pago
+
+Definicion validada por Andy:
+
+- Para la funcionalidad futura de patrones de pago/contacto, la fecha habitual de pago se medira con la `Fecha de orden` de Pagos Octopus.
+- Esta fecha representa la fecha en que se genera la orden de pago.
+- No debe confundirse con fecha de acreditacion, vencimiento, ECHEQ, fecha de valor/tesoreria ni Fecha Carga.
 
 Estado:
 
 - Definicion comercial incorporada.
 - No implementado en Render.
-- No implementado como alerta visible.
+- No implementado como funcionalidad visible.
+
+## Fecha Carga y resumen hasta hoy
+
+Definicion para V2:
+
+- `Fecha Carga` de Facturacion Historica se considera un corte administrativo: indica informacion registrada hasta esa fecha.
+- No se considera por si sola una fecha economica de operacion, factura o pago.
+- Para el resumen "hasta hoy", la propuesta queda como: informacion registrada hasta hoy + periodo no futuro.
+- Esto evita incluir movimientos futuros simplemente porque ya fueron cargados en la planilla.
+
+Estado:
+
+- Definicion comercial incorporada.
+- No implementado en Render.
+- No implementado como funcionalidad visible.
