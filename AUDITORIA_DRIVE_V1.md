@@ -100,6 +100,18 @@ Relaciones:
 
 ## Roadmap recomendado
 
+## Reglas V2 validadas
+
+### Alerta de caida de actividad mayor al 50%
+
+Andy confirmo que la alerta debe comparar el monto facturado total por cliente de un mes contra el mes anterior. No debe basarse en cantidad de pedidos ni cantidad de facturas.
+
+La finalidad es comercial: detectar clientes que redujeron fuertemente su actividad para poder contactarlos.
+
+Antes de implementarla en Render queda pendiente una definicion: que campo exacto de Facturacion Historica representa mejor ese "total facturado". No se debe asumir automaticamente que es la columna `TOTAL`. La recomendacion tecnica inicial es usar `Neto`, porque representa mejor actividad comercial sin impuestos/percepciones, pero requiere validacion de negocio.
+
+Tambien queda pendiente definir como evaluar meses abiertos para no comparar los primeros dias de un mes contra todo el mes anterior y generar alertas falsas.
+
 ### Etapa 1 - Auditoria Drive y calidad de datos
 
 Objetivo: saber exactamente que hay y que no es confiable.
