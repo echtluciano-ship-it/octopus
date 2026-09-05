@@ -122,6 +122,14 @@ Andy confirmo que para patrones de pago/contacto se debe utilizar la Fecha de or
 
 No debe confundirse con fecha de acreditacion, vencimiento, ECHEQ, fecha de valor/tesoreria ni Fecha Carga.
 
+### Cliente que dejo de operar
+
+Negocio confirmo que para esta alerta se considera que un cliente opero cuando tuvo facturacion.
+
+Si un cliente que anteriormente operaba completa 2 meses consecutivos sin ninguna facturacion, OCTOPUS debe marcarlo para alerta. Ejemplo: ultima facturacion en junio, sin facturacion en julio ni agosto, en septiembre aparece como cliente que lleva 2 meses sin operar.
+
+La fuente base para esta alerta debe ser Facturacion Historica normalizada, aplicando clientes canonicos y alias validados.
+
 ### Fecha Carga y resumen hasta hoy
 
 Fecha Carga queda como corte administrativo de informacion registrada. Para el resumen "hasta hoy", la propuesta V2 es incluir informacion registrada hasta hoy y excluir periodos futuros, para evitar sumar movimientos futuros simplemente porque ya fueron cargados.

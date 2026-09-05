@@ -36,6 +36,27 @@ Mes abierto:
 - Tambien debe existir una segunda alerta aproximadamente los dias 26/27 de cada mes para casos relevantes, con el objetivo de contactar al cliente y preguntarle si necesita algo mas.
 - No debe compararse automaticamente un mes abierto incompleto contra todo el mes anterior si todavia no hay evidencia de pedido/facturacion del cliente.
 
+## Cliente que dejo de operar
+
+Definicion validada por negocio:
+
+- Para esta alerta, se considera que un cliente "opero" cuando tuvo facturacion.
+- Si un cliente que anteriormente operaba completa 2 meses consecutivos sin ninguna facturacion, OCTOPUS debe marcarlo para alerta.
+- La medicion debe basarse en Facturacion Historica normalizada y clientes canonicos/alias validados.
+
+Ejemplo validado:
+
+- Ultima facturacion: junio.
+- Sin facturacion en julio.
+- Sin facturacion en agosto.
+- Resultado: en septiembre debe aparecer como cliente que lleva 2 meses sin operar.
+
+Estado:
+
+- Definicion comercial incorporada.
+- No implementado en Render.
+- No implementado como funcionalidad visible.
+
 ## Fecha habitual de pago
 
 Definicion validada por Andy:
