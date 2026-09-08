@@ -203,7 +203,7 @@ if available_months:
     )
     billing_summary, rentability_summary = executive_summary(selected_month)
 
-    facturacion = float(billing_summary["facturacion"].iloc[0]) if not billing_summary.empty else 0
+    facturacion_total = float(billing_summary["facturacion"].iloc[0]) if not billing_summary.empty else 0
     registros_facturacion = int(billing_summary["registros"].iloc[0]) if not billing_summary.empty else 0
     rentability_base = (
         float(rentability_summary["facturacion_neta_rentabilidad"].iloc[0])
@@ -220,20 +220,24 @@ if available_months:
     )
     rentabilidad_global = ganancia / rentability_base if rentability_base else None
 
-    summary_cards = st.columns(3)
+    summary_cards = st.columns(4)
     summary_cards[0].metric(
-        "Facturacion acumulada",
-        money(facturacion) if registros_facturacion else "Sin datos confiables",
+        "Facturacion total",
+        money(facturacion_total) if registros_facturacion else "Sin datos confiables",
     )
     summary_cards[1].metric(
+        "Facturacion neta validada",
+        money(rentability_base) if operaciones_rentabilidad else "Sin datos confiables",
+    )
+    summary_cards[2].metric(
         "Ganancia Octopus",
         money(ganancia) if operaciones_rentabilidad else "Sin datos confiables",
     )
-    summary_cards[2].metric("Rentabilidad global", percent_or_empty(rentabilidad_global))
+    summary_cards[3].metric("Rentabilidad global", percent_or_empty(rentabilidad_global))
 
     st.caption(
-        f"{registros_facturacion} registros de facturacion | "
-        f"{operaciones_rentabilidad} operaciones de rentabilidad"
+        "Facturacion total: historico comercial. "
+        f"Rentabilidad: {operaciones_rentabilidad} operaciones validadas."
     )
     st.divider()
 
