@@ -3,6 +3,7 @@ from __future__ import annotations
 import sqlite3
 import hmac
 import os
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -11,8 +12,23 @@ import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
-CURRENT_MONTH = "2026-09"
+CURRENT_DATE = date.today()
+CURRENT_MONTH = CURRENT_DATE.strftime("%Y-%m")
 HIDDEN_CLIENT_KEYS: set[str] = set()
+MONTH_NAMES = {
+    "01": "Enero",
+    "02": "Febrero",
+    "03": "Marzo",
+    "04": "Abril",
+    "05": "Mayo",
+    "06": "Junio",
+    "07": "Julio",
+    "08": "Agosto",
+    "09": "Septiembre",
+    "10": "Octubre",
+    "11": "Noviembre",
+    "12": "Diciembre",
+}
 
 
 st.set_page_config(page_title="Octopus - Base de Clientes", layout="wide")
@@ -65,6 +81,19 @@ def percent(value) -> str:
     return f"{float(value) * 100:.2f}%"
 
 
+def percent_or_empty(value) -> str:
+    if value is None or pd.isna(value):
+        return "Sin datos confiables"
+    return percent(value)
+
+
+def month_label(value: str) -> str:
+    if not value or "-" not in value:
+        return value or "Pendiente"
+    year, month = value.split("-", 1)
+    return f"{MONTH_NAMES.get(month, month)} {year}"
+
+
 def months_between(from_month: str, to_month: str = CURRENT_MONTH) -> int | None:
     if not from_month:
         return None
@@ -83,6 +112,71 @@ def clear_cache() -> None:
     read_sql.clear()
 
 
+def load_available_months() -> list[str]:
+    months = read_sql(
+        """
+        SELECT DISTINCT month
+        FROM (
+            SELECT month FROM billing_operations WHERE month IS NOT NULL
+            UNION
+            SELECT month FROM rentability_operations WHERE month IS NOT NULL
+        )
+        WHERE month <= ?
+        ORDER BY month DESC
+        """,
+        (CURRENT_MONTH,),
+    )
+    return months["month"].dropna().tolist()
+
+
+def executive_summary(selected_month: str) -> tuple[pd.DataFrame, pd.DataFrame]:
+    billing_where = [
+        "month = ?",
+        "net_amount IS NOT NULL",
+        "net_amount > 0",
+    ]
+    billing_params: list = [selected_month]
+    rentability_where = [
+        "month = ?",
+        "status LIKE 'OK%'",
+        "billed_amount IS NOT NULL",
+        "billed_amount > 0",
+        "octopus_profit IS NOT NULL",
+    ]
+    rentability_params: list = [selected_month]
+
+    if selected_month == CURRENT_MONTH:
+        today = CURRENT_DATE.isoformat()
+        billing_where.append("load_date <= ?")
+        billing_params.append(today)
+        rentability_where.append("operation_date <= ?")
+        rentability_params.append(today)
+
+    billing = read_sql(
+        f"""
+        SELECT
+            COALESCE(SUM(net_amount), 0) AS facturacion,
+            COUNT(*) AS registros
+        FROM billing_operations
+        WHERE {" AND ".join(billing_where)}
+        """,
+        tuple(billing_params),
+    )
+
+    rentability = read_sql(
+        f"""
+        SELECT
+            COALESCE(SUM(billed_amount), 0) AS facturacion_neta_rentabilidad,
+            COALESCE(SUM(octopus_profit), 0) AS ganancia_octopus,
+            COUNT(*) AS operaciones
+        FROM rentability_operations
+        WHERE {" AND ".join(rentability_where)}
+        """,
+        tuple(rentability_params),
+    )
+    return billing, rentability
+
+
 if not require_login():
     st.stop()
 
@@ -97,6 +191,51 @@ with top_right:
     if st.button("Actualizar datos"):
         clear_cache()
         st.rerun()
+
+available_months = load_available_months()
+if available_months:
+    st.subheader("Inicio Ejecutivo")
+    selected_month = st.selectbox(
+        "Mes",
+        options=available_months,
+        format_func=month_label,
+        label_visibility="collapsed",
+    )
+    billing_summary, rentability_summary = executive_summary(selected_month)
+
+    facturacion = float(billing_summary["facturacion"].iloc[0]) if not billing_summary.empty else 0
+    registros_facturacion = int(billing_summary["registros"].iloc[0]) if not billing_summary.empty else 0
+    rentability_base = (
+        float(rentability_summary["facturacion_neta_rentabilidad"].iloc[0])
+        if not rentability_summary.empty
+        else 0
+    )
+    ganancia = (
+        float(rentability_summary["ganancia_octopus"].iloc[0])
+        if not rentability_summary.empty
+        else 0
+    )
+    operaciones_rentabilidad = (
+        int(rentability_summary["operaciones"].iloc[0]) if not rentability_summary.empty else 0
+    )
+    rentabilidad_global = ganancia / rentability_base if rentability_base else None
+
+    summary_cards = st.columns(3)
+    summary_cards[0].metric(
+        "Facturacion acumulada",
+        money(facturacion) if registros_facturacion else "Sin datos confiables",
+    )
+    summary_cards[1].metric(
+        "Ganancia Octopus",
+        money(ganancia) if operaciones_rentabilidad else "Sin datos confiables",
+    )
+    summary_cards[2].metric("Rentabilidad global", percent_or_empty(rentabilidad_global))
+
+    st.caption(
+        f"{registros_facturacion} registros de facturacion | "
+        f"{operaciones_rentabilidad} operaciones de rentabilidad"
+    )
+    st.divider()
 
 clients = read_sql(
     """

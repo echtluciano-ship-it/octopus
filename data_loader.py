@@ -243,13 +243,13 @@ def lookup_billed_from_history(
     for invoice_key in invoice_keys:
         matches = conn.execute(
             """
-            SELECT total_amount, invoice_number
+            SELECT net_amount, invoice_number
             FROM billing_operations
             WHERE client_key = ?
               AND channel = ?
               AND substr(replace(replace(replace(invoice_number, ' ', ''), '-', ''), '/', ''), -8) = ?
-              AND total_amount IS NOT NULL
-              AND total_amount > 0
+              AND net_amount IS NOT NULL
+              AND net_amount > 0
             """,
             (client_key, channel, invoice_key),
         ).fetchall()
@@ -774,7 +774,7 @@ def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
     for client_key, client_name, channel, month in sorted(keys):
         billing_total, billing_ops = conn.execute(
             """
-            SELECT COALESCE(SUM(total_amount), 0), COUNT(*)
+            SELECT COALESCE(SUM(net_amount), 0), COUNT(*)
             FROM billing_operations
             WHERE client_key = ? AND channel = ? AND month = ?
             """,
