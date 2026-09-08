@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sqlite3
 import hmac
+import html
 import os
 from datetime import date
 from pathlib import Path
@@ -85,6 +86,10 @@ def percent_or_empty(value) -> str:
     if value is None or pd.isna(value):
         return "Sin datos confiables"
     return percent(value)
+
+
+def executive_value(value: str) -> str:
+    return html.escape(value)
 
 
 def month_label(value: str) -> str:
@@ -186,11 +191,53 @@ if not DB_PATH.exists():
     st.warning("La base todavia no esta cargada.")
     st.stop()
 
-top_left, top_right = st.columns([3, 1])
-with top_right:
-    if st.button("Actualizar datos"):
-        clear_cache()
-        st.rerun()
+st.markdown(
+    """
+    <style>
+    .executive-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.5rem;
+        margin: 0.25rem 0 0.2rem;
+    }
+    .executive-card {
+        border: 1px solid rgba(49, 51, 63, 0.18);
+        border-radius: 8px;
+        padding: 0.55rem 0.65rem;
+        min-width: 0;
+    }
+    .executive-label {
+        color: rgba(49, 51, 63, 0.68);
+        font-size: 0.78rem;
+        line-height: 1.1;
+        margin-bottom: 0.25rem;
+    }
+    .executive-number {
+        color: rgb(49, 51, 63);
+        font-size: 1.18rem;
+        font-weight: 700;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+    @media (max-width: 640px) {
+        .executive-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.42rem;
+        }
+        .executive-card {
+            padding: 0.45rem 0.5rem;
+        }
+        .executive-label {
+            font-size: 0.72rem;
+        }
+        .executive-number {
+            font-size: 0.96rem;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 available_months = load_available_months()
 if available_months:
@@ -219,25 +266,38 @@ if available_months:
         int(rentability_summary["operaciones"].iloc[0]) if not rentability_summary.empty else 0
     )
     rentabilidad_global = ganancia / rentability_base if rentability_base else None
+    facturacion_total_label = money(facturacion_total) if registros_facturacion else "Sin datos confiables"
+    rentability_base_label = money(rentability_base) if operaciones_rentabilidad else "Sin datos confiables"
+    ganancia_label = money(ganancia) if operaciones_rentabilidad else "Sin datos confiables"
+    rentabilidad_label = percent_or_empty(rentabilidad_global)
 
-    summary_cards = st.columns(4)
-    summary_cards[0].metric(
-        "Facturacion total",
-        money(facturacion_total) if registros_facturacion else "Sin datos confiables",
+    st.markdown(
+        f"""
+        <div class="executive-grid">
+          <div class="executive-card">
+            <div class="executive-label">Facturacion total</div>
+            <div class="executive-number">{executive_value(facturacion_total_label)}</div>
+          </div>
+          <div class="executive-card">
+            <div class="executive-label">Facturacion con rentabilidad</div>
+            <div class="executive-number">{executive_value(rentability_base_label)}</div>
+          </div>
+          <div class="executive-card">
+            <div class="executive-label">Ganancia Octopus</div>
+            <div class="executive-number">{executive_value(ganancia_label)}</div>
+          </div>
+          <div class="executive-card">
+            <div class="executive-label">Rentabilidad global</div>
+            <div class="executive-number">{executive_value(rentabilidad_label)}</div>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
-    summary_cards[1].metric(
-        "Facturacion neta validada",
-        money(rentability_base) if operaciones_rentabilidad else "Sin datos confiables",
-    )
-    summary_cards[2].metric(
-        "Ganancia Octopus",
-        money(ganancia) if operaciones_rentabilidad else "Sin datos confiables",
-    )
-    summary_cards[3].metric("Rentabilidad global", percent_or_empty(rentabilidad_global))
 
     st.caption(
-        "Facturacion total: historico comercial. "
-        f"Rentabilidad: {operaciones_rentabilidad} operaciones validadas."
+        "Facturacion total es el historico del mes. "
+        f"Rentabilidad usa {operaciones_rentabilidad} operaciones validadas."
     )
     st.divider()
 
@@ -272,8 +332,13 @@ if clients.empty:
     st.info("Todavia no hay clientes cargados.")
     st.stop()
 
+top_left, top_right = st.columns([3, 1])
 with top_left:
     search = st.text_input("Buscar cliente", placeholder="Nombre del cliente")
+with top_right:
+    if st.button("Actualizar datos"):
+        clear_cache()
+        st.rerun()
 
 filtered = clients.copy()
 if search.strip():
