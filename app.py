@@ -182,6 +182,102 @@ def executive_summary(selected_month: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     return billing, rentability
 
 
+def rentability_ranking(selected_month: str, limit: int) -> pd.DataFrame:
+    rentability_where = [
+        "month = ?",
+        "status LIKE 'OK%'",
+        "billed_amount IS NOT NULL",
+        "billed_amount > 0",
+        "octopus_profit IS NOT NULL",
+    ]
+    params: list = [selected_month]
+    if selected_month == CURRENT_MONTH:
+        rentability_where.append("operation_date <= ?")
+        params.append(CURRENT_DATE.isoformat())
+    params.append(limit)
+
+    return read_sql(
+        f"""
+        SELECT
+            client_name,
+            SUM(billed_amount) AS facturacion_validada,
+            SUM(octopus_profit) AS ganancia_octopus,
+            SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
+            COUNT(*) AS operaciones
+        FROM rentability_operations
+        WHERE {" AND ".join(rentability_where)}
+        GROUP BY client_key, client_name
+        HAVING SUM(billed_amount) > 0
+        ORDER BY rentabilidad DESC, ganancia_octopus DESC
+        LIMIT ?
+        """,
+        tuple(params),
+    )
+
+
+def billing_ranking(selected_month: str, limit: int) -> pd.DataFrame:
+    billing_where = [
+        "month = ?",
+        "net_amount IS NOT NULL",
+        "net_amount > 0",
+    ]
+    params: list = [selected_month]
+    if selected_month == CURRENT_MONTH:
+        billing_where.append("load_date <= ?")
+        params.append(CURRENT_DATE.isoformat())
+    params.append(limit)
+
+    return read_sql(
+        f"""
+        SELECT
+            client_name,
+            SUM(net_amount) AS facturacion,
+            COUNT(*) AS registros
+        FROM billing_operations
+        WHERE {" AND ".join(billing_where)}
+        GROUP BY client_key, client_name
+        ORDER BY facturacion DESC
+        LIMIT ?
+        """,
+        tuple(params),
+    )
+
+
+def ranking_item(position: int, client_name: str, detail: str) -> str:
+    return f"""
+      <div class="ranking-item">
+        <div class="ranking-position">{position}</div>
+        <div class="ranking-main">
+          <div class="ranking-client">{html.escape(client_name)}</div>
+          <div class="ranking-detail">{html.escape(detail)}</div>
+        </div>
+      </div>
+    """
+
+
+def render_rentability_ranking(ranking: pd.DataFrame) -> str:
+    if ranking.empty:
+        return '<div class="ranking-empty">Sin datos confiables para este periodo.</div>'
+    items = []
+    for position, row in enumerate(ranking.itertuples(index=False), 1):
+        detail = (
+            f"{percent(row.rentabilidad)} · "
+            f"{money(row.facturacion_validada)} · "
+            f"{money(row.ganancia_octopus)}"
+        )
+        items.append(ranking_item(position, row.client_name, detail))
+    return '<div class="ranking-list">' + "".join(items) + "</div>"
+
+
+def render_billing_ranking(ranking: pd.DataFrame) -> str:
+    if ranking.empty:
+        return '<div class="ranking-empty">Sin datos de facturacion para este periodo.</div>'
+    items = []
+    for position, row in enumerate(ranking.itertuples(index=False), 1):
+        items.append(ranking_item(position, row.client_name, money(row.facturacion)))
+    return '<div class="ranking-list">' + "".join(items) + "</div>"
+
+
 if not require_login():
     st.stop()
 
@@ -219,6 +315,69 @@ st.markdown(
         line-height: 1.15;
         overflow-wrap: anywhere;
     }
+    .rankings-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin: 0.35rem 0 0.2rem;
+    }
+    .ranking-panel {
+        border: 1px solid rgba(49, 51, 63, 0.14);
+        border-radius: 8px;
+        padding: 0.55rem 0.65rem 0.3rem;
+        min-width: 0;
+    }
+    .ranking-panel-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+    }
+    .ranking-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+    .ranking-item {
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+        padding: 0.34rem 0;
+        border-top: 1px solid rgba(49, 51, 63, 0.08);
+        min-width: 0;
+    }
+    .ranking-item:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+    .ranking-position {
+        flex: 0 0 1.35rem;
+        color: rgba(49, 51, 63, 0.65);
+        font-weight: 700;
+        font-size: 0.85rem;
+        line-height: 1.2;
+    }
+    .ranking-main {
+        min-width: 0;
+    }
+    .ranking-client {
+        color: rgb(49, 51, 63);
+        font-weight: 700;
+        font-size: 0.88rem;
+        line-height: 1.16;
+        overflow-wrap: anywhere;
+    }
+    .ranking-detail {
+        color: rgba(49, 51, 63, 0.68);
+        font-size: 0.78rem;
+        line-height: 1.22;
+        margin-top: 0.1rem;
+        overflow-wrap: anywhere;
+    }
+    .ranking-empty {
+        color: rgba(49, 51, 63, 0.62);
+        font-size: 0.82rem;
+        padding: 0.2rem 0 0.35rem;
+    }
     @media (max-width: 640px) {
         .executive-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -232,6 +391,22 @@ st.markdown(
         }
         .executive-number {
             font-size: 0.96rem;
+        }
+        .rankings-grid {
+            grid-template-columns: 1fr;
+            gap: 0.55rem;
+        }
+        .ranking-panel {
+            padding: 0.5rem 0.55rem 0.25rem;
+        }
+        .ranking-panel-title {
+            font-size: 0.9rem;
+        }
+        .ranking-client {
+            font-size: 0.84rem;
+        }
+        .ranking-detail {
+            font-size: 0.73rem;
         }
     }
     </style>
@@ -298,6 +473,32 @@ if available_months:
     st.caption(
         "Facturacion total es el historico del mes. "
         f"Rentabilidad usa {operaciones_rentabilidad} operaciones validadas."
+    )
+    st.divider()
+
+    st.subheader("Rankings")
+    top_limit = st.radio(
+        "Ver",
+        options=[5, 10],
+        horizontal=True,
+        format_func=lambda value: f"Top {value}",
+    )
+    rentability_top = rentability_ranking(selected_month, top_limit)
+    billing_top = billing_ranking(selected_month, top_limit)
+    st.markdown(
+        f"""
+        <div class="rankings-grid">
+          <div class="ranking-panel">
+            <div class="ranking-panel-title">Por rentabilidad</div>
+            {render_rentability_ranking(rentability_top)}
+          </div>
+          <div class="ranking-panel">
+            <div class="ranking-panel-title">Por facturacion</div>
+            {render_billing_ranking(billing_top)}
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
     st.divider()
 
