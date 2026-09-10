@@ -479,7 +479,7 @@ if available_months:
     st.subheader("Rankings")
     top_limit = st.radio(
         "Ver",
-        options=[5, 10],
+        options=[5, 10, 20],
         horizontal=True,
         format_func=lambda value: f"Top {value}",
     )
