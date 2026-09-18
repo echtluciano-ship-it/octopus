@@ -4,13 +4,16 @@
 
 - Confirmar que el working tree no tenga cambios no relacionados. No revertir cambios del usuario.
 - Leer `drive_sources.json`, `client_aliases.csv`, `manual_rentability_operations.csv`, `data_loader.py` y `app.py` cuando haga falta confirmar una regla vigente.
+- Leer `source_documents.csv` antes de clasificar archivos y conservar sus decisiones humanas/identidades previas.
 - Usar la skill de Google Drive para listar la carpeta oficial y sus subcarpetas de Pendientes/Pagos por mes.
 
 ## 2. Deteccion de Archivos Nuevos
 
 - Listar Pendientes y Pagos de todos los meses disponibles, no solo el mes actual.
-- Comparar cada archivo contra los IDs y nombres ya registrados en `manual_rentability_operations.csv` y en la base.
+- Calcular/registrar la identidad documental en `source_documents.csv`: Drive ID, SHA-256, huella visual exacta, tamano y fecha de deteccion.
+- Comparar cada archivo nuevo contra esas identidades. El nombre, cliente, fecha o importe no se usan como prueba automatica de duplicacion.
 - Descargar o abrir visualmente solo los candidatos nuevos o dudosos.
+- Ejecutar las pruebas de `tests/test_source_identity.py` cuando se modifique la deduplicacion.
 
 ## 3. Clasificacion
 
@@ -19,7 +22,7 @@ Cada archivo de Pendientes debe terminar clasificado como:
 - `OK` si tiene datos completos y confiables.
 - `OK_TRANSFERENCIA_1_2` si aplica la regla de costos ya pagados y comision 1,20%.
 - `OK_FC_NETA` u `OK_FC_HISTORICA` si aplica una regla validada de FC neta o cruce con Facturacion Historica.
-- `DUPLICADO` si ya fue incorporado.
+- `DUPLICADO` solo si coincide el Drive ID, SHA-256 o la imagen decodificada pixel por pixel con un archivo ya registrado; guardar `duplicate_of` y evidencia.
 - `NO_PROCESAR` si una validacion humana previa o el contenido indica que no corresponde.
 - `REVISION` si falta un dato clave o hay ambiguedad real.
 

@@ -37,3 +37,10 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - Debe conservarse en base/CSV para resolverla despues sin perder trazabilidad.
 - Si el usuario completa una respuesta en un Excel de control o por chat, tomarla como definitiva y persistirla.
 
+## Fechas y Operaciones Validadas el 2026-09-18
+
+- Los cuadros `Mas Metros - Espora` con ECHEQ 16/07/26 y 24/07/26 son operaciones distintas. Contabilizar ambos por separado aunque compartan Facturacion Neta.
+- Star Medical con ECHEQ 29/07 corresponde a julio de 2026.
+- El Perro de la Luna con ECHEQ 31/07 corresponde a julio de 2026.
+- Managing con ECHEQ 31/07/26 corresponde a julio de 2026.
+

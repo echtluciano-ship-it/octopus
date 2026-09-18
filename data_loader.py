@@ -4,6 +4,7 @@ import re
 import sqlite3
 import unicodedata
 import csv
+import hashlib
 from datetime import date, datetime
 from decimal import Decimal
 from pathlib import Path
@@ -39,6 +40,7 @@ TRANSFER_1_2_BY_SOURCE = {
 
 MANUAL_RENTABILITY_FILE = APP_DIR / "manual_rentability_operations.csv"
 CLIENT_ALIASES_FILE = APP_DIR / "client_aliases.csv"
+SOURCE_DOCUMENTS_FILE = APP_DIR / "source_documents.csv"
 
 CURRENT_MONTH = "2026-09"
 ALIAS_BY_KEY: dict[str, str] = {}
@@ -218,6 +220,35 @@ def extract_invoice_numbers(value: str) -> list[str]:
     return [n.lstrip("0") or "0" for n in re.findall(r"\d+", raw)]
 
 
+def extract_drive_id(value: str) -> str:
+    match = re.search(r"#drive_id_([A-Za-z0-9_-]+)", clean_text(value))
+    return match.group(1) if match else ""
+
+
+def make_operation_key(
+    source_path: str,
+    operation_date: date | None,
+    client_key: str,
+    channel: str,
+    billed_amount: float | None,
+    octopus_profit: float | None,
+) -> str:
+    drive_id = extract_drive_id(source_path)
+    if drive_id:
+        return f"drive:{drive_id}"
+    payload = "|".join(
+        [
+            clean_text(source_path),
+            operation_date.isoformat() if operation_date else "",
+            client_key,
+            channel,
+            "" if billed_amount is None else f"{billed_amount:.4f}",
+            "" if octopus_profit is None else f"{octopus_profit:.4f}",
+        ]
+    )
+    return f"legacy:{hashlib.sha256(payload.encode('utf-8')).hexdigest()}"
+
+
 def pick_facturacion_file() -> Path:
     for path in FACTURACION_CANDIDATES:
         if path.exists():
@@ -302,6 +333,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(
         """
         DROP TABLE IF EXISTS monthly_metrics;
+        DROP TABLE IF EXISTS source_documents;
         DROP TABLE IF EXISTS rentability_operations;
         DROP TABLE IF EXISTS billing_operations;
         DROP TABLE IF EXISTS data_quality_issues;
@@ -363,6 +395,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
 
         CREATE TABLE rentability_operations (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            operation_key TEXT NOT NULL,
             client_key TEXT NOT NULL,
             client_name TEXT NOT NULL,
             original_client_name TEXT,
@@ -378,6 +411,25 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             source_file TEXT,
             source_path TEXT,
             reference TEXT,
+            note TEXT,
+            source_drive_id TEXT
+        );
+
+        CREATE TABLE source_documents (
+            drive_id TEXT PRIMARY KEY,
+            file_name TEXT NOT NULL,
+            mime_type TEXT,
+            size_bytes INTEGER,
+            sha256 TEXT,
+            visual_sha256 TEXT,
+            detected_at TEXT,
+            folder_id TEXT,
+            folder_period TEXT,
+            operation_ref TEXT,
+            status TEXT NOT NULL,
+            duplicate_of TEXT,
+            duplicate_reason TEXT,
+            source_url TEXT,
             note TEXT
         );
 
@@ -637,12 +689,15 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
-                    client_key, client_name, original_client_name, channel, operation_date, month,
+                    operation_key, client_key, client_name, original_client_name, channel, operation_date, month,
                     check_amount, net_billing_amount, billed_amount, octopus_profit, status,
-                    operation_type, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    operation_type, source_file, source_path, reference, note, source_drive_id
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
+                    make_operation_key(
+                        source_file, op_date, client_key, channel, facturado, ganancia
+                    ),
                     client_key,
                     client_name,
                     original_client_name,
@@ -659,6 +714,7 @@ def load_rentability(conn: sqlite3.Connection) -> None:
                     source_file,
                     "",
                     note,
+                    extract_drive_id(source_file),
                 ),
             )
 
@@ -689,12 +745,20 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
             conn.execute(
                 """
                 INSERT INTO rentability_operations (
-                    client_key, client_name, original_client_name, channel, operation_date, month,
+                    operation_key, client_key, client_name, original_client_name, channel, operation_date, month,
                     check_amount, net_billing_amount, billed_amount, octopus_profit, status,
-                    operation_type, source_file, source_path, reference, note
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    operation_type, source_file, source_path, reference, note, source_drive_id
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
+                    make_operation_key(
+                        clean_text(row.get("source_path")),
+                        op_date,
+                        normalize_name(client_name),
+                        channel,
+                        billed_amount,
+                        parse_decimal(row.get("octopus_profit")),
+                    ),
                     normalize_name(client_name),
                     client_name,
                     original_client_name,
@@ -710,6 +774,51 @@ def load_manual_rentability(conn: sqlite3.Connection) -> None:
                     Path(clean_text(row.get("source_path"))).name,
                     clean_text(row.get("source_path")),
                     clean_text(row.get("reference")),
+                    clean_text(row.get("note")),
+                    extract_drive_id(row.get("source_path")),
+                ),
+            )
+
+
+def load_source_documents(conn: sqlite3.Connection) -> None:
+    if not SOURCE_DOCUMENTS_FILE.exists():
+        return
+    with SOURCE_DOCUMENTS_FILE.open("r", encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            drive_id = clean_text(row.get("drive_id"))
+            if not drive_id:
+                continue
+            operation_ref = clean_text(row.get("operation_ref"))
+            if not operation_ref:
+                match = conn.execute(
+                    "SELECT operation_key FROM rentability_operations WHERE source_drive_id = ? ORDER BY id LIMIT 1",
+                    (drive_id,),
+                ).fetchone()
+                if match:
+                    operation_ref = match[0]
+            conn.execute(
+                """
+                INSERT INTO source_documents (
+                    drive_id, file_name, mime_type, size_bytes, sha256, visual_sha256,
+                    detected_at, folder_id, folder_period, operation_ref, status,
+                    duplicate_of, duplicate_reason, source_url, note
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    drive_id,
+                    clean_text(row.get("file_name")),
+                    clean_text(row.get("mime_type")),
+                    int(parse_decimal(row.get("size_bytes")) or 0),
+                    clean_text(row.get("sha256")),
+                    clean_text(row.get("visual_sha256")),
+                    clean_text(row.get("detected_at")),
+                    clean_text(row.get("folder_id")),
+                    clean_text(row.get("folder_period")),
+                    operation_ref,
+                    clean_text(row.get("status")) or "NUEVO",
+                    clean_text(row.get("duplicate_of")),
+                    clean_text(row.get("duplicate_reason")),
+                    clean_text(row.get("source_url")),
                     clean_text(row.get("note")),
                 ),
             )
@@ -825,6 +934,7 @@ def load_database() -> None:
         load_billing(conn)
         load_rentability(conn)
         load_manual_rentability(conn)
+        load_source_documents(conn)
         rebuild_clients(conn)
         rebuild_monthly_metrics(conn)
         conn.commit()

@@ -17,6 +17,7 @@ Usar esta skill para mantener OCTOPUS actualizado desde la carpeta oficial de Go
 ## Principios
 
 - Procesar todo lo que pueda resolverse con reglas ya validadas.
+- Usar `source_documents.csv` como registro persistente de identidad documental y `source_identity.py` para comparar Drive ID, SHA-256 y pixeles exactos.
 - No convertir casos dudosos en decisiones automaticas.
 - Si un archivo necesita intervencion humana, clasificar solo ese archivo como `REVISION`, conservar la trazabilidad y continuar con el resto.
 - Nunca inventar facturado, ganancia, cliente, canal ni fecha.

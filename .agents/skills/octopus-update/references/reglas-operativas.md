@@ -18,10 +18,12 @@
 
 ## Duplicados
 
-- Antes de incorporar un cuadro, comparar contra `manual_rentability_operations.csv`, `octopus.db` y los IDs/nombres/tamanos de Drive ya registrados.
-- No contabilizar dos veces el mismo cuadro.
-- Si el duplicado es confirmado, registrar `DUPLICADO` y conservar referencia al archivo duplicado.
-- Si hay mismo nombre pero distinto tamano/contenido, revisar visualmente antes de marcar como duplicado.
+- Antes de incorporar un cuadro, consultar `source_documents.csv`, `manual_rentability_operations.csv` y `octopus.db`.
+- `MISMO CLIENTE != MISMA OPERACION`. Cliente, fecha, importes, canal o nombre de archivo no prueban por si solos una duplicacion.
+- Declarar un duplicado automatico solo con evidencia documental fuerte: mismo Drive ID, mismo SHA-256 o imagen identica pixel por pixel.
+- Si hay coincidencias parciales sin identidad documental exacta, clasificar como `REVISION`; nunca descartar automaticamente.
+- Registrar `duplicate_of` y el motivo exacto (`SAME_DRIVE_ID`, `SAME_SHA256` o `IDENTICAL_DECODED_PIXELS`).
+- Conservar Drive ID, SHA-256, huella visual, tamano, fecha de deteccion, operacion asociada y estado de cada archivo.
 - Si una validacion humana definitiva indica que un cuadro no debe alimentar calculos, registrar `EXCLUIDO` y conservar trazabilidad para que no se reincorpore.
 
 ## Clientes y Alias
