@@ -1,19 +1,20 @@
 from __future__ import annotations
 
-import sqlite3
 import hmac
 import html
 import os
-from datetime import date
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
+import metrics
+from data_access import business_today, clear_cache, database_revision, read_sql
+
 
 APP_DIR = Path(__file__).resolve().parent
 DB_PATH = APP_DIR / "octopus.db"
-CURRENT_DATE = date.today()
+CURRENT_DATE = business_today()
 CURRENT_MONTH = CURRENT_DATE.strftime("%Y-%m")
 HIDDEN_CLIENT_KEYS: set[str] = set()
 MONTH_NAMES = {
@@ -107,14 +108,11 @@ def months_between(from_month: str, to_month: str = CURRENT_MONTH) -> int | None
     return (y2 - y1) * 12 + (m2 - m1)
 
 
-@st.cache_data(show_spinner=False)
-def read_sql(query: str, params: tuple = ()) -> pd.DataFrame:
-    with sqlite3.connect(DB_PATH) as conn:
-        return pd.read_sql_query(query, conn, params=params)
-
-
-def clear_cache() -> None:
-    read_sql.clear()
+@st.fragment(run_every=30)
+def watch_data_updates() -> None:
+    current = (database_revision(DB_PATH), business_today().isoformat())
+    if st.session_state.get("_displayed_snapshot") != current:
+        st.rerun()
 
 
 def load_available_months() -> list[str]:
@@ -135,112 +133,15 @@ def load_available_months() -> list[str]:
 
 
 def executive_summary(selected_month: str) -> tuple[pd.DataFrame, pd.DataFrame]:
-    billing_where = [
-        "month = ?",
-        "net_amount IS NOT NULL",
-        "net_amount > 0",
-    ]
-    billing_params: list = [selected_month]
-    rentability_where = [
-        "month = ?",
-        "status LIKE 'OK%'",
-        "billed_amount IS NOT NULL",
-        "billed_amount > 0",
-        "octopus_profit IS NOT NULL",
-    ]
-    rentability_params: list = [selected_month]
-
-    if selected_month == CURRENT_MONTH:
-        today = CURRENT_DATE.isoformat()
-        billing_where.append("load_date <= ?")
-        billing_params.append(today)
-        rentability_where.append("operation_date <= ?")
-        rentability_params.append(today)
-
-    billing = read_sql(
-        f"""
-        SELECT
-            COALESCE(SUM(net_amount), 0) AS facturacion,
-            COUNT(*) AS registros
-        FROM billing_operations
-        WHERE {" AND ".join(billing_where)}
-        """,
-        tuple(billing_params),
-    )
-
-    rentability = read_sql(
-        f"""
-        SELECT
-            COALESCE(SUM(billed_amount), 0) AS facturacion_neta_rentabilidad,
-            COALESCE(SUM(octopus_profit), 0) AS ganancia_octopus,
-            COUNT(*) AS operaciones
-        FROM rentability_operations
-        WHERE {" AND ".join(rentability_where)}
-        """,
-        tuple(rentability_params),
-    )
-    return billing, rentability
+    return metrics.executive_summary(selected_month, CURRENT_DATE, read_sql)
 
 
 def rentability_ranking(selected_month: str, limit: int) -> pd.DataFrame:
-    rentability_where = [
-        "month = ?",
-        "status LIKE 'OK%'",
-        "billed_amount IS NOT NULL",
-        "billed_amount > 0",
-        "octopus_profit IS NOT NULL",
-    ]
-    params: list = [selected_month]
-    if selected_month == CURRENT_MONTH:
-        rentability_where.append("operation_date <= ?")
-        params.append(CURRENT_DATE.isoformat())
-    params.append(limit)
-
-    return read_sql(
-        f"""
-        SELECT
-            client_name,
-            SUM(billed_amount) AS facturacion_validada,
-            SUM(octopus_profit) AS ganancia_octopus,
-            SUM(octopus_profit) / SUM(billed_amount) AS rentabilidad,
-            COUNT(*) AS operaciones
-        FROM rentability_operations
-        WHERE {" AND ".join(rentability_where)}
-        GROUP BY client_key, client_name
-        HAVING SUM(billed_amount) > 0
-        ORDER BY rentabilidad DESC, ganancia_octopus DESC
-        LIMIT ?
-        """,
-        tuple(params),
-    )
+    return metrics.rentability_ranking(selected_month, limit, CURRENT_DATE, read_sql)
 
 
 def billing_ranking(selected_month: str, limit: int) -> pd.DataFrame:
-    billing_where = [
-        "month = ?",
-        "net_amount IS NOT NULL",
-        "net_amount > 0",
-    ]
-    params: list = [selected_month]
-    if selected_month == CURRENT_MONTH:
-        billing_where.append("load_date <= ?")
-        params.append(CURRENT_DATE.isoformat())
-    params.append(limit)
-
-    return read_sql(
-        f"""
-        SELECT
-            client_name,
-            SUM(net_amount) AS facturacion,
-            COUNT(*) AS registros
-        FROM billing_operations
-        WHERE {" AND ".join(billing_where)}
-        GROUP BY client_key, client_name
-        ORDER BY facturacion DESC
-        LIMIT ?
-        """,
-        tuple(params),
-    )
+    return metrics.billing_ranking(selected_month, limit, CURRENT_DATE, read_sql)
 
 
 def ranking_item(position: int, client_name: str, detail: str) -> str:
@@ -286,6 +187,9 @@ st.title("Base de Clientes")
 if not DB_PATH.exists():
     st.warning("La base todavia no esta cargada.")
     st.stop()
+
+st.session_state["_displayed_snapshot"] = (database_revision(DB_PATH), CURRENT_DATE.isoformat())
+watch_data_updates()
 
 st.markdown(
     """
@@ -695,3 +599,6 @@ with right:
         display_trace["Ganancia"] = display_trace["Ganancia"].map(money)
         display_trace["Rentabilidad"] = display_trace["Rentabilidad"].map(percent)
         st.dataframe(display_trace, use_container_width=True, hide_index=True)
+
+if st.session_state["_displayed_snapshot"][0] != database_revision(DB_PATH):
+    st.rerun()

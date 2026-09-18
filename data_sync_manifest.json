@@ -1,0 +1,3260 @@
+{
+  "database_sha256": "e4738f563889675048c4d91b81b0f46ab5c04c5fc92fad00a895a239f629243a",
+  "source_sha256": {
+    "data/FACTURACION OCTOPUS.xlsx": "cfd20307a676baacc7e3a8ae94afd08186c9efc212ffc999dd67fa5112de676b",
+    "data/billing_source.json": "312d95acd573a58d53f02f75aab77386286be76c7e4196685009cafb0a3dd4bd",
+    "manual_rentability_operations.csv": "86bc505985144bafdda9b4b7fa4f702d58ef74819bca9e20f80ca8150e18805c",
+    "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
+    "source_documents.csv": "453647946b4ddf56ab2b9d1f02bfbaf8fcfb176ee7553c4a86df3b9d2894a5f9"
+  },
+  "controls": {
+    "as_of": "2026-09-18",
+    "months": {
+      "2025-01": {
+        "billing_total": 1734932092.47,
+        "billing_records": 157,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "RECOLETATANGO S.A",
+            "client_key": "RECOLETATANGO",
+            "facturacion": 266715683.48,
+            "registros": 27
+          },
+          {
+            "client_name": "FURNITEC S.A.",
+            "client_key": "FURNITEC",
+            "facturacion": 220023448.26,
+            "registros": 14
+          },
+          {
+            "client_name": "GAMA26 SRL",
+            "client_key": "GAMA26",
+            "facturacion": 152462580.09,
+            "registros": 16
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 150001025.09,
+            "registros": 11
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 150000939.01,
+            "registros": 11
+          },
+          {
+            "client_name": "BLUE CATERING S.",
+            "client_key": "BLUE CATERING S",
+            "facturacion": 150000826.12,
+            "registros": 11
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 120000394.2,
+            "registros": 12
+          },
+          {
+            "client_name": "BAZAR CHEF S.R.L",
+            "client_key": "BAZAR CHEF",
+            "facturacion": 100014891.0,
+            "registros": 5
+          },
+          {
+            "client_name": "DROGUERIA VARADERO S. A.",
+            "client_key": "DROGUERIA VARADERO",
+            "facturacion": 92121240.58,
+            "registros": 9
+          },
+          {
+            "client_name": "JALEL SRL",
+            "client_key": "JALEL",
+            "facturacion": 63288173.76,
+            "registros": 9
+          },
+          {
+            "client_name": "ENERBOM SOCIEDAD ANONIMA",
+            "client_key": "ENERBOM",
+            "facturacion": 50185970.33,
+            "registros": 5
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 47369315.22,
+            "registros": 4
+          },
+          {
+            "client_name": "TADEO CZERWENY SA",
+            "client_key": "TADEO CZERWENY",
+            "facturacion": 34501907.67,
+            "registros": 3
+          },
+          {
+            "client_name": "MULTI RADIO SOCIEDAD ANONIMA",
+            "client_key": "MULTI RADIO",
+            "facturacion": 21208347.79,
+            "registros": 4
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 19999150.25,
+            "registros": 2
+          },
+          {
+            "client_name": "STOLIN",
+            "client_key": "STOLIN",
+            "facturacion": 16403844.26,
+            "registros": 2
+          },
+          {
+            "client_name": "Imágenes del Parque",
+            "client_key": "IMAGENES DEL PARQUE",
+            "facturacion": 13225642.16,
+            "registros": 2
+          },
+          {
+            "client_name": "MICAMI",
+            "client_key": "MICAMI",
+            "facturacion": 13011820.0,
+            "registros": 1
+          },
+          {
+            "client_name": "GOMGAR S.R.L",
+            "client_key": "GOMGAR",
+            "facturacion": 12004890.0,
+            "registros": 1
+          },
+          {
+            "client_name": "ARENA CAFE SRL",
+            "client_key": "ARENA CAFE",
+            "facturacion": 10372611.75,
+            "registros": 1
+          }
+        ]
+      },
+      "2025-02": {
+        "billing_total": 1584873348.76,
+        "billing_records": 195,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "A I SERVICES",
+            "client_key": "A I SERVICES",
+            "facturacion": 214668024.77,
+            "registros": 21
+          },
+          {
+            "client_name": "DIXI EVENTOS S.R.L.",
+            "client_key": "DIXI EVENTOS",
+            "facturacion": 190522660.75,
+            "registros": 14
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 120001038.51,
+            "registros": 12
+          },
+          {
+            "client_name": "BOSQUEMAR EMPRENDIMIENTOS",
+            "client_key": "BOSQUEMAR EMPRENDIMIENTOS",
+            "facturacion": 112001614.78,
+            "registros": 12
+          },
+          {
+            "client_name": "SARJUR S.A.",
+            "client_key": "SARJUR",
+            "facturacion": 101204322.31,
+            "registros": 12
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 82425922.6,
+            "registros": 5
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 78090089.51,
+            "registros": 8
+          },
+          {
+            "client_name": "BEKIR I S.R.L.",
+            "client_key": "BEKIR I",
+            "facturacion": 42251697.29,
+            "registros": 6
+          },
+          {
+            "client_name": "DROGUERIA VARADERO S. A.",
+            "client_key": "DROGUERIA VARADERO",
+            "facturacion": 41281540.0,
+            "registros": 4
+          },
+          {
+            "client_name": "BAZAR CHEF S.R.L",
+            "client_key": "BAZAR CHEF",
+            "facturacion": 41041368.24,
+            "registros": 6
+          },
+          {
+            "client_name": "E N O D SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+            "client_key": "E N O D",
+            "facturacion": 30428042.259999998,
+            "registros": 3
+          },
+          {
+            "client_name": "GCM PRODUCCIONES S.R.L.",
+            "client_key": "GCM PRODUCCIONES",
+            "facturacion": 30000564.59,
+            "registros": 3
+          },
+          {
+            "client_name": "ENOD SOCIEDAD DE RESPONSAB",
+            "client_key": "ENOD SOCIEDAD DE RESPONSAB",
+            "facturacion": 29949933.14,
+            "registros": 6
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 28014370.799999997,
+            "registros": 4
+          },
+          {
+            "client_name": "ACTIVASALUD S.R.L",
+            "client_key": "ACTIVASALUD",
+            "facturacion": 26748466.24,
+            "registros": 4
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 26020450.310000002,
+            "registros": 3
+          },
+          {
+            "client_name": "CUARTA COORDENADA S.R.L.",
+            "client_key": "CUARTA COORDENADA",
+            "facturacion": 25801433.759999998,
+            "registros": 5
+          },
+          {
+            "client_name": "LUPROD S.R.L.",
+            "client_key": "LUPROD",
+            "facturacion": 25033319.14,
+            "registros": 6
+          },
+          {
+            "client_name": "CALL UP SOCIEDAD ANONIMA",
+            "client_key": "CALL UP",
+            "facturacion": 25023300.2,
+            "registros": 2
+          },
+          {
+            "client_name": "Home Collection",
+            "client_key": "HOME COLLECTION",
+            "facturacion": 23023641.61,
+            "registros": 3
+          }
+        ]
+      },
+      "2025-03": {
+        "billing_total": 1240477258.01,
+        "billing_records": 174,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 217047505.58,
+            "registros": 20
+          },
+          {
+            "client_name": "SARJUR S.A.",
+            "client_key": "SARJUR",
+            "facturacion": 120023483.75,
+            "registros": 11
+          },
+          {
+            "client_name": "A I SERVICES",
+            "client_key": "A I SERVICES",
+            "facturacion": 117507255.82,
+            "registros": 16
+          },
+          {
+            "client_name": "AVD ARGENTINA SRL",
+            "client_key": "AVD ARGENTINA",
+            "facturacion": 95002211.95,
+            "registros": 9
+          },
+          {
+            "client_name": "DIXI EVENTOS S.R.L.",
+            "client_key": "DIXI EVENTOS",
+            "facturacion": 80412701.0,
+            "registros": 10
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 50207717.019999996,
+            "registros": 5
+          },
+          {
+            "client_name": "MARINOZZI GABRIEL HERNAN",
+            "client_key": "MARINOZZI GABRIEL HERNAN",
+            "facturacion": 50007721.879999995,
+            "registros": 4
+          },
+          {
+            "client_name": "BAZAR CHEF S.R.L",
+            "client_key": "BAZAR CHEF",
+            "facturacion": 41410459.37,
+            "registros": 6
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 41060006.8,
+            "registros": 5
+          },
+          {
+            "client_name": "BEKIR I S.R.L.",
+            "client_key": "BEKIR I",
+            "facturacion": 40949376.910000004,
+            "registros": 6
+          },
+          {
+            "client_name": "SPORT S LIFE SA",
+            "client_key": "SPORT S LIFE",
+            "facturacion": 30008070.59,
+            "registros": 3
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 28027550.5,
+            "registros": 3
+          },
+          {
+            "client_name": "CALL UP SOCIEDAD ANONIMA",
+            "client_key": "CALL UP",
+            "facturacion": 25012251.049999997,
+            "registros": 2
+          },
+          {
+            "client_name": "DIGITALLICA",
+            "client_key": "DIGITALLICA",
+            "facturacion": 24009420.68,
+            "registros": 3
+          },
+          {
+            "client_name": "MNOS IMPORTER S.R.L.",
+            "client_key": "MNOS IMPORTER",
+            "facturacion": 22738625.43,
+            "registros": 6
+          },
+          {
+            "client_name": "ENOD SOCIEDAD DE RESPONSAB",
+            "client_key": "ENOD SOCIEDAD DE RESPONSAB",
+            "facturacion": 22709588.580000002,
+            "registros": 3
+          },
+          {
+            "client_name": "E N O D SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+            "client_key": "E N O D",
+            "facturacion": 18202106.02,
+            "registros": 4
+          },
+          {
+            "client_name": "COMAGASI S A",
+            "client_key": "COMAGASI",
+            "facturacion": 16011941.940000001,
+            "registros": 2
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 13304170.28,
+            "registros": 2
+          },
+          {
+            "client_name": "Gestión Citera",
+            "client_key": "GESTION CITERA",
+            "facturacion": 12006041.35,
+            "registros": 3
+          }
+        ]
+      },
+      "2025-04": {
+        "billing_total": 1928133561.42,
+        "billing_records": 222,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "CNH SA",
+            "client_key": "CNH",
+            "facturacion": 150053920.83,
+            "registros": 11
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 140001514.71,
+            "registros": 12
+          },
+          {
+            "client_name": "BAZAR CHEF S.R.L",
+            "client_key": "BAZAR CHEF",
+            "facturacion": 99441289.69,
+            "registros": 12
+          },
+          {
+            "client_name": "A I SERVICES",
+            "client_key": "A I SERVICES",
+            "facturacion": 98263370.33,
+            "registros": 13
+          },
+          {
+            "client_name": "COSEME SA",
+            "client_key": "COSEME",
+            "facturacion": 89622723.35000001,
+            "registros": 8
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 87323513.92999999,
+            "registros": 7
+          },
+          {
+            "client_name": "GCM PRODUCCIONES S.R.L.",
+            "client_key": "GCM PRODUCCIONES",
+            "facturacion": 80568677.84,
+            "registros": 7
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 75019580.0,
+            "registros": 5
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 74816689.91,
+            "registros": 6
+          },
+          {
+            "client_name": "DIXI EVENTOS S.R.L.",
+            "client_key": "DIXI EVENTOS",
+            "facturacion": 70582398.67,
+            "registros": 5
+          },
+          {
+            "client_name": "SAMPEDRO ALFREDO",
+            "client_key": "SAMPEDRO ALFREDO",
+            "facturacion": 69975591.67,
+            "registros": 4
+          },
+          {
+            "client_name": "MNOS IMPORTER S.R.L.",
+            "client_key": "MNOS IMPORTER",
+            "facturacion": 66916032.63,
+            "registros": 12
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 64189893.43,
+            "registros": 5
+          },
+          {
+            "client_name": "INVESTIGACION CLINICA APLICADA",
+            "client_key": "INVESTIGACION CLINICA APLICADA",
+            "facturacion": 54033440.599999994,
+            "registros": 4
+          },
+          {
+            "client_name": "CALL UP SOCIEDAD ANONIMA",
+            "client_key": "CALL UP",
+            "facturacion": 50018662.53,
+            "registros": 5
+          },
+          {
+            "client_name": "BEKIR I S.R.L.",
+            "client_key": "BEKIR I",
+            "facturacion": 44108122.77,
+            "registros": 12
+          },
+          {
+            "client_name": "ENERBOM SOCIEDAD ANONIMA",
+            "client_key": "ENERBOM",
+            "facturacion": 41725382.66,
+            "registros": 7
+          },
+          {
+            "client_name": "BLINKER MEDIA CONSULTING S.A.",
+            "client_key": "BLINKER MEDIA CONSULTING",
+            "facturacion": 39629480.410000004,
+            "registros": 5
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 38707483.66,
+            "registros": 4
+          },
+          {
+            "client_name": "AVD ARGENTINA SRL",
+            "client_key": "AVD ARGENTINA",
+            "facturacion": 37750002.91,
+            "registros": 5
+          }
+        ]
+      },
+      "2025-05": {
+        "billing_total": 2205520770.32,
+        "billing_records": 204,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "CNH SA",
+            "client_key": "CNH",
+            "facturacion": 200714586.95,
+            "registros": 3
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion": 200081087.2,
+            "registros": 4
+          },
+          {
+            "client_name": "DROGUERIA VARADERO S. A.",
+            "client_key": "DROGUERIA VARADERO",
+            "facturacion": 147131939.61,
+            "registros": 27
+          },
+          {
+            "client_name": "DIXI EVENTOS S.R.L.",
+            "client_key": "DIXI EVENTOS",
+            "facturacion": 130000354.24000001,
+            "registros": 4
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 129140885.4,
+            "registros": 12
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 100834369.56,
+            "registros": 10
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 90001007.34,
+            "registros": 6
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 90000958.32000001,
+            "registros": 6
+          },
+          {
+            "client_name": "BLUE CATERING S.",
+            "client_key": "BLUE CATERING S",
+            "facturacion": 90000792.76,
+            "registros": 6
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 74281371.88,
+            "registros": 5
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 70000884.55,
+            "registros": 6
+          },
+          {
+            "client_name": "A I SERVICES",
+            "client_key": "A I SERVICES",
+            "facturacion": 56151528.78,
+            "registros": 13
+          },
+          {
+            "client_name": "TATAT AGROSERVICIOS S. A.",
+            "client_key": "TATAT AGROSERVICIOS",
+            "facturacion": 50765236.22,
+            "registros": 3
+          },
+          {
+            "client_name": "LORENZO NORBERTO FABIAN",
+            "client_key": "LORENZO NORBERTO FABIAN",
+            "facturacion": 50000192.39,
+            "registros": 3
+          },
+          {
+            "client_name": "MOJZESZOWICZ ROMINA",
+            "client_key": "MOJZESZOWICZ ROMINA",
+            "facturacion": 40272500.0,
+            "registros": 5
+          },
+          {
+            "client_name": "PRODOCSA PROYECTOS DOCUMENTALE",
+            "client_key": "PRODOCSA PROYECTOS DOCUMENTALE",
+            "facturacion": 34006521.03,
+            "registros": 4
+          },
+          {
+            "client_name": "SMARTGROW S.A.S",
+            "client_key": "SMARTGROW",
+            "facturacion": 30254001.25,
+            "registros": 4
+          },
+          {
+            "client_name": "COMPLEJO AKIRA SA",
+            "client_key": "COMPLEJO AKIRA",
+            "facturacion": 30164321.2,
+            "registros": 1
+          },
+          {
+            "client_name": "ENERBOM SOCIEDAD ANONIMA",
+            "client_key": "ENERBOM",
+            "facturacion": 30160632.16,
+            "registros": 5
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 30120694.15,
+            "registros": 2
+          }
+        ]
+      },
+      "2025-06": {
+        "billing_total": 1815952285.83,
+        "billing_records": 138,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 788538668.25,
+            "registros": 21
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 100009000.77,
+            "registros": 8
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 72759904.52,
+            "registros": 5
+          },
+          {
+            "client_name": "BASICS S.A.",
+            "client_key": "BASICS",
+            "facturacion": 70880286.76,
+            "registros": 10
+          },
+          {
+            "client_name": "MOJZESZOWICZ ROMINA",
+            "client_key": "MOJZESZOWICZ ROMINA",
+            "facturacion": 62246007.07,
+            "registros": 5
+          },
+          {
+            "client_name": "LONDYNSKI LEONARDO ABRAHAM",
+            "client_key": "LONDYNSKI LEONARDO ABRAHAM",
+            "facturacion": 51071829.760000005,
+            "registros": 2
+          },
+          {
+            "client_name": "AVD ARGENTINA SRL",
+            "client_key": "AVD ARGENTINA",
+            "facturacion": 50877863.480000004,
+            "registros": 5
+          },
+          {
+            "client_name": "SLIM FIT",
+            "client_key": "SLIM FIT",
+            "facturacion": 50494516.599999994,
+            "registros": 3
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 50004811.879999995,
+            "registros": 5
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 48282054.06,
+            "registros": 4
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 35015012.5,
+            "registros": 4
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion": 34026040.44,
+            "registros": 3
+          },
+          {
+            "client_name": "MAYCAR SOCIEDAD ANONIMA",
+            "client_key": "MAYCAR",
+            "facturacion": 33004030.39,
+            "registros": 4
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 30013701.42,
+            "registros": 5
+          },
+          {
+            "client_name": "Managing",
+            "client_key": "MANAGING",
+            "facturacion": 29918011.73,
+            "registros": 5
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 28037590.87,
+            "registros": 3
+          },
+          {
+            "client_name": "CARJUL S A",
+            "client_key": "CARJUL",
+            "facturacion": 20113041.48,
+            "registros": 3
+          },
+          {
+            "client_name": "SPORT S LIFE SA",
+            "client_key": "SPORT S LIFE",
+            "facturacion": 20008121.06,
+            "registros": 3
+          },
+          {
+            "client_name": "ENERBOM SOCIEDAD ANONIMA",
+            "client_key": "ENERBOM",
+            "facturacion": 19806801.75,
+            "registros": 4
+          },
+          {
+            "client_name": "QUOMO TEXTIL SRL",
+            "client_key": "QUOMO TEXTIL",
+            "facturacion": 18181938.7,
+            "registros": 1
+          }
+        ]
+      },
+      "2025-07": {
+        "billing_total": 1826122080.44,
+        "billing_records": 207,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 228538954.33,
+            "registros": 15
+          },
+          {
+            "client_name": "CIEN MILLAS S.A.",
+            "client_key": "CIEN MILLAS",
+            "facturacion": 172160239.32,
+            "registros": 6
+          },
+          {
+            "client_name": "LERNER ALBERTO ANGEL",
+            "client_key": "LERNER ALBERTO ANGEL",
+            "facturacion": 139848998.28,
+            "registros": 5
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 130844059.68,
+            "registros": 13
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 75629054.26,
+            "registros": 9
+          },
+          {
+            "client_name": "MOJZESZOWICZ ROMINA PAOLA",
+            "client_key": "MOJZESZOWICZ ROMINA PAOLA",
+            "facturacion": 65465363.82,
+            "registros": 8
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 60007444.5,
+            "registros": 8
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 58432999.519999996,
+            "registros": 2
+          },
+          {
+            "client_name": "PRODOCSA PROYECTOS DOCUMENTALE",
+            "client_key": "PRODOCSA PROYECTOS DOCUMENTALE",
+            "facturacion": 55027261.28,
+            "registros": 6
+          },
+          {
+            "client_name": "SINDICATO UNICO DE TRABAJADO",
+            "client_key": "SINDICATO UNICO DE TRABAJADO",
+            "facturacion": 53033322.175,
+            "registros": 3
+          },
+          {
+            "client_name": "SLIM FIT",
+            "client_key": "SLIM FIT",
+            "facturacion": 50360243.28,
+            "registros": 2
+          },
+          {
+            "client_name": "BASICS S.A.",
+            "client_key": "BASICS",
+            "facturacion": 48954617.870000005,
+            "registros": 6
+          },
+          {
+            "client_name": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "client_key": "SUIZO ARGENTINA SOCIEDAD ANONI",
+            "facturacion": 41634733.0,
+            "registros": 4
+          },
+          {
+            "client_name": "UP SOLUCIONES S.R.L.",
+            "client_key": "UP SOLUCIONES",
+            "facturacion": 40655478.0,
+            "registros": 4
+          },
+          {
+            "client_name": "ENERBOM SOCIEDAD ANONIMA",
+            "client_key": "ENERBOM",
+            "facturacion": 40025195.59,
+            "registros": 9
+          },
+          {
+            "client_name": "MAYCAR SOCIEDAD ANONIMA",
+            "client_key": "MAYCAR",
+            "facturacion": 39609431.91,
+            "registros": 4
+          },
+          {
+            "client_name": "COSEME SA",
+            "client_key": "COSEME",
+            "facturacion": 38514240.85,
+            "registros": 3
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 37040716.14,
+            "registros": 3
+          },
+          {
+            "client_name": "GA-MA MEDIC SOCIEDAD ANONIMA",
+            "client_key": "GA MA MEDIC",
+            "facturacion": 31549005.060000002,
+            "registros": 2
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 29410941.02,
+            "registros": 3
+          }
+        ]
+      },
+      "2025-08": {
+        "billing_total": 3405942813.43,
+        "billing_records": 213,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "CLUB ATLETICO RIVER PLATE ASOC CIVIL",
+            "client_key": "CLUB ATLETICO RIVER PLATE ASOC CIVIL",
+            "facturacion": 1065274623.56,
+            "registros": 2
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 330578459.55,
+            "registros": 10
+          },
+          {
+            "client_name": "EQUILA SRL",
+            "client_key": "EQUILA",
+            "facturacion": 295281242.78,
+            "registros": 19
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 151756624.22,
+            "registros": 13
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 132543567.88,
+            "registros": 11
+          },
+          {
+            "client_name": "A T X SA",
+            "client_key": "A T X",
+            "facturacion": 114071659.94,
+            "registros": 10
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 112590892.73,
+            "registros": 10
+          },
+          {
+            "client_name": "UP SOLUCIONES S.R.L.",
+            "client_key": "UP SOLUCIONES",
+            "facturacion": 85451905.0,
+            "registros": 4
+          },
+          {
+            "client_name": "BLUE CATERING S.",
+            "client_key": "BLUE CATERING S",
+            "facturacion": 66669268.14,
+            "registros": 2
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 66668981.1,
+            "registros": 2
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 66668782.620000005,
+            "registros": 2
+          },
+          {
+            "client_name": "QUOMO TEXTIL SRL",
+            "client_key": "QUOMO TEXTIL",
+            "facturacion": 58242598.03,
+            "registros": 5
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion": 57023111.59,
+            "registros": 6
+          },
+          {
+            "client_name": "STOLIN",
+            "client_key": "STOLIN",
+            "facturacion": 50000908.91,
+            "registros": 5
+          },
+          {
+            "client_name": "SPIRIT GROUP SRL",
+            "client_key": "SPIRIT GROUP",
+            "facturacion": 50000396.54,
+            "registros": 5
+          },
+          {
+            "client_name": "AVD ARGENTINA SRL",
+            "client_key": "AVD ARGENTINA",
+            "facturacion": 41945117.86,
+            "registros": 4
+          },
+          {
+            "client_name": "MAYCAR SOCIEDAD ANONIMA",
+            "client_key": "MAYCAR",
+            "facturacion": 39905071.36,
+            "registros": 4
+          },
+          {
+            "client_name": "MOJZESZOWICZ ROMINA PAOLA",
+            "client_key": "MOJZESZOWICZ ROMINA PAOLA",
+            "facturacion": 38021089.97,
+            "registros": 4
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 35081950.37,
+            "registros": 3
+          },
+          {
+            "client_name": "DYKTEL S.A.",
+            "client_key": "DYKTEL",
+            "facturacion": 35008910.92,
+            "registros": 3
+          }
+        ]
+      },
+      "2025-09": {
+        "billing_total": 1917898315.04,
+        "billing_records": 165,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 390019530.0,
+            "registros": 11
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 206912026.12,
+            "registros": 27
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 137917471.65,
+            "registros": 11
+          },
+          {
+            "client_name": "EQUILA SRL",
+            "client_key": "EQUILA",
+            "facturacion": 137137436.0,
+            "registros": 9
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 100312057.3,
+            "registros": 8
+          },
+          {
+            "client_name": "AVD ARGENTINA SRL",
+            "client_key": "AVD ARGENTINA",
+            "facturacion": 85850132.44,
+            "registros": 6
+          },
+          {
+            "client_name": "COSEME SA",
+            "client_key": "COSEME",
+            "facturacion": 78020291.49,
+            "registros": 5
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 73705604.5,
+            "registros": 3
+          },
+          {
+            "client_name": "MAYCAR SOCIEDAD ANONIMA",
+            "client_key": "MAYCAR",
+            "facturacion": 68535722.64,
+            "registros": 5
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 44750430.879999995,
+            "registros": 2
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 41553690.0,
+            "registros": 2
+          },
+          {
+            "client_name": "LUGALU S.A.",
+            "client_key": "LUGALU",
+            "facturacion": 40787836.01,
+            "registros": 5
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 40007912.019999996,
+            "registros": 3
+          },
+          {
+            "client_name": "SPIRIT GROUP SRL",
+            "client_key": "SPIRIT GROUP",
+            "facturacion": 31516227.310000002,
+            "registros": 2
+          },
+          {
+            "client_name": "SLIM FIT",
+            "client_key": "SLIM FIT",
+            "facturacion": 30647269.5,
+            "registros": 2
+          },
+          {
+            "client_name": "CONTENT EVERYWHERE S.A.",
+            "client_key": "CONTENT EVERYWHERE",
+            "facturacion": 29633687.57,
+            "registros": 6
+          },
+          {
+            "client_name": "VINZALAB SA",
+            "client_key": "VINZALAB",
+            "facturacion": 28438921.63,
+            "registros": 8
+          },
+          {
+            "client_name": "FV HOLDING SRL",
+            "client_key": "FV HOLDING",
+            "facturacion": 27638132.38,
+            "registros": 6
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 25318211.61,
+            "registros": 2
+          },
+          {
+            "client_name": "QUOMO TEXTIL SRL",
+            "client_key": "QUOMO TEXTIL",
+            "facturacion": 22011495.48,
+            "registros": 1
+          }
+        ]
+      },
+      "2025-10": {
+        "billing_total": 2552034572.06,
+        "billing_records": 212,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 200006970.48000002,
+            "registros": 10
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 193635302.09,
+            "registros": 22
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 159425460.0,
+            "registros": 3
+          },
+          {
+            "client_name": "A T X SA",
+            "client_key": "A T X",
+            "facturacion": 152090041.02,
+            "registros": 16
+          },
+          {
+            "client_name": "GYULAND S.R.L.",
+            "client_key": "GYULAND",
+            "facturacion": 111484518.28,
+            "registros": 4
+          },
+          {
+            "client_name": "COOK MASTER S R L",
+            "client_key": "COOK MASTER",
+            "facturacion": 95893586.41,
+            "registros": 4
+          },
+          {
+            "client_name": "MERNO S A",
+            "client_key": "MERNO",
+            "facturacion": 81809448.38,
+            "registros": 6
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 74525093.56,
+            "registros": 3
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 70000028.7,
+            "registros": 4
+          },
+          {
+            "client_name": "ENOD SOCIEDAD DE RESPONSAB",
+            "client_key": "ENOD SOCIEDAD DE RESPONSAB",
+            "facturacion": 66161499.51,
+            "registros": 6
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 62676489.92,
+            "registros": 3
+          },
+          {
+            "client_name": "PWI EVENTS S.R.L",
+            "client_key": "PWI EVENTS",
+            "facturacion": 60367523.46,
+            "registros": 5
+          },
+          {
+            "client_name": "SANCOR COOPERATIVA DE SEGUROS",
+            "client_key": "SANCOR COOPERATIVA DE SEGUROS",
+            "facturacion": 57060476.0,
+            "registros": 2
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 53143402.5,
+            "registros": 3
+          },
+          {
+            "client_name": "MOJZESZOWICZ ROMINA PAOLA",
+            "client_key": "MOJZESZOWICZ ROMINA PAOLA",
+            "facturacion": 51078645.0,
+            "registros": 4
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 49644410.730000004,
+            "registros": 3
+          },
+          {
+            "client_name": "CLINICA BASILEA SA",
+            "client_key": "CLINICA BASILEA",
+            "facturacion": 45653030.39,
+            "registros": 3
+          },
+          {
+            "client_name": "GA-MA MEDIC SOCIEDAD ANONIMA",
+            "client_key": "GA MA MEDIC",
+            "facturacion": 44805836.88,
+            "registros": 2
+          },
+          {
+            "client_name": "SPIRIT GROUP SRL",
+            "client_key": "SPIRIT GROUP",
+            "facturacion": 44447051.43,
+            "registros": 2
+          },
+          {
+            "client_name": "INDIAN ARGENTINA S.A.",
+            "client_key": "INDIAN ARGENTINA",
+            "facturacion": 42601625.1,
+            "registros": 3
+          }
+        ]
+      },
+      "2025-11": {
+        "billing_total": 2953699519.08,
+        "billing_records": 223,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 500579227.31,
+            "registros": 26
+          },
+          {
+            "client_name": "GRUPO LUMBRERA S.A.S",
+            "client_key": "GRUPO LUMBRERA",
+            "facturacion": 421066431.07,
+            "registros": 16
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 247587636.81,
+            "registros": 22
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion": 150055435.0,
+            "registros": 4
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 148784747.68,
+            "registros": 11
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 129648172.84,
+            "registros": 8
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 103009616.31,
+            "registros": 8
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 100021079.89,
+            "registros": 7
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 90192359.88,
+            "registros": 5
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 74971244.94,
+            "registros": 3
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 65045600.0,
+            "registros": 3
+          },
+          {
+            "client_name": "MERNO S A",
+            "client_key": "MERNO",
+            "facturacion": 57855651.97,
+            "registros": 3
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 56922323.32,
+            "registros": 3
+          },
+          {
+            "client_name": "SPIRIT GROUP SRL",
+            "client_key": "SPIRIT GROUP",
+            "facturacion": 53645013.14,
+            "registros": 3
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 49613575.82,
+            "registros": 3
+          },
+          {
+            "client_name": "DONDERA S. A.",
+            "client_key": "DONDERA",
+            "facturacion": 45158063.73,
+            "registros": 3
+          },
+          {
+            "client_name": "SANCOR COOPERATIVA DE SEGUROS",
+            "client_key": "SANCOR COOPERATIVA DE SEGUROS",
+            "facturacion": 44003171.75,
+            "registros": 2
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 38375897.41,
+            "registros": 3
+          },
+          {
+            "client_name": "CLINICA BASILEA SA",
+            "client_key": "CLINICA BASILEA",
+            "facturacion": 33064733.42,
+            "registros": 2
+          },
+          {
+            "client_name": "Managing",
+            "client_key": "MANAGING",
+            "facturacion": 30004640.97,
+            "registros": 2
+          }
+        ]
+      },
+      "2025-12": {
+        "billing_total": 2836835709.95,
+        "billing_records": 213,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 250002850.0,
+            "registros": 5
+          },
+          {
+            "client_name": "Alimentaria Sustentable",
+            "client_key": "ALIMENTARIA SUSTENTABLE",
+            "facturacion": 249763500.0,
+            "registros": 5
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 200441467.63,
+            "registros": 12
+          },
+          {
+            "client_name": "BASICS S.A.",
+            "client_key": "BASICS",
+            "facturacion": 196804530.38,
+            "registros": 13
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 172577752.01999998,
+            "registros": 11
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 100976421.24,
+            "registros": 8
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 100072308.78999999,
+            "registros": 8
+          },
+          {
+            "client_name": "MERNO S A",
+            "client_key": "MERNO",
+            "facturacion": 100018562.05,
+            "registros": 7
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 94341565.3,
+            "registros": 3
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 87455631.68,
+            "registros": 4
+          },
+          {
+            "client_name": "KUMITATE S. A.",
+            "client_key": "KUMITATE",
+            "facturacion": 80008521.85,
+            "registros": 4
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 75014567.2,
+            "registros": 5
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 71397096.61,
+            "registros": 6
+          },
+          {
+            "client_name": "ADFLUENCE MEDIA",
+            "client_key": "ADFLUENCE MEDIA",
+            "facturacion": 70434662.88000001,
+            "registros": 4
+          },
+          {
+            "client_name": "GAMA26 SRL",
+            "client_key": "GAMA26",
+            "facturacion": 68327701.05,
+            "registros": 8
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 58691787.31,
+            "registros": 3
+          },
+          {
+            "client_name": "BECHEM SUDAMERIKA S A",
+            "client_key": "BECHEM SUDAMERIKA",
+            "facturacion": 46561822.51,
+            "registros": 3
+          },
+          {
+            "client_name": "MINORD SA",
+            "client_key": "MINORD",
+            "facturacion": 40012380.9,
+            "registros": 2
+          },
+          {
+            "client_name": "ETRA S A I C Y F",
+            "client_key": "ETRA I C Y F",
+            "facturacion": 39278736.06,
+            "registros": 3
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 39110286.9,
+            "registros": 3
+          }
+        ]
+      },
+      "2026-01": {
+        "billing_total": 3117893597.47,
+        "billing_records": 251,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "GRUPO LUMBRERA S.A.S",
+            "client_key": "GRUPO LUMBRERA",
+            "facturacion": 550439724.35,
+            "registros": 43
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 251504096.18,
+            "registros": 7
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 247057237.72,
+            "registros": 28
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 201722639.28,
+            "registros": 17
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 199137714.48000002,
+            "registros": 13
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 160725690.59,
+            "registros": 8
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 99045764.1,
+            "registros": 5
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 90550967.16,
+            "registros": 8
+          },
+          {
+            "client_name": "Wirksam",
+            "client_key": "WIRKSAM",
+            "facturacion": 85320618.22,
+            "registros": 3
+          },
+          {
+            "client_name": "BLUE CATERING S.",
+            "client_key": "BLUE CATERING S",
+            "facturacion": 83963096.28999999,
+            "registros": 6
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 83409766.39,
+            "registros": 6
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 83407324.27,
+            "registros": 6
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 73675499.88,
+            "registros": 3
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 69717166.68,
+            "registros": 3
+          },
+          {
+            "client_name": "MOVIMI S. R. L.",
+            "client_key": "MOVIMI",
+            "facturacion": 66013447.25,
+            "registros": 3
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 60037451.56,
+            "registros": 5
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 50555496.7,
+            "registros": 4
+          },
+          {
+            "client_name": "SINDICATO UNICO DE TRABAJADO",
+            "client_key": "SINDICATO UNICO DE TRABAJADO",
+            "facturacion": 50002069.25,
+            "registros": 2
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 45025286.07,
+            "registros": 4
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 39982787.980000004,
+            "registros": 2
+          }
+        ]
+      },
+      "2026-02": {
+        "billing_total": 2610748534.75,
+        "billing_records": 263,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "GRUPO LUMBRERA S.A.S",
+            "client_key": "GRUPO LUMBRERA",
+            "facturacion": 429474300.0,
+            "registros": 29
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 270526383.58,
+            "registros": 19
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 266164425.0,
+            "registros": 5
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 123339858.0,
+            "registros": 3
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 122816979.09,
+            "registros": 17
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 101913756.00999999,
+            "registros": 6
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 100937067.6,
+            "registros": 15
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 85181910.43,
+            "registros": 13
+          },
+          {
+            "client_name": "BASICS S.A.",
+            "client_key": "BASICS",
+            "facturacion": 82697786.02,
+            "registros": 13
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 74349200.0,
+            "registros": 3
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 63849307.0,
+            "registros": 3
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 60022981.88,
+            "registros": 5
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 60019815.0,
+            "registros": 4
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion": 51788130.440000005,
+            "registros": 13
+          },
+          {
+            "client_name": "ACMED",
+            "client_key": "ACMED",
+            "facturacion": 51628327.33,
+            "registros": 13
+          },
+          {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion": 43948426.87,
+            "registros": 13
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 41213884.0,
+            "registros": 3
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 35009911.35,
+            "registros": 4
+          },
+          {
+            "client_name": "ACTIVASALUD S.R.L",
+            "client_key": "ACTIVASALUD",
+            "facturacion": 32453796.81,
+            "registros": 5
+          },
+          {
+            "client_name": "SINDICATO UNICO DE TRABAJADO",
+            "client_key": "SINDICATO UNICO DE TRABAJADO",
+            "facturacion": 32001220.18,
+            "registros": 1
+          }
+        ]
+      },
+      "2026-03": {
+        "billing_total": 3080555478.13,
+        "billing_records": 255,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "GRUPO LUMBRERA S.A.S",
+            "client_key": "GRUPO LUMBRERA",
+            "facturacion": 652956646.4,
+            "registros": 53
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 380066150.0,
+            "registros": 8
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 292716891.35,
+            "registros": 15
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 201624738.42000002,
+            "registros": 14
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 200704812.57999998,
+            "registros": 8
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 188611586.05,
+            "registros": 23
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 115743096.86,
+            "registros": 11
+          },
+          {
+            "client_name": "Obra Social",
+            "client_key": "OBRA SOCIAL",
+            "facturacion": 90069111.17,
+            "registros": 1
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 74383200.47,
+            "registros": 3
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 66117982.86,
+            "registros": 4
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 65710084.31999999,
+            "registros": 3
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 59415560.86,
+            "registros": 4
+          },
+          {
+            "client_name": "SAINT GERMAIN S. R. L.",
+            "client_key": "SAINT GERMAIN",
+            "facturacion": 58015235.38,
+            "registros": 9
+          },
+          {
+            "client_name": "Celumania",
+            "client_key": "CELUMANIA",
+            "facturacion": 50661289.26,
+            "registros": 5
+          },
+          {
+            "client_name": "MERNO S A",
+            "client_key": "MERNO",
+            "facturacion": 46850354.03,
+            "registros": 9
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 42453919.95,
+            "registros": 3
+          },
+          {
+            "client_name": "ACMED",
+            "client_key": "ACMED",
+            "facturacion": 41496596.93,
+            "registros": 4
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion": 38844504.25,
+            "registros": 4
+          },
+          {
+            "client_name": "ACTIVASALUD S.R.L",
+            "client_key": "ACTIVASALUD",
+            "facturacion": 30784034.66,
+            "registros": 5
+          },
+          {
+            "client_name": "PAPEXPRESS S. R. L.",
+            "client_key": "PAPEXPRESS",
+            "facturacion": 29663309.83,
+            "registros": 8
+          }
+        ]
+      },
+      "2026-04": {
+        "billing_total": 3434639739.13,
+        "billing_records": 240,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 400001828.55,
+            "registros": 9
+          },
+          {
+            "client_name": "GRUPO LUMBRERA S.A.S",
+            "client_key": "GRUPO LUMBRERA",
+            "facturacion": 333598844.0,
+            "registros": 25
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 306540896.84,
+            "registros": 15
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 204337646.57,
+            "registros": 14
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 181543553.53,
+            "registros": 6
+          },
+          {
+            "client_name": "Alimentaria Sustentable",
+            "client_key": "ALIMENTARIA SUSTENTABLE",
+            "facturacion": 141481159.65,
+            "registros": 6
+          },
+          {
+            "client_name": "BLUE CATERING S.",
+            "client_key": "BLUE CATERING S",
+            "facturacion": 114181970.81,
+            "registros": 8
+          },
+          {
+            "client_name": "GUSTAVO QUIROGA E. P. M. SA",
+            "client_key": "GUSTAVO QUIROGA E P M",
+            "facturacion": 111855116.64,
+            "registros": 9
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 107751304.15,
+            "registros": 8
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 104300829.95,
+            "registros": 8
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 102286292.82,
+            "registros": 8
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 100003697.51,
+            "registros": 3
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 88923829.01,
+            "registros": 6
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 86879967.00999999,
+            "registros": 3
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 81234232.42999999,
+            "registros": 6
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 77294270.44999999,
+            "registros": 3
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 66115728.5,
+            "registros": 4
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 65026921.06,
+            "registros": 5
+          },
+          {
+            "client_name": "IDEFI DESARROLLOS S.A.",
+            "client_key": "IDEFI DESARROLLOS",
+            "facturacion": 63009740.94,
+            "registros": 3
+          },
+          {
+            "client_name": "SAINT GERMAIN S. R. L.",
+            "client_key": "SAINT GERMAIN",
+            "facturacion": 61967690.730000004,
+            "registros": 8
+          }
+        ]
+      },
+      "2026-05": {
+        "billing_total": 3688720777.42,
+        "billing_records": 244,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 608383107.84,
+            "registros": 17
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 335644665.01,
+            "registros": 17
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 309914524.5,
+            "registros": 25
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 222340086.13,
+            "registros": 20
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 173736739.48,
+            "registros": 10
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion": 150368726.69,
+            "registros": 8
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 135259641.41,
+            "registros": 5
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 101755317.25,
+            "registros": 5
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 100742039.61,
+            "registros": 3
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 100027509.37,
+            "registros": 6
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 100005301.56,
+            "registros": 4
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 86031422.12,
+            "registros": 6
+          },
+          {
+            "client_name": "ROSATTO DOMINGO SERGIO",
+            "client_key": "ROSATTO DOMINGO SERGIO",
+            "facturacion": 72933940.39,
+            "registros": 4
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 64230768.72,
+            "registros": 4
+          },
+          {
+            "client_name": "CLAN EST SACIFICA",
+            "client_key": "CLAN EST SACIFICA",
+            "facturacion": 61918255.57,
+            "registros": 5
+          },
+          {
+            "client_name": "EAT & DRINK S.A.",
+            "client_key": "EAT DRINK",
+            "facturacion": 59915783.86,
+            "registros": 4
+          },
+          {
+            "client_name": "Fashion Cook",
+            "client_key": "FASHION COOK",
+            "facturacion": 59915783.86,
+            "registros": 4
+          },
+          {
+            "client_name": "SINDICATO UNICO DE TRABAJADO",
+            "client_key": "SINDICATO UNICO DE TRABAJADO",
+            "facturacion": 58233411.879999995,
+            "registros": 2
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 55373766.94,
+            "registros": 2
+          },
+          {
+            "client_name": "MARINELLI PAOLA GISELLA",
+            "client_key": "MARINELLI PAOLA GISELLA",
+            "facturacion": 41522931.36,
+            "registros": 4
+          }
+        ]
+      },
+      "2026-06": {
+        "billing_total": 3189162664.78,
+        "billing_records": 237,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": [
+          {
+            "client_name": "Alimentaria Sustentable",
+            "client_key": "ALIMENTARIA SUSTENTABLE",
+            "facturacion": 521943908.05,
+            "registros": 29
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 343551105.32,
+            "registros": 17
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 337586530.31,
+            "registros": 31
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion": 276761837.88,
+            "registros": 16
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 202734254.66,
+            "registros": 20
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 136313508.04,
+            "registros": 6
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 123630444.11,
+            "registros": 8
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 117600111.5,
+            "registros": 7
+          },
+          {
+            "client_name": "BASICS S.A.",
+            "client_key": "BASICS",
+            "facturacion": 100853610.0,
+            "registros": 3
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 100004368.03,
+            "registros": 4
+          },
+          {
+            "client_name": "Fashion Cook",
+            "client_key": "FASHION COOK",
+            "facturacion": 80022751.46000001,
+            "registros": 4
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 80019163.94,
+            "registros": 6
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 77736420.82,
+            "registros": 3
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 69515927.7,
+            "registros": 4
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion": 65828692.62,
+            "registros": 6
+          },
+          {
+            "client_name": "Celumania",
+            "client_key": "CELUMANIA",
+            "facturacion": 45036363.32,
+            "registros": 4
+          },
+          {
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion": 39648374.174,
+            "registros": 2
+          },
+          {
+            "client_name": "Grupo Mónaco",
+            "client_key": "GRUPO MONACO",
+            "facturacion": 33102680.919999998,
+            "registros": 5
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 31946007.799999997,
+            "registros": 4
+          },
+          {
+            "client_name": "Macri Javier",
+            "client_key": "MACRI JAVIER",
+            "facturacion": 30000271.11,
+            "registros": 6
+          }
+        ]
+      },
+      "2026-07": {
+        "billing_total": 2964935744.31,
+        "billing_records": 224,
+        "validated_net": 3525447514.0,
+        "profit": 186728278.0,
+        "profitability": 0.052965836892615276,
+        "valid_operations": 78,
+        "rentability_ranking": [
+          {
+            "client_name": "Gestión Citera",
+            "client_key": "GESTION CITERA",
+            "facturacion_validada": 4802030.0,
+            "ganancia_octopus": 423222.0,
+            "rentabilidad": 0.08813397667236565,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Neoimagenes",
+            "client_key": "NEOIMAGENES",
+            "facturacion_validada": 11407890.0,
+            "ganancia_octopus": 908150.0,
+            "rentabilidad": 0.07960718415061856,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Imágenes del Parque",
+            "client_key": "IMAGENES DEL PARQUE",
+            "facturacion_validada": 10202570.0,
+            "ganancia_octopus": 811725.0,
+            "rentabilidad": 0.07956083614226611,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion_validada": 31946007.0,
+            "ganancia_octopus": 2535261.0,
+            "rentabilidad": 0.07936081025713167,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Mia Producciones",
+            "client_key": "MIA PRODUCCIONES",
+            "facturacion_validada": 16013862.0,
+            "ganancia_octopus": 1270695.0,
+            "rentabilidad": 0.07934969091153651,
+            "operaciones": 1
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion_validada": 101516559.0,
+            "ganancia_octopus": 8045577.0,
+            "rentabilidad": 0.07925383877520907,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion_validada": 16039250.0,
+            "ganancia_octopus": 1270976.0,
+            "rentabilidad": 0.07924161042442758,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion_validada": 19315712.0,
+            "ganancia_octopus": 1530274.0,
+            "rentabilidad": 0.0792243123111382,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Home Collection",
+            "client_key": "HOME COLLECTION",
+            "facturacion_validada": 19323744.0,
+            "ganancia_octopus": 1524863.0,
+            "rentabilidad": 0.07891136417456161,
+            "operaciones": 1
+          },
+          {
+            "client_name": "ACMED",
+            "client_key": "ACMED",
+            "facturacion_validada": 5066688.0,
+            "ganancia_octopus": 399084.0,
+            "rentabilidad": 0.07876624730001137,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Red Prestacional",
+            "client_key": "RED PRESTACIONAL",
+            "facturacion_validada": 5911302.0,
+            "ganancia_octopus": 464392.0,
+            "rentabilidad": 0.07856001943395888,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Medicaid",
+            "client_key": "MEDICAID",
+            "facturacion_validada": 5911880.0,
+            "ganancia_octopus": 464114.0,
+            "rentabilidad": 0.07850531472222035,
+            "operaciones": 2
+          },
+          {
+            "client_name": "El Perro de la Luna",
+            "client_key": "EL PERRO DE LA LUNA",
+            "facturacion_validada": 5000448.0,
+            "ganancia_octopus": 370106.0,
+            "rentabilidad": 0.0740145682946808,
+            "operaciones": 1
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion_validada": 276761833.0,
+            "ganancia_octopus": 20267099.0,
+            "rentabilidad": 0.07322938564292569,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion_validada": 78076020.0,
+            "ganancia_octopus": 5413297.0,
+            "rentabilidad": 0.06933366992835957,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Aeronáuticos",
+            "client_key": "AERONAUTICOS",
+            "facturacion_validada": 33090579.0,
+            "ganancia_octopus": 2288446.0,
+            "rentabilidad": 0.06915702502515897,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Mas Metros",
+            "client_key": "MAS METROS",
+            "facturacion_validada": 10015180.0,
+            "ganancia_octopus": 689052.0,
+            "rentabilidad": 0.06880076044564351,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion_validada": 390123297.0,
+            "ganancia_octopus": 25349502.0,
+            "rentabilidad": 0.06497818047508196,
+            "operaciones": 4
+          },
+          {
+            "client_name": "FTL",
+            "client_key": "FTL",
+            "facturacion_validada": 14013514.0,
+            "ganancia_octopus": 875845.0,
+            "rentabilidad": 0.06250002675988335,
+            "operaciones": 3
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 196262472.0,
+            "ganancia_octopus": 11852029.0,
+            "rentabilidad": 0.060388666662672015,
+            "operaciones": 3
+          }
+        ],
+        "billing_ranking": [
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 413610551.36,
+            "registros": 22
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 413472584.99,
+            "registros": 19
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 267954931.87,
+            "registros": 29
+          },
+          {
+            "client_name": "CNH SA",
+            "client_key": "CNH",
+            "facturacion": 250004227.59,
+            "registros": 7
+          },
+          {
+            "client_name": "LA MANTOVANA DE SERVICIOS",
+            "client_key": "LA MANTOVANA DE SERVICIOS",
+            "facturacion": 242036313.14,
+            "registros": 14
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 178131376.92,
+            "registros": 13
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 120024073.01,
+            "registros": 8
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 105950514.39,
+            "registros": 4
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 101516559.03,
+            "registros": 4
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 78076020.83,
+            "registros": 3
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion": 70115247.22,
+            "registros": 5
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 68616866.12,
+            "registros": 4
+          },
+          {
+            "client_name": "COCINA Y PATAGONIA",
+            "client_key": "COCINA Y PATAGONIA",
+            "facturacion": 64781974.43,
+            "registros": 9
+          },
+          {
+            "client_name": "PROMORED ARGENTINA S. A.",
+            "client_key": "PROMORED ARGENTINA",
+            "facturacion": 55788430.089999996,
+            "registros": 7
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 52619386.44,
+            "registros": 9
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 50008640.76,
+            "registros": 4
+          },
+          {
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion": 39048782.21,
+            "registros": 2
+          },
+          {
+            "client_name": "ASOCIACION DEL PERSONAL AERO",
+            "client_key": "ASOCIACION DEL PERSONAL AERO",
+            "facturacion": 33090578.509999998,
+            "registros": 4
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 33021595.37,
+            "registros": 2
+          },
+          {
+            "client_name": "MARINELLI PAOLA GISELLA",
+            "client_key": "MARINELLI PAOLA GISELLA",
+            "facturacion": 30563207.66,
+            "registros": 4
+          }
+        ]
+      },
+      "2026-08": {
+        "billing_total": 4316074799.38,
+        "billing_records": 320,
+        "validated_net": 3126596931.0,
+        "profit": 192354429.0,
+        "profitability": 0.06152197844653996,
+        "valid_operations": 82,
+        "rentability_ranking": [
+          {
+            "client_name": "MINETECH SRL",
+            "client_key": "MINETECH",
+            "facturacion_validada": 3889440.0,
+            "ganancia_octopus": 366696.0,
+            "rentabilidad": 0.09427989633469086,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Sind Serenos",
+            "client_key": "SIND SERENOS",
+            "facturacion_validada": 6003612.0,
+            "ganancia_octopus": 498900.0,
+            "rentabilidad": 0.08309997381576291,
+            "operaciones": 1
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion_validada": 89079605.0,
+            "ganancia_octopus": 7182267.0,
+            "rentabilidad": 0.0806275128858059,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Imágenes del Parque",
+            "client_key": "IMAGENES DEL PARQUE",
+            "facturacion_validada": 15011350.0,
+            "ganancia_octopus": 1196427.0,
+            "rentabilidad": 0.07970149253731343,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion_validada": 47609884.0,
+            "ganancia_octopus": 3782798.0,
+            "rentabilidad": 0.07945404781914613,
+            "operaciones": 2
+          },
+          {
+            "client_name": "ACMED",
+            "client_key": "ACMED",
+            "facturacion_validada": 15776898.0,
+            "ganancia_octopus": 1252045.0,
+            "rentabilidad": 0.07935938991302346,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion_validada": 19544819.0,
+            "ganancia_octopus": 1547696.0,
+            "rentabilidad": 0.07918702137891377,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion_validada": 15618123.0,
+            "ganancia_octopus": 1234974.0,
+            "rentabilidad": 0.07907313830221467,
+            "operaciones": 2
+          },
+          {
+            "client_name": "BIO-LAP S.A.",
+            "client_key": "BIO LAP",
+            "facturacion_validada": 37946058.0,
+            "ganancia_octopus": 2993691.0,
+            "rentabilidad": 0.0788933332679774,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medicaid",
+            "client_key": "MEDICAID",
+            "facturacion_validada": 3702054.0,
+            "ganancia_octopus": 290405.0,
+            "rentabilidad": 0.07844429065594397,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Red Prestacional",
+            "client_key": "RED PRESTACIONAL",
+            "facturacion_validada": 5112909.0,
+            "ganancia_octopus": 398340.0,
+            "rentabilidad": 0.0779086817308894,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 302423573.0,
+            "ganancia_octopus": 22683679.0,
+            "rentabilidad": 0.07500631903452844,
+            "operaciones": 4
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion_validada": 146029841.0,
+            "ganancia_octopus": 10687477.0,
+            "rentabilidad": 0.07318693855182654,
+            "operaciones": 4
+          },
+          {
+            "client_name": "ASHI S.A",
+            "client_key": "ASHI",
+            "facturacion_validada": 2090122.0,
+            "ganancia_octopus": 152279.0,
+            "rentabilidad": 0.07285651268203483,
+            "operaciones": 1
+          },
+          {
+            "client_name": "CARJUL S A",
+            "client_key": "CARJUL",
+            "facturacion_validada": 9782350.0,
+            "ganancia_octopus": 684765.0,
+            "rentabilidad": 0.07000005111246276,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Sportlife",
+            "client_key": "SPORTLIFE",
+            "facturacion_validada": 10232390.0,
+            "ganancia_octopus": 716267.0,
+            "rentabilidad": 0.06999997068133643,
+            "operaciones": 1
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion_validada": 24004910.0,
+            "ganancia_octopus": 1675864.0,
+            "rentabilidad": 0.06981338401185425,
+            "operaciones": 1
+          },
+          {
+            "client_name": "HT CONTENIDOS S. A.",
+            "client_key": "HT CONTENIDOS",
+            "facturacion_validada": 19200131.0,
+            "ganancia_octopus": 1334793.0,
+            "rentabilidad": 0.0695199944208714,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Fundacion Soldados",
+            "client_key": "FUNDACION SOLDADOS",
+            "facturacion_validada": 14001253.0,
+            "ganancia_octopus": 973367.0,
+            "rentabilidad": 0.06951999224640823,
+            "operaciones": 1
+          },
+          {
+            "client_name": "HT Contenidos Natural Market",
+            "client_key": "HT CONTENIDOS NATURAL MARKET",
+            "facturacion_validada": 15822000.0,
+            "ganancia_octopus": 1099945.0,
+            "rentabilidad": 0.06951997219062066,
+            "operaciones": 1
+          }
+        ],
+        "billing_ranking": [
+          {
+            "client_name": "GYULAND S.R.L.",
+            "client_key": "GYULAND",
+            "facturacion": 825971285.86,
+            "registros": 51
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 422904010.77,
+            "registros": 41
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 422186354.08,
+            "registros": 21
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 348603170.42,
+            "registros": 29
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 164652016.66,
+            "registros": 10
+          },
+          {
+            "client_name": "COCINA Y PATAGONIA",
+            "client_key": "COCINA Y PATAGONIA",
+            "facturacion": 150081443.48,
+            "registros": 14
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion": 145291723.05,
+            "registros": 11
+          },
+          {
+            "client_name": "DROGUERIA VARADERO S. A.",
+            "client_key": "DROGUERIA VARADERO",
+            "facturacion": 124019840.0,
+            "registros": 6
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 121832875.84,
+            "registros": 5
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 120057250.0,
+            "registros": 8
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 111189203.48,
+            "registros": 8
+          },
+          {
+            "client_name": "MEDPHARMA S.A.",
+            "client_key": "MEDPHARMA",
+            "facturacion": 111137050.86,
+            "registros": 7
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 106477679.48,
+            "registros": 4
+          },
+          {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 99586776.86,
+            "registros": 5
+          },
+          {
+            "client_name": "ASHI S.A",
+            "client_key": "ASHI",
+            "facturacion": 87004091.97999999,
+            "registros": 4
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 85887640.45,
+            "registros": 3
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 76861612.12,
+            "registros": 4
+          },
+          {
+            "client_name": "BAHIA SERVICIOS INDUSTRIALES",
+            "client_key": "BAHIA SERVICIOS INDUSTRIALES",
+            "facturacion": 70019391.68,
+            "registros": 5
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 50004214.46,
+            "registros": 4
+          },
+          {
+            "client_name": "WAYNA S.A.",
+            "client_key": "WAYNA",
+            "facturacion": 47624880.83,
+            "registros": 4
+          }
+        ]
+      },
+      "2026-09": {
+        "billing_total": 2047247598.15,
+        "billing_records": 137,
+        "validated_net": 1279043138.0,
+        "profit": 70958957.0,
+        "profitability": 0.055478157766403656,
+        "valid_operations": 33,
+        "rentability_ranking": [
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion_validada": 22372617.0,
+            "ganancia_octopus": 2001055.0,
+            "rentabilidad": 0.08944215153730116,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion_validada": 11794851.0,
+            "ganancia_octopus": 1052864.0,
+            "rentabilidad": 0.08926471389931082,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion_validada": 9520166.0,
+            "ganancia_octopus": 848961.0,
+            "rentabilidad": 0.08917502068766447,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medicaid",
+            "client_key": "MEDICAID",
+            "facturacion_validada": 6933988.0,
+            "ganancia_octopus": 612710.0,
+            "rentabilidad": 0.08836329108155365,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Sind Serenos",
+            "client_key": "SIND SERENOS",
+            "facturacion_validada": 12004736.0,
+            "ganancia_octopus": 997593.0,
+            "rentabilidad": 0.08309995321846311,
+            "operaciones": 2
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion_validada": 96940800.0,
+            "ganancia_octopus": 7682811.0,
+            "rentabilidad": 0.07925260571400278,
+            "operaciones": 2
+          },
+          {
+            "client_name": "ISAKITO S.A.",
+            "client_key": "ISAKITO",
+            "facturacion_validada": 25011840.0,
+            "ganancia_octopus": 1979844.0,
+            "rentabilidad": 0.07915627158977508,
+            "operaciones": 1
+          },
+          {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion_validada": 50000000.0,
+            "ganancia_octopus": 3488000.0,
+            "rentabilidad": 0.06976,
+            "operaciones": 1
+          },
+          {
+            "client_name": "HT CONTENIDOS S. A.",
+            "client_key": "HT CONTENIDOS",
+            "facturacion_validada": 7985029.0,
+            "ganancia_octopus": 555119.0,
+            "rentabilidad": 0.0695199729393594,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion_validada": 86151730.0,
+            "ganancia_octopus": 5975936.0,
+            "rentabilidad": 0.06936524664101348,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Aeronáuticos",
+            "client_key": "AERONAUTICOS",
+            "facturacion_validada": 16620488.0,
+            "ganancia_octopus": 1149423.0,
+            "rentabilidad": 0.06915699466826726,
+            "operaciones": 1
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion_validada": 77045180.0,
+            "ganancia_octopus": 4842627.0,
+            "rentabilidad": 0.06285437972888115,
+            "operaciones": 3
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion_validada": 249940229.0,
+            "ganancia_octopus": 14843204.0,
+            "rentabilidad": 0.05938701448497113,
+            "operaciones": 4
+          },
+          {
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion_validada": 39597933.0,
+            "ganancia_octopus": 2350828.0,
+            "rentabilidad": 0.05936744223492676,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion_validada": 100445076.0,
+            "ganancia_octopus": 5737320.0,
+            "rentabilidad": 0.05711897714129859,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion_validada": 120109590.0,
+            "ganancia_octopus": 6840691.0,
+            "rentabilidad": 0.056953745325414896,
+            "operaciones": 2
+          },
+          {
+            "client_name": "COCINA Y PATAGONIA",
+            "client_key": "COCINA Y PATAGONIA",
+            "facturacion_validada": 110174125.0,
+            "ganancia_octopus": 5495486.0,
+            "rentabilidad": 0.049880005854369164,
+            "operaciones": 2
+          },
+          {
+            "client_name": "AUFBAUEN S.R.L.",
+            "client_key": "AUFBAUEN",
+            "facturacion_validada": 18390010.0,
+            "ganancia_octopus": 882720.0,
+            "rentabilidad": 0.04799997389887227,
+            "operaciones": 1
+          },
+          {
+            "client_name": "PROMORED ARGENTINA S. A.",
+            "client_key": "PROMORED ARGENTINA",
+            "facturacion_validada": 16344124.0,
+            "ganancia_octopus": 751830.0,
+            "rentabilidad": 0.04600001811048423,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Bahia",
+            "client_key": "BAHIA",
+            "facturacion_validada": 14895680.0,
+            "ganancia_octopus": 628756.0,
+            "rentabilidad": 0.04221062751079507,
+            "operaciones": 1
+          }
+        ],
+        "billing_ranking": [
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 435188875.61,
+            "registros": 21
+          },
+          {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 157625331.0,
+            "registros": 11
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 154834726.0,
+            "registros": 10
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 125508714.56,
+            "registros": 5
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 120109590.0,
+            "registros": 8
+          },
+          {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 99173553.72,
+            "registros": 5
+          },
+          {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 96940801.46000001,
+            "registros": 4
+          },
+          {
+            "client_name": "MEDPHARMA S.A.",
+            "client_key": "MEDPHARMA",
+            "facturacion": 87839070.0,
+            "registros": 8
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 86151730.71000001,
+            "registros": 3
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 85976051.0,
+            "registros": 11
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 81994911.61,
+            "registros": 4
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 77045181.0,
+            "registros": 3
+          },
+          {
+            "client_name": "Obra Social",
+            "client_key": "OBRA SOCIAL",
+            "facturacion": 74466706.51,
+            "registros": 1
+          },
+          {
+            "client_name": "TRANS BOX S. R. L.",
+            "client_key": "TRANS BOX",
+            "facturacion": 61897502.11,
+            "registros": 1
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 50008020.0,
+            "registros": 3
+          },
+          {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 49946094.08,
+            "registros": 3
+          },
+          {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 30590891.92,
+            "registros": 8
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 27044890.42,
+            "registros": 4
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 25864923.5,
+            "registros": 3
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion": 18850030.15,
+            "registros": 4
+          }
+        ]
+      }
+    },
+    "published_clients": 74,
+    "valid_operations_all_dates": 200,
+    "operation_states": {
+      "OK": 175,
+      "DUPLICADO": 14,
+      "OK_TRANSFERENCIA_1_2": 13,
+      "OK_FC_NETA": 12,
+      "REVISION": 3,
+      "EXCLUIDO": 2,
+      "NO_PROCESAR": 2
+    }
+  }
+}

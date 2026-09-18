@@ -6,6 +6,7 @@
 - Leer `drive_sources.json`, `client_aliases.csv`, `manual_rentability_operations.csv`, `data_loader.py` y `app.py` cuando haga falta confirmar una regla vigente.
 - Leer `source_documents.csv` antes de clasificar archivos y conservar sus decisiones humanas/identidades previas.
 - Usar la skill de Google Drive para listar la carpeta oficial y sus subcarpetas de Pendientes/Pagos por mes.
+- Leer los metadatos actuales de Facturacion Historica y Clientes/Alias. Comparar con `data/billing_source.json` y las validaciones persistidas. Si Facturacion cambio, descargar el XLSX oficial completo a `data/FACTURACION OCTOPUS.xlsx` y actualizar ID, version/fecha de modificacion y SHA-256 en `data/billing_source.json`. No dar la fuente por actualizada por haber procesado fotos nuevas.
 
 ## 2. Deteccion de Archivos Nuevos
 
@@ -42,14 +43,20 @@ Los archivos de Pagos se revisan como validacion/contexto, pero no se cargan com
 - No completar Facturacion Neta con ECHEQ para forzar un calculo; si falta y no aplica una regla especial validada, dejar el cuadro en `REVISION`.
 - No modificar manualmente resultados agregados de Render.
 - Regenerar `octopus.db` ejecutando `data_loader.py` con el Python del workspace si el Python del sistema no tiene dependencias.
-- Verificar conteos de estados, operaciones nuevas y clientes publicados.
+- La carga construye una base temporal, recalcula clientes/resumenes, reconcilia los indicadores y reemplaza la base completa. Genera `data_sync_manifest.json` con hashes de fuentes/base y resultados de control.
+- Ejecutar `python scripts/verify_sync.py`. Debe reconciliar cada mes disponible: Facturacion total, Facturacion con rentabilidad, Ganancia, porcentaje ponderado, ambos rankings Top 5/10/20, tablas mensuales y clientes publicados. No publicar si falla.
+- Facturacion total y ranking de facturacion dependen de `billing_operations.net_amount`; los nuevos cuadros solo modifican rentabilidad/ganancia/fichas salvo que tambien haya novedades en Facturacion Historica.
+- En el mes actual, tarjetas y rankings conservan el corte por Fecha Carga (facturacion) y fecha de operacion (rentabilidad), hasta el dia de consulta en Argentina. Las fichas individuales conservan su historial completo, que puede contener fechas futuras. Informar esa diferencia cuando explique un aparente desfase; no adelantar movimientos futuros para igualar totales.
+- `data_access.py` invalida consultas por version de SQLite y su WAL; la app comprueba cambios de base/dia cada 30 segundos en sesiones abiertas. Todas las vistas deben usar esta lectura compartida.
 
 ## 6. Publicacion
 
 - Ejecutar verificaciones basicas de Python.
+- Ejecutar `python -m unittest discover -s tests -v` si se modifica la carga, cache, indicadores o deduplicacion.
 - Commit y push a GitHub solo con archivos necesarios para la actualizacion.
-- Confirmar que Render responde en `https://octopus-clientes.onrender.com/#base-de-clientes`.
-- Si Render responde pero puede estar desplegando, aclararlo en el resumen solo si no se puede confirmar la sincronizacion completa.
+- Incluir fuentes actualizadas, base y `data_sync_manifest.json` en el mismo commit; excluir `outputs/` y credenciales. Docker ejecuta `scripts/verify_sync.py` y rechaza una base que no corresponda a las fuentes enviadas.
+- Esperar el despliegue del commit correcto. Abrir Render, comparar tarjetas y ambos rankings con `data_sync_manifest.json` para julio/agosto/septiembre y cualquier otro mes afectado. Probar busqueda y una ficha afectada; verificar total de clientes.
+- Solo informar sincronizacion SI cuando los valores publicados coincidan con el control. Una respuesta HTTP correcta, un push exitoso o los nuevos cuadros en una ficha no prueban por si solos la sincronizacion de todos los indicadores.
 
 ## 7. Resumen Final
 

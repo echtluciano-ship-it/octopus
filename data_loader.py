@@ -5,9 +5,13 @@ import sqlite3
 import unicodedata
 import csv
 import hashlib
+import os
+import tempfile
+from contextlib import closing
 from datetime import date, datetime
 from decimal import Decimal
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from openpyxl import load_workbook
 
@@ -42,7 +46,7 @@ MANUAL_RENTABILITY_FILE = APP_DIR / "manual_rentability_operations.csv"
 CLIENT_ALIASES_FILE = APP_DIR / "client_aliases.csv"
 SOURCE_DOCUMENTS_FILE = APP_DIR / "source_documents.csv"
 
-CURRENT_MONTH = "2026-09"
+CURRENT_MONTH = datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).strftime("%Y-%m")
 ALIAS_BY_KEY: dict[str, str] = {}
 
 
@@ -447,6 +451,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             rentability_operations INTEGER DEFAULT 0,
             has_pending_data INTEGER DEFAULT 0
         );
+        CREATE UNIQUE INDEX monthly_metrics_identity ON monthly_metrics (client_key, channel, month);
         """
     )
 
@@ -874,28 +879,33 @@ def rebuild_clients(conn: sqlite3.Connection) -> None:
 
 
 def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
+    from metrics import VALID_BILLING, VALID_RENTABILITY
+
+    conn.execute("DELETE FROM monthly_metrics")
     keys = set()
-    for row in conn.execute("SELECT DISTINCT client_key, client_name, channel, month FROM billing_operations"):
+    for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM billing_operations"):
         keys.add(row)
-    for row in conn.execute("SELECT DISTINCT client_key, client_name, channel, month FROM rentability_operations"):
+    for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM rentability_operations"):
         keys.add(row)
 
-    for client_key, client_name, channel, month in sorted(keys):
+    names = dict(conn.execute("SELECT client_key, display_name FROM clients"))
+    for client_key, channel, month in sorted(keys):
         billing_total, billing_ops = conn.execute(
-            """
+            f"""
             SELECT COALESCE(SUM(net_amount), 0), COUNT(*)
             FROM billing_operations
             WHERE client_key = ? AND channel = ? AND month = ?
+              AND {VALID_BILLING}
             """,
             (client_key, channel, month),
         ).fetchone()
         rent_billed, profit, rent_ops, pending = conn.execute(
-            """
+            f"""
             SELECT
-                COALESCE(SUM(CASE WHEN status LIKE 'OK%' THEN billed_amount ELSE 0 END), 0),
-                COALESCE(SUM(CASE WHEN status LIKE 'OK%' THEN octopus_profit ELSE 0 END), 0),
-                COUNT(*),
-                SUM(CASE WHEN status NOT LIKE 'OK%' OR billed_amount IS NULL THEN 1 ELSE 0 END)
+                COALESCE(SUM(CASE WHEN {VALID_RENTABILITY} THEN billed_amount ELSE 0 END), 0),
+                COALESCE(SUM(CASE WHEN {VALID_RENTABILITY} THEN octopus_profit ELSE 0 END), 0),
+                SUM(CASE WHEN {VALID_RENTABILITY} THEN 1 ELSE 0 END),
+                SUM(CASE WHEN {VALID_RENTABILITY} THEN 0 ELSE 1 END)
             FROM rentability_operations
             WHERE client_key = ? AND channel = ? AND month = ?
             """,
@@ -911,7 +921,7 @@ def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
             """,
             (
                 client_key,
-                client_name,
+                names[client_key],
                 channel,
                 month,
                 billing_total or 0,
@@ -928,16 +938,28 @@ def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
 def load_database() -> None:
     global ALIAS_BY_KEY
     ALIAS_BY_KEY = load_alias_map()
-    with connect() as conn:
-        reset_schema(conn)
-        seed_aliases(conn)
-        load_billing(conn)
-        load_rentability(conn)
-        load_manual_rentability(conn)
-        load_source_documents(conn)
-        rebuild_clients(conn)
-        rebuild_monthly_metrics(conn)
-        conn.commit()
+    # Publish one complete, reconciled snapshot so readers never see a partial load.
+    fd, temporary = tempfile.mkstemp(prefix=".octopus-", suffix=".db", dir=DB_PATH.parent)
+    os.close(fd)
+    try:
+        with closing(sqlite3.connect(temporary)) as conn, conn:
+            reset_schema(conn)
+            seed_aliases(conn)
+            load_billing(conn)
+            load_rentability(conn)
+            load_manual_rentability(conn)
+            load_source_documents(conn)
+            rebuild_clients(conn)
+            rebuild_monthly_metrics(conn)
+            from sync_checks import reconcile_database, write_manifest
+
+            report = reconcile_database(conn, datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date())
+            conn.commit()
+        os.replace(temporary, DB_PATH)
+        write_manifest(DB_PATH.parent, report)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
 
 
 if __name__ == "__main__":

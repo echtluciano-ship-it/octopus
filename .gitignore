@@ -1,2 +1,4 @@
 __pycache__/
 .streamlit/secrets.toml
+outputs/
+.octopus-*.db

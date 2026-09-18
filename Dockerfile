@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN python scripts/verify_sync.py
+
 ENV PORT=8501
 
 EXPOSE 8501
