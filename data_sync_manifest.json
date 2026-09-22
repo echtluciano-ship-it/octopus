@@ -1,14 +1,14 @@
 {
-  "database_sha256": "e4738f563889675048c4d91b81b0f46ab5c04c5fc92fad00a895a239f629243a",
+  "database_sha256": "ce3b51e8fa0326333db66da3242b1a5c780bdc8096e097e1388ad9e55b218980",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "cfd20307a676baacc7e3a8ae94afd08186c9efc212ffc999dd67fa5112de676b",
-    "data/billing_source.json": "312d95acd573a58d53f02f75aab77386286be76c7e4196685009cafb0a3dd4bd",
-    "manual_rentability_operations.csv": "86bc505985144bafdda9b4b7fa4f702d58ef74819bca9e20f80ca8150e18805c",
+    "data/FACTURACION OCTOPUS.xlsx": "32159ee3a4945bec2b23f37c799e23cd834e952500bd49af751c9ec65983886a",
+    "data/billing_source.json": "c4a77fd031418444d2334e7ce123cdd488e33f704312f56f4d4881aac1ad78c8",
+    "manual_rentability_operations.csv": "26c8d33d8c42a4c4c1bfc9d5d4ec0d8b24b4270cd033807760455f9d7c6d3c03",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "453647946b4ddf56ab2b9d1f02bfbaf8fcfb176ee7553c4a86df3b9d2894a5f9"
+    "source_documents.csv": "f4227e7a401e04c33073a1275bfbf90592404162de8f88bf8005fffa20cdf9a3"
   },
   "controls": {
-    "as_of": "2026-09-18",
+    "as_of": "2026-09-21",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,44 +2953,44 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2047247598.15,
-        "billing_records": 137,
-        "validated_net": 1279043138.0,
-        "profit": 70958957.0,
-        "profitability": 0.055478157766403656,
-        "valid_operations": 33,
+        "billing_total": 2570279188.64,
+        "billing_records": 178,
+        "validated_net": 1337595760.0,
+        "profit": 75667122.0,
+        "profitability": 0.05656949899422528,
+        "valid_operations": 38,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
             "client_key": "MEDIPREMIUM",
-            "facturacion_validada": 22372617.0,
-            "ganancia_octopus": 2001055.0,
-            "rentabilidad": 0.08944215153730116,
-            "operaciones": 1
+            "facturacion_validada": 41237630.0,
+            "ganancia_octopus": 3687688.0,
+            "rentabilidad": 0.08942531372438232,
+            "operaciones": 2
           },
           {
             "client_name": "Medical Cross",
             "client_key": "MEDICAL CROSS",
-            "facturacion_validada": 11794851.0,
-            "ganancia_octopus": 1052864.0,
-            "rentabilidad": 0.08926471389931082,
-            "operaciones": 1
+            "facturacion_validada": 22397411.0,
+            "ganancia_octopus": 1998851.0,
+            "rentabilidad": 0.08924473458115315,
+            "operaciones": 2
           },
           {
             "client_name": "Cemair",
             "client_key": "CEMAIR",
-            "facturacion_validada": 9520166.0,
-            "ganancia_octopus": 848961.0,
-            "rentabilidad": 0.08917502068766447,
-            "operaciones": 1
+            "facturacion_validada": 20129856.0,
+            "ganancia_octopus": 1795228.0,
+            "rentabilidad": 0.08918235679380916,
+            "operaciones": 2
           },
           {
             "client_name": "Medicaid",
             "client_key": "MEDICAID",
-            "facturacion_validada": 6933988.0,
-            "ganancia_octopus": 612710.0,
-            "rentabilidad": 0.08836329108155365,
-            "operaciones": 2
+            "facturacion_validada": 9334699.0,
+            "ganancia_octopus": 823483.0,
+            "rentabilidad": 0.08821741333062802,
+            "operaciones": 3
           },
           {
             "client_name": "Sind Serenos",
@@ -3075,10 +3075,10 @@
           {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion_validada": 100445076.0,
-            "ganancia_octopus": 5737320.0,
-            "rentabilidad": 0.05711897714129859,
-            "operaciones": 1
+            "facturacion_validada": 116519724.0,
+            "ganancia_octopus": 6655825.0,
+            "rentabilidad": 0.057121874061425,
+            "operaciones": 2
           },
           {
             "client_name": "Drogueria Meta",
@@ -3129,6 +3129,12 @@
             "registros": 21
           },
           {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 217179835.06,
+            "registros": 16
+          },
+          {
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
             "facturacion": 157625331.0,
@@ -3139,6 +3145,12 @@
             "client_key": "ALIMENTOS VIANDAS",
             "facturacion": 154834726.0,
             "registros": 10
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 150943995.76,
+            "registros": 8
           },
           {
             "client_name": "Draconis",
@@ -3207,12 +3219,6 @@
             "registros": 1
           },
           {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 50008020.0,
-            "registros": 3
-          },
-          {
             "client_name": "TEYLEM SA",
             "client_key": "TEYLEM",
             "facturacion": 49946094.08,
@@ -3221,37 +3227,31 @@
           {
             "client_name": "AEQUALIS S A",
             "client_key": "AEQUALIS",
-            "facturacion": 30590891.92,
-            "registros": 8
+            "facturacion": 45881468.62,
+            "registros": 12
           },
           {
             "client_name": "Medipremium",
             "client_key": "MEDIPREMIUM",
-            "facturacion": 27044890.42,
-            "registros": 4
+            "facturacion": 41021892.15,
+            "registros": 5
           },
           {
-            "client_name": "LOGISTICAL S. A.",
-            "client_key": "LOGISTICAL",
-            "facturacion": 25864923.5,
-            "registros": 3
-          },
-          {
-            "client_name": "Cemair",
-            "client_key": "CEMAIR",
-            "facturacion": 18850030.15,
-            "registros": 4
+            "client_name": "ELIPA SAS",
+            "client_key": "ELIPA",
+            "facturacion": 36029414.83,
+            "registros": 1
           }
         ]
       }
     },
-    "published_clients": 74,
-    "valid_operations_all_dates": 200,
+    "published_clients": 78,
+    "valid_operations_all_dates": 211,
     "operation_states": {
-      "OK": 175,
+      "OK": 185,
       "DUPLICADO": 14,
       "OK_TRANSFERENCIA_1_2": 13,
-      "OK_FC_NETA": 12,
+      "OK_FC_NETA": 13,
       "REVISION": 3,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2
