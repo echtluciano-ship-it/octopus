@@ -1,43 +1,47 @@
 ---
 name: octopus-update
-description: Actualizar OCTOPUS desde Google Drive cuando el usuario pida "Actualiza OCTOPUS", "actualizar cuadros", "sincronizar Drive/base/Render" o una actualizacion operativa equivalente del proyecto OCTOPUS. No usar para agregar nuevas funcionalidades de interfaz o para analisis largos no relacionados con la actualizacion.
+description: Actualizar OCTOPUS desde Google Drive cuando el usuario diga "Actualiza OCTOPUS" o pida sincronizar cuadros/base/Render. La actualizacion cotidiana es incremental; ejecutar una auditoria historica completa solo ante "Audita OCTOPUS completo" o una imposibilidad tecnica explicada al usuario.
 ---
 
 # OCTOPUS Update
 
-Usar esta skill para mantener OCTOPUS actualizado desde la carpeta oficial de Google Drive hasta Render. El objetivo es ejecutar el flujo ya validado, sin pedirle al usuario que repita reglas permanentes y sin cambiar reglas de negocio.
+Mantener la aplicacion existente `app_octopus` sincronizada desde la carpeta oficial de Drive hasta Render, sin cambiar reglas de negocio ni interfaz.
 
-## Antes de actuar
+## Elegir el modo
 
-- Trabajar sobre el repo existente `app_octopus`; no crear una app nueva.
-- Usar Google Drive como fuente oficial viva y revisar el estado mas reciente antes de procesar.
-- Leer las reglas vigentes en [Reglas Operativas](references/reglas-operativas.md) y el procedimiento en [Flujo de Actualizacion](references/flujo-actualizacion.md).
-- Si la actualizacion toca clientes, alias, cuadros dudosos o casos especiales, consultar tambien [Casos Validados](references/casos-validados.md).
+- **`Actualiza OCTOPUS`**: usar siempre el flujo incremental de [Actualizacion Incremental](references/flujo-incremental.md). No revisar ni descargar documentos historicos sin cambios.
+- **`Audita OCTOPUS completo`**: usar [Auditoria Completa](references/flujo-auditoria-completa.md). Es el unico disparador normal de la revision historica pesada.
+- Si el flujo incremental detecta una condicion que impide garantizar integridad, detener antes de iniciar una auditoria completa y explicar el motivo. Recargar una fuente oficial completa que efectivamente cambio no equivale a auditar visualmente todo Drive.
 
-## Principios
+Leer siempre [Reglas Operativas](references/reglas-operativas.md). Consultar [Casos Validados](references/casos-validados.md) solo para archivos/clientes alcanzados por la actualizacion.
 
-- Procesar todo lo que pueda resolverse con reglas ya validadas.
-- Usar `source_documents.csv` como registro persistente de identidad documental y `source_identity.py` para comparar Drive ID, SHA-256 y pixeles exactos.
-- No convertir casos dudosos en decisiones automaticas.
-- Si un archivo necesita intervencion humana, clasificar solo ese archivo como `REVISION`, conservar la trazabilidad y continuar con el resto.
-- Una actualizacion incluye todas las fuentes e indicadores: revisar la version actual de Facturacion Historica aunque no haya cuadros nuevos. Ejecutar la reconciliacion y verificar los valores publicados, no solo que Render responda.
-- Nunca inventar facturado, ganancia, cliente, canal ni fecha.
-- No modificar la interfaz de Render salvo que el usuario lo pida explicitamente; en una actualizacion normal solo se actualizan datos/base.
+## Invariantes
 
-## Cierre Esperado
+- Drive es la fuente oficial viva; `data/incremental_update_state.json` conserva el ultimo watermark e inventario conocido.
+- `source_documents.csv` y `source_identity.py` conservan identidad documental, trazabilidad y decisiones humanas.
+- Mismo cliente no implica misma operacion. Duplicar automaticamente solo por Drive ID, SHA-256 o pixeles identicos.
+- Descargar, abrir y extraer solo archivos nuevos, modificados o dudosos.
+- Si una fuente no cambio, no reprocesarla. Si Facturacion Historica cambio, cargar su nueva version; si no cambio, no descargarla.
+- Aplicar operaciones Drive-backed con `scripts/incremental_refresh.py`. Recalcular solo clientes y meses afectados. El control global rapido de integridad se mantiene.
+- Un caso nuevo dudoso va a `REVISION`; continuar con los demas.
+- Commit/push y Render solo cuando haya cambios persistidos. Verificar en Render los meses, rankings y fichas afectados.
 
-Al terminar, responder con un resumen corto:
+## Cierre
+
+Responder en formato breve:
 
 ```text
-Cuadros nuevos encontrados: X
-Procesados: X
-Duplicados: X
-En revision: X
-Clientes existentes actualizados: X
-Clientes nuevos creados: X
-Total publicado en Render: X
-Sincronizacion Drive -> base -> Render: SI/NO
+Archivos detectados en Drive: X
+Archivos ya conocidos/sin cambios: X
+Archivos nuevos: X
+Archivos modificados: X
+Duplicados confirmados: X
+Operaciones incorporadas: X
+Casos en REVIEW: X
+Meses/clientes afectados: ...
+Facturacion Historica cambio: SI/NO
+GitHub actualizado: OK/SIN CAMBIOS/ERROR
+Render actualizado y verificado: OK/SIN CAMBIOS/ERROR
+Tiempo total: X
 ```
-
-Si queda algo en revision, indicar exactamente archivo, cliente probable si existe, link/ID de Drive y el dato que falta.
 

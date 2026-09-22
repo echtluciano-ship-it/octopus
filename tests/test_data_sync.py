@@ -124,6 +124,45 @@ class SyncTests(unittest.TestCase):
         row = self.conn.execute("SELECT rentability_billed,octopus_profit,rentability_operations FROM monthly_metrics WHERE client_key='A' AND month='2026-09'").fetchone()
         self.assertEqual(row, (400, 35, 2))
 
+    def test_scoped_rebuild_matches_full_rebuild_for_affected_data(self):
+        partial = sqlite3.connect(":memory:")
+        self.conn.backup(partial)
+        additions = (
+            ("incremental-a", "A", "Cliente A", "2026-09-18", 250, 25),
+            ("incremental-c", "C", "Cliente C", "2026-09-18", 600, 90),
+        )
+        for conn in (self.conn, partial):
+            for key, client, name, day, net, profit in additions:
+                conn.execute(
+                    """INSERT INTO rentability_operations
+                    (operation_key,client_key,client_name,channel,month,operation_date,
+                     billed_amount,octopus_profit,status)
+                    VALUES (?,?,?,'HYF',?,?,?,?, 'OK')""",
+                    (key, client, name, day[:7], day, net, profit),
+                )
+
+        self.rebuild()
+        affected_clients = {"A", "C"}
+        affected_metrics = {("A", "HYF", "2026-09"), ("C", "HYF", "2026-09")}
+        data_loader.rebuild_clients(partial, affected_clients)
+        data_loader.rebuild_monthly_metrics(partial, affected_metrics)
+        partial.commit()
+
+        self.assertEqual(
+            self.conn.execute("SELECT * FROM clients ORDER BY client_key").fetchall(),
+            partial.execute("SELECT * FROM clients ORDER BY client_key").fetchall(),
+        )
+        metric_columns = (
+            "client_key,client_name,channel,month,billing_total,rentability_billed,"
+            "octopus_profit,rentability_pct,billing_operations,rentability_operations,has_pending_data"
+        )
+        self.assertEqual(
+            self.conn.execute(f"SELECT {metric_columns} FROM monthly_metrics ORDER BY client_key,channel,month").fetchall(),
+            partial.execute(f"SELECT {metric_columns} FROM monthly_metrics ORDER BY client_key,channel,month").fetchall(),
+        )
+        self.assertEqual(reconcile_database(self.conn, AS_OF), reconcile_database(partial, AS_OF))
+        partial.close()
+
     def test_failed_load_preserves_previous_database(self):
         before = self.path.read_bytes()
         with patch.object(data_loader, "DB_PATH", self.path), patch.object(data_loader, "load_billing", side_effect=ValueError("bad input")):

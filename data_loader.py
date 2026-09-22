@@ -724,65 +724,80 @@ def load_rentability(conn: sqlite3.Connection) -> None:
             )
 
 
-def load_manual_rentability(conn: sqlite3.Connection) -> None:
+def manual_rentability_record(row: dict[str, str]) -> dict | None:
+    """Normalize one persisted manual row into the database representation."""
+    client_name = clean_text(row.get("client_name"))
+    if not client_name:
+        return None
+    original_client_name = client_name
+    client_name = canonical_client_name(original_client_name)
+    op_date = parse_date(row.get("received_date"))
+    if not op_date:
+        return None
+    month = op_date.strftime("%Y-%m")
+    channel = normalize_channel(row.get("channel"))
+    status = clean_text(row.get("status")) or "PENDIENTE"
+    operation_type = clean_text(row.get("operation_type")) or "NORMAL"
+    net_billing_amount = parse_decimal(row.get("net_billing_amount"))
+    legacy_billed_amount = parse_decimal(row.get("billed_amount"))
+    billed_amount = net_billing_amount if net_billing_amount is not None else legacy_billed_amount
+    check_amount = parse_decimal(row.get("check_amount"))
+    if check_amount is None and operation_type == "TRANSFERENCIA_1_2":
+        check_amount = legacy_billed_amount
+    source_path = clean_text(row.get("source_path"))
+    profit = parse_decimal(row.get("octopus_profit"))
+    client_key = normalize_name(client_name)
+    return {
+        "operation_key": make_operation_key(
+            source_path, op_date, client_key, channel, billed_amount, profit
+        ),
+        "client_key": client_key,
+        "client_name": client_name,
+        "original_client_name": original_client_name,
+        "channel": channel,
+        "operation_date": op_date.isoformat(),
+        "month": month,
+        "check_amount": check_amount,
+        "net_billing_amount": net_billing_amount,
+        "billed_amount": billed_amount,
+        "octopus_profit": profit,
+        "status": status,
+        "operation_type": operation_type,
+        "source_file": Path(source_path).name,
+        "source_path": source_path,
+        "reference": clean_text(row.get("reference")),
+        "note": clean_text(row.get("note")),
+        "source_drive_id": extract_drive_id(source_path),
+    }
+
+
+def insert_manual_rentability(conn: sqlite3.Connection, record: dict) -> None:
+    columns = (
+        "operation_key", "client_key", "client_name", "original_client_name", "channel",
+        "operation_date", "month", "check_amount", "net_billing_amount", "billed_amount",
+        "octopus_profit", "status", "operation_type", "source_file", "source_path",
+        "reference", "note", "source_drive_id",
+    )
+    conn.execute(
+        f"INSERT INTO rentability_operations ({', '.join(columns)}) "
+        f"VALUES ({', '.join('?' for _ in columns)})",
+        tuple(record[column] for column in columns),
+    )
+
+
+def load_manual_rentability(
+    conn: sqlite3.Connection, drive_ids: set[str] | None = None
+) -> None:
     if not MANUAL_RENTABILITY_FILE.exists():
         return
     with MANUAL_RENTABILITY_FILE.open("r", encoding="utf-8-sig", newline="") as fh:
         for row in csv.DictReader(fh):
-            client_name = clean_text(row.get("client_name"))
-            if not client_name:
+            record = manual_rentability_record(row)
+            if record is None:
                 continue
-            original_client_name = client_name
-            client_name = canonical_client_name(original_client_name)
-            op_date = parse_date(row.get("received_date"))
-            if not op_date:
+            if drive_ids is not None and record["source_drive_id"] not in drive_ids:
                 continue
-            month = op_date.strftime("%Y-%m")
-            channel = normalize_channel(row.get("channel"))
-            status = clean_text(row.get("status")) or "PENDIENTE"
-            operation_type = clean_text(row.get("operation_type")) or "NORMAL"
-            net_billing_amount = parse_decimal(row.get("net_billing_amount"))
-            legacy_billed_amount = parse_decimal(row.get("billed_amount"))
-            billed_amount = net_billing_amount if net_billing_amount is not None else legacy_billed_amount
-            check_amount = parse_decimal(row.get("check_amount"))
-            if check_amount is None and operation_type == "TRANSFERENCIA_1_2":
-                check_amount = legacy_billed_amount
-            conn.execute(
-                """
-                INSERT INTO rentability_operations (
-                    operation_key, client_key, client_name, original_client_name, channel, operation_date, month,
-                    check_amount, net_billing_amount, billed_amount, octopus_profit, status,
-                    operation_type, source_file, source_path, reference, note, source_drive_id
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    make_operation_key(
-                        clean_text(row.get("source_path")),
-                        op_date,
-                        normalize_name(client_name),
-                        channel,
-                        billed_amount,
-                        parse_decimal(row.get("octopus_profit")),
-                    ),
-                    normalize_name(client_name),
-                    client_name,
-                    original_client_name,
-                    channel,
-                    op_date.isoformat(),
-                    month,
-                    check_amount,
-                    net_billing_amount,
-                    billed_amount,
-                    parse_decimal(row.get("octopus_profit")),
-                    status,
-                    operation_type,
-                    Path(clean_text(row.get("source_path"))).name,
-                    clean_text(row.get("source_path")),
-                    clean_text(row.get("reference")),
-                    clean_text(row.get("note")),
-                    extract_drive_id(row.get("source_path")),
-                ),
-            )
+            insert_manual_rentability(conn, record)
 
 
 def load_source_documents(conn: sqlite3.Connection) -> None:
@@ -829,10 +844,23 @@ def load_source_documents(conn: sqlite3.Connection) -> None:
             )
 
 
-def rebuild_clients(conn: sqlite3.Connection) -> None:
+def _where_client_keys(client_keys: set[str] | None) -> tuple[str, tuple[str, ...]]:
+    if client_keys is None:
+        return "", ()
+    ordered = tuple(sorted(client_keys))
+    if not ordered:
+        return " WHERE 0", ()
+    return f" WHERE client_key IN ({', '.join('?' for _ in ordered)})", ordered
+
+
+def rebuild_clients(conn: sqlite3.Connection, client_keys: set[str] | None = None) -> None:
+    where, params = _where_client_keys(client_keys)
+    if client_keys is not None:
+        conn.executemany("DELETE FROM clients WHERE client_key = ?", [(key,) for key in client_keys])
     names: dict[str, dict] = {}
     for client_key, client_name, period_date, month in conn.execute(
-        "SELECT client_key, client_name, period_date, month FROM billing_operations"
+        "SELECT client_key, client_name, period_date, month FROM billing_operations" + where,
+        params,
     ):
         item = names.setdefault(
             client_key,
@@ -841,7 +869,8 @@ def rebuild_clients(conn: sqlite3.Connection) -> None:
         item["dates"].append(period_date)
         item["months"].append(month)
     for client_key, client_name, operation_date, month in conn.execute(
-        "SELECT client_key, client_name, operation_date, month FROM rentability_operations"
+        "SELECT client_key, client_name, operation_date, month FROM rentability_operations" + where,
+        params,
     ):
         item = names.setdefault(
             client_key,
@@ -878,15 +907,36 @@ def rebuild_clients(conn: sqlite3.Connection) -> None:
         )
 
 
-def rebuild_monthly_metrics(conn: sqlite3.Connection) -> None:
+def rebuild_monthly_metrics(
+    conn: sqlite3.Connection,
+    identities: set[tuple[str, str, str]] | None = None,
+) -> None:
     from metrics import VALID_BILLING, VALID_RENTABILITY
 
-    conn.execute("DELETE FROM monthly_metrics")
-    keys = set()
-    for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM billing_operations"):
-        keys.add(row)
-    for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM rentability_operations"):
-        keys.add(row)
+    if identities is None:
+        conn.execute("DELETE FROM monthly_metrics")
+        keys = set()
+        for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM billing_operations"):
+            keys.add(row)
+        for row in conn.execute("SELECT DISTINCT client_key, channel, month FROM rentability_operations"):
+            keys.add(row)
+    else:
+        keys = set()
+        for identity in identities:
+            conn.execute(
+                "DELETE FROM monthly_metrics WHERE client_key = ? AND channel = ? AND month = ?",
+                identity,
+            )
+            exists = conn.execute(
+                """SELECT 1 FROM billing_operations
+                   WHERE client_key = ? AND channel = ? AND month = ?
+                   UNION ALL
+                   SELECT 1 FROM rentability_operations
+                   WHERE client_key = ? AND channel = ? AND month = ? LIMIT 1""",
+                identity + identity,
+            ).fetchone()
+            if exists:
+                keys.add(identity)
 
     names = dict(conn.execute("SELECT client_key, display_name FROM clients"))
     for client_key, channel, month in sorted(keys):
