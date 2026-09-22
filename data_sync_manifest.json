@@ -1,14 +1,14 @@
 {
-  "database_sha256": "ce3b51e8fa0326333db66da3242b1a5c780bdc8096e097e1388ad9e55b218980",
+  "database_sha256": "0f01b82d3b2262beeaffba899c7103a66650ce19337476313c34de231f252d51",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "32159ee3a4945bec2b23f37c799e23cd834e952500bd49af751c9ec65983886a",
-    "data/billing_source.json": "c4a77fd031418444d2334e7ce123cdd488e33f704312f56f4d4881aac1ad78c8",
-    "manual_rentability_operations.csv": "26c8d33d8c42a4c4c1bfc9d5d4ec0d8b24b4270cd033807760455f9d7c6d3c03",
+    "data/FACTURACION OCTOPUS.xlsx": "3c5686e8a5894e2da1c6cb9be5e562945a256e38dab4a5912564badf4e7d1a77",
+    "data/billing_source.json": "0d4592bc191eca5fc9c11815a94c152cc750bee9111fd041b00bfe9a31ab5b8c",
+    "manual_rentability_operations.csv": "41fff466015113ed96cb7d1f45bce725ab5adef3bfa99bb2f30bbec4bd890da2",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "f4227e7a401e04c33073a1275bfbf90592404162de8f88bf8005fffa20cdf9a3"
+    "source_documents.csv": "ca24583432ea2a13532d647a6c14f65ecdcf3bc503936333374b256e133bf8c3"
   },
   "controls": {
-    "as_of": "2026-09-21",
+    "as_of": "2026-09-22",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2570279188.64,
-        "billing_records": 178,
-        "validated_net": 1337595760.0,
-        "profit": 75667122.0,
-        "profitability": 0.05656949899422528,
-        "valid_operations": 38,
+        "billing_total": 2593734853.42,
+        "billing_records": 182,
+        "validated_net": 1361410380.0,
+        "profit": 77548956.0,
+        "profitability": 0.056962218842491856,
+        "valid_operations": 39,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3011,10 +3011,10 @@
           {
             "client_name": "ISAKITO S.A.",
             "client_key": "ISAKITO",
-            "facturacion_validada": 25011840.0,
-            "ganancia_octopus": 1979844.0,
-            "rentabilidad": 0.07915627158977508,
-            "operaciones": 1
+            "facturacion_validada": 48826460.0,
+            "ganancia_octopus": 3861678.0,
+            "rentabilidad": 0.07908986234103393,
+            "operaciones": 2
           },
           {
             "client_name": "DAUMAS MOTOFLEX S.R.L.",
@@ -3225,16 +3225,16 @@
             "registros": 3
           },
           {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion": 48217042.3,
+            "registros": 6
+          },
+          {
             "client_name": "AEQUALIS S A",
             "client_key": "AEQUALIS",
             "facturacion": 45881468.62,
             "registros": 12
-          },
-          {
-            "client_name": "Medipremium",
-            "client_key": "MEDIPREMIUM",
-            "facturacion": 41021892.15,
-            "registros": 5
           },
           {
             "client_name": "ELIPA SAS",
@@ -3246,11 +3246,11 @@
       }
     },
     "published_clients": 78,
-    "valid_operations_all_dates": 211,
+    "valid_operations_all_dates": 212,
     "operation_states": {
       "OK": 185,
+      "OK_TRANSFERENCIA_1_2": 14,
       "DUPLICADO": 14,
-      "OK_TRANSFERENCIA_1_2": 13,
       "OK_FC_NETA": 13,
       "REVISION": 3,
       "EXCLUIDO": 2,

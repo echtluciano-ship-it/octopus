@@ -1,13 +1,15 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-09-22T01:40:51.262Z",
+  "last_successful_scan": "2026-09-22T21:24:36.497Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
     "pendientes/2026-09": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
     "pagos/2026-07": "1F7pvsJ8wgxxIZ4O3doXH7F5tDntER8Vf",
     "pagos/2026-08": "1MxMI04k8PXD2zzXYRS6sK5kFVAffe4oU",
-    "pagos/2026-09": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c"
+    "pagos/2026-09": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+    "pendientes/2026-10": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+    "pagos/2026-10": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14"
   },
   "documents": {
     "1jQFzxHetZ7oVOWRh8QiPeD_Bg_nh4duU": {
@@ -6653,6 +6655,248 @@
       "folder_period": "2026-09",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/11Cqx02909BAOlAeB998N_vWhFdkpgd1E/view?usp=drivesdk"
+    },
+    "1S7Z74IfnL75y0Bc5Dd2VvzOkhPqhm5yZ": {
+      "drive_id": "1S7Z74IfnL75y0Bc5Dd2VvzOkhPqhm5yZ",
+      "name": "Ordenes de Pago HYF DISTRIBUCIONES SA 22-9-26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 58754,
+      "modified_time": "2026-09-22T21:14:12.011Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1S7Z74IfnL75y0Bc5Dd2VvzOkhPqhm5yZ/view?usp=drivesdk"
+    },
+    "171grfeSurd0O1fbGHl6npV7txiF7k4GC": {
+      "drive_id": "171grfeSurd0O1fbGHl6npV7txiF7k4GC",
+      "name": "O_P Espora M _0000000039946.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 71984,
+      "modified_time": "2026-09-22T21:14:11.989Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/171grfeSurd0O1fbGHl6npV7txiF7k4GC/view?usp=drivesdk"
+    },
+    "1cPZILHCkJJnluSomCyMO9pqjkVxsjesk": {
+      "drive_id": "1cPZILHCkJJnluSomCyMO9pqjkVxsjesk",
+      "name": "RET MC 198 - D. ESPORA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 63762,
+      "modified_time": "2026-09-22T21:14:11.958Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1cPZILHCkJJnluSomCyMO9pqjkVxsjesk/view?usp=drivesdk"
+    },
+    "1sQKoiZOiXzRQ5Wfdu6_v1ffqiOLdVp38": {
+      "drive_id": "1sQKoiZOiXzRQ5Wfdu6_v1ffqiOLdVp38",
+      "name": "RET MC 197 - D. ESPORA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 63764,
+      "modified_time": "2026-09-22T21:14:11.907Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1sQKoiZOiXzRQ5Wfdu6_v1ffqiOLdVp38/view?usp=drivesdk"
+    },
+    "1xR5p-c1pjIaREDhJn1wRqNvtlFt-rPem": {
+      "drive_id": "1xR5p-c1pjIaREDhJn1wRqNvtlFt-rPem",
+      "name": "O_P_0000000039946_G00003260.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 12608,
+      "modified_time": "2026-09-22T21:14:11.904Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1xR5p-c1pjIaREDhJn1wRqNvtlFt-rPem/view?usp=drivesdk"
+    },
+    "1pQLSyx4vE9L2FaA7QvH3rul598cFFeWZ": {
+      "drive_id": "1pQLSyx4vE9L2FaA7QvH3rul598cFFeWZ",
+      "name": "Espora 22.9.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 5451,
+      "modified_time": "2026-09-22T21:14:11.849Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1pQLSyx4vE9L2FaA7QvH3rul598cFFeWZ/view?usp=drivesdk"
+    },
+    "1LycUZjLlnV6FO9fijqVaChEvGYVUgU0M": {
+      "drive_id": "1LycUZjLlnV6FO9fijqVaChEvGYVUgU0M",
+      "name": "Ordenes de Pago  DISTRIBUIDORA ESPORA SRL 22-9-26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 59121,
+      "modified_time": "2026-09-22T21:14:11.844Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1LycUZjLlnV6FO9fijqVaChEvGYVUgU0M/view?usp=drivesdk"
+    },
+    "1Ym4hVKmiUXMpLCs4jTIxGe-WoXRhUFgT": {
+      "drive_id": "1Ym4hVKmiUXMpLCs4jTIxGe-WoXRhUFgT",
+      "name": "Digitalización_2008_01_06_20_43_56_854.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 36587,
+      "modified_time": "2026-09-22T21:13:36.777Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Ym4hVKmiUXMpLCs4jTIxGe-WoXRhUFgT/view?usp=drivesdk"
+    },
+    "1KviGjVa_6xUzDK_ReeInudMOYCSv8cRu": {
+      "drive_id": "1KviGjVa_6xUzDK_ReeInudMOYCSv8cRu",
+      "name": "Cheque31017_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4942,
+      "modified_time": "2026-09-22T21:13:36.548Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KviGjVa_6xUzDK_ReeInudMOYCSv8cRu/view?usp=drivesdk"
+    },
+    "1-CkxwcnFGvnKYGyfWMFBRiqjwc5dT4M6": {
+      "drive_id": "1-CkxwcnFGvnKYGyfWMFBRiqjwc5dT4M6",
+      "name": "Cheque6268_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4775,
+      "modified_time": "2026-09-22T21:13:34.835Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-CkxwcnFGvnKYGyfWMFBRiqjwc5dT4M6/view?usp=drivesdk"
+    },
+    "1_mlr-_UsrxZwSfOVTZo50099JBzRVUMB": {
+      "drive_id": "1_mlr-_UsrxZwSfOVTZo50099JBzRVUMB",
+      "name": "Cheque30000072_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4772,
+      "modified_time": "2026-09-22T21:13:34.617Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1_mlr-_UsrxZwSfOVTZo50099JBzRVUMB/view?usp=drivesdk"
+    },
+    "1ctptNIPuxeKs0nzR5KcCirDNiWCkacDK": {
+      "drive_id": "1ctptNIPuxeKs0nzR5KcCirDNiWCkacDK",
+      "name": "Cheque68253510_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4777,
+      "modified_time": "2026-09-22T21:13:34.595Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1ctptNIPuxeKs0nzR5KcCirDNiWCkacDK/view?usp=drivesdk"
+    },
+    "1hBz2xIxgvyxpTQDONjfYHpEyPF7-kkAk": {
+      "drive_id": "1hBz2xIxgvyxpTQDONjfYHpEyPF7-kkAk",
+      "name": "Digitalización_2008_01_06_01_42_10_115.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 36857,
+      "modified_time": "2026-09-22T21:13:34.550Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1hBz2xIxgvyxpTQDONjfYHpEyPF7-kkAk/view?usp=drivesdk"
+    },
+    "1WqEpZGeLJUy7_2SDvdtsxaAxr7wwstz5": {
+      "drive_id": "1WqEpZGeLJUy7_2SDvdtsxaAxr7wwstz5",
+      "name": "Cheque30007511_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4775,
+      "modified_time": "2026-09-22T21:13:34.531Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1WqEpZGeLJUy7_2SDvdtsxaAxr7wwstz5/view?usp=drivesdk"
+    },
+    "1aRhXIDenDaBIlbp7c5RVYQefL-cwj0jr": {
+      "drive_id": "1aRhXIDenDaBIlbp7c5RVYQefL-cwj0jr",
+      "name": "Cheque40755529_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4773,
+      "modified_time": "2026-09-22T21:13:34.526Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1aRhXIDenDaBIlbp7c5RVYQefL-cwj0jr/view?usp=drivesdk"
+    },
+    "1pG58wDOC4p0Xt3pN25JpkWQVigq3hqJa": {
+      "drive_id": "1pG58wDOC4p0Xt3pN25JpkWQVigq3hqJa",
+      "name": "Cheque1930_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4774,
+      "modified_time": "2026-09-22T21:13:34.502Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1pG58wDOC4p0Xt3pN25JpkWQVigq3hqJa/view?usp=drivesdk"
+    },
+    "1LWsumF8ClR3raJr9sqfBw3Le1UkWcFI0": {
+      "drive_id": "1LWsumF8ClR3raJr9sqfBw3Le1UkWcFI0",
+      "name": "Cheque10974850_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4780,
+      "modified_time": "2026-09-22T21:13:34.388Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1LWsumF8ClR3raJr9sqfBw3Le1UkWcFI0/view?usp=drivesdk"
+    },
+    "1bWctVvQ07M-D5w13uH0rOpx6pYZ2j6-8": {
+      "drive_id": "1bWctVvQ07M-D5w13uH0rOpx6pYZ2j6-8",
+      "name": "Cheque6931069_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4777,
+      "modified_time": "2026-09-22T21:13:34.370Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1bWctVvQ07M-D5w13uH0rOpx6pYZ2j6-8/view?usp=drivesdk"
+    },
+    "1n4IUoihTmoCkvi168VyY3HrWLSg-HeSv": {
+      "drive_id": "1n4IUoihTmoCkvi168VyY3HrWLSg-HeSv",
+      "name": "Cheque14665_HYF DISTRIBUCIONES S.A._33711676789.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 4777,
+      "modified_time": "2026-09-22T21:13:34.342Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1n4IUoihTmoCkvi168VyY3HrWLSg-HeSv/view?usp=drivesdk"
+    },
+    "1gH5D4rvwZEuQ7tNZKRODt1DJhZrOJBzG": {
+      "drive_id": "1gH5D4rvwZEuQ7tNZKRODt1DJhZrOJBzG",
+      "name": "PHOTO-2026-09-22-15-05-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18790,
+      "modified_time": "2026-09-22T21:17:53.738Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1gH5D4rvwZEuQ7tNZKRODt1DJhZrOJBzG/view?usp=drivesdk"
+    },
+    "1_Vjz4S5fLwZrKkh2FIYhs62DPqFpVomJ": {
+      "drive_id": "1_Vjz4S5fLwZrKkh2FIYhs62DPqFpVomJ",
+      "name": "PHOTO-2026-09-22-11-23-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 308111,
+      "modified_time": "2026-09-22T21:17:53.736Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1_Vjz4S5fLwZrKkh2FIYhs62DPqFpVomJ/view?usp=drivesdk"
+    },
+    "15tB-lgr3L7lJNj_ggHXQjgQZ63xXC888": {
+      "drive_id": "15tB-lgr3L7lJNj_ggHXQjgQZ63xXC888",
+      "name": "PHOTO-2026-09-22-14-58-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18498,
+      "modified_time": "2026-09-22T21:17:53.513Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/15tB-lgr3L7lJNj_ggHXQjgQZ63xXC888/view?usp=drivesdk"
     }
   },
   "official_sources": {
@@ -6660,22 +6904,13 @@
       "id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "title": "FACTURACION OCTOPUS.xlsx",
       "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "size": "417498",
-      "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit?usp=drivesdk&ouid=104113734634245258280&rtpof=true&sd=true",
-      "file_or_folder": "file",
-      "created_time": null,
-      "modified_time": "2026-09-22T01:00:52.163Z",
-      "parent_ids": null,
-      "drive_id": null,
-      "current_user_can_share": null,
-      "has_augmented_permissions": null,
-      "shared": null,
-      "permissions": null,
-      "source_visibility_status": "access_not_verified"
+      "size": "418534",
+      "modified_time": "2026-09-22T19:37:56.668Z",
+      "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-22T01:41:12+00:00"
+    "recorded_at": "2026-09-22T21:37:42+00:00"
   }
 }

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 
@@ -94,6 +95,8 @@ def commit_snapshot(state: dict, snapshot: dict) -> dict:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Plan or persist an incremental Google Drive scan.")
     parser.add_argument("command", choices=("plan", "commit", "init"))
     parser.add_argument("--snapshot", type=Path, required=True)
