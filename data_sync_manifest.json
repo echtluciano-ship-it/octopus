@@ -1,14 +1,14 @@
 {
-  "database_sha256": "0f01b82d3b2262beeaffba899c7103a66650ce19337476313c34de231f252d51",
+  "database_sha256": "274792ade8a5f7ea4a8a694594692140180c580b8c639db25348aabe18b8e38e",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "3c5686e8a5894e2da1c6cb9be5e562945a256e38dab4a5912564badf4e7d1a77",
-    "data/billing_source.json": "0d4592bc191eca5fc9c11815a94c152cc750bee9111fd041b00bfe9a31ab5b8c",
+    "data/FACTURACION OCTOPUS.xlsx": "a34b08351b63b9e89480dcf80065a466446826a3d529b329c85e205f2e9f6d36",
+    "data/billing_source.json": "fc93d20642cd087f0c8599b72d0dbfdb7d43eeacdca86a879d15554ad6d782c4",
     "manual_rentability_operations.csv": "41fff466015113ed96cb7d1f45bce725ab5adef3bfa99bb2f30bbec4bd890da2",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "ca24583432ea2a13532d647a6c14f65ecdcf3bc503936333374b256e133bf8c3"
+    "source_documents.csv": "7f2dc3259f525b381fd78ec9340881d280e43a91fce3088f408c7052886825a8"
   },
   "controls": {
-    "as_of": "2026-09-22",
+    "as_of": "2026-09-23",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 2593734853.42,
         "billing_records": 182,
-        "validated_net": 1361410380.0,
-        "profit": 77548956.0,
-        "profitability": 0.056962218842491856,
-        "valid_operations": 39,
+        "validated_net": 1449738327.0,
+        "profit": 82970051.0,
+        "profitability": 0.05723105298022517,
+        "valid_operations": 43,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3017,11 +3017,35 @@
             "operaciones": 2
           },
           {
+            "client_name": "ASHI S.A",
+            "client_key": "ASHI",
+            "facturacion_validada": 11001205.0,
+            "ganancia_octopus": 820610.0,
+            "rentabilidad": 0.07459273779554149,
+            "operaciones": 1
+          },
+          {
+            "client_name": "TRICO",
+            "client_key": "TRICO",
+            "facturacion_validada": 27006818.0,
+            "ganancia_octopus": 1885505.0,
+            "rentabilidad": 0.06981588871373147,
+            "operaciones": 1
+          },
+          {
             "client_name": "DAUMAS MOTOFLEX S.R.L.",
             "client_key": "DAUMAS MOTOFLEX",
             "facturacion_validada": 50000000.0,
             "ganancia_octopus": 3488000.0,
             "rentabilidad": 0.06976,
+            "operaciones": 1
+          },
+          {
+            "client_name": "TRANSPORTE TRACCION S.R.L.",
+            "client_key": "TRANSPORTE TRACCION",
+            "facturacion_validada": 10412612.0,
+            "ganancia_octopus": 724403.0,
+            "rentabilidad": 0.06956976789301282,
             "operaciones": 1
           },
           {
@@ -3091,34 +3115,10 @@
           {
             "client_name": "COCINA Y PATAGONIA",
             "client_key": "COCINA Y PATAGONIA",
-            "facturacion_validada": 110174125.0,
-            "ganancia_octopus": 5495486.0,
-            "rentabilidad": 0.049880005854369164,
-            "operaciones": 2
-          },
-          {
-            "client_name": "AUFBAUEN S.R.L.",
-            "client_key": "AUFBAUEN",
-            "facturacion_validada": 18390010.0,
-            "ganancia_octopus": 882720.0,
-            "rentabilidad": 0.04799997389887227,
-            "operaciones": 1
-          },
-          {
-            "client_name": "PROMORED ARGENTINA S. A.",
-            "client_key": "PROMORED ARGENTINA",
-            "facturacion_validada": 16344124.0,
-            "ganancia_octopus": 751830.0,
-            "rentabilidad": 0.04600001811048423,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Bahia",
-            "client_key": "BAHIA",
-            "facturacion_validada": 14895680.0,
-            "ganancia_octopus": 628756.0,
-            "rentabilidad": 0.04221062751079507,
-            "operaciones": 1
+            "facturacion_validada": 150081437.0,
+            "ganancia_octopus": 7486063.0,
+            "rentabilidad": 0.04988000614626311,
+            "operaciones": 3
           }
         ],
         "billing_ranking": [

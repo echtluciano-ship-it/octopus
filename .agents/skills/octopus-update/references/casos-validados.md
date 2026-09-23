@@ -44,3 +44,8 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - El Perro de la Luna con ECHEQ 31/07 corresponde a julio de 2026.
 - Managing con ECHEQ 31/07/26 corresponde a julio de 2026.
 
+## Hasar - Canal Corregido
+
+- Para `PHOTO-2026-09-23-11-52-07.jpg` (Drive ID `18etnvM0kn-HSGkKRdMtymT5SY17E__Qe`), Luciano confirmo el 2026-09-23 que el canal correcto es `HYF`, aunque el encabezado del cuadro dice `HASAR-ESPORA`.
+- El cuadro muestra ECHEQ 25/09 y 25/10. Mantenerlo en `REVISION` sin contabilizar hasta que se defina el mes operativo; la correccion de canal a `HYF` ya es definitiva.
+
