@@ -8,6 +8,12 @@
 4. En las carpetas mensuales conocidas, buscar archivos creados o modificados desde el watermark. No listar/descargar todo el contenido historico.
 5. Leer metadatos de Facturacion Historica y compararlos con `data/billing_source.json` y el estado incremental.
 
+### Respaldo para carpetas compartidas
+
+- La busqueda de Drive por `modifiedTime` puede omitir archivos nuevos dentro de carpetas compartidas. En cada actualizacion, listar tambien los hijos directos de las carpetas del mes actual y del mes inmediato siguiente y comparar solo sus Drive ID/metadatos contra el estado persistido; esto no habilita descargar ni reinterpretar archivos conocidos.
+- Si el usuario informa una carga en un mes concreto y la busqueda incremental devuelve cero resultados, el listado directo de esa carpeta es obligatorio antes de concluir que no hubo cambios.
+- Para meses historicos, mantener la busqueda por watermark; listar directamente una carpeta historica solo cuando el usuario indique que agrego o movio archivos alli, o cuando exista otra evidencia concreta de desincronizacion.
+
 Crear un snapshot temporal con este esquema y ejecutar:
 
 ```powershell
