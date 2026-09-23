@@ -1,11 +1,11 @@
 {
-  "database_sha256": "274792ade8a5f7ea4a8a694594692140180c580b8c639db25348aabe18b8e38e",
+  "database_sha256": "7ccdea239e87deb08fe72bc26b0357d198e15ece5542751b47c09d9e090ed613",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "a34b08351b63b9e89480dcf80065a466446826a3d529b329c85e205f2e9f6d36",
     "data/billing_source.json": "fc93d20642cd087f0c8599b72d0dbfdb7d43eeacdca86a879d15554ad6d782c4",
-    "manual_rentability_operations.csv": "41fff466015113ed96cb7d1f45bce725ab5adef3bfa99bb2f30bbec4bd890da2",
+    "manual_rentability_operations.csv": "2006cefd545b31be95c57448735f528bbbf16446f6934ad76d89f286d2741998",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "7f2dc3259f525b381fd78ec9340881d280e43a91fce3088f408c7052886825a8"
+    "source_documents.csv": "3d7f843dd7507d5e4170e1868bf395965073f2ae7442c1a5d13a2a9a55306d60"
   },
   "controls": {
     "as_of": "2026-09-23",
@@ -2663,10 +2663,10 @@
       "2026-08": {
         "billing_total": 4316074799.38,
         "billing_records": 320,
-        "validated_net": 3126596931.0,
-        "profit": 192354429.0,
-        "profitability": 0.06152197844653996,
-        "valid_operations": 82,
+        "validated_net": 3173993429.23,
+        "profit": 195149918.33,
+        "profitability": 0.06148403349950939,
+        "valid_operations": 83,
         "rentability_ranking": [
           {
             "client_name": "MINETECH SRL",
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 2593734853.42,
         "billing_records": 182,
-        "validated_net": 1449738327.0,
-        "profit": 82970051.0,
-        "profitability": 0.05723105298022517,
-        "valid_operations": 43,
+        "validated_net": 1460187275.77,
+        "profit": 83586339.67,
+        "profitability": 0.05724357488728454,
+        "valid_operations": 44,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3097,6 +3097,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion_validada": 10448948.77,
+            "ganancia_octopus": 616288.67,
+            "rentabilidad": 0.05898092559984865,
+            "operaciones": 1
+          },
+          {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
             "facturacion_validada": 116519724.0,
@@ -3111,14 +3119,6 @@
             "ganancia_octopus": 6840691.0,
             "rentabilidad": 0.056953745325414896,
             "operaciones": 2
-          },
-          {
-            "client_name": "COCINA Y PATAGONIA",
-            "client_key": "COCINA Y PATAGONIA",
-            "facturacion_validada": 150081437.0,
-            "ganancia_octopus": 7486063.0,
-            "rentabilidad": 0.04988000614626311,
-            "operaciones": 3
           }
         ],
         "billing_ranking": [
@@ -3246,13 +3246,14 @@
       }
     },
     "published_clients": 78,
-    "valid_operations_all_dates": 212,
+    "valid_operations_all_dates": 216,
     "operation_states": {
       "OK": 185,
       "OK_TRANSFERENCIA_1_2": 14,
       "DUPLICADO": 14,
       "OK_FC_NETA": 13,
-      "REVISION": 3,
+      "OK_MULTI_MONTH_SPLIT": 4,
+      "REVISION": 2,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2
     }

@@ -47,5 +47,17 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 ## Hasar - Canal Corregido
 
 - Para `PHOTO-2026-09-23-11-52-07.jpg` (Drive ID `18etnvM0kn-HSGkKRdMtymT5SY17E__Qe`), Luciano confirmo el 2026-09-23 que el canal correcto es `HYF`, aunque el encabezado del cuadro dice `HASAR-ESPORA`.
-- El cuadro muestra ECHEQ 25/09 y 25/10. Mantenerlo en `REVISION` sin contabilizar hasta que se defina el mes operativo; la correccion de canal a `HYF` ya es definitiva.
+- La orden `O_P_0201500033107.pdf` (Drive ID `1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3`) reconcilia el total pagado de 29.496.064,77 y demuestra valores por 29.336.044,77 en septiembre y 160.020,00 en octubre.
+- Distribuir la Facturacion Neta 24.805.152 y la Ganancia Octopus 1.713.756 con esas proporciones: septiembre 24.670.580,81 / 1.704.458,65 y octubre 134.571,19 / 9.297,35. Estado definitivo: `OK_MULTI_MONTH_SPLIT`.
+
+## Alimentos Viandas - Operacion Agosto/Septiembre
+
+- `PHOTO-2026-08-28-15-32-49.jpg` (Drive ID `1E-KylRmviBfoivwCSc_Ia1Cm9_nT3NNM`) corresponde a `Alimentos Viandas - HYF`.
+- La orden `ORDEN_DE_PAGO_12373.pdf` (Drive ID `1BWBwdE9ogr5dmsEnbYu71h69zt1B_nQX`) reconcilia el ECHEQ total 67.394.427,09 y la base de retenciones 57.845.448,14 con la FC neta visible 57.845.447.
+- Los valores son 55.220.592,28 en agosto y 12.173.834,81 en septiembre. Distribucion definitiva: agosto FC neta 47.396.498,23 / ganancia 2.795.489,33; septiembre FC neta 10.448.948,77 / ganancia 616.288,67. Estado `OK_MULTI_MONTH_SPLIT`.
+
+## BASIC A - Octubre/Noviembre
+
+- `PHOTO-2026-09-22-11-23-21.jpg` (HYF) y `PHOTO-2026-09-22-14-58-07.jpg` (Espora) muestran fechas de octubre y noviembre.
+- No existe aun una orden de pago correspondiente en `Pagos Octopus` que permita demostrar la distribucion real. Mantener ambos en `REVISION`; no asumir porcentajes ni publicar.
 

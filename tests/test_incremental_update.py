@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from scripts.drive_delta import build_plan, commit_snapshot
+from scripts.incremental_refresh import group_records_by_drive_id, record_groups_changed
 
 
 class DriveDeltaTests(unittest.TestCase):
@@ -56,6 +57,51 @@ class DriveDeltaTests(unittest.TestCase):
         self.assertEqual(committed["last_successful_scan"], snapshot["scan_started_at"])
         self.assertEqual(set(committed["documents"]), {"known", "other"})
         self.assertEqual(committed["official_sources"]["billing"]["modified_time"], "new")
+
+
+class MultiMonthOperationTests(unittest.TestCase):
+    def operation(self, month: str, billed: float, profit: float) -> dict:
+        record = {
+            "operation_key": f"split-{month}",
+            "client_key": "HASAR",
+            "client_name": "Hasar",
+            "original_client_name": "Hasar",
+            "channel": "HYF",
+            "operation_date": f"{month}-25",
+            "month": month,
+            "check_amount": None,
+            "net_billing_amount": billed,
+            "billed_amount": billed,
+            "octopus_profit": profit,
+            "status": "OK_MULTI_MONTH_SPLIT",
+            "operation_type": "MULTI_MONTH_SPLIT",
+            "source_file": "card.jpg",
+            "source_path": "card.jpg#drive_id_same",
+            "reference": month,
+            "note": "fixture",
+            "source_drive_id": "same",
+        }
+        return record
+
+    def test_one_document_can_create_two_monthly_fragments(self) -> None:
+        records = [
+            self.operation("2026-09", 90, 9),
+            self.operation("2026-10", 10, 1),
+        ]
+        grouped = group_records_by_drive_id(records)
+
+        self.assertEqual(list(grouped), ["same"])
+        self.assertEqual(len(grouped["same"]), 2)
+        self.assertFalse(record_groups_changed(records, [dict(row) for row in reversed(records)]))
+
+    def test_changed_fragment_is_detected_without_collapsing_document(self) -> None:
+        existing = [
+            self.operation("2026-09", 90, 9),
+            self.operation("2026-10", 10, 1),
+        ]
+        current = [dict(existing[0]), dict(existing[1], billed_amount=11)]
+
+        self.assertTrue(record_groups_changed(current, existing))
 
 
 if __name__ == "__main__":

@@ -13,7 +13,11 @@
 
 - El mes operativo de un cuadro se imputa por la fecha real visible en el cuadro, principalmente fecha de ECHEQ o transferencia, no por la carpeta donde fue subido ni por la fecha del nombre del archivo.
 - Si un archivo esta en una carpeta mensual incorrecta y la fecha real es clara, moverlo al mes correcto en Drive y conservar su ID/trazabilidad.
-- Si el cuadro tiene multiples fechas o una fecha ilegible, clasificarlo como `REVISION` salvo que la regla ya haya sido validada para ese caso.
+- Si el cuadro tiene fechas que abarcan dos o mas meses, buscar primero la orden de pago correspondiente en `Pagos Octopus`. Cuando cliente/canal, importes y referencias permitan un cruce inequivoco, distribuir Facturacion Neta y Ganancia Octopus entre los meses en la misma proporcion que los valores efectivamente pagados con vencimiento en cada mes.
+- La distribucion multi-mes se calcula con importes reales de la orden de pago; nunca asumir 50/50 ni otro porcentaje. Los tramos deben sumar exactamente la Facturacion Neta y la Ganancia del cuadro original, admitiendo solo el ajuste de redondeo en el ultimo tramo.
+- Retenciones, costos y otros conceptos sin vencimiento no se usan como ponderadores mensuales. La suma de valores usada para ponderar debe reconciliar con el ECHEQ/importe pagado del cuadro. Si el cruce no es seguro o no reconcilia, clasificar `REVISION`.
+- Una misma identidad documental puede originar varios tramos `OK_MULTI_MONTH_SPLIT`, uno por mes, conservando el mismo Drive ID y la orden de pago usada como evidencia.
+- Si el cuadro tiene una fecha ilegible y no existe una orden de pago que permita resolverla, clasificarlo como `REVISION`.
 - Si la fecha del nombre del archivo contradice la fecha visible del cuadro, manda la fecha visible del cuadro.
 
 ## Duplicados
@@ -48,6 +52,7 @@
 
 - `OK_TRANSFERENCIA_1_2`: cuando el cuadro no muestra facturado porque los costos ya fueron pagados anteriormente y la Ganancia Octopus corresponde claramente al 1,20% del importe transferido. En ese caso la base para rentabilidad es el importe transferido visible.
 - `OK_FC_NETA` / `OK_FC_HISTORICA` u operaciones con FC neta: usar solo cuando el cuadro, Facturacion Historica o una validacion previa habilita tomar ese importe como Facturacion Neta.
+- `OK_MULTI_MONTH_SPLIT`: cuadro con valores en mas de un mes cuya distribucion fue demostrada por una orden de pago inequivoca. Cada tramo mensual conserva su parte de ECHEQ/valor pagado, Facturacion Neta y Ganancia Octopus; la rentabilidad consolidada del cuadro no cambia.
 - Si falta Facturacion Neta visible, intentar cruce inequivoco contra Facturacion Historica antes de pedir revision.
 - Si el cruce contra Facturacion Historica no es inequivoco, clasificar como `REVISION`.
 

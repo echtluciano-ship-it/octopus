@@ -6908,6 +6908,39 @@
       "folder_period": "2026-10",
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/18etnvM0kn-HSGkKRdMtymT5SY17E__Qe/view?usp=drivesdk"
+    },
+    "1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3": {
+      "drive_id": "1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3",
+      "name": "O_P_0201500033107.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 241072,
+      "modified_time": "2026-09-23T20:08:58.347Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/open?id=1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3"
+    },
+    "1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ": {
+      "drive_id": "1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ",
+      "name": "O_P_0201500033107_G00009240.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 12633,
+      "modified_time": "2026-09-23T20:08:58.065Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/open?id=1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ"
+    },
+    "1Kxgw4odWAVqr7doA-gumapFPe04WN58c": {
+      "drive_id": "1Kxgw4odWAVqr7doA-gumapFPe04WN58c",
+      "name": "Retencion_IIBB_Arba_2026-00001-00008816.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 46963,
+      "modified_time": "2026-09-23T20:08:58.009Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/open?id=1Kxgw4odWAVqr7doA-gumapFPe04WN58c"
     }
   },
   "official_sources": {
@@ -6922,6 +6955,12 @@
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-23T19:46:21+00:00"
+    "recorded_at": "2026-09-23T20:29:29+00:00"
+  },
+  "last_database_refresh": {
+    "mode": "incremental",
+    "at": "2026-09-23T20:29:29+00:00",
+    "new_operations": 2,
+    "updated_operations": 2
   }
 }

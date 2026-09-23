@@ -96,6 +96,28 @@ def record_changed(record: dict, existing: sqlite3.Row) -> bool:
     return any(not same_value(record[field], existing[field]) for field in OPERATION_FIELDS)
 
 
+def group_records_by_drive_id(records) -> dict[str, list]:
+    """Group operation fragments while preserving one documentary identity."""
+    grouped: dict[str, list] = {}
+    for record in records:
+        drive_id = record["source_drive_id"]
+        if drive_id:
+            grouped.setdefault(drive_id, []).append(record)
+    return grouped
+
+
+def record_sort_key(record) -> tuple:
+    return tuple("" if record[field] is None else str(record[field]) for field in OPERATION_FIELDS)
+
+
+def record_groups_changed(current: list[dict], existing: list[sqlite3.Row]) -> bool:
+    if len(current) != len(existing):
+        return True
+    current_sorted = sorted(current, key=record_sort_key)
+    existing_sorted = sorted(existing, key=record_sort_key)
+    return any(record_changed(left, right) for left, right in zip(current_sorted, existing_sorted))
+
+
 def check_incremental_preconditions(state: dict, manifest: dict, rows: list[dict[str, str]]) -> None:
     if sha256(APP_DIR / "octopus.db") != manifest.get("database_sha256"):
         raise FullRefreshRequired("octopus.db no coincide con el ultimo manifest")
@@ -122,17 +144,13 @@ def refresh(state_path: Path = STATE_FILE) -> dict:
     check_incremental_preconditions(state, manifest, rows)
 
     data_loader.ALIAS_BY_KEY = data_loader.load_alias_map()
-    current_records: dict[str, dict] = {}
+    parsed_records = []
     for row in rows:
         record = data_loader.manual_rentability_record(row)
         if record is None:
             continue
-        drive_id = record["source_drive_id"]
-        if not drive_id:
-            continue
-        if drive_id in current_records:
-            raise FullRefreshRequired(f"Drive ID repetido en CSV manual: {drive_id}")
-        current_records[drive_id] = record
+        parsed_records.append(record)
+    current_records = group_records_by_drive_id(parsed_records)
 
     with closing(sqlite3.connect(APP_DIR / "octopus.db")) as baseline:
         baseline.row_factory = sqlite3.Row
@@ -140,9 +158,7 @@ def refresh(state_path: Path = STATE_FILE) -> dict:
             f"SELECT {', '.join(OPERATION_FIELDS)} FROM rentability_operations "
             "WHERE COALESCE(source_drive_id, '') <> ''"
         ).fetchall()
-        existing = {row["source_drive_id"]: row for row in existing_rows}
-        if len(existing) != len(existing_rows):
-            raise FullRefreshRequired("hay mas de una operacion para el mismo Drive ID")
+        existing = group_records_by_drive_id(existing_rows)
 
     removed = set(existing) - set(current_records)
     if removed:
@@ -152,8 +168,8 @@ def refresh(state_path: Path = STATE_FILE) -> dict:
     new_ids = {drive_id for drive_id in current_records if drive_id not in existing}
     updated_ids = {
         drive_id
-        for drive_id, record in current_records.items()
-        if drive_id in existing and record_changed(record, existing[drive_id])
+        for drive_id, records in current_records.items()
+        if drive_id in existing and record_groups_changed(records, existing[drive_id])
     }
     changed_ids = new_ids | updated_ids
     source_documents_changed = (
@@ -227,15 +243,15 @@ def refresh(state_path: Path = STATE_FILE) -> dict:
     state["last_database_refresh"] = {
         "mode": "incremental",
         "at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "new_operations": len(new_ids),
-        "updated_operations": len(updated_ids),
+        "new_operations": sum(len(current_records[drive_id]) for drive_id in new_ids),
+        "updated_operations": sum(len(current_records[drive_id]) for drive_id in updated_ids),
     }
     write_state(state, state_path)
     return {
         "mode": "incremental",
         "changed": True,
-        "new_operations": len(new_ids),
-        "updated_operations": len(updated_ids),
+        "new_operations": sum(len(current_records[drive_id]) for drive_id in new_ids),
+        "updated_operations": sum(len(current_records[drive_id]) for drive_id in updated_ids),
         "affected_clients": sorted({row[0] for row in identities}),
         "affected_months": sorted({row[2] for row in identities}),
         "elapsed_seconds": round(time.perf_counter() - started, 3),

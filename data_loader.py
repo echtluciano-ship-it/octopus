@@ -236,10 +236,12 @@ def make_operation_key(
     channel: str,
     billed_amount: float | None,
     octopus_profit: float | None,
+    fragment_key: str | None = None,
 ) -> str:
     drive_id = extract_drive_id(source_path)
     if drive_id:
-        return f"drive:{drive_id}"
+        suffix = f":fragment:{clean_text(fragment_key)}" if fragment_key else ""
+        return f"drive:{drive_id}{suffix}"
     payload = "|".join(
         [
             clean_text(source_path),
@@ -747,9 +749,10 @@ def manual_rentability_record(row: dict[str, str]) -> dict | None:
     source_path = clean_text(row.get("source_path"))
     profit = parse_decimal(row.get("octopus_profit"))
     client_key = normalize_name(client_name)
+    fragment_key = month if operation_type == "MULTI_MONTH_SPLIT" else None
     return {
         "operation_key": make_operation_key(
-            source_path, op_date, client_key, channel, billed_amount, profit
+            source_path, op_date, client_key, channel, billed_amount, profit, fragment_key
         ),
         "client_key": client_key,
         "client_name": client_name,

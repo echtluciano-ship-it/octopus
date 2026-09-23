@@ -21,6 +21,15 @@ class OperationIdentityTests(unittest.TestCase):
         self.assertNotEqual(first_key, second_key)
         self.assertEqual(conn.execute("SELECT COUNT(*) FROM operations").fetchone()[0], 2)
 
+    def test_one_drive_document_can_have_distinct_month_fragments(self) -> None:
+        common = (date(2026, 9, 25), "HASAR", "HYF", 100.0, 10.0)
+        september = make_operation_key("card.jpg#drive_id_same", *common, "2026-09")
+        october = make_operation_key("card.jpg#drive_id_same", *common, "2026-10")
+
+        self.assertEqual(september, "drive:same:fragment:2026-09")
+        self.assertEqual(october, "drive:same:fragment:2026-10")
+        self.assertNotEqual(september, october)
+
 
 if __name__ == "__main__":
     unittest.main()
