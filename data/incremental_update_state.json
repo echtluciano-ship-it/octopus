@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-09-23T19:43:16.102Z",
+  "last_successful_scan": "2026-09-24T23:31:29.523Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -6918,7 +6918,7 @@
       "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
       "folder_period": "2026-09",
       "source_type": "pagos",
-      "url": "https://drive.google.com/open?id=1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3"
+      "url": "https://drive.google.com/file/d/1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3/view?usp=drivesdk"
     },
     "1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ": {
       "drive_id": "1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ",
@@ -6929,7 +6929,7 @@
       "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
       "folder_period": "2026-09",
       "source_type": "pagos",
-      "url": "https://drive.google.com/open?id=1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ"
+      "url": "https://drive.google.com/file/d/1fd1pG8JR83bPiOq6ROF9rWn_N_podBqZ/view?usp=drivesdk"
     },
     "1Kxgw4odWAVqr7doA-gumapFPe04WN58c": {
       "drive_id": "1Kxgw4odWAVqr7doA-gumapFPe04WN58c",
@@ -6940,7 +6940,128 @@
       "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
       "folder_period": "2026-09",
       "source_type": "pagos",
-      "url": "https://drive.google.com/open?id=1Kxgw4odWAVqr7doA-gumapFPe04WN58c"
+      "url": "https://drive.google.com/file/d/1Kxgw4odWAVqr7doA-gumapFPe04WN58c/view?usp=drivesdk"
+    },
+    "1e7xafY7iGW3XHnXHCaFabqv58Cna67Cd": {
+      "drive_id": "1e7xafY7iGW3XHnXHCaFabqv58Cna67Cd",
+      "name": "PHOTO-2026-09-24-19-47-26.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 12811,
+      "modified_time": "2026-09-24T22:59:14.156Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1e7xafY7iGW3XHnXHCaFabqv58Cna67Cd/view?usp=drivesdk"
+    },
+    "1aZEr7AIvjd63u8_Uih8qwyLbxgRGM87a": {
+      "drive_id": "1aZEr7AIvjd63u8_Uih8qwyLbxgRGM87a",
+      "name": "PHOTO-2026-09-24-19-47-26.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 12558,
+      "modified_time": "2026-09-24T22:59:13.988Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1aZEr7AIvjd63u8_Uih8qwyLbxgRGM87a/view?usp=drivesdk"
+    },
+    "1KQhjyl3qknQyUwByblJZoLVNfA7pQ6Ne": {
+      "drive_id": "1KQhjyl3qknQyUwByblJZoLVNfA7pQ6Ne",
+      "name": "PHOTO-2026-09-24-19-00-55.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18100,
+      "modified_time": "2026-09-24T22:31:46.364Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1KQhjyl3qknQyUwByblJZoLVNfA7pQ6Ne/view?usp=drivesdk"
+    },
+    "1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe": {
+      "drive_id": "1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe",
+      "name": "PHOTO-2026-09-24-19-19-03.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18066,
+      "modified_time": "2026-09-24T22:31:46.358Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe/view?usp=drivesdk"
+    },
+    "1rPbj1HizsvTIwPPwkgyWz703QP7GTwy6": {
+      "drive_id": "1rPbj1HizsvTIwPPwkgyWz703QP7GTwy6",
+      "name": "PHOTO-2026-09-24-11-21-51.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 451079,
+      "modified_time": "2026-09-24T22:31:46.214Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1rPbj1HizsvTIwPPwkgyWz703QP7GTwy6/view?usp=drivesdk"
+    },
+    "1o2bzPZBJtqhMcx3m_XEUwoZDu3_ce2dk": {
+      "drive_id": "1o2bzPZBJtqhMcx3m_XEUwoZDu3_ce2dk",
+      "name": "PHOTO-2026-09-24-19-11-13.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17486,
+      "modified_time": "2026-09-24T22:31:46.075Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1o2bzPZBJtqhMcx3m_XEUwoZDu3_ce2dk/view?usp=drivesdk"
+    },
+    "1sP-Fh47QpsK_mazOY-duQ9qN-B7QcLS9": {
+      "drive_id": "1sP-Fh47QpsK_mazOY-duQ9qN-B7QcLS9",
+      "name": "PHOTO-2026-09-24-13-36-37.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 580762,
+      "modified_time": "2026-09-24T22:32:09.520Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1sP-Fh47QpsK_mazOY-duQ9qN-B7QcLS9/view?usp=drivesdk"
+    },
+    "1-UIO5yUssdv2wVbn26GuId9FW8Vg8Vis": {
+      "drive_id": "1-UIO5yUssdv2wVbn26GuId9FW8Vg8Vis",
+      "name": "ORDEN_DE_PAGO_12731 (1).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 56491,
+      "modified_time": "2026-09-24T22:33:08.321Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-UIO5yUssdv2wVbn26GuId9FW8Vg8Vis/view?usp=drivesdk"
+    },
+    "1wAxIl3qU9yN-bpNtzCdu23xuq4mthl72": {
+      "drive_id": "1wAxIl3qU9yN-bpNtzCdu23xuq4mthl72",
+      "name": "ORDEN_DE_PAGO_12736.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 54977,
+      "modified_time": "2026-09-24T22:33:08.286Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1wAxIl3qU9yN-bpNtzCdu23xuq4mthl72/view?usp=drivesdk"
+    },
+    "1ZdtF5hf_FzsXPs5QaOrOEeECWtPgBT8k": {
+      "drive_id": "1ZdtF5hf_FzsXPs5QaOrOEeECWtPgBT8k",
+      "name": "PAGO EL FARO DIECIOCHO DE TANDIL E-CHEQ.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 12350,
+      "modified_time": "2026-09-24T22:33:08.259Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1ZdtF5hf_FzsXPs5QaOrOEeECWtPgBT8k/view?usp=drivesdk"
+    },
+    "1IEKNSCRRYvghiY2bttmWc2FKeABwuAxl": {
+      "drive_id": "1IEKNSCRRYvghiY2bttmWc2FKeABwuAxl",
+      "name": "ORDEN_DE_PAGO_12722.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 51079,
+      "modified_time": "2026-09-24T22:33:08.258Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1IEKNSCRRYvghiY2bttmWc2FKeABwuAxl/view?usp=drivesdk"
     }
   },
   "official_sources": {
@@ -6948,19 +7069,21 @@
       "id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "title": "FACTURACION OCTOPUS.xlsx",
       "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "size": "417853",
-      "modified_time": "2026-09-23T19:04:34.975Z",
+      "size": "418718",
+      "modified_time": "2026-09-24T22:35:06.814Z",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-24T00:04:26+00:00"
+    "recorded_at": "2026-09-24T23:33:01+00:00"
   },
   "last_database_refresh": {
-    "mode": "incremental",
-    "at": "2026-09-24T00:04:26+00:00",
-    "new_operations": 0,
-    "updated_operations": 1
+    "mode": "official_source_reload",
+    "at": "2026-09-24T23:34:04+00:00",
+    "new_operations": 6,
+    "updated_operations": 0,
+    "new_billing_records": 15,
+    "new_source_documents": 11
   }
 }

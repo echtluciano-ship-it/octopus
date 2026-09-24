@@ -1,14 +1,14 @@
 {
-  "database_sha256": "ca215967ebc2a20b14198d83a9479a23fb79a3ff61799a989d1ea67434432091",
+  "database_sha256": "eadba2cf479fe3d84b03d28d3026e455c26268fb8fcfa2c4cbd0e7039cce83dd",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "a34b08351b63b9e89480dcf80065a466446826a3d529b329c85e205f2e9f6d36",
-    "data/billing_source.json": "fc93d20642cd087f0c8599b72d0dbfdb7d43eeacdca86a879d15554ad6d782c4",
-    "manual_rentability_operations.csv": "5dd953488b3c92a0471e1d897cf62e9a0f11026e3f53bc1979e9d0cf77ec69cb",
+    "data/FACTURACION OCTOPUS.xlsx": "63ac222d81f6acf6b8961801915c214aa2d367190281ac56a5d01998ffc87e12",
+    "data/billing_source.json": "99e7c8fdf59a2fceef0ceeccc2be4b8ca90e01965827f6c962a9794b155633fd",
+    "manual_rentability_operations.csv": "16199f8e5d74e929e863e0a9171e510cffbd809196a4d3e5e1f9344bc3a3e700",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "84ab0edea73ba279d64f5a912011e58d90ea3dc2c2bb2ea064b9815ea9e26ce6"
+    "source_documents.csv": "783b1e8f90cb7a2eea5e7c21c0c6799d23070c87bccb58de38afd6e739204f77"
   },
   "controls": {
-    "as_of": "2026-09-23",
+    "as_of": "2026-09-24",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2664,8 +2664,8 @@
         "billing_total": 4316074799.38,
         "billing_records": 320,
         "validated_net": 3173993429.23,
-        "profit": 195149918.33,
-        "profitability": 0.06148403349950939,
+        "profit": 195149918.32999998,
+        "profitability": 0.061484033499509386,
         "valid_operations": 83,
         "rentability_ranking": [
           {
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2593734853.42,
-        "billing_records": 182,
-        "validated_net": 1460187275.77,
-        "profit": 83586339.67,
-        "profitability": 0.05724357488728454,
-        "valid_operations": 44,
+        "billing_total": 2732506669.06,
+        "billing_records": 198,
+        "validated_net": 1640938079.77,
+        "profit": 94148293.67,
+        "profitability": 0.05737467783257012,
+        "valid_operations": 49,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3073,6 +3073,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion_validada": 76009134.0,
+            "ganancia_octopus": 4936113.0,
+            "rentabilidad": 0.0649410503742879,
+            "operaciones": 1
+          },
+          {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion_validada": 77045180.0,
@@ -3083,10 +3091,10 @@
           {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
-            "facturacion_validada": 249940229.0,
-            "ganancia_octopus": 14843204.0,
-            "rentabilidad": 0.05938701448497113,
-            "operaciones": 4
+            "facturacion_validada": 313078839.0,
+            "ganancia_octopus": 18592198.0,
+            "rentabilidad": 0.059385035601208426,
+            "operaciones": 6
           },
           {
             "client_name": "ITPA S.A.",
@@ -3110,14 +3118,6 @@
             "facturacion_validada": 116519724.0,
             "ganancia_octopus": 6655825.0,
             "rentabilidad": 0.057121874061425,
-            "operaciones": 2
-          },
-          {
-            "client_name": "Drogueria Meta",
-            "client_key": "DROGUERIA META",
-            "facturacion_validada": 120109590.0,
-            "ganancia_octopus": 6840691.0,
-            "rentabilidad": 0.056953745325414896,
             "operaciones": 2
           }
         ],
@@ -3219,6 +3219,12 @@
             "registros": 1
           },
           {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 61546684.19,
+            "registros": 16
+          },
+          {
             "client_name": "TEYLEM SA",
             "client_key": "TEYLEM",
             "facturacion": 49946094.08,
@@ -3231,24 +3237,18 @@
             "registros": 6
           },
           {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 45881468.62,
-            "registros": 12
-          },
-          {
-            "client_name": "ELIPA SAS",
-            "client_key": "ELIPA",
-            "facturacion": 36029414.83,
-            "registros": 1
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion": 41084132.38,
+            "registros": 2
           }
         ]
       }
     },
-    "published_clients": 78,
-    "valid_operations_all_dates": 215,
+    "published_clients": 79,
+    "valid_operations_all_dates": 221,
     "operation_states": {
-      "OK": 186,
+      "OK": 192,
       "OK_TRANSFERENCIA_1_2": 14,
       "DUPLICADO": 14,
       "OK_FC_NETA": 13,
