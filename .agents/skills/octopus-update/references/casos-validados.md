@@ -47,8 +47,8 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 ## Hasar - Canal Corregido
 
 - Para `PHOTO-2026-09-23-11-52-07.jpg` (Drive ID `18etnvM0kn-HSGkKRdMtymT5SY17E__Qe`), Luciano confirmo el 2026-09-23 que el canal correcto es `HYF`, aunque el encabezado del cuadro dice `HASAR-ESPORA`.
-- La orden `O_P_0201500033107.pdf` (Drive ID `1sL6dHmTmywr-561zG9kJBe07Q1RuWUC3`) reconcilia el total pagado de 29.496.064,77 y demuestra valores por 29.336.044,77 en septiembre y 160.020,00 en octubre.
-- Distribuir la Facturacion Neta 24.805.152 y la Ganancia Octopus 1.713.756 con esas proporciones: septiembre 24.670.580,81 / 1.704.458,65 y octubre 134.571,19 / 9.297,35. Estado definitivo: `OK_MULTI_MONTH_SPLIT`.
+- Luciano confirmo despues que la fecha `25/10` es incorrecta. Este archivo NO es multi-mes: toda la operacion corresponde al `25/09/2026`.
+- Imputar en septiembre el ECHEQ completo 29.496.064,77, la Facturacion Neta 24.805.152 y la Ganancia Octopus 1.713.756. No crear ni reponer un tramo de octubre, aunque la orden `O_P_0201500033107.pdf` conserve esa fecha en el documento original.
 
 ## Alimentos Viandas - Operacion Agosto/Septiembre
 

@@ -1,11 +1,11 @@
 {
-  "database_sha256": "7ccdea239e87deb08fe72bc26b0357d198e15ece5542751b47c09d9e090ed613",
+  "database_sha256": "ca215967ebc2a20b14198d83a9479a23fb79a3ff61799a989d1ea67434432091",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "a34b08351b63b9e89480dcf80065a466446826a3d529b329c85e205f2e9f6d36",
     "data/billing_source.json": "fc93d20642cd087f0c8599b72d0dbfdb7d43eeacdca86a879d15554ad6d782c4",
-    "manual_rentability_operations.csv": "2006cefd545b31be95c57448735f528bbbf16446f6934ad76d89f286d2741998",
+    "manual_rentability_operations.csv": "5dd953488b3c92a0471e1d897cf62e9a0f11026e3f53bc1979e9d0cf77ec69cb",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "3d7f843dd7507d5e4170e1868bf395965073f2ae7442c1a5d13a2a9a55306d60"
+    "source_documents.csv": "84ab0edea73ba279d64f5a912011e58d90ea3dc2c2bb2ea064b9815ea9e26ce6"
   },
   "controls": {
     "as_of": "2026-09-23",
@@ -3246,16 +3246,16 @@
       }
     },
     "published_clients": 78,
-    "valid_operations_all_dates": 216,
+    "valid_operations_all_dates": 215,
     "operation_states": {
-      "OK": 185,
+      "OK": 186,
       "OK_TRANSFERENCIA_1_2": 14,
       "DUPLICADO": 14,
       "OK_FC_NETA": 13,
-      "OK_MULTI_MONTH_SPLIT": 4,
       "REVISION": 2,
       "EXCLUIDO": 2,
-      "NO_PROCESAR": 2
+      "NO_PROCESAR": 2,
+      "OK_MULTI_MONTH_SPLIT": 2
     }
   }
 }
