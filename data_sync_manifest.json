@@ -1,14 +1,14 @@
 {
-  "database_sha256": "eadba2cf479fe3d84b03d28d3026e455c26268fb8fcfa2c4cbd0e7039cce83dd",
+  "database_sha256": "7a065058dbe694a0380f5c0f6b4b51a01ed4e171175fa2358178da81ec5b4eb6",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "63ac222d81f6acf6b8961801915c214aa2d367190281ac56a5d01998ffc87e12",
-    "data/billing_source.json": "99e7c8fdf59a2fceef0ceeccc2be4b8ca90e01965827f6c962a9794b155633fd",
-    "manual_rentability_operations.csv": "16199f8e5d74e929e863e0a9171e510cffbd809196a4d3e5e1f9344bc3a3e700",
+    "data/FACTURACION OCTOPUS.xlsx": "9eda3dbf714184152511462050251b9dda5f19de69d601d5cf5516565a873413",
+    "data/billing_source.json": "f2913139c88a6501f5d85df25456627365e22554df5b09f5bb2827603bf06371",
+    "manual_rentability_operations.csv": "0b57403971e1a4c1fce9107a6660f0526b9283f0fd42a8c7bdce07f947466238",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "783b1e8f90cb7a2eea5e7c21c0c6799d23070c87bccb58de38afd6e739204f77"
+    "source_documents.csv": "59b4fe8c1d7330ffcc0957ce47c6d6335bcc3424fa7e43fea4afd73261af4c23"
   },
   "controls": {
-    "as_of": "2026-09-24",
+    "as_of": "2026-09-25",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2732506669.06,
-        "billing_records": 198,
-        "validated_net": 1640938079.77,
-        "profit": 94148293.67,
-        "profitability": 0.05737467783257012,
-        "valid_operations": 49,
+        "billing_total": 2796360272.2,
+        "billing_records": 205,
+        "validated_net": 1860430816.77,
+        "profit": 106498155.67,
+        "profitability": 0.05724381401878599,
+        "valid_operations": 58,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -2991,6 +2991,14 @@
             "ganancia_octopus": 823483.0,
             "rentabilidad": 0.08821741333062802,
             "operaciones": 3
+          },
+          {
+            "client_name": "FORMAS ARGENTINAS SR",
+            "client_key": "FORMAS ARGENTINAS SR",
+            "facturacion_validada": 283000.0,
+            "ganancia_octopus": 23962.0,
+            "rentabilidad": 0.08467137809187279,
+            "operaciones": 1
           },
           {
             "client_name": "Sind Serenos",
@@ -3073,6 +3081,22 @@
             "operaciones": 1
           },
           {
+            "client_name": "Hasar",
+            "client_key": "HASAR",
+            "facturacion_validada": 24805152.0,
+            "ganancia_octopus": 1713756.0,
+            "rentabilidad": 0.06908871189340021,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Mas Metros",
+            "client_key": "MAS METROS",
+            "facturacion_validada": 5015780.0,
+            "ganancia_octopus": 345094.0,
+            "rentabilidad": 0.06880166195487043,
+            "operaciones": 1
+          },
+          {
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
             "facturacion_validada": 76009134.0,
@@ -3095,30 +3119,6 @@
             "ganancia_octopus": 18592198.0,
             "rentabilidad": 0.059385035601208426,
             "operaciones": 6
-          },
-          {
-            "client_name": "ITPA S.A.",
-            "client_key": "ITPA",
-            "facturacion_validada": 39597933.0,
-            "ganancia_octopus": 2350828.0,
-            "rentabilidad": 0.05936744223492676,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Alimentos Viandas",
-            "client_key": "ALIMENTOS VIANDAS",
-            "facturacion_validada": 10448948.77,
-            "ganancia_octopus": 616288.67,
-            "rentabilidad": 0.05898092559984865,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Centro Médico Amenabar",
-            "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion_validada": 116519724.0,
-            "ganancia_octopus": 6655825.0,
-            "rentabilidad": 0.057121874061425,
-            "operaciones": 2
           }
         ],
         "billing_ranking": [
@@ -3165,6 +3165,12 @@
             "registros": 8
           },
           {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 99995992.84,
+            "registros": 13
+          },
+          {
             "client_name": "DAUMAS MOTOFLEX S.R.L.",
             "client_key": "DAUMAS MOTOFLEX",
             "facturacion": 99173553.72,
@@ -3187,12 +3193,6 @@
             "client_key": "VEGA Y CAMJI",
             "facturacion": 86151730.71000001,
             "registros": 3
-          },
-          {
-            "client_name": "Centro Médico Amenabar",
-            "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion": 85976051.0,
-            "registros": 11
           },
           {
             "client_name": "APR Energy",
@@ -3246,10 +3246,10 @@
       }
     },
     "published_clients": 79,
-    "valid_operations_all_dates": 221,
+    "valid_operations_all_dates": 229,
     "operation_states": {
-      "OK": 192,
-      "OK_TRANSFERENCIA_1_2": 14,
+      "OK": 198,
+      "OK_TRANSFERENCIA_1_2": 16,
       "DUPLICADO": 14,
       "OK_FC_NETA": 13,
       "REVISION": 2,
