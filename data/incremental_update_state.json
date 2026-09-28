@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-09-28T02:42:06.4361328Z",
+  "last_successful_scan": "2026-09-28T21:08:14.390010Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -7315,26 +7315,204 @@
       "folder_period": "2026-09",
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/169peDHGiRavg3PdDI0UC_qp3LXWQlhL9/view?usp=drivesdk"
+    },
+    "1-PTwRZvQUqgLO-rRMjGjvCXQG_UH8zOA": {
+      "drive_id": "1-PTwRZvQUqgLO-rRMjGjvCXQG_UH8zOA",
+      "name": "PHOTO-2026-09-28-17-08-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 684654,
+      "modified_time": "2026-09-28T20:52:52.149Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1-PTwRZvQUqgLO-rRMjGjvCXQG_UH8zOA/view?usp=drivesdk"
+    },
+    "1Mmdsws6v3_QI5H2oX5Sk05VWP7TDvDV5": {
+      "drive_id": "1Mmdsws6v3_QI5H2oX5Sk05VWP7TDvDV5",
+      "name": "PHOTO-2026-09-28-17-08-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 668886,
+      "modified_time": "2026-09-28T20:52:52.063Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1Mmdsws6v3_QI5H2oX5Sk05VWP7TDvDV5/view?usp=drivesdk"
+    },
+    "1jFQnKTXLEGaDncJ8IGg1z8I9Ny6_fCe4": {
+      "drive_id": "1jFQnKTXLEGaDncJ8IGg1z8I9Ny6_fCe4",
+      "name": "PHOTO-2026-09-28-17-08-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 432052,
+      "modified_time": "2026-09-28T20:52:51.662Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1jFQnKTXLEGaDncJ8IGg1z8I9Ny6_fCe4/view?usp=drivesdk"
+    },
+    "1z3xF0C4uySS7-UWuthJmoluCWRKNQcCg": {
+      "drive_id": "1z3xF0C4uySS7-UWuthJmoluCWRKNQcCg",
+      "name": "PHOTO-2026-09-28-13-58-24.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 13123,
+      "modified_time": "2026-09-28T19:50:12.316Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1z3xF0C4uySS7-UWuthJmoluCWRKNQcCg/view?usp=drivesdk"
+    },
+    "1yLJBRoLswCAVMjr2_PKC3U7TPvwTBb6y": {
+      "drive_id": "1yLJBRoLswCAVMjr2_PKC3U7TPvwTBb6y",
+      "name": "PHOTO-2026-09-28-11-51-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 290079,
+      "modified_time": "2026-09-28T19:49:54.153Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1yLJBRoLswCAVMjr2_PKC3U7TPvwTBb6y/view?usp=drivesdk"
+    },
+    "1Ew3tRHbDexJoyj12oDIyCnSSZDn1zmhE": {
+      "drive_id": "1Ew3tRHbDexJoyj12oDIyCnSSZDn1zmhE",
+      "name": "DetalleEcheque-JWV9JQ8L6482QMD-Emitidos-20260928.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3370,
+      "modified_time": "2026-09-28T19:48:45.709Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Ew3tRHbDexJoyj12oDIyCnSSZDn1zmhE/view?usp=drivesdk"
+    },
+    "1tYCm-3ZpQ5hdU5s3jPLqYvXEgyt5ySOK": {
+      "drive_id": "1tYCm-3ZpQ5hdU5s3jPLqYvXEgyt5ySOK",
+      "name": "DetalleEcheque-GOW9MWRJ48M2EXD-Emitidos-20260928.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3367,
+      "modified_time": "2026-09-28T19:48:45.670Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1tYCm-3ZpQ5hdU5s3jPLqYvXEgyt5ySOK/view?usp=drivesdk"
+    },
+    "1TKjjTv05kAB1LZGIUjwdUu1bhIPQdFVZ": {
+      "drive_id": "1TKjjTv05kAB1LZGIUjwdUu1bhIPQdFVZ",
+      "name": "FVHOLDINGSRL_op0001-00003535_HYFDISTRIBUCIONESSA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3939,
+      "modified_time": "2026-09-28T19:48:45.254Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1TKjjTv05kAB1LZGIUjwdUu1bhIPQdFVZ/view?usp=drivesdk"
+    },
+    "1h6l26bzSyVsriyD_ZttuvLFgca6S0e6Q": {
+      "drive_id": "1h6l26bzSyVsriyD_ZttuvLFgca6S0e6Q",
+      "name": "FVHOLDINGSRL_op0001-00003533_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3941,
+      "modified_time": "2026-09-28T19:48:45.230Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1h6l26bzSyVsriyD_ZttuvLFgca6S0e6Q/view?usp=drivesdk"
+    },
+    "1-mV9vfx_QCkXxJpSEgqjnhjnOncJFGlU": {
+      "drive_id": "1-mV9vfx_QCkXxJpSEgqjnhjnOncJFGlU",
+      "name": "FVHOLDINGSRL_op0001-00003534_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3941,
+      "modified_time": "2026-09-28T19:48:45.220Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-mV9vfx_QCkXxJpSEgqjnhjnOncJFGlU/view?usp=drivesdk"
+    },
+    "1T35ICYAbPebcFF-JUQCt3KmUQz_rq43l": {
+      "drive_id": "1T35ICYAbPebcFF-JUQCt3KmUQz_rq43l",
+      "name": "DetalleEcheque-ZEPN6E6R8VQNQ0M-Emitidos-20260928.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3369,
+      "modified_time": "2026-09-28T19:48:45.191Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1T35ICYAbPebcFF-JUQCt3KmUQz_rq43l/view?usp=drivesdk"
+    },
+    "101UwNGT7a0AyK6DPZO8y_lir09DIhfSU": {
+      "drive_id": "101UwNGT7a0AyK6DPZO8y_lir09DIhfSU",
+      "name": "FVHOLDINGSRL_op0001-00003536_HYFDISTRIBUCIONESSA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3949,
+      "modified_time": "2026-09-28T19:48:45.187Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/101UwNGT7a0AyK6DPZO8y_lir09DIhfSU/view?usp=drivesdk"
+    },
+    "1SIY0NmPExIjn-VuomzVEoYc0HQCTKwsi": {
+      "drive_id": "1SIY0NmPExIjn-VuomzVEoYc0HQCTKwsi",
+      "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL cma 28-9-26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 58806,
+      "modified_time": "2026-09-28T20:52:20.099Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1SIY0NmPExIjn-VuomzVEoYc0HQCTKwsi/view?usp=drivesdk"
+    },
+    "1NJ0YGPttSK32M5rEeSiSIo97JIHt_QO2": {
+      "drive_id": "1NJ0YGPttSK32M5rEeSiSIo97JIHt_QO2",
+      "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL pilar 28-9-26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 139409,
+      "modified_time": "2026-09-28T20:52:19.277Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NJ0YGPttSK32M5rEeSiSIo97JIHt_QO2/view?usp=drivesdk"
+    },
+    "108-B4udoEd-hl5eJlj6k1jFBySrJ9Vqc": {
+      "drive_id": "108-B4udoEd-hl5eJlj6k1jFBySrJ9Vqc",
+      "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL rsc 28-9-26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 58671,
+      "modified_time": "2026-09-28T20:52:19.131Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/108-B4udoEd-hl5eJlj6k1jFBySrJ9Vqc/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 419977,
-      "modified_time": "2026-09-27T18:04:30.877Z"
+      "size_bytes": 417579,
+      "modified_time": "2026-09-28T18:57:29.467Z",
+      "sha256": "8563b3f547b3b8d20bab7705293332217ef0e776ab574a6dff2c4294341c98f4"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-28T02:43:18+00:00"
+    "recorded_at": "2026-09-28T21:09:54+00:00"
   },
   "last_database_refresh": {
-    "mode": "official_source_reload",
-    "at": "2026-09-28T02:43:18+00:00",
-    "new_operations": 1,
+    "mode": "full_source_reload_for_changed_billing_then_incremental_delta",
+    "at": "2026-09-28T21:10:05Z",
+    "new_operations": 5,
     "updated_operations": 0,
-    "new_billing_records": 0,
-    "new_source_documents": 1
+    "billing_rows": 4635,
+    "rentability_operations": 255,
+    "source_documents": 291,
+    "affected_months": [
+      "2026-09",
+      "2026-10"
+    ],
+    "affected_clients": [
+      "CHURRINCHES",
+      "DAUMAS MOTOFLEX",
+      "FV HOLDING",
+      "GRUPO SASHIMI",
+      "ROCA NIKKEI"
+    ]
   }
 }

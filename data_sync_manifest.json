@@ -1,14 +1,14 @@
 {
-  "database_sha256": "204442b88926dbc181020f4996f6520e4fc8820c3b7eabc0e73873185ee0c92c",
+  "database_sha256": "ae19e086f153767e2bd5a53fff9d89c86a87686822fd43c3c6567782f1d991d2",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "05ece3e472e7db8e7545111144266907a0cebeea5994ea004a94687c44e21ba9",
-    "data/billing_source.json": "6618ebf3193e71ad524e69ef686169e50666c2fb46fac2b9a1ef6c2a2b3b3255",
-    "manual_rentability_operations.csv": "f7e7ad4158ee3e5d2a83407c68be342ec4572388fabc5efdf4c3888451e5308b",
+    "data/FACTURACION OCTOPUS.xlsx": "8563b3f547b3b8d20bab7705293332217ef0e776ab574a6dff2c4294341c98f4",
+    "data/billing_source.json": "330d11e8b1ff0413979731c849cc02eb5f78cd4a4670aecd1385334323a08ee0",
+    "manual_rentability_operations.csv": "6d24d4a5d78b6ebb06336efbe069577aeb851ea6edaab9ccdad37f193c3d94ec",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "a601d0f68c8e10a5deda902bb788989a2a6f5812f682fb73dfdf2b9e18c63516"
+    "source_documents.csv": "0ef3fb2c1d95111457dbff92c2f5bc55ba331f2683675fc23280948c03cb4921"
   },
   "controls": {
-    "as_of": "2026-09-27",
+    "as_of": "2026-09-28",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2796360272.2,
-        "billing_records": 205,
-        "validated_net": 1860430816.77,
-        "profit": 106498155.67,
-        "profitability": 0.05724381401878599,
-        "valid_operations": 58,
+        "billing_total": 2904573098.19,
+        "billing_records": 213,
+        "validated_net": 1946968547.77,
+        "profit": 110131691.67,
+        "profitability": 0.0565657271639758,
+        "valid_operations": 61,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3041,14 +3041,6 @@
             "operaciones": 1
           },
           {
-            "client_name": "DAUMAS MOTOFLEX S.R.L.",
-            "client_key": "DAUMAS MOTOFLEX",
-            "facturacion_validada": 50000000.0,
-            "ganancia_octopus": 3488000.0,
-            "rentabilidad": 0.06976,
-            "operaciones": 1
-          },
-          {
             "client_name": "TRANSPORTE TRACCION S.R.L.",
             "client_key": "TRANSPORTE TRACCION",
             "facturacion_validada": 10412612.0,
@@ -3119,6 +3111,14 @@
             "ganancia_octopus": 18592198.0,
             "rentabilidad": 0.059385035601208426,
             "operaciones": 6
+          },
+          {
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion_validada": 39597933.0,
+            "ganancia_octopus": 2350828.0,
+            "rentabilidad": 0.05936744223492676,
+            "operaciones": 1
           }
         ],
         "billing_ranking": [
@@ -3225,6 +3225,12 @@
             "registros": 16
           },
           {
+            "client_name": "Fashion Cook",
+            "client_key": "FASHION COOK",
+            "facturacion": 50006741.3,
+            "registros": 3
+          },
+          {
             "client_name": "TEYLEM SA",
             "client_key": "TEYLEM",
             "facturacion": 49946094.08,
@@ -3235,23 +3241,17 @@
             "client_key": "MEDIPREMIUM",
             "facturacion": 48217042.3,
             "registros": 6
-          },
-          {
-            "client_name": "ITPA S.A.",
-            "client_key": "ITPA",
-            "facturacion": 41084132.38,
-            "registros": 2
           }
         ]
       }
     },
-    "published_clients": 80,
-    "valid_operations_all_dates": 230,
+    "published_clients": 81,
+    "valid_operations_all_dates": 235,
     "operation_states": {
-      "OK": 199,
+      "OK": 203,
       "OK_TRANSFERENCIA_1_2": 16,
+      "OK_FC_NETA": 14,
       "DUPLICADO": 14,
-      "OK_FC_NETA": 13,
       "REVISION": 2,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2,
