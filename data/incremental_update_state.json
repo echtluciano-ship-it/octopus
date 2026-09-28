@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-09-28T21:08:14.390010Z",
+  "last_successful_scan": "2026-09-28T21:27:29.3200128Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -7480,39 +7480,69 @@
       "folder_period": "2026-09",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/108-B4udoEd-hl5eJlj6k1jFBySrJ9Vqc/view?usp=drivesdk"
+    },
+    "17XdU7Lcll4sEK56kQDD9ZkJVhV4tMcmU": {
+      "drive_id": "17XdU7Lcll4sEK56kQDD9ZkJVhV4tMcmU",
+      "name": "PHOTO-2026-09-28-18-13-11.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 239217,
+      "modified_time": "2026-09-28T21:21:02.034Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/17XdU7Lcll4sEK56kQDD9ZkJVhV4tMcmU/view?usp=drivesdk"
+    },
+    "1sslXxQxrKr6S0IUYtRO8Vt4Qm4b1xcH5": {
+      "drive_id": "1sslXxQxrKr6S0IUYtRO8Vt4Qm4b1xcH5",
+      "name": "PHOTO-2026-09-28-18-13-11.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 130378,
+      "modified_time": "2026-09-28T21:21:01.853Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1sslXxQxrKr6S0IUYtRO8Vt4Qm4b1xcH5/view?usp=drivesdk"
+    },
+    "1qAEmMGRqHtK0qpmzr_JHwyelFoQtJy2q": {
+      "drive_id": "1qAEmMGRqHtK0qpmzr_JHwyelFoQtJy2q",
+      "name": "PHOTO-2026-09-28-18-13-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 465616,
+      "modified_time": "2026-09-28T21:21:01.839Z",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1qAEmMGRqHtK0qpmzr_JHwyelFoQtJy2q/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 417579,
-      "modified_time": "2026-09-28T18:57:29.467Z",
-      "sha256": "8563b3f547b3b8d20bab7705293332217ef0e776ab574a6dff2c4294341c98f4"
+      "size_bytes": 419726,
+      "modified_time": "2026-09-28T21:07:04.280Z",
+      "sha256": "782ee80e1cecd4a4febd26f8b69736bcd7430bbb1cfd50230efb4bbf2e1f1568"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-28T21:09:54+00:00"
+    "recorded_at": "2026-09-28T21:28:25+00:00"
   },
   "last_database_refresh": {
     "mode": "full_source_reload_for_changed_billing_then_incremental_delta",
-    "at": "2026-09-28T21:10:05Z",
-    "new_operations": 5,
+    "at": "2026-09-28T21:28:25Z",
+    "new_operations": 3,
     "updated_operations": 0,
     "billing_rows": 4635,
-    "rentability_operations": 255,
-    "source_documents": 291,
+    "rentability_operations": 258,
+    "source_documents": 294,
     "affected_months": [
-      "2026-09",
-      "2026-10"
+      "2026-09"
     ],
     "affected_clients": [
-      "CHURRINCHES",
-      "DAUMAS MOTOFLEX",
-      "FV HOLDING",
-      "GRUPO SASHIMI",
-      "ROCA NIKKEI"
+      "CENTRO MEDICO AMENABAR",
+      "PILAR",
+      "RSC"
     ]
   }
 }

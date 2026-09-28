@@ -1,11 +1,11 @@
 {
-  "database_sha256": "ae19e086f153767e2bd5a53fff9d89c86a87686822fd43c3c6567782f1d991d2",
+  "database_sha256": "c843194807efbed05c52ef65e9b56721793d9c95509e4a972db76c1c186e3cd7",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "8563b3f547b3b8d20bab7705293332217ef0e776ab574a6dff2c4294341c98f4",
-    "data/billing_source.json": "330d11e8b1ff0413979731c849cc02eb5f78cd4a4670aecd1385334323a08ee0",
-    "manual_rentability_operations.csv": "6d24d4a5d78b6ebb06336efbe069577aeb851ea6edaab9ccdad37f193c3d94ec",
+    "data/FACTURACION OCTOPUS.xlsx": "782ee80e1cecd4a4febd26f8b69736bcd7430bbb1cfd50230efb4bbf2e1f1568",
+    "data/billing_source.json": "9e69a68ec5dde010ea60d7da67c948ea6a39ee87353805650989db2010ea3543",
+    "manual_rentability_operations.csv": "c2cc3449434c3ef1b8ab2677170ad19afbedf9cab461c9b932d6428961e457a4",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "0ef3fb2c1d95111457dbff92c2f5bc55ba331f2683675fc23280948c03cb4921"
+    "source_documents.csv": "af335595050b0bb0c15991158ed122f063f3de36df390c1d4f0e3cc710277598"
   },
   "controls": {
     "as_of": "2026-09-28",
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 2904573098.19,
         "billing_records": 213,
-        "validated_net": 1946968547.77,
-        "profit": 110131691.67,
-        "profitability": 0.0565657271639758,
-        "valid_operations": 61,
+        "validated_net": 1999089739.77,
+        "profit": 113105878.67,
+        "profitability": 0.05657869000068656,
+        "valid_operations": 64,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3245,10 +3245,10 @@
         ]
       }
     },
-    "published_clients": 81,
-    "valid_operations_all_dates": 235,
+    "published_clients": 83,
+    "valid_operations_all_dates": 238,
     "operation_states": {
-      "OK": 203,
+      "OK": 206,
       "OK_TRANSFERENCIA_1_2": 16,
       "OK_FC_NETA": 14,
       "DUPLICADO": 14,
