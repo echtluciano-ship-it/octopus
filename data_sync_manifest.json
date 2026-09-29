@@ -1,14 +1,14 @@
 {
-  "database_sha256": "c843194807efbed05c52ef65e9b56721793d9c95509e4a972db76c1c186e3cd7",
+  "database_sha256": "4317426b20bd9e9db4ddab31f808bca1d734d9f2345ffe5ab740f39834e5c4b3",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "782ee80e1cecd4a4febd26f8b69736bcd7430bbb1cfd50230efb4bbf2e1f1568",
-    "data/billing_source.json": "9e69a68ec5dde010ea60d7da67c948ea6a39ee87353805650989db2010ea3543",
-    "manual_rentability_operations.csv": "c2cc3449434c3ef1b8ab2677170ad19afbedf9cab461c9b932d6428961e457a4",
+    "data/FACTURACION OCTOPUS.xlsx": "c0c8a2a14cd32d7ada23409c31a000983e56b00bd95bbb28eb8a44b162980b29",
+    "data/billing_source.json": "6c21237269e62997dbcbab55e1ead965146b75f6d0f72915f48a4f9f438f80ab",
+    "manual_rentability_operations.csv": "0d7cb0ac30bffa17fbe11a59e4ab2d07b972ae19f3476d226bce5fc4b5e7cfde",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "af335595050b0bb0c15991158ed122f063f3de36df390c1d4f0e3cc710277598"
+    "source_documents.csv": "b53fb7eec9448fdfde8bd716971ce9f200027cffb46cdd97ea173031abe50fc1"
   },
   "controls": {
-    "as_of": "2026-09-28",
+    "as_of": "2026-09-29",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 2904573098.19,
-        "billing_records": 213,
-        "validated_net": 1999089739.77,
-        "profit": 113105878.67,
-        "profitability": 0.05657869000068656,
-        "valid_operations": 64,
+        "billing_total": 3245167103.17,
+        "billing_records": 233,
+        "validated_net": 2007395141.77,
+        "profit": 113504537.67,
+        "profitability": 0.05654319635840034,
+        "valid_operations": 65,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3129,6 +3129,12 @@
             "registros": 21
           },
           {
+            "client_name": "GYULAND S.R.L.",
+            "client_key": "GYULAND",
+            "facturacion": 260429556.0,
+            "registros": 8
+          },
+          {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
             "facturacion": 217179835.06,
@@ -3235,21 +3241,15 @@
             "client_key": "TEYLEM",
             "facturacion": 49946094.08,
             "registros": 3
-          },
-          {
-            "client_name": "Medipremium",
-            "client_key": "MEDIPREMIUM",
-            "facturacion": 48217042.3,
-            "registros": 6
           }
         ]
       }
     },
     "published_clients": 83,
-    "valid_operations_all_dates": 238,
+    "valid_operations_all_dates": 241,
     "operation_states": {
-      "OK": 206,
-      "OK_TRANSFERENCIA_1_2": 16,
+      "OK": 207,
+      "OK_TRANSFERENCIA_1_2": 18,
       "OK_FC_NETA": 14,
       "DUPLICADO": 14,
       "REVISION": 2,

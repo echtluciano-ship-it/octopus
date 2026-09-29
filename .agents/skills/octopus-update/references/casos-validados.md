@@ -61,3 +61,9 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - `PHOTO-2026-09-22-11-23-21.jpg` (HYF) y `PHOTO-2026-09-22-14-58-07.jpg` (Espora) muestran fechas de octubre y noviembre.
 - No existe aun una orden de pago correspondiente en `Pagos Octopus` que permita demostrar la distribucion real. Mantener ambos en `REVISION`; no asumir porcentajes ni publicar.
 
+## Fashion Cook - Fecha Corregida
+
+- Para `PHOTO-2026-09-29-16-05-01.jpg` (Drive ID `10TdCUFtxmPwU4iHBNMEEVpORR_iLTRzE`), Luciano confirmo el 2026-09-29 que la fecha correcta es `05/10/2026`.
+- La fecha `30/09/2026` visible en el cuadro esta mal confeccionada y no debe usarse para imputar esta operacion.
+- Imputar la operacion completa a octubre de 2026; no dividirla ni volver a septiembre en futuras actualizaciones.
+
