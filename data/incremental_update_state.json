@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-09-29T20:50:00Z",
+  "last_successful_scan": "2026-09-30T01:35:00Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -7623,6 +7623,39 @@
       "folder_period": "2026-09",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1JZa1zd1QEs7c18tM6eZlPVP54Ut9MgIo/view?usp=drivesdk"
+    },
+    "1ZoNRcE73yH3Se4HfWCThTFMC-bAdb13p": {
+      "drive_id": "1ZoNRcE73yH3Se4HfWCThTFMC-bAdb13p",
+      "name": "PHOTO-2026-09-29-22-19-32.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17596,
+      "modified_time": "2026-09-30T01:31:47.406Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ZoNRcE73yH3Se4HfWCThTFMC-bAdb13p/view?usp=drivesdk"
+    },
+    "1oaV7ZNb8X9Wrm58oxPs1Q_7J3wm8iiAG": {
+      "drive_id": "1oaV7ZNb8X9Wrm58oxPs1Q_7J3wm8iiAG",
+      "name": "PHOTO-2026-09-29-21-43-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17770,
+      "modified_time": "2026-09-30T01:31:47.175Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1oaV7ZNb8X9Wrm58oxPs1Q_7J3wm8iiAG/view?usp=drivesdk"
+    },
+    "1p5cwUiHzW-7648TJanwlKC9q8iX4EYXO": {
+      "drive_id": "1p5cwUiHzW-7648TJanwlKC9q8iX4EYXO",
+      "name": "PHOTO-2026-09-29-21-09-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18395,
+      "modified_time": "2026-09-30T01:31:47.147Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1p5cwUiHzW-7648TJanwlKC9q8iX4EYXO/view?usp=drivesdk"
     }
   },
   "official_sources": {
@@ -7636,28 +7669,12 @@
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-09-29T20:54:42+00:00"
+    "recorded_at": "2026-09-30T01:44:55+00:00"
   },
   "last_database_refresh": {
-    "mode": "full_source_reload_for_changed_billing_then_incremental_delta",
-    "at": "2026-09-29T20:56:00Z",
+    "mode": "incremental",
+    "at": "2026-09-30T01:44:55+00:00",
     "new_operations": 3,
-    "updated_operations": 0,
-    "billing_rows": 4655,
-    "rentability_operations": 261,
-    "source_documents": 304,
-    "affected_months": [
-      "2026-09",
-      "2026-10"
-    ],
-    "affected_clients": [
-      "ALIMENTARIA SUSTENTABLE",
-      "FASHION COOK",
-      "FV HOLDING SRL",
-      "GYULAND S.R.L.",
-      "MOHALEM MARIA LUZ",
-      "NASSIMOFF ARIEL",
-      "OUTFIT LAB S.A.S"
-    ]
+    "updated_operations": 0
   }
 }
