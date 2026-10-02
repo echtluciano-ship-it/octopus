@@ -1,14 +1,14 @@
 {
-  "database_sha256": "ac7117ae5a1fc3d7cbe8f15d6371c44f7ef13181f821a1e1150ebab5be277b87",
+  "database_sha256": "97b902dad9ac5745edc585a7a1ba7b59851a2ac39cea68c04c0dfbe57a026a05",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "c0c8a2a14cd32d7ada23409c31a000983e56b00bd95bbb28eb8a44b162980b29",
-    "data/billing_source.json": "6c21237269e62997dbcbab55e1ead965146b75f6d0f72915f48a4f9f438f80ab",
+    "data/FACTURACION OCTOPUS.xlsx": "cc67423d97ed6678e5ee329ff148a8c7cf9c30435300c5a674bc258fa338ac87",
+    "data/billing_source.json": "f25a672fb961e8839f16b9e307294ddb3f7a3d3d35358f8edd18adefe0b936b0",
     "manual_rentability_operations.csv": "bdfc445cecfd1d920dfc8893860ffb705c4cb7ea2ea7f4aa27dd9980dac36699",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
     "source_documents.csv": "278610e059262b9f22c3578f2c15bd4f1f78f53bba7c4da908bff1bcb3343f8e"
   },
   "controls": {
-    "as_of": "2026-09-29",
+    "as_of": "2026-10-01",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,12 +2953,12 @@
         ]
       },
       "2026-09": {
-        "billing_total": 3245167103.17,
-        "billing_records": 233,
-        "validated_net": 2007395141.77,
-        "profit": 113504537.67,
-        "profitability": 0.05654319635840034,
-        "valid_operations": 65,
+        "billing_total": 4237049839.45,
+        "billing_records": 288,
+        "validated_net": 2246879773.77,
+        "profit": 125706777.67,
+        "profitability": 0.055947264796940524,
+        "valid_operations": 73,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3033,6 +3033,22 @@
             "operaciones": 1
           },
           {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion_validada": 100935975.0,
+            "ganancia_octopus": 7065518.0,
+            "rentabilidad": 0.0699999975231824,
+            "operaciones": 1
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion_validada": 25001920.0,
+            "ganancia_octopus": 1745654.0,
+            "rentabilidad": 0.06982079776273183,
+            "operaciones": 1
+          },
+          {
             "client_name": "TRICO",
             "client_key": "TRICO",
             "facturacion_validada": 27006818.0,
@@ -3103,25 +3119,15 @@
             "ganancia_octopus": 4842627.0,
             "rentabilidad": 0.06285437972888115,
             "operaciones": 3
-          },
-          {
-            "client_name": "Ovniplast",
-            "client_key": "OVNIPLAST",
-            "facturacion_validada": 313078839.0,
-            "ganancia_octopus": 18592198.0,
-            "rentabilidad": 0.059385035601208426,
-            "operaciones": 6
-          },
-          {
-            "client_name": "ITPA S.A.",
-            "client_key": "ITPA",
-            "facturacion_validada": 39597933.0,
-            "ganancia_octopus": 2350828.0,
-            "rentabilidad": 0.05936744223492676,
-            "operaciones": 1
           }
         ],
         "billing_ranking": [
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 450014138.39000005,
+            "registros": 10
+          },
           {
             "client_name": "Escalum",
             "client_key": "ESCALUM",
@@ -3157,6 +3163,18 @@
             "client_key": "LABORATORIOS JAYOR",
             "facturacion": 150943995.76,
             "registros": 8
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 150065434.59,
+            "registros": 8
+          },
+          {
+            "client_name": "COCINA Y PATAGONIA",
+            "client_key": "COCINA Y PATAGONIA",
+            "facturacion": 143801235.84,
+            "registros": 14
           },
           {
             "client_name": "Draconis",
@@ -3213,34 +3231,42 @@
             "registros": 3
           },
           {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 76777092.59,
+            "registros": 20
+          },
+          {
             "client_name": "Obra Social",
             "client_key": "OBRA SOCIAL",
             "facturacion": 74466706.51,
             "registros": 1
-          },
+          }
+        ]
+      },
+      "2026-10": {
+        "billing_total": 109708642.49,
+        "billing_records": 7,
+        "validated_net": 42850468.0,
+        "profit": 514206.0,
+        "profitability": 0.012000008961395707,
+        "valid_operations": 1,
+        "rentability_ranking": [
           {
-            "client_name": "TRANS BOX S. R. L.",
-            "client_key": "TRANS BOX",
-            "facturacion": 61897502.11,
-            "registros": 1
-          },
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion_validada": 42850468.0,
+            "ganancia_octopus": 514206.0,
+            "rentabilidad": 0.012000008961395707,
+            "operaciones": 1
+          }
+        ],
+        "billing_ranking": [
           {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 61546684.19,
-            "registros": 16
-          },
-          {
-            "client_name": "Fashion Cook",
-            "client_key": "FASHION COOK",
-            "facturacion": 50006741.3,
-            "registros": 3
-          },
-          {
-            "client_name": "TEYLEM SA",
-            "client_key": "TEYLEM",
-            "facturacion": 49946094.08,
-            "registros": 3
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 109708642.49000001,
+            "registros": 7
           }
         ]
       }
