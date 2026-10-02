@@ -1,6 +1,6 @@
 # Auditoria Completa
 
-Usar solo cuando el usuario diga `Audita OCTOPUS completo` o cuando una condicion grave impida demostrar integridad incremental y el motivo ya haya sido explicado.
+Usar solo cuando el usuario diga `Audita OCTOPUS completo` o cuando una condicion grave impida demostrar integridad incremental y el motivo ya haya sido explicado. Para cerrar exhaustivamente un unico mes usar [Cierre Mensual Completo](flujo-cierre-mensual.md), no este flujo historico.
 
 1. Inventariar todas las carpetas y meses oficiales de Pendientes y Pagos.
 2. Reconciliar cada Drive ID con `source_documents.csv` y el estado incremental.

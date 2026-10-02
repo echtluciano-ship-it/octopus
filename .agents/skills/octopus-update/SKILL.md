@@ -1,6 +1,6 @@
 ---
 name: octopus-update
-description: Actualizar OCTOPUS desde Google Drive cuando el usuario diga "Actualiza OCTOPUS" o pida sincronizar cuadros/base/Render. La actualizacion cotidiana es incremental; ejecutar una auditoria historica completa solo ante "Audita OCTOPUS completo" o una imposibilidad tecnica explicada al usuario.
+description: Actualizar, auditar o cerrar mensualmente OCTOPUS desde Google Drive hasta Render. "Actualiza OCTOPUS" es incremental; "Cierre mensual OCTOPUS" audita y reconcilia un periodo completo; "Audita OCTOPUS completo" revisa la historia solicitada.
 ---
 
 # OCTOPUS Update
@@ -10,6 +10,7 @@ Mantener la aplicacion existente `app_octopus` sincronizada desde la carpeta ofi
 ## Elegir el modo
 
 - **`Actualiza OCTOPUS`**: usar siempre el flujo incremental de [Actualizacion Incremental](references/flujo-incremental.md). No revisar ni descargar documentos historicos sin cambios.
+- **`Cierre mensual OCTOPUS`**, **`Cerra OCTOPUS`** o un pedido equivalente para cerrar un mes: usar [Cierre Mensual Completo](references/flujo-cierre-mensual.md). Auditar de punta a punta el periodo indicado; si no se indica, usar el mes que termina en la fecha local solamente cuando sea su ultimo dia.
 - **`Audita OCTOPUS completo`**: usar [Auditoria Completa](references/flujo-auditoria-completa.md). Es el unico disparador normal de la revision historica pesada.
 - Si el flujo incremental detecta una condicion que impide garantizar integridad, detener antes de iniciar una auditoria completa y explicar el motivo. Recargar una fuente oficial completa que efectivamente cambio no equivale a auditar visualmente todo Drive.
 
@@ -25,6 +26,7 @@ Leer siempre [Reglas Operativas](references/reglas-operativas.md). Consultar [Ca
 - Aplicar operaciones Drive-backed con `scripts/incremental_refresh.py`. Recalcular solo clientes y meses afectados. El control global rapido de integridad se mantiene.
 - Un caso nuevo dudoso va a `REVISION`; continuar con los demas.
 - Commit/push y Render solo cuando haya cambios persistidos. Verificar en Render los meses, rankings y fichas afectados.
+- Un cierre mensual solo puede quedar `CERRADO` si todo documento del alcance tiene clasificacion y no queda ningun caso `REVISION` sin resolver. Persistir evidencia del cierre para que pueda reproducirse.
 
 ## Cierre
 
