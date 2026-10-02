@@ -18,6 +18,12 @@ from sync_checks import reconcile_database, verify_manifest, write_manifest, SOU
 AS_OF = date(2026, 9, 18)
 
 
+class NormalizationTests(unittest.TestCase):
+    def test_combined_hyf_espora_channel_is_preserved(self):
+        self.assertEqual(data_loader.normalize_channel("HYF-ESPORA"), "HYF-ESPORA")
+        self.assertEqual(data_loader.normalize_channel("Wolfpack - HYF - Espora"), "HYF-ESPORA")
+
+
 class SyncTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()

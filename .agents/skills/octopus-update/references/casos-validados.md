@@ -67,3 +67,9 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - La fecha `30/09/2026` visible en el cuadro esta mal confeccionada y no debe usarse para imputar esta operacion.
 - Imputar la operacion completa a octubre de 2026; no dividirla ni volver a septiembre en futuras actualizaciones.
 
+## Alimentos Viandas HYF - Octubre
+
+- `PHOTO-2026-09-24-13-36-37.jpg` (Drive ID `1sP-Fh47QpsK_mazOY-duQ9qN-B7QcLS9`) es una operacion valida de `Alimentos Viandas - HYF`: Facturacion Neta 62.182.426, ECHEQ 72.442.527, Devolver Cliente 68.464.095 y Ganancia Octopus 3.667.519.
+- La orden `ORDEN_DE_PAGO_12731 (1).pdf` respalda los importes y el ECHEQ con vencimiento 02/10/2026. La operacion debe permanecer en rentabilidad de octubre.
+- El chat del 02/10/2026 registra la duda de Andy sobre si los 68.464.095 ya fueron devueltos y la respuesta de Mariano `tenes razon, aho reviso`, pero no contiene una confirmacion final. Mantener pendiente de confirmacion solo el estado operativo de devolucion; no excluir ni modificar la operacion de rentabilidad por esta duda.
+

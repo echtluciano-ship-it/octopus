@@ -99,6 +99,8 @@ def canonical_client_name(value: str) -> str:
 
 def normalize_channel(value: str) -> str:
     text = strip_accents(clean_text(value)).upper()
+    if ("HYF" in text or "H Y F" in text) and "ESPORA" in text:
+        return "HYF-ESPORA"
     if "HYF" in text or "H Y F" in text:
         return "HYF"
     if "ESPORA" in text:

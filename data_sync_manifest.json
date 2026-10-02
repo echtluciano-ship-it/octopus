@@ -1,14 +1,14 @@
 {
-  "database_sha256": "97b902dad9ac5745edc585a7a1ba7b59851a2ac39cea68c04c0dfbe57a026a05",
+  "database_sha256": "6d4ce6dc6c13ad79598478b66ec1f687757a66520de5d97617af34ddd64f15ed",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "cc67423d97ed6678e5ee329ff148a8c7cf9c30435300c5a674bc258fa338ac87",
     "data/billing_source.json": "f25a672fb961e8839f16b9e307294ddb3f7a3d3d35358f8edd18adefe0b936b0",
-    "manual_rentability_operations.csv": "bdfc445cecfd1d920dfc8893860ffb705c4cb7ea2ea7f4aa27dd9980dac36699",
+    "manual_rentability_operations.csv": "99b93a4d141ba16b025cb0ee776aaccd5e0ddec20f0e8a5cc59828a7bdba9853",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "278610e059262b9f22c3578f2c15bd4f1f78f53bba7c4da908bff1bcb3343f8e"
+    "source_documents.csv": "3452802dec42ebb3b9b38f64a872ceed6f4af74d1fd966546c9b86a327a242b1"
   },
   "controls": {
-    "as_of": "2026-10-01",
+    "as_of": "2026-10-02",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3247,11 +3247,19 @@
       "2026-10": {
         "billing_total": 109708642.49,
         "billing_records": 7,
-        "validated_net": 42850468.0,
-        "profit": 514206.0,
-        "profitability": 0.012000008961395707,
-        "valid_operations": 1,
+        "validated_net": 105032894.0,
+        "profit": 4181725.0,
+        "profitability": 0.03981347976568179,
+        "valid_operations": 2,
         "rentability_ranking": [
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion_validada": 62182426.0,
+            "ganancia_octopus": 3667519.0,
+            "rentabilidad": 0.05897999219264941,
+            "operaciones": 1
+          },
           {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
@@ -3271,10 +3279,10 @@
         ]
       }
     },
-    "published_clients": 84,
-    "valid_operations_all_dates": 244,
+    "published_clients": 85,
+    "valid_operations_all_dates": 247,
     "operation_states": {
-      "OK": 209,
+      "OK": 212,
       "OK_TRANSFERENCIA_1_2": 18,
       "OK_FC_NETA": 15,
       "DUPLICADO": 14,
