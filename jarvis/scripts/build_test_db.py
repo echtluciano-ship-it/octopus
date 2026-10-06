@@ -19,10 +19,12 @@ def build_test_database(path: Path) -> None:
                 display_name TEXT NOT NULL
             );
             CREATE TABLE billing_operations (
-                billing_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 client_key TEXT NOT NULL,
                 month TEXT NOT NULL,
-                net_amount REAL NOT NULL
+                net_amount REAL NOT NULL,
+                load_date TEXT NOT NULL,
+                period_date TEXT NOT NULL
             );
             CREATE TABLE rentability_operations (
                 operation_key TEXT PRIMARY KEY,
@@ -50,11 +52,12 @@ def build_test_database(path: Path) -> None:
             [("ACME", "Acme"), ("BETA", "Beta")],
         )
         conn.executemany(
-            "INSERT INTO billing_operations(client_key,month,net_amount) VALUES (?,?,?)",
+            "INSERT INTO billing_operations(client_key,month,net_amount,load_date,period_date) "
+            "VALUES (?,?,?,?,?)",
             [
-                ("ACME", "2026-09", 1_250_000),
-                ("BETA", "2026-09", 2_500_000),
-                ("ACME", "2026-10", 900_000),
+                ("ACME", "2026-09", 1_250_000, "2026-09-05", "2026-09-01"),
+                ("BETA", "2026-09", 2_500_000, "2026-09-18", "2026-09-01"),
+                ("ACME", "2026-10", 900_000, "2026-10-02", "2026-10-01"),
             ],
         )
         conn.executemany(

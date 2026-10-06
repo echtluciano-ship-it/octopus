@@ -3,4 +3,6 @@ __pycache__/
 outputs/
 .octopus-*.db
 jarvis/data/*.db
+jarvis/data/*shadow*.json
 jarvis/logs/*.db
+jarvis/logs/*shadow*.json

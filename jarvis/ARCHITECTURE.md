@@ -19,9 +19,18 @@ la identidad documental, los calculos y la autoridad sobre los datos.
 ## Etapas
 
 - V0 Lab: datos sinteticos y solo lectura.
-- Shadow: fuentes reales de solo lectura sin efectos externos.
+- Shadow: snapshot local de la base real, solo lectura, reconciliado contra las
+  consultas vigentes y sin efectos externos.
 - Approval: propuestas de accion con autorizacion humana.
 - Low-risk automation: tareas idempotentes y reversibles.
 - Production: PostgreSQL, monitoreo, backups y canales controlados.
 
 Tickets permanece fuera del alcance hasta documentar el proceso real.
+
+## Aislamiento de Shadow
+
+- La fuente OCTOPUS solo se abre con SQLite `mode=ro` y `query_only`.
+- El agente consulta una copia con `shadow` en su nombre, nunca `octopus.db`.
+- Se verifica SHA-256 de la fuente antes y despues de crear el snapshot.
+- Snapshot, manifiesto y auditoria contienen datos locales y no entran a Git.
+- GitHub, Render, Drive, WhatsApp, email, red y shell estan denegados por politica.

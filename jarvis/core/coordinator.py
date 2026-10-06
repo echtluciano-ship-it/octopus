@@ -15,8 +15,10 @@ class JarvisCoordinator:
     agent_id = "coordinator"
 
     def __init__(self, reader: OctopusReader, policy: PermissionPolicy, audit_log: AuditLog) -> None:
-        if policy.environment != "test":
-            raise ValueError("JARVIS v0 can run only with the TEST policy")
+        if policy.environment not in {"test", "shadow"}:
+            raise ValueError("JARVIS v0 can run only with a TEST or SHADOW policy")
+        if reader.environment != policy.environment:
+            raise ValueError("Reader and policy environments must match")
         self.reader = reader
         self.policy = policy
         self.audit_log = audit_log

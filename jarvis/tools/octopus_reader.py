@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sqlite3
 from contextlib import contextmanager
+from datetime import date
 from pathlib import Path
 from typing import Iterator
 
@@ -16,42 +17,59 @@ VALID_RENTABILITY = (
 class OctopusReader:
     """A narrow read-only facade. It never accepts raw SQL from an agent."""
 
-    def __init__(self, db_path: Path, *, laboratory: bool = True) -> None:
+    def __init__(
+        self,
+        db_path: Path,
+        *,
+        environment: str = "test",
+        as_of: date | None = None,
+    ) -> None:
         self.db_path = Path(db_path).resolve()
+        self.environment = environment
+        self.as_of = as_of or date.today()
         if not self.db_path.exists():
             raise FileNotFoundError(self.db_path)
-        if laboratory and "test" not in self.db_path.name.lower():
-            raise ValueError("JARVIS TEST Lab only accepts a database whose name contains 'test'")
+        required_marker = {"test": "test", "shadow": "shadow"}.get(environment)
+        if required_marker is None:
+            raise ValueError("JARVIS only accepts the TEST or SHADOW environment")
+        if required_marker not in self.db_path.name.lower():
+            raise ValueError(
+                f"JARVIS {environment.upper()} only accepts a database whose name "
+                f"contains {required_marker!r}"
+            )
 
     @contextmanager
     def _connection(self) -> Iterator[sqlite3.Connection]:
         uri = self.db_path.as_uri() + "?mode=ro"
         conn = sqlite3.connect(uri, uri=True)
         conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA query_only=ON")
         try:
             yield conn
         finally:
             conn.close()
 
     def month_summary(self, month: str) -> ToolResult:
+        billing_where, billing_params = self._period_filter("billing", month)
+        rent_where, rent_params = self._period_filter("rentability", month)
         with self._connection() as conn:
             billing = conn.execute(
                 "SELECT COUNT(*) records, COALESCE(SUM(net_amount),0) total "
-                "FROM billing_operations WHERE month=? AND net_amount > 0",
-                (month,),
+                f"FROM billing_operations WHERE {billing_where}",
+                billing_params,
             ).fetchone()
             rent = conn.execute(
                 f"SELECT COUNT(*) operations, COALESCE(SUM(billed_amount),0) net, "
                 f"COALESCE(SUM(octopus_profit),0) profit FROM rentability_operations "
-                f"WHERE month=? AND {VALID_RENTABILITY}",
-                (month,),
+                f"WHERE {rent_where}",
+                rent_params,
             ).fetchone()
             operation_keys = [
                 row[0]
                 for row in conn.execute(
-                    f"SELECT operation_key FROM rentability_operations WHERE month=? "
-                    f"AND {VALID_RENTABILITY} ORDER BY operation_key",
-                    (month,),
+                    f"SELECT operation_key FROM rentability_operations WHERE {rent_where} "
+                    f"ORDER BY operation_key",
+                    rent_params,
                 )
             ]
         net = float(rent["net"])
@@ -123,24 +141,45 @@ class OctopusReader:
         )
 
     def audit_month_components(self, month: str) -> dict:
+        billing_where, billing_params = self._period_filter("billing", month)
+        rent_where, rent_params = self._period_filter("rentability", month)
         with self._connection() as conn:
             billing = [
                 dict(row)
                 for row in conn.execute(
-                    "SELECT billing_id,net_amount FROM billing_operations "
-                    "WHERE month=? AND net_amount > 0 ORDER BY billing_id",
-                    (month,),
+                    "SELECT id AS billing_id,net_amount FROM billing_operations "
+                    f"WHERE {billing_where} ORDER BY id",
+                    billing_params,
                 )
             ]
             operations = [
                 dict(row)
                 for row in conn.execute(
                     f"SELECT operation_key,billed_amount,octopus_profit FROM rentability_operations "
-                    f"WHERE month=? AND {VALID_RENTABILITY} ORDER BY operation_key",
-                    (month,),
+                    f"WHERE {rent_where} ORDER BY operation_key",
+                    rent_params,
                 )
             ]
         return {"billing": billing, "operations": operations}
+
+    def _period_filter(self, kind: str, month: str) -> tuple[str, tuple]:
+        current_month = self.as_of.strftime("%Y-%m")
+        validity = {
+            "billing": "net_amount IS NOT NULL AND net_amount > 0",
+            "rentability": VALID_RENTABILITY,
+        }[kind]
+        where = f"month=? AND {validity}"
+        params: list[str] = [month]
+        if month > current_month:
+            where += " AND 0"
+        elif month == current_month:
+            if kind == "billing":
+                where += " AND load_date <= ? AND period_date <= ?"
+                params.extend((self.as_of.isoformat(), self.as_of.isoformat()))
+            else:
+                where += " AND operation_date <= ?"
+                params.append(self.as_of.isoformat())
+        return where, tuple(params)
 
     def audit_client_components(self, client_key: str) -> list[dict]:
         with self._connection() as conn:

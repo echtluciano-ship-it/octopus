@@ -1,18 +1,27 @@
 from __future__ import annotations
 
 import argparse
+import json
+from datetime import date
 from pathlib import Path
 
 from jarvis.core.audit_log import AuditLog
 from jarvis.core.coordinator import JarvisCoordinator
 from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
+from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot
+from jarvis.scripts.shadow_reconcile import reconcile_months, write_report
 from jarvis.tools.octopus_reader import OctopusReader
 
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_DB = ROOT / "data" / "octopus_test.db"
 DEFAULT_AUDIT = ROOT / "logs" / "jarvis_audit.db"
+DEFAULT_SHADOW_DB = ROOT / "data" / "octopus_shadow.db"
+DEFAULT_SHADOW_MANIFEST = ROOT / "data" / "octopus_shadow_manifest.json"
+DEFAULT_SHADOW_AUDIT = ROOT / "logs" / "jarvis_shadow_audit.db"
+DEFAULT_SHADOW_REPORT = ROOT / "logs" / "octopus_shadow_reconciliation.json"
+SHADOW_POLICY = ROOT / "config" / "permissions.shadow.json"
 
 
 def main() -> None:
@@ -20,10 +29,19 @@ def main() -> None:
     subparsers = parser.add_subparsers(dest="command", required=True)
     init_parser = subparsers.add_parser("init-test", help="Create synthetic TEST data")
     init_parser.add_argument("--db", type=Path, default=DEFAULT_DB)
+    shadow_parser = subparsers.add_parser("init-shadow", help="Create a verified read-only snapshot")
+    shadow_parser.add_argument("--source", type=Path, required=True)
+    shadow_parser.add_argument("--db", type=Path, default=DEFAULT_SHADOW_DB)
+    shadow_parser.add_argument("--manifest", type=Path, default=DEFAULT_SHADOW_MANIFEST)
+    reconcile_parser = subparsers.add_parser("reconcile-shadow", help="Compare SHADOW with OCTOPUS metrics")
+    reconcile_parser.add_argument("--db", type=Path, default=DEFAULT_SHADOW_DB)
+    reconcile_parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
+    reconcile_parser.add_argument("--report", type=Path, default=DEFAULT_SHADOW_REPORT)
     ask_parser = subparsers.add_parser("ask", help="Run one audited read-only request")
     ask_parser.add_argument("request")
-    ask_parser.add_argument("--db", type=Path, default=DEFAULT_DB)
-    ask_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT)
+    ask_parser.add_argument("--environment", choices=("test", "shadow"), default="test")
+    ask_parser.add_argument("--db", type=Path)
+    ask_parser.add_argument("--audit", type=Path)
     args = parser.parse_args()
 
     if args.command == "init-test":
@@ -31,8 +49,25 @@ def main() -> None:
         print(f"TEST database created: {args.db.resolve()}")
         return
 
-    reader = OctopusReader(args.db, laboratory=True)
-    coordinator = JarvisCoordinator(reader, PermissionPolicy(), AuditLog(args.audit))
+    if args.command == "init-shadow":
+        result = create_shadow_snapshot(args.source, args.db, args.manifest)
+        print(json.dumps(result, indent=2, ensure_ascii=True))
+        return
+
+    if args.command == "reconcile-shadow":
+        report = reconcile_months(args.db, args.as_of)
+        write_report(report, args.report)
+        print(json.dumps(report, indent=2, ensure_ascii=True))
+        if report["status"] != "OK":
+            raise SystemExit(1)
+        return
+
+    environment = args.environment
+    db_path = args.db or (DEFAULT_SHADOW_DB if environment == "shadow" else DEFAULT_DB)
+    audit_path = args.audit or (DEFAULT_SHADOW_AUDIT if environment == "shadow" else DEFAULT_AUDIT)
+    policy = PermissionPolicy(SHADOW_POLICY) if environment == "shadow" else PermissionPolicy()
+    reader = OctopusReader(db_path, environment=environment)
+    coordinator = JarvisCoordinator(reader, policy, AuditLog(audit_path))
     response = coordinator.handle(args.request)
     print(response.answer)
     print(f"Estado: {response.status}")

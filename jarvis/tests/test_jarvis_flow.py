@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from contextlib import closing
 from dataclasses import replace
+from datetime import date
 from pathlib import Path
 
 from jarvis.agents.auditor import OctopusAuditor
@@ -14,6 +15,8 @@ from jarvis.core.contracts import PolicyDenied
 from jarvis.core.coordinator import JarvisCoordinator
 from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
+from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot, sha256_file
+from jarvis.scripts.shadow_reconcile import reconcile_months
 from jarvis.tools.octopus_reader import OctopusReader
 
 
@@ -92,6 +95,46 @@ class JarvisFlowTests(unittest.TestCase):
         production.write_bytes(self.db.read_bytes())
         with self.assertRaisesRegex(ValueError, "TEST"):
             OctopusReader(production)
+
+    def test_shadow_snapshot_does_not_modify_source(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        source_hash = sha256_file(self.db)
+        result = create_shadow_snapshot(self.db, shadow)
+        self.assertEqual(sha256_file(self.db), source_hash)
+        self.assertTrue(result["source_unchanged"])
+        self.assertEqual(result["integrity_check"], "ok")
+        self.assertEqual(result["counts"]["rentability_operations"], 4)
+        self.assertNotEqual(shadow.resolve(), self.db.resolve())
+
+    def test_shadow_reader_requires_an_isolated_shadow_database(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        create_shadow_snapshot(self.db, shadow)
+        reader = OctopusReader(shadow, environment="shadow", as_of=date(2026, 10, 6))
+        self.assertEqual(reader.month_summary("2026-09").data["valid_operations"], 2)
+        with self.assertRaisesRegex(ValueError, "SHADOW"):
+            OctopusReader(self.db, environment="shadow")
+
+    def test_shadow_policy_can_only_run_read_only_flow(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        create_shadow_snapshot(self.db, shadow)
+        policy_path = Path(__file__).resolve().parents[1] / "config" / "permissions.shadow.json"
+        policy = PermissionPolicy(policy_path)
+        coordinator = JarvisCoordinator(
+            OctopusReader(shadow, environment="shadow", as_of=date(2026, 10, 6)),
+            policy,
+            AuditLog(Path(self.temp.name) / "shadow_audit.db"),
+        )
+        response = coordinator.handle("Resumen de septiembre 2026")
+        self.assertEqual(response.status, "APPROVED")
+        with self.assertRaises(PolicyDenied):
+            policy.require_tool("octopus-specialist", "render.deploy")
+
+    def test_shadow_reconciles_with_current_octopus_metrics(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        create_shadow_snapshot(self.db, shadow)
+        report = reconcile_months(shadow, date(2026, 10, 6), ["2026-09", "2026-10"])
+        self.assertEqual(report["status"], "OK")
+        self.assertEqual(report["months_checked"], 2)
 
 
 if __name__ == "__main__":
