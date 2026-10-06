@@ -87,7 +87,10 @@ def reconcile_database(conn: sqlite3.Connection, as_of: date) -> dict:
         bb = billed[billed.month == month]
         if month == as_of.strftime("%Y-%m"):
             rr = rr[rr.operation_date <= as_of.isoformat()]
-            bb = bb[bb.load_date <= as_of.isoformat()]
+            bb = bb[
+                (bb.load_date <= as_of.isoformat())
+                & (bb.period_date <= as_of.isoformat())
+            ]
         b_summary, r_summary = metrics.executive_summary(month, as_of, read)
         b_top = metrics.billing_ranking(month, -1, as_of, read)
         r_top = metrics.rentability_ranking(month, -1, as_of, read)

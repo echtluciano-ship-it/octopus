@@ -1,14 +1,14 @@
 {
-  "database_sha256": "6d4ce6dc6c13ad79598478b66ec1f687757a66520de5d97617af34ddd64f15ed",
+  "database_sha256": "3766df8d7c23b966b9de314237433169f343e50847332f6ac4c5ba061090f908",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "cc67423d97ed6678e5ee329ff148a8c7cf9c30435300c5a674bc258fa338ac87",
-    "data/billing_source.json": "f25a672fb961e8839f16b9e307294ddb3f7a3d3d35358f8edd18adefe0b936b0",
-    "manual_rentability_operations.csv": "99b93a4d141ba16b025cb0ee776aaccd5e0ddec20f0e8a5cc59828a7bdba9853",
+    "data/FACTURACION OCTOPUS.xlsx": "245fc631beabc37344d065f18bd80954c6a29be794a07626030433aeeb9ecc3b",
+    "data/billing_source.json": "d9f0e7dad2f78f693c44ac7d772ba87ef85b1b948274dae5d5924d4a0edbd458",
+    "manual_rentability_operations.csv": "280a1eef4685b50f4ba32a9765b096673aa31185408e6251f822708e1f34f610",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "3452802dec42ebb3b9b38f64a872ceed6f4af74d1fd966546c9b86a327a242b1"
+    "source_documents.csv": "f517b27316fa89eeeeabaa8e7cd42818582fa7f3cb6ef9e7c083cabd4467021d"
   },
   "controls": {
-    "as_of": "2026-10-02",
+    "as_of": "2026-10-05",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,8 +2953,8 @@
         ]
       },
       "2026-09": {
-        "billing_total": 4237049839.45,
-        "billing_records": 288,
+        "billing_total": 4324439636.07,
+        "billing_records": 295,
         "validated_net": 2246879773.77,
         "profit": 125706777.67,
         "profitability": 0.055947264796940524,
@@ -3147,6 +3147,12 @@
             "registros": 16
           },
           {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 165202983.72,
+            "registros": 9
+          },
+          {
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
             "facturacion": 157625331.0,
@@ -3195,12 +3201,6 @@
             "registros": 13
           },
           {
-            "client_name": "DAUMAS MOTOFLEX S.R.L.",
-            "client_key": "DAUMAS MOTOFLEX",
-            "facturacion": 99173553.72,
-            "registros": 5
-          },
-          {
             "client_name": "IT Patagonia",
             "client_key": "IT PATAGONIA",
             "facturacion": 96940801.46000001,
@@ -3245,13 +3245,37 @@
         ]
       },
       "2026-10": {
-        "billing_total": 109708642.49,
-        "billing_records": 7,
-        "validated_net": 105032894.0,
-        "profit": 4181725.0,
-        "profitability": 0.03981347976568179,
-        "valid_operations": 2,
+        "billing_total": 0.0,
+        "billing_records": 0,
+        "validated_net": 420457784.0,
+        "profit": 22243989.0,
+        "profitability": 0.05290421499248543,
+        "valid_operations": 8,
         "rentability_ranking": [
+          {
+            "client_name": "MINETECH SRL",
+            "client_key": "MINETECH",
+            "facturacion_validada": 3997570.0,
+            "ganancia_octopus": 375947.0,
+            "rentabilidad": 0.0940438816581073,
+            "operaciones": 1
+          },
+          {
+            "client_name": "MEDPHARMA S.A.",
+            "client_key": "MEDPHARMA",
+            "facturacion_validada": 87839070.0,
+            "ganancia_octopus": 6148735.0,
+            "rentabilidad": 0.07000000113844557,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion_validada": 141165720.0,
+            "ganancia_octopus": 8346282.0,
+            "rentabilidad": 0.0591239997925842,
+            "operaciones": 1
+          },
           {
             "client_name": "Alimentos Viandas",
             "client_key": "ALIMENTOS VIANDAS",
@@ -3261,28 +3285,37 @@
             "operaciones": 1
           },
           {
+            "client_name": "Fashion Cook",
+            "client_key": "FASHION COOK",
+            "facturacion_validada": 50006740.0,
+            "ganancia_octopus": 2802311.0,
+            "rentabilidad": 0.056038665987824844,
+            "operaciones": 1
+          },
+          {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
             "facturacion_validada": 42850468.0,
             "ganancia_octopus": 514206.0,
             "rentabilidad": 0.012000008961395707,
             "operaciones": 1
+          },
+          {
+            "client_name": "Alimentaria Sustentable",
+            "client_key": "ALIMENTARIA SUSTENTABLE",
+            "facturacion_validada": 32415790.0,
+            "ganancia_octopus": 388989.0,
+            "rentabilidad": 0.011999985192401605,
+            "operaciones": 1
           }
         ],
-        "billing_ranking": [
-          {
-            "client_name": "Alimentos Viandas",
-            "client_key": "ALIMENTOS VIANDAS",
-            "facturacion": 109708642.49000001,
-            "registros": 7
-          }
-        ]
+        "billing_ranking": []
       }
     },
     "published_clients": 85,
-    "valid_operations_all_dates": 247,
+    "valid_operations_all_dates": 248,
     "operation_states": {
-      "OK": 212,
+      "OK": 213,
       "OK_TRANSFERENCIA_1_2": 18,
       "OK_FC_NETA": 15,
       "DUPLICADO": 14,

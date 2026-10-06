@@ -111,6 +111,16 @@ class SyncTests(unittest.TestCase):
         pd.testing.assert_frame_equal(before_rent, rent)
         self.assertEqual(metrics.billing_ranking("2026-09", 20, AS_OF, self.read).iloc[0].client_key, "B")
 
+    def test_current_month_excludes_future_period_even_when_already_loaded(self):
+        self.conn.execute("""INSERT INTO billing_operations
+            (client_key,client_name,channel,month,period_date,load_date,net_amount,source)
+            VALUES ('B','Cliente B','HYF','2026-09','2026-09-26','2026-09-18',8000,'fixture')""")
+        self.rebuild()
+        before_due = metrics.executive_summary("2026-09", AS_OF, self.read)[0]
+        on_due = metrics.executive_summary("2026-09", date(2026, 9, 26), self.read)[0]
+        self.assertEqual(before_due.iloc[0].facturacion, 3000)
+        self.assertEqual(on_due.iloc[0].facturacion, 20000)
+
     def test_wal_commits_refresh_same_query(self):
         self.conn.execute("PRAGMA journal_mode=WAL")
         query = "SELECT SUM(net_amount) n FROM billing_operations"

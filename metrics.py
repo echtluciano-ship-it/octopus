@@ -11,17 +11,21 @@ VALID_BILLING = "net_amount IS NOT NULL AND net_amount > 0"
 
 def period_filter(kind: str, month: str, as_of: date) -> tuple[str, tuple]:
     current_month = as_of.strftime("%Y-%m")
-    validity, cutoff = {
-        "billing": (VALID_BILLING, "load_date"),
-        "rentability": (VALID_RENTABILITY, "operation_date"),
+    validity = {
+        "billing": VALID_BILLING,
+        "rentability": VALID_RENTABILITY,
     }[kind]
     where = f"month = ? AND {validity}"
     params = [month]
     if month > current_month:
         where += " AND 0"
     elif month == current_month:
-        where += f" AND {cutoff} <= ?"
-        params.append(as_of.isoformat())
+        if kind == "billing":
+            where += " AND load_date <= ? AND period_date <= ?"
+            params.extend((as_of.isoformat(), as_of.isoformat()))
+        else:
+            where += " AND operation_date <= ?"
+            params.append(as_of.isoformat())
     return where, tuple(params)
 
 
