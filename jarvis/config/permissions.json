@@ -1,0 +1,36 @@
+{
+  "environment": "test",
+  "default": "deny",
+  "agents": {
+    "coordinator": {
+      "allow_agents": ["octopus-specialist", "auditor"],
+      "allow_tools": []
+    },
+    "octopus-specialist": {
+      "allow_agents": [],
+      "allow_tools": [
+        "octopus.month_summary",
+        "octopus.client_snapshot",
+        "octopus.review_cases"
+      ]
+    },
+    "auditor": {
+      "allow_agents": [],
+      "allow_tools": [
+        "octopus.audit_month_components",
+        "octopus.audit_client_components",
+        "octopus.audit_review_components"
+      ]
+    }
+  },
+  "globally_denied": [
+    "filesystem.write",
+    "shell.exec",
+    "network.request",
+    "drive.write",
+    "whatsapp.send",
+    "email.send",
+    "github.push",
+    "render.deploy"
+  ]
+}

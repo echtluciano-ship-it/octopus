@@ -2,3 +2,5 @@ __pycache__/
 .streamlit/secrets.toml
 outputs/
 .octopus-*.db
+jarvis/data/*.db
+jarvis/logs/*.db
