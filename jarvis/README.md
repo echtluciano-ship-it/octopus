@@ -34,11 +34,15 @@ trabaja exclusivamente sobre esa copia ignorada por Git.
 ```powershell
 python -m jarvis.cli init-shadow --source C:\ruta\a\octopus.db
 python -m jarvis.cli reconcile-shadow --as-of 2026-10-06
+python -m jarvis.cli observe-shadow --as-of 2026-10-06
 python -m jarvis.cli ask --environment shadow "Resumen de septiembre 2026"
 ```
 
 La reconciliacion compara los resultados de JARVIS con las consultas vigentes de
 OCTOPUS. Una diferencia termina en error y no habilita ninguna accion externa.
+La observacion integral vuelve a verificar el snapshot, audita todos los meses y
+clientes con operaciones validas, registra los casos REVIEW y confirma que no se
+ejecuto ninguna accion externa.
 
 Cada respuesta muestra un ID que permite rastrear la ejecucion en
 `jarvis/logs/jarvis_audit.db`.
@@ -54,6 +58,7 @@ Cada respuesta muestra un ID que permite rastrear la ejecucion en
 - `scripts/build_test_db.py`: genera informacion sintetica reproducible.
 - `scripts/create_shadow_snapshot.py`: copia coherente con hash e integridad.
 - `scripts/shadow_reconcile.py`: compara SHADOW contra las metricas actuales.
+- `scripts/shadow_observe.py`: ejecuta la bateria integral de observacion.
 - `config/permissions.shadow.json`: permisos de lectura y denegaciones externas.
 
 La aplicacion OCTOPUS/Render existente permanece fuera de este laboratorio.

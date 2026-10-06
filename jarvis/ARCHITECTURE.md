@@ -34,3 +34,5 @@ Tickets permanece fuera del alcance hasta documentar el proceso real.
 - Se verifica SHA-256 de la fuente antes y despues de crear el snapshot.
 - Snapshot, manifiesto y auditoria contienen datos locales y no entran a Git.
 - GitHub, Render, Drive, WhatsApp, email, red y shell estan denegados por politica.
+- Cada corrida integral audita todos los meses y clientes validos, conserva los
+  casos REVIEW y declara explicitamente cero acciones externas.

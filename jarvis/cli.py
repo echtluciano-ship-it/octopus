@@ -10,6 +10,7 @@ from jarvis.core.coordinator import JarvisCoordinator
 from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
 from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot
+from jarvis.scripts.shadow_observe import observe_shadow, write_observation_report
 from jarvis.scripts.shadow_reconcile import reconcile_months, write_report
 from jarvis.tools.octopus_reader import OctopusReader
 
@@ -21,6 +22,7 @@ DEFAULT_SHADOW_DB = ROOT / "data" / "octopus_shadow.db"
 DEFAULT_SHADOW_MANIFEST = ROOT / "data" / "octopus_shadow_manifest.json"
 DEFAULT_SHADOW_AUDIT = ROOT / "logs" / "jarvis_shadow_audit.db"
 DEFAULT_SHADOW_REPORT = ROOT / "logs" / "octopus_shadow_reconciliation.json"
+DEFAULT_SHADOW_OBSERVATION = ROOT / "logs" / "octopus_shadow_observation.json"
 SHADOW_POLICY = ROOT / "config" / "permissions.shadow.json"
 
 
@@ -37,6 +39,12 @@ def main() -> None:
     reconcile_parser.add_argument("--db", type=Path, default=DEFAULT_SHADOW_DB)
     reconcile_parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
     reconcile_parser.add_argument("--report", type=Path, default=DEFAULT_SHADOW_REPORT)
+    observe_parser = subparsers.add_parser("observe-shadow", help="Run the full audited SHADOW suite")
+    observe_parser.add_argument("--db", type=Path, default=DEFAULT_SHADOW_DB)
+    observe_parser.add_argument("--manifest", type=Path, default=DEFAULT_SHADOW_MANIFEST)
+    observe_parser.add_argument("--audit", type=Path, default=DEFAULT_SHADOW_AUDIT)
+    observe_parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
+    observe_parser.add_argument("--report", type=Path, default=DEFAULT_SHADOW_OBSERVATION)
     ask_parser = subparsers.add_parser("ask", help="Run one audited read-only request")
     ask_parser.add_argument("request")
     ask_parser.add_argument("--environment", choices=("test", "shadow"), default="test")
@@ -59,6 +67,20 @@ def main() -> None:
         write_report(report, args.report)
         print(json.dumps(report, indent=2, ensure_ascii=True))
         if report["status"] != "OK":
+            raise SystemExit(1)
+        return
+
+    if args.command == "observe-shadow":
+        report = observe_shadow(
+            args.db,
+            args.manifest,
+            SHADOW_POLICY,
+            args.audit,
+            args.as_of,
+        )
+        write_observation_report(report, args.report)
+        print(json.dumps(report, indent=2, ensure_ascii=True))
+        if report["status"] == "BLOCKED":
             raise SystemExit(1)
         return
 

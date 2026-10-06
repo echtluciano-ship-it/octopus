@@ -16,6 +16,7 @@ from jarvis.core.coordinator import JarvisCoordinator
 from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
 from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot, sha256_file
+from jarvis.scripts.shadow_observe import observe_shadow, verify_shadow_manifest
 from jarvis.scripts.shadow_reconcile import reconcile_months
 from jarvis.tools.octopus_reader import OctopusReader
 
@@ -135,6 +136,34 @@ class JarvisFlowTests(unittest.TestCase):
         report = reconcile_months(shadow, date(2026, 10, 6), ["2026-09", "2026-10"])
         self.assertEqual(report["status"], "OK")
         self.assertEqual(report["months_checked"], 2)
+
+    def test_shadow_observation_audits_every_month_and_client(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        manifest = Path(self.temp.name) / "octopus_shadow_manifest.json"
+        create_shadow_snapshot(self.db, shadow, manifest)
+        policy_path = Path(__file__).resolve().parents[1] / "config" / "permissions.shadow.json"
+        report = observe_shadow(
+            shadow,
+            manifest,
+            policy_path,
+            Path(self.temp.name) / "shadow_observation_audit.db",
+            date(2026, 10, 6),
+        )
+        self.assertEqual(report["status"], "OK")
+        self.assertEqual(report["observations"]["months_total"], 2)
+        self.assertEqual(report["observations"]["clients_total"], 2)
+        self.assertEqual(report["observations"]["valid_operations_observed"], 2)
+        self.assertEqual(report["external_actions_executed"], 0)
+
+    def test_tampered_shadow_snapshot_is_blocked(self) -> None:
+        shadow = Path(self.temp.name) / "octopus_shadow.db"
+        manifest = Path(self.temp.name) / "octopus_shadow_manifest.json"
+        create_shadow_snapshot(self.db, shadow, manifest)
+        with shadow.open("ab") as output:
+            output.write(b"tampered")
+        verification = verify_shadow_manifest(shadow, manifest)
+        self.assertFalse(verification["approved"])
+        self.assertTrue(any("snapshot hash" in problem for problem in verification["problems"]))
 
 
 if __name__ == "__main__":
