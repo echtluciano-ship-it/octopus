@@ -35,6 +35,7 @@ trabaja exclusivamente sobre esa copia ignorada por Git.
 python -m jarvis.cli init-shadow --source C:\ruta\a\octopus.db
 python -m jarvis.cli reconcile-shadow --as-of 2026-10-06
 python -m jarvis.cli observe-shadow --as-of 2026-10-06
+python -m jarvis.cli shadow-cycle --source C:\ruta\a\octopus.db --as-of 2026-10-07
 python -m jarvis.cli ask --environment shadow "Resumen de septiembre 2026"
 ```
 
@@ -43,6 +44,9 @@ OCTOPUS. Una diferencia termina en error y no habilita ninguna accion externa.
 La observacion integral vuelve a verificar el snapshot, audita todos los meses y
 clientes con operaciones validas, registra los casos REVIEW y confirma que no se
 ejecuto ninguna accion externa.
+`shadow-cycle` es el comando cotidiano de esta etapa: renueva la copia, ejecuta
+la auditoria y compara meses, clientes y casos REVIEW contra la corrida anterior.
+Cada resultado queda en un historial SQLite append-only local.
 
 Cada respuesta muestra un ID que permite rastrear la ejecucion en
 `jarvis/logs/jarvis_audit.db`.
@@ -59,6 +63,7 @@ Cada respuesta muestra un ID que permite rastrear la ejecucion en
 - `scripts/create_shadow_snapshot.py`: copia coherente con hash e integridad.
 - `scripts/shadow_reconcile.py`: compara SHADOW contra las metricas actuales.
 - `scripts/shadow_observe.py`: ejecuta la bateria integral de observacion.
+- `scripts/shadow_cycle.py`: compara corridas y conserva el historial local.
 - `config/permissions.shadow.json`: permisos de lectura y denegaciones externas.
 
 La aplicacion OCTOPUS/Render existente permanece fuera de este laboratorio.

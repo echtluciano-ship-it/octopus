@@ -36,3 +36,5 @@ Tickets permanece fuera del alcance hasta documentar el proceso real.
 - GitHub, Render, Drive, WhatsApp, email, red y shell estan denegados por politica.
 - Cada corrida integral audita todos los meses y clientes validos, conserva los
   casos REVIEW y declara explicitamente cero acciones externas.
+- Los ciclos sucesivos informan solamente cambios reales por tabla, mes, cliente
+  y cola REVIEW; el historial local es append-only.

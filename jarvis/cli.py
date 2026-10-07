@@ -11,6 +11,7 @@ from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
 from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot
 from jarvis.scripts.shadow_observe import observe_shadow, write_observation_report
+from jarvis.scripts.shadow_cycle import run_shadow_cycle, write_cycle_report
 from jarvis.scripts.shadow_reconcile import reconcile_months, write_report
 from jarvis.tools.octopus_reader import OctopusReader
 
@@ -23,6 +24,8 @@ DEFAULT_SHADOW_MANIFEST = ROOT / "data" / "octopus_shadow_manifest.json"
 DEFAULT_SHADOW_AUDIT = ROOT / "logs" / "jarvis_shadow_audit.db"
 DEFAULT_SHADOW_REPORT = ROOT / "logs" / "octopus_shadow_reconciliation.json"
 DEFAULT_SHADOW_OBSERVATION = ROOT / "logs" / "octopus_shadow_observation.json"
+DEFAULT_SHADOW_CYCLE_REPORT = ROOT / "logs" / "octopus_shadow_cycle.json"
+DEFAULT_SHADOW_HISTORY = ROOT / "logs" / "octopus_shadow_history.db"
 SHADOW_POLICY = ROOT / "config" / "permissions.shadow.json"
 
 
@@ -45,6 +48,14 @@ def main() -> None:
     observe_parser.add_argument("--audit", type=Path, default=DEFAULT_SHADOW_AUDIT)
     observe_parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
     observe_parser.add_argument("--report", type=Path, default=DEFAULT_SHADOW_OBSERVATION)
+    cycle_parser = subparsers.add_parser("shadow-cycle", help="Refresh, compare and audit SHADOW")
+    cycle_parser.add_argument("--source", type=Path, required=True)
+    cycle_parser.add_argument("--db", type=Path, default=DEFAULT_SHADOW_DB)
+    cycle_parser.add_argument("--manifest", type=Path, default=DEFAULT_SHADOW_MANIFEST)
+    cycle_parser.add_argument("--audit", type=Path, default=DEFAULT_SHADOW_AUDIT)
+    cycle_parser.add_argument("--history", type=Path, default=DEFAULT_SHADOW_HISTORY)
+    cycle_parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
+    cycle_parser.add_argument("--report", type=Path, default=DEFAULT_SHADOW_CYCLE_REPORT)
     ask_parser = subparsers.add_parser("ask", help="Run one audited read-only request")
     ask_parser.add_argument("request")
     ask_parser.add_argument("--environment", choices=("test", "shadow"), default="test")
@@ -80,6 +91,34 @@ def main() -> None:
         )
         write_observation_report(report, args.report)
         print(json.dumps(report, indent=2, ensure_ascii=True))
+        if report["status"] == "BLOCKED":
+            raise SystemExit(1)
+        return
+
+    if args.command == "shadow-cycle":
+        report = run_shadow_cycle(
+            source=args.source,
+            db_path=args.db,
+            manifest_path=args.manifest,
+            policy_path=SHADOW_POLICY,
+            audit_path=args.audit,
+            history_path=args.history,
+            as_of=args.as_of,
+        )
+        write_cycle_report(report, args.report)
+        summary = {
+            "cycle_id": report["cycle_id"],
+            "status": report["status"],
+            "source_unchanged": report["snapshot"]["source_unchanged"],
+            "months_checked": report["observation"]["reconciliation"]["months_checked"],
+            "clients_checked": report["observation"]["observations"]["clients_total"],
+            "affected_months": report["drift"]["affected_months"],
+            "affected_clients": report["drift"]["affected_clients"],
+            "reviews_added": report["drift"]["reviews_added"],
+            "reviews_resolved": report["drift"]["reviews_resolved"],
+            "external_actions_executed": report["external_actions_executed"],
+        }
+        print(json.dumps(summary, indent=2, ensure_ascii=True))
         if report["status"] == "BLOCKED":
             raise SystemExit(1)
         return

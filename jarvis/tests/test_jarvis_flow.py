@@ -17,6 +17,7 @@ from jarvis.core.policy import PermissionPolicy
 from jarvis.scripts.build_test_db import build_test_database
 from jarvis.scripts.create_shadow_snapshot import create_shadow_snapshot, sha256_file
 from jarvis.scripts.shadow_observe import observe_shadow, verify_shadow_manifest
+from jarvis.scripts.shadow_cycle import run_shadow_cycle
 from jarvis.scripts.shadow_reconcile import reconcile_months
 from jarvis.tools.octopus_reader import OctopusReader
 
@@ -164,6 +165,53 @@ class JarvisFlowTests(unittest.TestCase):
         verification = verify_shadow_manifest(shadow, manifest)
         self.assertFalse(verification["approved"])
         self.assertTrue(any("snapshot hash" in problem for problem in verification["problems"]))
+
+    def test_repeated_shadow_cycle_reports_only_real_drift(self) -> None:
+        root = Path(self.temp.name)
+        shadow = root / "octopus_shadow.db"
+        manifest = root / "octopus_shadow_manifest.json"
+        audit = root / "shadow_cycle_audit.db"
+        history = root / "shadow_history.db"
+        policy_path = Path(__file__).resolve().parents[1] / "config" / "permissions.shadow.json"
+        first = run_shadow_cycle(
+            source=self.db,
+            db_path=shadow,
+            manifest_path=manifest,
+            policy_path=policy_path,
+            audit_path=audit,
+            history_path=history,
+            as_of=date(2026, 10, 6),
+        )
+        self.assertTrue(first["drift"]["baseline"])
+
+        with closing(sqlite3.connect(self.db)) as conn, conn:
+            conn.execute(
+                "INSERT INTO billing_operations"
+                "(client_key,month,net_amount,load_date,period_date) VALUES (?,?,?,?,?)",
+                ("ACME", "2026-10", 100_000, "2026-10-06", "2026-10-01"),
+            )
+            conn.execute(
+                "INSERT INTO rentability_operations VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                ("op-acme-2", "ACME", "Acme", "HYF", "2026-10", "2026-10-06", 100_000, 5_000, "OK", "acme-2.jpg", "drive-acme-2"),
+            )
+
+        second = run_shadow_cycle(
+            source=self.db,
+            db_path=shadow,
+            manifest_path=manifest,
+            policy_path=policy_path,
+            audit_path=audit,
+            history_path=history,
+            as_of=date(2026, 10, 6),
+        )
+        self.assertFalse(second["drift"]["baseline"])
+        self.assertEqual(second["drift"]["affected_months"], ["2026-10"])
+        self.assertEqual(second["drift"]["affected_clients"], ["ACME"])
+        self.assertEqual(second["drift"]["table_deltas"]["billing_operations"], 1)
+        self.assertEqual(second["drift"]["table_deltas"]["rentability_operations"], 1)
+        self.assertEqual(second["external_actions_executed"], 0)
+        with closing(sqlite3.connect(history)) as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM shadow_cycles").fetchone()[0], 2)
 
 
 if __name__ == "__main__":
