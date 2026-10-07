@@ -34,7 +34,7 @@ def capture_shadow_state(db_path: Path, as_of: date) -> dict[str, Any]:
             )
         ]
         client_rows = conn.execute(
-            "SELECT client_key,COUNT(*) AS operations,SUM(billed_amount) AS billing," 
+            "SELECT client_key,COUNT(*) AS operations,SUM(billed_amount) AS billing,"
             "SUM(octopus_profit) AS profit,MAX(operation_date) AS last_operation "
             "FROM rentability_operations WHERE status LIKE 'OK%' AND billed_amount > 0 "
             "AND octopus_profit IS NOT NULL GROUP BY client_key ORDER BY client_key"
