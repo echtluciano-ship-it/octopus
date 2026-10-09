@@ -23,6 +23,10 @@ class NormalizationTests(unittest.TestCase):
         self.assertEqual(data_loader.normalize_channel("HYF-ESPORA"), "HYF-ESPORA")
         self.assertEqual(data_loader.normalize_channel("Wolfpack - HYF - Espora"), "HYF-ESPORA")
 
+    def test_billing_period_is_normalized_to_month_start(self):
+        self.assertEqual(data_loader.parse_period("Agos-26"), date(2026, 8, 1))
+        self.assertEqual(data_loader.parse_period(date(2026, 10, 26)), date(2026, 10, 1))
+
 
 class SyncTests(unittest.TestCase):
     def setUp(self):

@@ -1,14 +1,14 @@
 {
-  "database_sha256": "3766df8d7c23b966b9de314237433169f343e50847332f6ac4c5ba061090f908",
+  "database_sha256": "4f589a3d80150921eec462ce5d14f11bf3e40894d3edf28bb5eee2662000a6d1",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "245fc631beabc37344d065f18bd80954c6a29be794a07626030433aeeb9ecc3b",
-    "data/billing_source.json": "d9f0e7dad2f78f693c44ac7d772ba87ef85b1b948274dae5d5924d4a0edbd458",
-    "manual_rentability_operations.csv": "280a1eef4685b50f4ba32a9765b096673aa31185408e6251f822708e1f34f610",
+    "data/FACTURACION OCTOPUS.xlsx": "bf657389d2361b1324516b98f086a4cf28e314156e721c9993f2933de415c98e",
+    "data/billing_source.json": "c2e78614f82c749bbbdf27523144dc94a768abc0cd83584c2e84623312618e20",
+    "manual_rentability_operations.csv": "44da464cb17360ec2960c62e93541dc5981a0e1506d54b7f25f5283936a2cf3c",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "f517b27316fa89eeeeabaa8e7cd42818582fa7f3cb6ef9e7c083cabd4467021d"
+    "source_documents.csv": "9fe5904d6ff8910152eb8f622fee187c8a2668712eef94741616d2e9b23bbd0d"
   },
   "controls": {
-    "as_of": "2026-10-05",
+    "as_of": "2026-10-08",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,8 +2953,8 @@
         ]
       },
       "2026-09": {
-        "billing_total": 4324439636.07,
-        "billing_records": 295,
+        "billing_total": 4432050757.64,
+        "billing_records": 303,
         "validated_net": 2246879773.77,
         "profit": 125706777.67,
         "profitability": 0.055947264796940524,
@@ -3195,6 +3195,12 @@
             "registros": 8
           },
           {
+            "client_name": "PLUS NOA SA",
+            "client_key": "PLUS NOA",
+            "facturacion": 100000037.88,
+            "registros": 8
+          },
+          {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
             "facturacion": 99995992.84,
@@ -3235,22 +3241,16 @@
             "client_key": "AEQUALIS",
             "facturacion": 76777092.59,
             "registros": 20
-          },
-          {
-            "client_name": "Obra Social",
-            "client_key": "OBRA SOCIAL",
-            "facturacion": 74466706.51,
-            "registros": 1
           }
         ]
       },
       "2026-10": {
-        "billing_total": 0.0,
-        "billing_records": 0,
-        "validated_net": 420457784.0,
-        "profit": 22243989.0,
-        "profitability": 0.05290421499248543,
-        "valid_operations": 8,
+        "billing_total": 1186804430.7,
+        "billing_records": 69,
+        "validated_net": 1171921697.0,
+        "profit": 66060404.0,
+        "profitability": 0.056369298536845844,
+        "valid_operations": 20,
         "rentability_ranking": [
           {
             "client_name": "MINETECH SRL",
@@ -3261,12 +3261,60 @@
             "operaciones": 1
           },
           {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion_validada": 87089270.0,
+            "ganancia_octopus": 7233394.0,
+            "rentabilidad": 0.08305723540913823,
+            "operaciones": 3
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion_validada": 24097628.0,
+            "ganancia_octopus": 1925065.0,
+            "rentabilidad": 0.07988607841402481,
+            "operaciones": 1
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion_validada": 76861611.0,
+            "ganancia_octopus": 6120520.0,
+            "rentabilidad": 0.0796303892199189,
+            "operaciones": 2
+          },
+          {
             "client_name": "MEDPHARMA S.A.",
             "client_key": "MEDPHARMA",
             "facturacion_validada": 87839070.0,
             "ganancia_octopus": 6148735.0,
             "rentabilidad": 0.07000000113844557,
             "operaciones": 2
+          },
+          {
+            "client_name": "GEM CONSTRUCCIONES S. A.",
+            "client_key": "GEM CONSTRUCCIONES",
+            "facturacion_validada": 20011360.0,
+            "ganancia_octopus": 1398266.0,
+            "rentabilidad": 0.06987361178850413,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion_validada": 32867790.0,
+            "ganancia_octopus": 2277134.0,
+            "rentabilidad": 0.06928162800115249,
+            "operaciones": 1
+          },
+          {
+            "client_name": "DYKTEL S.A.",
+            "client_key": "DYKTEL",
+            "facturacion_validada": 15011350.0,
+            "ganancia_octopus": 900681.0,
+            "rentabilidad": 0.06,
+            "operaciones": 1
           },
           {
             "client_name": "Ovniplast",
@@ -3285,6 +3333,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "Managing",
+            "client_key": "MANAGING",
+            "facturacion_validada": 30021040.0,
+            "ganancia_octopus": 1715403.0,
+            "rentabilidad": 0.05714002579524227,
+            "operaciones": 1
+          },
+          {
             "client_name": "Fashion Cook",
             "client_key": "FASHION COOK",
             "facturacion_validada": 50006740.0,
@@ -3293,12 +3349,20 @@
             "operaciones": 1
           },
           {
+            "client_name": "NOVOMEDICAL S.R.L.",
+            "client_key": "NOVOMEDICAL",
+            "facturacion_validada": 15489730.0,
+            "ganancia_octopus": 743507.0,
+            "rentabilidad": 0.04799999741764382,
+            "operaciones": 1
+          },
+          {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
-            "facturacion_validada": 42850468.0,
-            "ganancia_octopus": 514206.0,
-            "rentabilidad": 0.012000008961395707,
-            "operaciones": 1
+            "facturacion_validada": 492864602.0,
+            "ganancia_octopus": 22016651.0,
+            "rentabilidad": 0.04467078972735802,
+            "operaciones": 2
           },
           {
             "client_name": "Alimentaria Sustentable",
@@ -3309,15 +3373,94 @@
             "operaciones": 1
           }
         ],
-        "billing_ranking": []
+        "billing_ranking": [
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 204489644.46,
+            "registros": 15
+          },
+          {
+            "client_name": "Wolfpack",
+            "client_key": "WOLFPACK",
+            "facturacion": 179857472.76,
+            "registros": 3
+          },
+          {
+            "client_name": "SAINT GERMAIN S. R. L.",
+            "client_key": "SAINT GERMAIN",
+            "facturacion": 139699773.14,
+            "registros": 12
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 120028613.71000001,
+            "registros": 8
+          },
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 109708642.49000001,
+            "registros": 7
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 101491091.67,
+            "registros": 5
+          },
+          {
+            "client_name": "MEDPHARMA S.A.",
+            "client_key": "MEDPHARMA",
+            "facturacion": 91157351.31,
+            "registros": 8
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion": 87083270.56,
+            "registros": 3
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion": 86645141.86,
+            "registros": 3
+          },
+          {
+            "client_name": "ITPA S.A.",
+            "client_key": "ITPA",
+            "facturacion": 41084132.370000005,
+            "registros": 2
+          },
+          {
+            "client_name": "FUNDACION SOLDADOS FUNDASOL",
+            "client_key": "FUNDACION SOLDADOS FUNDASOL",
+            "facturacion": 14932373.18,
+            "registros": 1
+          },
+          {
+            "client_name": "MINETECH SRL",
+            "client_key": "MINETECH",
+            "facturacion": 6022311.62,
+            "registros": 1
+          },
+          {
+            "client_name": "ASOCIACION DEL PERSONAL AERO",
+            "client_key": "ASOCIACION DEL PERSONAL AERO",
+            "facturacion": 4604611.57,
+            "registros": 1
+          }
+        ]
       }
     },
-    "published_clients": 85,
-    "valid_operations_all_dates": 248,
+    "published_clients": 86,
+    "valid_operations_all_dates": 258,
     "operation_states": {
-      "OK": 213,
+      "OK": 219,
+      "OK_FC_NETA": 19,
       "OK_TRANSFERENCIA_1_2": 18,
-      "OK_FC_NETA": 15,
       "DUPLICADO": 14,
       "REVISION": 2,
       "EXCLUIDO": 2,

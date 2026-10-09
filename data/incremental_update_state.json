@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-06T00:42:00+00:00",
+  "last_successful_scan": "2026-10-09T01:54:31+00:00",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -8008,26 +8008,322 @@
       "folder_period": "2026-10",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/147130_58vchKzQbTkcdK5pQFya7T_pUy/view?usp=drivesdk"
+    },
+    "1Okv_Pb0k5h9_kRUbIB4Tj9nvW2WbF6F2": {
+      "drive_id": "1Okv_Pb0k5h9_kRUbIB4Tj9nvW2WbF6F2",
+      "name": "PHOTO-2026-10-08-17-41-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 598690,
+      "modified_time": "2026-10-08T21:10:41.496Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1Okv_Pb0k5h9_kRUbIB4Tj9nvW2WbF6F2/view?usp=drivesdk"
+    },
+    "1COlHyvHTnOBtIVEprH65KvybN0gUbUxr": {
+      "drive_id": "1COlHyvHTnOBtIVEprH65KvybN0gUbUxr",
+      "name": "PHOTO-2026-10-08-13-34-23.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 416660,
+      "modified_time": "2026-10-08T21:10:40.855Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1COlHyvHTnOBtIVEprH65KvybN0gUbUxr/view?usp=drivesdk"
+    },
+    "1SBMZ4PlWXmteYkr8skYV-r0JZzHEry-I": {
+      "drive_id": "1SBMZ4PlWXmteYkr8skYV-r0JZzHEry-I",
+      "name": "PHOTO-2026-10-08-13-44-03.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 554891,
+      "modified_time": "2026-10-08T21:10:40.840Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1SBMZ4PlWXmteYkr8skYV-r0JZzHEry-I/view?usp=drivesdk"
+    },
+    "1sUwP8nYLJo_wN_PvX5AAor5_tqOeSRzZ": {
+      "drive_id": "1sUwP8nYLJo_wN_PvX5AAor5_tqOeSRzZ",
+      "name": "PHOTO-2026-10-08-13-44-03.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 475154,
+      "modified_time": "2026-10-08T21:10:40.767Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1sUwP8nYLJo_wN_PvX5AAor5_tqOeSRzZ/view?usp=drivesdk"
+    },
+    "1KVT8bgJwzyiZyuwZQebGM2JnBA4Ffgtz": {
+      "drive_id": "1KVT8bgJwzyiZyuwZQebGM2JnBA4Ffgtz",
+      "name": "PHOTO-2026-10-08-16-54-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 586805,
+      "modified_time": "2026-10-08T21:10:40.755Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1KVT8bgJwzyiZyuwZQebGM2JnBA4Ffgtz/view?usp=drivesdk"
+    },
+    "1Q6_Wv59xELH46Az6wi6zw9gHr1bbeA_s": {
+      "drive_id": "1Q6_Wv59xELH46Az6wi6zw9gHr1bbeA_s",
+      "name": "PHOTO-2026-10-08-13-47-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 236680,
+      "modified_time": "2026-10-08T21:10:40.368Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1Q6_Wv59xELH46Az6wi6zw9gHr1bbeA_s/view?usp=drivesdk"
+    },
+    "1ZnqDYUtCC-0KnTXFQHwfPRQqXcAuVC7b": {
+      "drive_id": "1ZnqDYUtCC-0KnTXFQHwfPRQqXcAuVC7b",
+      "name": "PHOTO-2026-10-08-13-16-06.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 12760,
+      "modified_time": "2026-10-08T21:10:39.892Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ZnqDYUtCC-0KnTXFQHwfPRQqXcAuVC7b/view?usp=drivesdk"
+    },
+    "1LKKVUotU8k0AakKM6wQqXgLRqsglEGwa": {
+      "drive_id": "1LKKVUotU8k0AakKM6wQqXgLRqsglEGwa",
+      "name": "PHOTO-2026-10-06-18-52-41.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17755,
+      "modified_time": "2026-10-07T14:24:07.032Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1LKKVUotU8k0AakKM6wQqXgLRqsglEGwa/view?usp=drivesdk"
+    },
+    "1gxbFHM2V70PpqYdjqA4q2TMmP4NXxQpQ": {
+      "drive_id": "1gxbFHM2V70PpqYdjqA4q2TMmP4NXxQpQ",
+      "name": "PHOTO-2026-10-06-18-14-46.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17739,
+      "modified_time": "2026-10-07T14:24:06.570Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1gxbFHM2V70PpqYdjqA4q2TMmP4NXxQpQ/view?usp=drivesdk"
+    },
+    "1dTeN3ODCFCxd14aRrgdtRnFegYX_3fPw": {
+      "drive_id": "1dTeN3ODCFCxd14aRrgdtRnFegYX_3fPw",
+      "name": "PHOTO-2026-10-06-18-46-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17737,
+      "modified_time": "2026-10-07T14:24:06.433Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1dTeN3ODCFCxd14aRrgdtRnFegYX_3fPw/view?usp=drivesdk"
+    },
+    "1IV1bPAMCI9vtnJYIrdnRvrXaGxLO6QY-": {
+      "drive_id": "1IV1bPAMCI9vtnJYIrdnRvrXaGxLO6QY-",
+      "name": "PHOTO-2026-10-08-16-54-40.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 317705,
+      "modified_time": "2026-10-08T21:09:23.969Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1IV1bPAMCI9vtnJYIrdnRvrXaGxLO6QY-/view?usp=drivesdk"
+    },
+    "1vN55g569O_cU4ydMgnIjgEggUd_ibvIk": {
+      "drive_id": "1vN55g569O_cU4ydMgnIjgEggUd_ibvIk",
+      "name": "MAGTIK- DISTRIBUIDORA ESPORA-  COMP RET- O.PAGO 8-10.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 208732,
+      "modified_time": "2026-10-08T21:09:23.606Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1vN55g569O_cU4ydMgnIjgEggUd_ibvIk/view?usp=drivesdk"
+    },
+    "1arsq-BRjZvcB5OFQSViNzPzGO8ZEQpHZ": {
+      "drive_id": "1arsq-BRjZvcB5OFQSViNzPzGO8ZEQpHZ",
+      "name": "MAGTIK- DISTRIBUIDORA ESPORA- O.PAGO 8-10.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 323009,
+      "modified_time": "2026-10-08T21:09:22.079Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1arsq-BRjZvcB5OFQSViNzPzGO8ZEQpHZ/view?usp=drivesdk"
+    },
+    "1LhPgbsKFvtR2r88glzSbwfkJxe8zsWOh": {
+      "drive_id": "1LhPgbsKFvtR2r88glzSbwfkJxe8zsWOh",
+      "name": "30708609982_CG0003-_00000132_06-10-2026_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 41665,
+      "modified_time": "2026-10-08T21:09:22.034Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1LhPgbsKFvtR2r88glzSbwfkJxe8zsWOh/view?usp=drivesdk"
+    },
+    "1ojcbFItDPnX9T4QwGBwJ1CGgnBNG8Idy": {
+      "drive_id": "1ojcbFItDPnX9T4QwGBwJ1CGgnBNG8Idy",
+      "name": "RET 206 MC - HYF.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 64180,
+      "modified_time": "2026-10-08T21:09:20.706Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1ojcbFItDPnX9T4QwGBwJ1CGgnBNG8Idy/view?usp=drivesdk"
+    },
+    "1KpovfTIyTk2cRzPhKa3wO6_GctfXKTcR": {
+      "drive_id": "1KpovfTIyTk2cRzPhKa3wO6_GctfXKTcR",
+      "name": "RET 205 MC - HYF.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 64165,
+      "modified_time": "2026-10-08T21:09:20.634Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KpovfTIyTk2cRzPhKa3wO6_GctfXKTcR/view?usp=drivesdk"
+    },
+    "1fy9Qo39_KBM3dDeU5vwQLV-vP83LOqcr": {
+      "drive_id": "1fy9Qo39_KBM3dDeU5vwQLV-vP83LOqcr",
+      "name": "HYF 7.10.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 6374,
+      "modified_time": "2026-10-08T21:09:20.005Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1fy9Qo39_KBM3dDeU5vwQLV-vP83LOqcr/view?usp=drivesdk"
+    },
+    "1drScdogQiMPKcw4969NjSEncwHQ450aw": {
+      "drive_id": "1drScdogQiMPKcw4969NjSEncwHQ450aw",
+      "name": "30711398356_LRA8Dha476_2.pdf.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 11757,
+      "modified_time": "2026-10-08T21:09:19.890Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1drScdogQiMPKcw4969NjSEncwHQ450aw/view?usp=drivesdk"
+    },
+    "18EFrvtTgrPxgA7ZLajr9r1zz5nWS7HcR": {
+      "drive_id": "18EFrvtTgrPxgA7ZLajr9r1zz5nWS7HcR",
+      "name": "certret fc 62215 hyf.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10593,
+      "modified_time": "2026-10-08T21:09:19.789Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/18EFrvtTgrPxgA7ZLajr9r1zz5nWS7HcR/view?usp=drivesdk"
+    },
+    "1abbk7qDYeIdwipVWvtzxO-hN6sI-EkkS": {
+      "drive_id": "1abbk7qDYeIdwipVWvtzxO-hN6sI-EkkS",
+      "name": "EL FARO 18_ 0810.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 60915,
+      "modified_time": "2026-10-08T21:07:34.574Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1abbk7qDYeIdwipVWvtzxO-hN6sI-EkkS/view?usp=drivesdk"
+    },
+    "1dm7176Osl0MUPV8Nd2Q-5oj2kAXw4Qq1": {
+      "drive_id": "1dm7176Osl0MUPV8Nd2Q-5oj2kAXw4Qq1",
+      "name": "Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 61094,
+      "modified_time": "2026-10-08T21:07:34.504Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1dm7176Osl0MUPV8Nd2Q-5oj2kAXw4Qq1/view?usp=drivesdk"
+    },
+    "193k4wQadyLYsDVElxe9pwicXcCEe3XqJ": {
+      "drive_id": "193k4wQadyLYsDVElxe9pwicXcCEe3XqJ",
+      "name": "certret fc 44 el faro 18.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10572,
+      "modified_time": "2026-10-08T21:07:34.443Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/193k4wQadyLYsDVElxe9pwicXcCEe3XqJ/view?usp=drivesdk"
+    },
+    "1dz7u37KgJN4-58O9wcmiTs-ud-UVHbx0": {
+      "drive_id": "1dz7u37KgJN4-58O9wcmiTs-ud-UVHbx0",
+      "name": "certret fc 72013 d espora.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10592,
+      "modified_time": "2026-10-08T21:07:34.277Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1dz7u37KgJN4-58O9wcmiTs-ud-UVHbx0/view?usp=drivesdk"
+    },
+    "1uAM2eLCoZ5D_ZS7UsSuKlZ-4sF9vlb8a": {
+      "drive_id": "1uAM2eLCoZ5D_ZS7UsSuKlZ-4sF9vlb8a",
+      "name": "Ret Espora.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 37330,
+      "modified_time": "2026-10-08T21:07:34.277Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1uAM2eLCoZ5D_ZS7UsSuKlZ-4sF9vlb8a/view?usp=drivesdk"
+    },
+    "1-8U2RHLK01hnk3plQS60eFOJr-gA6ltb": {
+      "drive_id": "1-8U2RHLK01hnk3plQS60eFOJr-gA6ltb",
+      "name": "certret fc 62215 hyf.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10593,
+      "modified_time": "2026-10-08T21:07:34.119Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-8U2RHLK01hnk3plQS60eFOJr-gA6ltb/view?usp=drivesdk"
+    },
+    "1JsUxDcfqsYJexsy554BXfGV6ida_5GPG": {
+      "drive_id": "1JsUxDcfqsYJexsy554BXfGV6ida_5GPG",
+      "name": "Ret Espora.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 37330,
+      "modified_time": "2026-10-07T18:15:20.953Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1JsUxDcfqsYJexsy554BXfGV6ida_5GPG/view?usp=drivesdk"
+    },
+    "1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw": {
+      "drive_id": "1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw",
+      "name": "Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 61094,
+      "modified_time": "2026-10-07T18:15:20.781Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 422606,
-      "modified_time": "2026-10-05T20:03:12.198Z",
-      "sha256": "245fc631beabc37344d065f18bd80954c6a29be794a07626030433aeeb9ecc3b"
+      "size_bytes": 427815,
+      "modified_time": "2026-10-08T20:33:27.902Z",
+      "sha256": "bf657389d2361b1324516b98f086a4cf28e314156e721c9993f2933de415c98e"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-06T00:49:10+00:00"
+    "recorded_at": "2026-10-09T01:54:33+00:00"
   },
   "last_database_refresh": {
-    "mode": "full_source_refresh",
-    "at": "2026-10-06T00:49:11+00:00",
-    "new_operations": 1,
-    "updated_operations": 0,
-    "billing_records_added": 20
+    "mode": "full_source_change",
+    "at": "2026-10-09T01:54:31+00:00",
+    "new_operations": 10,
+    "updated_operations": 0
   }
 }

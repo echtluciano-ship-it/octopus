@@ -196,6 +196,14 @@ def parse_date(value) -> date | None:
     return None
 
 
+def parse_period(value) -> date | None:
+    """Normalize the billing Periodo column as a month, never as an exact day."""
+    parsed = parse_date(value)
+    if parsed is None:
+        return None
+    return date(parsed.year, parsed.month, 1)
+
+
 def month_diff(from_month: str, to_month: str = CURRENT_MONTH) -> int:
     y1, m1 = map(int, from_month.split("-"))
     y2, m2 = map(int, to_month.split("-"))
@@ -538,7 +546,7 @@ def load_billing(conn: sqlite3.Connection) -> None:
             )
             continue
         cliente_oficial = canonical_client_name(cliente_original)
-        period = parse_date(values[5])
+        period = parse_period(values[5])
         if not period:
             conn.execute(
                 """
