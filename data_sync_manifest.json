@@ -1,14 +1,14 @@
 {
-  "database_sha256": "4f589a3d80150921eec462ce5d14f11bf3e40894d3edf28bb5eee2662000a6d1",
+  "database_sha256": "026d32c59d4db70e962076007466fdb68496f0db2f21c6a431ced015c52611e3",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "bf657389d2361b1324516b98f086a4cf28e314156e721c9993f2933de415c98e",
-    "data/billing_source.json": "c2e78614f82c749bbbdf27523144dc94a768abc0cd83584c2e84623312618e20",
-    "manual_rentability_operations.csv": "44da464cb17360ec2960c62e93541dc5981a0e1506d54b7f25f5283936a2cf3c",
+    "data/FACTURACION OCTOPUS.xlsx": "b0aaf24bfc40c9018df141f9de50a1bb8e949ea8acf9995a65bf3a7af130bffa",
+    "data/billing_source.json": "946b8c268d5f79b7a45643d52c415533d117d1aaff4fdf4e8133bfb3e5d602e0",
+    "manual_rentability_operations.csv": "f55d0e34d3dd44e297606c8525b387d519ebae1881b66c45de5695cddd8eceee",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "9fe5904d6ff8910152eb8f622fee187c8a2668712eef94741616d2e9b23bbd0d"
+    "source_documents.csv": "c1ae6ef6bc805cbdff415cb36bc3854e3ffee19c16ad1f0ffa9c6c07b26daa6a"
   },
   "controls": {
-    "as_of": "2026-10-08",
+    "as_of": "2026-10-14",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 4432050757.64,
         "billing_records": 303,
-        "validated_net": 2246879773.77,
-        "profit": 125706777.67,
-        "profitability": 0.055947264796940524,
-        "valid_operations": 73,
+        "validated_net": 2263555641.77,
+        "profit": 126718371.67,
+        "profitability": 0.05598199988179299,
+        "valid_operations": 74,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3041,14 +3041,6 @@
             "operaciones": 1
           },
           {
-            "client_name": "MAGTIK S A",
-            "client_key": "MAGTIK",
-            "facturacion_validada": 25001920.0,
-            "ganancia_octopus": 1745654.0,
-            "rentabilidad": 0.06982079776273183,
-            "operaciones": 1
-          },
-          {
             "client_name": "TRICO",
             "client_key": "TRICO",
             "facturacion_validada": 27006818.0,
@@ -3103,6 +3095,14 @@
             "ganancia_octopus": 345094.0,
             "rentabilidad": 0.06880166195487043,
             "operaciones": 1
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion_validada": 41677788.0,
+            "ganancia_octopus": 2757248.0,
+            "rentabilidad": 0.06615629409123153,
+            "operaciones": 2
           },
           {
             "client_name": "Protección Inteligente",
@@ -3245,13 +3245,21 @@
         ]
       },
       "2026-10": {
-        "billing_total": 1186804430.7,
-        "billing_records": 69,
-        "validated_net": 1171921697.0,
-        "profit": 66060404.0,
-        "profitability": 0.056369298536845844,
-        "valid_operations": 20,
+        "billing_total": 1577719652.25,
+        "billing_records": 103,
+        "validated_net": 1476742608.0,
+        "profit": 83831124.0,
+        "profitability": 0.05676759344916254,
+        "valid_operations": 35,
         "rentability_ranking": [
+          {
+            "client_name": "GUSTAVO QUIROGA E. P. M. SA",
+            "client_key": "GUSTAVO QUIROGA E P M",
+            "facturacion_validada": 19188692.0,
+            "ganancia_octopus": 3070190.0,
+            "rentabilidad": 0.15999996247790105,
+            "operaciones": 1
+          },
           {
             "client_name": "MINETECH SRL",
             "client_key": "MINETECH",
@@ -3285,12 +3293,28 @@
             "operaciones": 2
           },
           {
+            "client_name": "Star Medical",
+            "client_key": "STAR MEDICAL",
+            "facturacion_validada": 15824626.0,
+            "ganancia_octopus": 1258696.0,
+            "rentabilidad": 0.07954033163248218,
+            "operaciones": 1
+          },
+          {
+            "client_name": "FV HOLDING SRL",
+            "client_key": "FV HOLDING",
+            "facturacion_validada": 27832690.0,
+            "ganancia_octopus": 2204994.0,
+            "rentabilidad": 0.07922317246374677,
+            "operaciones": 3
+          },
+          {
             "client_name": "MEDPHARMA S.A.",
             "client_key": "MEDPHARMA",
-            "facturacion_validada": 87839070.0,
-            "ganancia_octopus": 6148735.0,
-            "rentabilidad": 0.07000000113844557,
-            "operaciones": 2
+            "facturacion_validada": 121942257.0,
+            "ganancia_octopus": 9020089.0,
+            "rentabilidad": 0.07397016605982616,
+            "operaciones": 3
           },
           {
             "client_name": "GEM CONSTRUCCIONES S. A.",
@@ -3309,6 +3333,22 @@
             "operaciones": 1
           },
           {
+            "client_name": "Aeronáuticos",
+            "client_key": "AERONAUTICOS",
+            "facturacion_validada": 18247149.0,
+            "ganancia_octopus": 1263404.0,
+            "rentabilidad": 0.06923843280942135,
+            "operaciones": 2
+          },
+          {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion_validada": 5222102.0,
+            "ganancia_octopus": 316784.0,
+            "rentabilidad": 0.060662162477868105,
+            "operaciones": 1
+          },
+          {
             "client_name": "DYKTEL S.A.",
             "client_key": "DYKTEL",
             "facturacion_validada": 15011350.0,
@@ -3319,10 +3359,10 @@
           {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
-            "facturacion_validada": 141165720.0,
-            "ganancia_octopus": 8346282.0,
-            "rentabilidad": 0.0591239997925842,
-            "operaciones": 1
+            "facturacion_validada": 168816526.0,
+            "ganancia_octopus": 9989072.0,
+            "rentabilidad": 0.059171173798470415,
+            "operaciones": 2
           },
           {
             "client_name": "Alimentos Viandas",
@@ -3349,6 +3389,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "ZELENAY BRUNO",
+            "client_key": "ZELENAY BRUNO",
+            "facturacion_validada": 20011220.0,
+            "ganancia_octopus": 1100617.0,
+            "rentabilidad": 0.05499999500280343,
+            "operaciones": 1
+          },
+          {
             "client_name": "NOVOMEDICAL S.R.L.",
             "client_key": "NOVOMEDICAL",
             "facturacion_validada": 15489730.0,
@@ -3357,19 +3405,11 @@
             "operaciones": 1
           },
           {
-            "client_name": "Wolfpack",
-            "client_key": "WOLFPACK",
-            "facturacion_validada": 492864602.0,
-            "ganancia_octopus": 22016651.0,
-            "rentabilidad": 0.04467078972735802,
-            "operaciones": 2
-          },
-          {
-            "client_name": "Alimentaria Sustentable",
-            "client_key": "ALIMENTARIA SUSTENTABLE",
-            "facturacion_validada": 32415790.0,
-            "ganancia_octopus": 388989.0,
-            "rentabilidad": 0.011999985192401605,
+            "client_name": "CHIAGRAAL S.A.S.",
+            "client_key": "CHIAGRAAL",
+            "facturacion_validada": 20008185.0,
+            "ganancia_octopus": 920377.0,
+            "rentabilidad": 0.046000024489977476,
             "operaciones": 1
           }
         ],
@@ -3387,10 +3427,22 @@
             "registros": 3
           },
           {
+            "client_name": "TRANS BOX S. R. L.",
+            "client_key": "TRANS BOX",
+            "facturacion": 140013583.12,
+            "registros": 6
+          },
+          {
             "client_name": "SAINT GERMAIN S. R. L.",
             "client_key": "SAINT GERMAIN",
             "facturacion": 139699773.14,
             "registros": 12
+          },
+          {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 124004376.66,
+            "registros": 14
           },
           {
             "client_name": "Drogueria Meta",
@@ -3435,9 +3487,45 @@
             "registros": 2
           },
           {
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion": 38009191.6,
+            "registros": 4
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 28581410.86,
+            "registros": 2
+          },
+          {
+            "client_name": "FORAIN S. A.",
+            "client_key": "FORAIN",
+            "facturacion": 20613713.34,
+            "registros": 2
+          },
+          {
+            "client_name": "ASOCIACION DEL PERSONAL AERO",
+            "client_key": "ASOCIACION DEL PERSONAL AERO",
+            "facturacion": 18247148.759999998,
+            "registros": 2
+          },
+          {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 15631750.43,
+            "registros": 4
+          },
+          {
             "client_name": "FUNDACION SOLDADOS FUNDASOL",
             "client_key": "FUNDACION SOLDADOS FUNDASOL",
             "facturacion": 14932373.18,
+            "registros": 1
+          },
+          {
+            "client_name": "TRANSPORTE TRACCION S.R.L.",
+            "client_key": "TRANSPORTE TRACCION",
+            "facturacion": 10418658.35,
             "registros": 1
           },
           {
@@ -3445,27 +3533,21 @@
             "client_key": "MINETECH",
             "facturacion": 6022311.62,
             "registros": 1
-          },
-          {
-            "client_name": "ASOCIACION DEL PERSONAL AERO",
-            "client_key": "ASOCIACION DEL PERSONAL AERO",
-            "facturacion": 4604611.57,
-            "registros": 1
           }
         ]
       }
     },
-    "published_clients": 86,
-    "valid_operations_all_dates": 258,
+    "published_clients": 89,
+    "valid_operations_all_dates": 275,
     "operation_states": {
-      "OK": 219,
-      "OK_FC_NETA": 19,
+      "OK": 225,
+      "OK_FC_NETA": 28,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
+      "OK_MULTI_MONTH_SPLIT": 4,
       "REVISION": 2,
       "EXCLUIDO": 2,
-      "NO_PROCESAR": 2,
-      "OK_MULTI_MONTH_SPLIT": 2
+      "NO_PROCESAR": 2
     }
   }
 }

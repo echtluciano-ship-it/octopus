@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-09T01:54:31+00:00",
+  "last_successful_scan": "2026-10-14T20:46:34+00:00",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -8305,25 +8305,443 @@
       "folder_period": "2026-10",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw/view?usp=drivesdk"
+    },
+    "1icRf2rbSx0Oe6pMOTeukjlitxbJgkkcP": {
+      "drive_id": "1icRf2rbSx0Oe6pMOTeukjlitxbJgkkcP",
+      "name": "PHOTO-2026-10-14-16-09-11.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18271,
+      "modified_time": "2026-10-14T20:34:33.933Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1icRf2rbSx0Oe6pMOTeukjlitxbJgkkcP/view?usp=drivesdk"
+    },
+    "1_CV2hAes6Q6GtjHe3Alc8oqMnkD3gt7d": {
+      "drive_id": "1_CV2hAes6Q6GtjHe3Alc8oqMnkD3gt7d",
+      "name": "PHOTO-2026-10-13-15-42-38.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 540011,
+      "modified_time": "2026-10-13T21:55:59.757Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1_CV2hAes6Q6GtjHe3Alc8oqMnkD3gt7d/view?usp=drivesdk"
+    },
+    "1xTsial2csmNf6dCHIvWd-uDVDn1IUhLr": {
+      "drive_id": "1xTsial2csmNf6dCHIvWd-uDVDn1IUhLr",
+      "name": "PHOTO-2026-10-13-14-39-16.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18235,
+      "modified_time": "2026-10-13T21:55:59.742Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1xTsial2csmNf6dCHIvWd-uDVDn1IUhLr/view?usp=drivesdk"
+    },
+    "1Tfr3zNB5gU_q9ostzgLh86ffE52gj1tu": {
+      "drive_id": "1Tfr3zNB5gU_q9ostzgLh86ffE52gj1tu",
+      "name": "PHOTO-2026-10-13-15-41-34.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 508382,
+      "modified_time": "2026-10-13T21:55:59.647Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1Tfr3zNB5gU_q9ostzgLh86ffE52gj1tu/view?usp=drivesdk"
+    },
+    "1uF2nyIhogo1JSUcG1W8pbB6pwDudA6gI": {
+      "drive_id": "1uF2nyIhogo1JSUcG1W8pbB6pwDudA6gI",
+      "name": "PHOTO-2026-10-13-14-43-13.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18244,
+      "modified_time": "2026-10-13T21:55:59.640Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1uF2nyIhogo1JSUcG1W8pbB6pwDudA6gI/view?usp=drivesdk"
+    },
+    "1NnW58mLeMMxT7V4GEbK044dxXnc_xuG5": {
+      "drive_id": "1NnW58mLeMMxT7V4GEbK044dxXnc_xuG5",
+      "name": "PHOTO-2026-10-13-16-08-41.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 16299,
+      "modified_time": "2026-10-13T21:55:59.403Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1NnW58mLeMMxT7V4GEbK044dxXnc_xuG5/view?usp=drivesdk"
+    },
+    "1czL0EnqJxQf6VFcGIIX4-MxQRtm99vwn": {
+      "drive_id": "1czL0EnqJxQf6VFcGIIX4-MxQRtm99vwn",
+      "name": "PHOTO-2026-10-13-12-02-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 577976,
+      "modified_time": "2026-10-13T16:14:09.589Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1czL0EnqJxQf6VFcGIIX4-MxQRtm99vwn/view?usp=drivesdk"
+    },
+    "1-DcjWvP9Prui0DQuW0J93tkkFKMLxdTb": {
+      "drive_id": "1-DcjWvP9Prui0DQuW0J93tkkFKMLxdTb",
+      "name": "PHOTO-2026-10-13-12-01-46.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 489357,
+      "modified_time": "2026-10-13T16:14:03.876Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1-DcjWvP9Prui0DQuW0J93tkkFKMLxdTb/view?usp=drivesdk"
+    },
+    "1e7mFSdT5V6Y2vdBkzDLi2zyquC2rhO-4": {
+      "drive_id": "1e7mFSdT5V6Y2vdBkzDLi2zyquC2rhO-4",
+      "name": "PHOTO-2026-10-09-20-03-48.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17605,
+      "modified_time": "2026-10-10T00:45:23.668Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1e7mFSdT5V6Y2vdBkzDLi2zyquC2rhO-4/view?usp=drivesdk"
+    },
+    "1XP1Wu1-q6GtoGrEPv_rXAqG7rg_-BO9G": {
+      "drive_id": "1XP1Wu1-q6GtoGrEPv_rXAqG7rg_-BO9G",
+      "name": "PHOTO-2026-10-09-19-53-51.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18460,
+      "modified_time": "2026-10-10T00:45:23.613Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1XP1Wu1-q6GtoGrEPv_rXAqG7rg_-BO9G/view?usp=drivesdk"
+    },
+    "1OqDmUjafV-2ri5_FkO-Gh5s8XmyNbQms": {
+      "drive_id": "1OqDmUjafV-2ri5_FkO-Gh5s8XmyNbQms",
+      "name": "PHOTO-2026-10-09-19-33-04.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18177,
+      "modified_time": "2026-10-10T00:45:23.325Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1OqDmUjafV-2ri5_FkO-Gh5s8XmyNbQms/view?usp=drivesdk"
+    },
+    "14AmIIdvttoyDDuKerUsP_6jOA4GKcX0Z": {
+      "drive_id": "14AmIIdvttoyDDuKerUsP_6jOA4GKcX0Z",
+      "name": "PHOTO-2026-10-09-12-33-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 456360,
+      "modified_time": "2026-10-09T22:33:13.774Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/14AmIIdvttoyDDuKerUsP_6jOA4GKcX0Z/view?usp=drivesdk"
+    },
+    "1JDE7Kr9tr0crrGdoepO25mN0-f2f-Ed-": {
+      "drive_id": "1JDE7Kr9tr0crrGdoepO25mN0-f2f-Ed-",
+      "name": "PHOTO-2026-10-09-13-38-31.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 339103,
+      "modified_time": "2026-10-09T22:33:13.543Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1JDE7Kr9tr0crrGdoepO25mN0-f2f-Ed-/view?usp=drivesdk"
+    },
+    "1Oayej2R7-n6jE02eJNYqRX4AZrlSOhrX": {
+      "drive_id": "1Oayej2R7-n6jE02eJNYqRX4AZrlSOhrX",
+      "name": "PHOTO-2026-10-09-16-00-09.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 499370,
+      "modified_time": "2026-10-09T22:33:13.405Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1Oayej2R7-n6jE02eJNYqRX4AZrlSOhrX/view?usp=drivesdk"
+    },
+    "1h_vTYJQSOJds_5kq8GtBRbIavEt_K6w9": {
+      "drive_id": "1h_vTYJQSOJds_5kq8GtBRbIavEt_K6w9",
+      "name": "PHOTO-2026-10-09-18-58-29.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18639,
+      "modified_time": "2026-10-09T22:33:13.033Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1h_vTYJQSOJds_5kq8GtBRbIavEt_K6w9/view?usp=drivesdk"
+    },
+    "1CLlDaCc1QLKo6mtu3s9gjPqoZ7fxi0rf": {
+      "drive_id": "1CLlDaCc1QLKo6mtu3s9gjPqoZ7fxi0rf",
+      "name": "PHOTO-2026-10-09-19-04-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18129,
+      "modified_time": "2026-10-09T22:33:12.979Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1CLlDaCc1QLKo6mtu3s9gjPqoZ7fxi0rf/view?usp=drivesdk"
+    },
+    "1C_H9Edw89uCzdmlurEy-I7eG57SJMjrz": {
+      "drive_id": "1C_H9Edw89uCzdmlurEy-I7eG57SJMjrz",
+      "name": "PHOTO-2026-10-09-16-00-09.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 499370,
+      "modified_time": "2026-10-09T22:32:36.418Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1C_H9Edw89uCzdmlurEy-I7eG57SJMjrz/view?usp=drivesdk"
+    },
+    "1XNzY40SEXNmgmsPYUpqtzVDNx45RtLVo": {
+      "drive_id": "1XNzY40SEXNmgmsPYUpqtzVDNx45RtLVo",
+      "name": "PHOTO-2026-10-09-13-38-31.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 339103,
+      "modified_time": "2026-10-09T22:32:36.077Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1XNzY40SEXNmgmsPYUpqtzVDNx45RtLVo/view?usp=drivesdk"
+    },
+    "11l-3YnSgRtvJ0Ov6Ww4LQriattNL4YFp": {
+      "drive_id": "11l-3YnSgRtvJ0Ov6Ww4LQriattNL4YFp",
+      "name": "PHOTO-2026-10-09-12-33-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 456360,
+      "modified_time": "2026-10-09T22:32:34.869Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/11l-3YnSgRtvJ0Ov6Ww4LQriattNL4YFp/view?usp=drivesdk"
+    },
+    "11iipOreBG-s1EpFURg3J9hEUs5pmsL6e": {
+      "drive_id": "11iipOreBG-s1EpFURg3J9hEUs5pmsL6e",
+      "name": "PHOTO-2026-10-09-18-58-29.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18639,
+      "modified_time": "2026-10-09T22:32:32.184Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/11iipOreBG-s1EpFURg3J9hEUs5pmsL6e/view?usp=drivesdk"
+    },
+    "1tU-dHlbZnVC8Fk_VSLaVjNph0TJDPGVM": {
+      "drive_id": "1tU-dHlbZnVC8Fk_VSLaVjNph0TJDPGVM",
+      "name": "PHOTO-2026-10-09-19-04-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18129,
+      "modified_time": "2026-10-09T22:32:31.996Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1tU-dHlbZnVC8Fk_VSLaVjNph0TJDPGVM/view?usp=drivesdk"
+    },
+    "1-iXaBqJXDR6KOzpsz4dPiPllQa5PW4C7": {
+      "drive_id": "1-iXaBqJXDR6KOzpsz4dPiPllQa5PW4C7",
+      "name": "30718086481_OP_00027704_09-10-2026_ELFARODIECIOCHODETANDILSRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 45554,
+      "modified_time": "2026-10-13T21:57:16.449Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-iXaBqJXDR6KOzpsz4dPiPllQa5PW4C7/view?usp=drivesdk"
+    },
+    "1NbWIJ943etBWCWkotHSZaqMC9vuIgwg8": {
+      "drive_id": "1NbWIJ943etBWCWkotHSZaqMC9vuIgwg8",
+      "name": "30708609982_OP_00027703_09-10-2026_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 44923,
+      "modified_time": "2026-10-13T21:57:16.295Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NbWIJ943etBWCWkotHSZaqMC9vuIgwg8/view?usp=drivesdk"
+    },
+    "16z_8zv-n1G5h78RImikXkIwfJr-ys1Xv": {
+      "drive_id": "16z_8zv-n1G5h78RImikXkIwfJr-ys1Xv",
+      "name": "30718086481_CIB_00003431_09-10-2026_ELFARODIECIOCHODETANDILSRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 44873,
+      "modified_time": "2026-10-13T21:57:16.255Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/16z_8zv-n1G5h78RImikXkIwfJr-ys1Xv/view?usp=drivesdk"
+    },
+    "1VX4rjDGhUYBrHww9B0hIO8NwrWt3KoCU": {
+      "drive_id": "1VX4rjDGhUYBrHww9B0hIO8NwrWt3KoCU",
+      "name": "30709899496_CIB_00003402_10-09-2026_FORTEDEIMARMISA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 44352,
+      "modified_time": "2026-10-13T21:56:53.166Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1VX4rjDGhUYBrHww9B0hIO8NwrWt3KoCU/view?usp=drivesdk"
+    },
+    "1OiYVg2ru990F9DdQ5-g9ChBnOU6LTLa0": {
+      "drive_id": "1OiYVg2ru990F9DdQ5-g9ChBnOU6LTLa0",
+      "name": "30709899496_CIB_00003403_10-09-2026_FORTEDEIMARMISA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 44625,
+      "modified_time": "2026-10-13T21:56:52.927Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1OiYVg2ru990F9DdQ5-g9ChBnOU6LTLa0/view?usp=drivesdk"
+    },
+    "1NKitmkzDG51Kl37aS9n4_2sHcztPuHfL": {
+      "drive_id": "1NKitmkzDG51Kl37aS9n4_2sHcztPuHfL",
+      "name": "30708609982_CIB_00003430_09-10-2026_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 45129,
+      "modified_time": "2026-10-13T21:56:52.907Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NKitmkzDG51Kl37aS9n4_2sHcztPuHfL/view?usp=drivesdk"
+    },
+    "1v_0NstrBBdm2ijBwYiVeX7DhrJyaHbYw": {
+      "drive_id": "1v_0NstrBBdm2ijBwYiVeX7DhrJyaHbYw",
+      "name": "30709899496_OP_00027250_10-09-2026_FORTEDEIMARMISA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 44920,
+      "modified_time": "2026-10-13T21:56:52.907Z",
+      "folder_id": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
+      "folder_period": "2026-09",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1v_0NstrBBdm2ijBwYiVeX7DhrJyaHbYw/view?usp=drivesdk"
+    },
+    "1EzCF_j7LXFS7fn7gdLXNJg1mXLTYLEKy": {
+      "drive_id": "1EzCF_j7LXFS7fn7gdLXNJg1mXLTYLEKy",
+      "name": "30708609982_CIB_00003430_09-10-2026_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 45129,
+      "modified_time": "2026-10-13T21:56:52.902Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1EzCF_j7LXFS7fn7gdLXNJg1mXLTYLEKy/view?usp=drivesdk"
+    },
+    "1TC2zw2wpRN7BKX4UU7mPbiT7bcQgbjOx": {
+      "drive_id": "1TC2zw2wpRN7BKX4UU7mPbiT7bcQgbjOx",
+      "name": "Comprobante (6).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 27493,
+      "modified_time": "2026-10-13T16:13:17.002Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1TC2zw2wpRN7BKX4UU7mPbiT7bcQgbjOx/view?usp=drivesdk"
+    },
+    "1tWR1R9gd35aTIEOka4rr-GppOLpLvNg4": {
+      "drive_id": "1tWR1R9gd35aTIEOka4rr-GppOLpLvNg4",
+      "name": "PHOTO-2026-10-09-15-56-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 475369,
+      "modified_time": "2026-10-13T16:13:16.517Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1tWR1R9gd35aTIEOka4rr-GppOLpLvNg4/view?usp=drivesdk"
+    },
+    "1F9Jx2vJ6V20tNd9epDrks8Ssu29wh3S8": {
+      "drive_id": "1F9Jx2vJ6V20tNd9epDrks8Ssu29wh3S8",
+      "name": "FVHOLDINGSRL_op0001-00003600_DISTRIBUIDORAESPORASRL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3961,
+      "modified_time": "2026-10-13T16:13:14.476Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1F9Jx2vJ6V20tNd9epDrks8Ssu29wh3S8/view?usp=drivesdk"
+    },
+    "1y24gGTSH35FCsgqPT1sR71Gqe5JN3ZOO": {
+      "drive_id": "1y24gGTSH35FCsgqPT1sR71Gqe5JN3ZOO",
+      "name": "Comprobante (7).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 27487,
+      "modified_time": "2026-10-13T16:13:14.449Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1y24gGTSH35FCsgqPT1sR71Gqe5JN3ZOO/view?usp=drivesdk"
+    },
+    "16TFe_Q3x4ouSXZnFPkijvwX0FC16EfMo": {
+      "drive_id": "16TFe_Q3x4ouSXZnFPkijvwX0FC16EfMo",
+      "name": "FVHOLDINGSRL_op0001-00003601_HYFDISTRIBUCIONESSA.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3942,
+      "modified_time": "2026-10-13T16:13:14.384Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/16TFe_Q3x4ouSXZnFPkijvwX0FC16EfMo/view?usp=drivesdk"
+    },
+    "1V6qRNZBtsCd8Cbo0B1QoGdj5e5nb8QT9": {
+      "drive_id": "1V6qRNZBtsCd8Cbo0B1QoGdj5e5nb8QT9",
+      "name": "RETENCION OP 309.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 142559,
+      "modified_time": "2026-10-09T15:02:36.125Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1V6qRNZBtsCd8Cbo0B1QoGdj5e5nb8QT9/view?usp=drivesdk"
+    },
+    "1T91xYqY78OtMMsiVeoX-HQoL73VHQF2m": {
+      "drive_id": "1T91xYqY78OtMMsiVeoX-HQoL73VHQF2m",
+      "name": "PHOTO-2026-10-09-11-43-55.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 81381,
+      "modified_time": "2026-10-09T15:02:32.737Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1T91xYqY78OtMMsiVeoX-HQoL73VHQF2m/view?usp=drivesdk"
+    },
+    "18RdVQZPD6PDMF9Gio22TaI1ikKs0ar3B": {
+      "drive_id": "18RdVQZPD6PDMF9Gio22TaI1ikKs0ar3B",
+      "name": "PHOTO-2026-10-09-11-24-58.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 46502,
+      "modified_time": "2026-10-09T15:02:32.626Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/18RdVQZPD6PDMF9Gio22TaI1ikKs0ar3B/view?usp=drivesdk"
+    },
+    "1WFSzD-8xIuxgJriB2RPhaPsOEdzdbViS": {
+      "drive_id": "1WFSzD-8xIuxgJriB2RPhaPsOEdzdbViS",
+      "name": "ORDEN DE PAGO 309.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 198663,
+      "modified_time": "2026-10-09T15:02:32.575Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1WFSzD-8xIuxgJriB2RPhaPsOEdzdbViS/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 427815,
-      "modified_time": "2026-10-08T20:33:27.902Z",
-      "sha256": "bf657389d2361b1324516b98f086a4cf28e314156e721c9993f2933de415c98e"
+      "size_bytes": 427320,
+      "modified_time": "2026-10-14T19:58:24.881Z",
+      "sha256": "b0aaf24bfc40c9018df141f9de50a1bb8e949ea8acf9995a65bf3a7af130bffa"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-09T01:54:33+00:00"
+    "recorded_at": "2026-10-14T20:49:11+00:00"
   },
   "last_database_refresh": {
-    "mode": "full_source_change",
-    "at": "2026-10-09T01:54:31+00:00",
-    "new_operations": 10,
+    "mode": "incremental",
+    "at": "2026-10-14T20:47:28+00:00",
+    "new_operations": 0,
     "updated_operations": 0
   }
 }
