@@ -1,14 +1,14 @@
 {
-  "database_sha256": "026d32c59d4db70e962076007466fdb68496f0db2f21c6a431ced015c52611e3",
+  "database_sha256": "de9be7b73df0c987b14aa6cc24798c3b5bdf0392db9d3ab867f72ebc55cc405a",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "b0aaf24bfc40c9018df141f9de50a1bb8e949ea8acf9995a65bf3a7af130bffa",
-    "data/billing_source.json": "946b8c268d5f79b7a45643d52c415533d117d1aaff4fdf4e8133bfb3e5d602e0",
-    "manual_rentability_operations.csv": "f55d0e34d3dd44e297606c8525b387d519ebae1881b66c45de5695cddd8eceee",
+    "data/FACTURACION OCTOPUS.xlsx": "bcb3fef871628cb40f792e826aaec70c69dbd814ba83e0145808068ece7a3f30",
+    "data/billing_source.json": "61fd3314b5939e58081184886e87cb23a8ba768efc6622e02a8640c7b8a76c44",
+    "manual_rentability_operations.csv": "0e7553e8dfc701af8d6ecb9440f86a197348dbda779509b8799458efbfbddbb4",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "c1ae6ef6bc805cbdff415cb36bc3854e3ffee19c16ad1f0ffa9c6c07b26daa6a"
+    "source_documents.csv": "0b8db58d4ef866bad31709ae9275300aaa25e5a2b103e09f3261e757b334e436"
   },
   "controls": {
-    "as_of": "2026-10-14",
+    "as_of": "2026-10-15",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 1577719652.25,
-        "billing_records": 103,
-        "validated_net": 1476742608.0,
-        "profit": 83831124.0,
-        "profitability": 0.05676759344916254,
-        "valid_operations": 35,
+        "billing_total": 1885582805.77,
+        "billing_records": 120,
+        "validated_net": 1521878765.0,
+        "profit": 87284805.0,
+        "profitability": 0.057353323410094366,
+        "valid_operations": 39,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3266,6 +3266,30 @@
             "facturacion_validada": 3997570.0,
             "ganancia_octopus": 375947.0,
             "rentabilidad": 0.0940438816581073,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion_validada": 21172151.0,
+            "ganancia_octopus": 1787585.0,
+            "rentabilidad": 0.08443095838490855,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion_validada": 10340755.0,
+            "ganancia_octopus": 870815.0,
+            "rentabilidad": 0.08421193616907083,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion_validada": 3979040.0,
+            "ganancia_octopus": 332359.0,
+            "rentabilidad": 0.08352743375286502,
             "operaciones": 1
           },
           {
@@ -3387,44 +3411,32 @@
             "ganancia_octopus": 2802311.0,
             "rentabilidad": 0.056038665987824844,
             "operaciones": 1
-          },
-          {
-            "client_name": "ZELENAY BRUNO",
-            "client_key": "ZELENAY BRUNO",
-            "facturacion_validada": 20011220.0,
-            "ganancia_octopus": 1100617.0,
-            "rentabilidad": 0.05499999500280343,
-            "operaciones": 1
-          },
-          {
-            "client_name": "NOVOMEDICAL S.R.L.",
-            "client_key": "NOVOMEDICAL",
-            "facturacion_validada": 15489730.0,
-            "ganancia_octopus": 743507.0,
-            "rentabilidad": 0.04799999741764382,
-            "operaciones": 1
-          },
-          {
-            "client_name": "CHIAGRAAL S.A.S.",
-            "client_key": "CHIAGRAAL",
-            "facturacion_validada": 20008185.0,
-            "ganancia_octopus": 920377.0,
-            "rentabilidad": 0.046000024489977476,
-            "operaciones": 1
           }
         ],
         "billing_ranking": [
           {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
-            "facturacion": 204489644.46,
-            "registros": 15
+            "facturacion": 307854527.23,
+            "registros": 22
           },
           {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
             "facturacion": 179857472.76,
             "registros": 3
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 165975779.3,
+            "registros": 9
+          },
+          {
+            "client_name": "LUIS ARCEO S. R. L.",
+            "client_key": "LUIS ARCEO",
+            "facturacion": 140013583.12,
+            "registros": 6
           },
           {
             "client_name": "TRANS BOX S. R. L.",
@@ -3455,12 +3467,6 @@
             "client_key": "ALIMENTOS VIANDAS",
             "facturacion": 109708642.49000001,
             "registros": 7
-          },
-          {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 101491091.67,
-            "registros": 5
           },
           {
             "client_name": "MEDPHARMA S.A.",
@@ -3527,20 +3533,14 @@
             "client_key": "TRANSPORTE TRACCION",
             "facturacion": 10418658.35,
             "registros": 1
-          },
-          {
-            "client_name": "MINETECH SRL",
-            "client_key": "MINETECH",
-            "facturacion": 6022311.62,
-            "registros": 1
           }
         ]
       }
     },
-    "published_clients": 89,
-    "valid_operations_all_dates": 275,
+    "published_clients": 90,
+    "valid_operations_all_dates": 279,
     "operation_states": {
-      "OK": 225,
+      "OK": 229,
       "OK_FC_NETA": 28,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
