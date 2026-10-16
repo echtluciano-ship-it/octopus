@@ -1,14 +1,14 @@
 {
-  "database_sha256": "de9be7b73df0c987b14aa6cc24798c3b5bdf0392db9d3ab867f72ebc55cc405a",
+  "database_sha256": "e32ea546891c70dfe289e1386bfcadfad687ca1a7dbd8b189401f1aab0b62523",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "bcb3fef871628cb40f792e826aaec70c69dbd814ba83e0145808068ece7a3f30",
-    "data/billing_source.json": "61fd3314b5939e58081184886e87cb23a8ba768efc6622e02a8640c7b8a76c44",
-    "manual_rentability_operations.csv": "0e7553e8dfc701af8d6ecb9440f86a197348dbda779509b8799458efbfbddbb4",
+    "data/FACTURACION OCTOPUS.xlsx": "bbe6f622811de91b1f182b3ef78e2515afd370c8d935fba28c8804150cc49ca6",
+    "data/billing_source.json": "0f42b9a43aa715f823d3b66a11eb56fcc7d17d2983540918e6823b10608ce102",
+    "manual_rentability_operations.csv": "100d3e7007c5ce28b3c20db78ec427724f3bb38260638bf4aecf77e71fe4a3a7",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "0b8db58d4ef866bad31709ae9275300aaa25e5a2b103e09f3261e757b334e436"
+    "source_documents.csv": "cfc10d8bc4a5c97205554ada7d2a37f9b393f04eb8860326c2863a430afbe9c5"
   },
   "controls": {
-    "as_of": "2026-10-15",
+    "as_of": "2026-10-16",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2953,7 +2953,7 @@
         ]
       },
       "2026-09": {
-        "billing_total": 4432050757.64,
+        "billing_total": 4431843521.81,
         "billing_records": 303,
         "validated_net": 2263555641.77,
         "profit": 126718371.67,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 1885582805.77,
-        "billing_records": 120,
-        "validated_net": 1521878765.0,
-        "profit": 87284805.0,
-        "profitability": 0.057353323410094366,
-        "valid_operations": 39,
+        "billing_total": 1907257514.72,
+        "billing_records": 123,
+        "validated_net": 2128671026.0,
+        "profit": 127908982.0,
+        "profitability": 0.06008865646109471,
+        "valid_operations": 48,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3271,26 +3271,34 @@
           {
             "client_name": "Medipremium",
             "client_key": "MEDIPREMIUM",
-            "facturacion_validada": 21172151.0,
-            "ganancia_octopus": 1787585.0,
-            "rentabilidad": 0.08443095838490855,
+            "facturacion_validada": 40359771.0,
+            "ganancia_octopus": 3407199.0,
+            "rentabilidad": 0.08442067225802644,
+            "operaciones": 2
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion_validada": 101491091.0,
+            "ganancia_octopus": 8560370.0,
+            "rentabilidad": 0.0843460240268774,
             "operaciones": 1
           },
           {
             "client_name": "Cemair",
             "client_key": "CEMAIR",
-            "facturacion_validada": 10340755.0,
-            "ganancia_octopus": 870815.0,
-            "rentabilidad": 0.08421193616907083,
-            "operaciones": 1
+            "facturacion_validada": 21833395.0,
+            "ganancia_octopus": 1839125.0,
+            "rentabilidad": 0.08423449491020521,
+            "operaciones": 2
           },
           {
             "client_name": "Medical Cross",
             "client_key": "MEDICAL CROSS",
-            "facturacion_validada": 3979040.0,
-            "ganancia_octopus": 332359.0,
-            "rentabilidad": 0.08352743375286502,
-            "operaciones": 1
+            "facturacion_validada": 8616225.0,
+            "ganancia_octopus": 720423.0,
+            "rentabilidad": 0.08361237084686159,
+            "operaciones": 2
           },
           {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
@@ -3335,10 +3343,10 @@
           {
             "client_name": "MEDPHARMA S.A.",
             "client_key": "MEDPHARMA",
-            "facturacion_validada": 121942257.0,
-            "ganancia_octopus": 9020089.0,
-            "rentabilidad": 0.07397016605982616,
-            "operaciones": 3
+            "facturacion_validada": 178996420.0,
+            "ganancia_octopus": 13823824.0,
+            "rentabilidad": 0.07722961163133878,
+            "operaciones": 5
           },
           {
             "client_name": "GEM CONSTRUCCIONES S. A.",
@@ -3381,12 +3389,20 @@
             "operaciones": 1
           },
           {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 163532189.0,
+            "ganancia_octopus": 9779999.0,
+            "rentabilidad": 0.059804733611191374,
+            "operaciones": 1
+          },
+          {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
-            "facturacion_validada": 168816526.0,
-            "ganancia_octopus": 9989072.0,
-            "rentabilidad": 0.059171173798470415,
-            "operaciones": 2
+            "facturacion_validada": 294209529.0,
+            "ganancia_octopus": 17407493.0,
+            "rentabilidad": 0.059166992514372296,
+            "operaciones": 3
           },
           {
             "client_name": "Alimentos Viandas",
@@ -3394,22 +3410,6 @@
             "facturacion_validada": 62182426.0,
             "ganancia_octopus": 3667519.0,
             "rentabilidad": 0.05897999219264941,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Managing",
-            "client_key": "MANAGING",
-            "facturacion_validada": 30021040.0,
-            "ganancia_octopus": 1715403.0,
-            "rentabilidad": 0.05714002579524227,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Fashion Cook",
-            "client_key": "FASHION COOK",
-            "facturacion_validada": 50006740.0,
-            "ganancia_octopus": 2802311.0,
-            "rentabilidad": 0.056038665987824844,
             "operaciones": 1
           }
         ],
@@ -3538,10 +3538,10 @@
       }
     },
     "published_clients": 90,
-    "valid_operations_all_dates": 279,
+    "valid_operations_all_dates": 287,
     "operation_states": {
-      "OK": 229,
-      "OK_FC_NETA": 28,
+      "OK": 235,
+      "OK_FC_NETA": 30,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,
