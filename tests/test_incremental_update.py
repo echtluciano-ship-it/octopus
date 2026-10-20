@@ -41,6 +41,12 @@ class DriveDeltaTests(unittest.TestCase):
         self.assertEqual(plan["counts"]["modified"], 1)
         self.assertEqual(plan["modified"][0]["after"]["drive_id"], "known")
 
+    def test_equivalent_timestamp_precision_is_unchanged(self):
+        same = self.known | {"modified_time": "2026-09-20T10:00:00.000Z"}
+        plan = build_plan(self.state, {"files": [same]})
+        self.assertEqual(plan["counts"]["modified"], 0)
+        self.assertEqual(plan["counts"]["unchanged"], 1)
+
     def test_new_drive_id_is_new_even_when_name_and_size_match(self):
         other = self.known | {"drive_id": "other"}
         plan = build_plan(self.state, {"files": [other]})

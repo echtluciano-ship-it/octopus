@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-20T15:16:07+00:00",
+  "last_successful_scan": "2026-10-20T23:03:43+00:00",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -9295,28 +9295,61 @@
       "folder_period": "2026-10",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8/view?usp=drivesdk"
+    },
+    "1WPRNopur0tBarfDF6g6D6BBLOe4kNaB2": {
+      "drive_id": "1WPRNopur0tBarfDF6g6D6BBLOe4kNaB2",
+      "name": "PHOTO-2026-10-20-16-48-41.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 13286,
+      "modified_time": "2026-10-20T21:21:15.302Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1WPRNopur0tBarfDF6g6D6BBLOe4kNaB2/view?usp=drivesdk"
+    },
+    "1NMM_Kz_NUZ4fVLiC_OjXok9eXhu9XZLa": {
+      "drive_id": "1NMM_Kz_NUZ4fVLiC_OjXok9eXhu9XZLa",
+      "name": "PHOTO-2026-10-20-12-31-55.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 450256,
+      "modified_time": "2026-10-20T21:17:49.759Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1NMM_Kz_NUZ4fVLiC_OjXok9eXhu9XZLa/view?usp=drivesdk"
+    },
+    "1eCuk4JMhETLgKRuM9aaYPrRzHjIlrUmJ": {
+      "drive_id": "1eCuk4JMhETLgKRuM9aaYPrRzHjIlrUmJ",
+      "name": "PHOTO-2026-10-20-17-24-14.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18366,
+      "modified_time": "2026-10-20T21:17:49.206Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1eCuk4JMhETLgKRuM9aaYPrRzHjIlrUmJ/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 428657,
-      "modified_time": "2026-10-19T23:00:54.671Z",
-      "sha256": "6b88d78c75ed1770e54fd5dbe3620131a2cf6ad9382a136c3bfc1fe3d0aab8b8"
+      "size_bytes": 465260,
+      "modified_time": "2026-10-20T20:37:37.447Z",
+      "sha256": "e791eec403fd9250471db38120aa37dbcffbb691172e76017641fe480b6c5fff"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-20T15:16:10+00:00"
+    "recorded_at": "2026-10-20T23:05:28+00:00"
   },
   "last_database_refresh": {
     "mode": "source_change_refresh",
-    "at": "2026-10-20T15:16:19+00:00",
-    "new_operations": 7,
+    "at": "2026-10-20T23:05:28+00:00",
+    "new_operations": 3,
     "updated_operations": 0,
-    "billing_rows_added": 11,
+    "billing_rows_added": 48,
     "billing_rows_removed": 0,
-    "source_documents_added": 19
+    "source_documents_added": 3
   }
 }

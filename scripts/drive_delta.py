@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 
 
@@ -15,11 +16,21 @@ def read_json(path: Path, default: dict | None = None) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def normalize_timestamp(value: object) -> str:
+    text = str(value or "")
+    if not text:
+        return ""
+    try:
+        return datetime.fromisoformat(text.replace("Z", "+00:00")).isoformat()
+    except ValueError:
+        return text
+
+
 def document_key(document: dict) -> tuple:
     return (
         str(document.get("name") or document.get("file_name") or ""),
         str(document.get("size_bytes") or document.get("size") or ""),
-        str(document.get("modified_time") or ""),
+        normalize_timestamp(document.get("modified_time")),
         str(document.get("folder_id") or ""),
     )
 

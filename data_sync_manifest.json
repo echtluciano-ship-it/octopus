@@ -1,11 +1,11 @@
 {
-  "database_sha256": "258a8b1160ffeb3656d8bb75db930c182f0e19ed01573c80c77e7a6896ea9bc3",
+  "database_sha256": "4e55fe42dda248241b92e6f47db6e623c7fd2947629963b8b6e8f170f28f060a",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "6b88d78c75ed1770e54fd5dbe3620131a2cf6ad9382a136c3bfc1fe3d0aab8b8",
-    "data/billing_source.json": "7cb057fa6e831f97f9be55024fd31b9b5fea0c879803abe0c8ace2d14ebf5559",
-    "manual_rentability_operations.csv": "0e9a9ebceeefb6d08323af4a0d650981ce950e68cff1b160671d8ef3ba1362fe",
+    "data/FACTURACION OCTOPUS.xlsx": "e791eec403fd9250471db38120aa37dbcffbb691172e76017641fe480b6c5fff",
+    "data/billing_source.json": "906c1ed798536e858e9a4f72363b29e8dd64f8d10838f6783a96bccced8f5a39",
+    "manual_rentability_operations.csv": "124c91d01b354d461389300e60d5ebcf7442601f01a5a57ce2beab058374714a",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "1e8919671b53f00da2477374b4019b89117e6245022057a2d2583f9d414a0f46"
+    "source_documents.csv": "865984b2f24d4b91841d97e807da41c7a7cfc4a21851321ff3c5f3c9f4b513ce"
   },
   "controls": {
     "as_of": "2026-10-20",
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 2045509516.19,
-        "billing_records": 134,
-        "validated_net": 2148082841.0,
-        "profit": 129403237.0,
-        "profitability": 0.06024126934497495,
-        "valid_operations": 50,
+        "billing_total": 2980415132.96,
+        "billing_records": 182,
+        "validated_net": 2184813786.0,
+        "profit": 130756772.0,
+        "profitability": 0.05984801672246497,
+        "valid_operations": 51,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3415,10 +3415,22 @@
         ],
         "billing_ranking": [
           {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion": 437673873.87,
+            "registros": 23
+          },
+          {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
             "facturacion": 307854527.23,
             "registros": 22
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 266519614.59,
+            "registros": 14
           },
           {
             "client_name": "Wolfpack",
@@ -3427,10 +3439,10 @@
             "registros": 3
           },
           {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 165975779.3,
-            "registros": 9
+            "client_name": "GYULAND S.R.L.",
+            "client_key": "GYULAND",
+            "facturacion": 140556940.0,
+            "registros": 6
           },
           {
             "client_name": "LUIS ARCEO S. R. L.",
@@ -3449,6 +3461,12 @@
             "client_key": "SAINT GERMAIN",
             "facturacion": 139699773.14,
             "registros": 12
+          },
+          {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion": 130444989.88,
+            "registros": 6
           },
           {
             "client_name": "Centro Médico Amenabar",
@@ -3487,6 +3505,18 @@
             "registros": 3
           },
           {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion": 80385015.19999999,
+            "registros": 4
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 57162821.66,
+            "registros": 4
+          },
+          {
             "client_name": "NUKE MEDICA S.R.L.",
             "client_key": "NUKE MEDICA",
             "facturacion": 42001052.32,
@@ -3503,45 +3533,15 @@
             "client_key": "MAGTIK",
             "facturacion": 38009191.6,
             "registros": 4
-          },
-          {
-            "client_name": "DAUMAS MOTOFLEX S.R.L.",
-            "client_key": "DAUMAS MOTOFLEX",
-            "facturacion": 36730945.82,
-            "registros": 1
-          },
-          {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 30848355.19,
-            "registros": 8
-          },
-          {
-            "client_name": "LOGISTICAL S. A.",
-            "client_key": "LOGISTICAL",
-            "facturacion": 28581410.86,
-            "registros": 2
-          },
-          {
-            "client_name": "ELIPA SAS",
-            "client_key": "ELIPA",
-            "facturacion": 26000822.16,
-            "registros": 1
-          },
-          {
-            "client_name": "FORAIN S. A.",
-            "client_key": "FORAIN",
-            "facturacion": 20613713.34,
-            "registros": 2
           }
         ]
       }
     },
-    "published_clients": 92,
-    "valid_operations_all_dates": 294,
+    "published_clients": 93,
+    "valid_operations_all_dates": 297,
     "operation_states": {
       "OK": 239,
-      "OK_FC_NETA": 33,
+      "OK_FC_NETA": 36,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,
