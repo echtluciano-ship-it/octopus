@@ -1,14 +1,14 @@
 {
-  "database_sha256": "e32ea546891c70dfe289e1386bfcadfad687ca1a7dbd8b189401f1aab0b62523",
+  "database_sha256": "258a8b1160ffeb3656d8bb75db930c182f0e19ed01573c80c77e7a6896ea9bc3",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "bbe6f622811de91b1f182b3ef78e2515afd370c8d935fba28c8804150cc49ca6",
-    "data/billing_source.json": "0f42b9a43aa715f823d3b66a11eb56fcc7d17d2983540918e6823b10608ce102",
-    "manual_rentability_operations.csv": "100d3e7007c5ce28b3c20db78ec427724f3bb38260638bf4aecf77e71fe4a3a7",
+    "data/FACTURACION OCTOPUS.xlsx": "6b88d78c75ed1770e54fd5dbe3620131a2cf6ad9382a136c3bfc1fe3d0aab8b8",
+    "data/billing_source.json": "7cb057fa6e831f97f9be55024fd31b9b5fea0c879803abe0c8ace2d14ebf5559",
+    "manual_rentability_operations.csv": "0e9a9ebceeefb6d08323af4a0d650981ce950e68cff1b160671d8ef3ba1362fe",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "cfc10d8bc4a5c97205554ada7d2a37f9b393f04eb8860326c2863a430afbe9c5"
+    "source_documents.csv": "1e8919671b53f00da2477374b4019b89117e6245022057a2d2583f9d414a0f46"
   },
   "controls": {
-    "as_of": "2026-10-16",
+    "as_of": "2026-10-20",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 1907257514.72,
-        "billing_records": 123,
-        "validated_net": 2128671026.0,
-        "profit": 127908982.0,
-        "profitability": 0.06008865646109471,
-        "valid_operations": 48,
+        "billing_total": 2045509516.19,
+        "billing_records": 134,
+        "validated_net": 2148082841.0,
+        "profit": 129403237.0,
+        "profitability": 0.06024126934497495,
+        "valid_operations": 50,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3317,20 +3317,20 @@
             "operaciones": 1
           },
           {
+            "client_name": "Star Medical",
+            "client_key": "STAR MEDICAL",
+            "facturacion_validada": 30229451.0,
+            "ganancia_octopus": 2408490.0,
+            "rentabilidad": 0.07967362688789817,
+            "operaciones": 2
+          },
+          {
             "client_name": "APR Energy",
             "client_key": "APR ENERGY",
             "facturacion_validada": 76861611.0,
             "ganancia_octopus": 6120520.0,
             "rentabilidad": 0.0796303892199189,
             "operaciones": 2
-          },
-          {
-            "client_name": "Star Medical",
-            "client_key": "STAR MEDICAL",
-            "facturacion_validada": 15824626.0,
-            "ganancia_octopus": 1258696.0,
-            "rentabilidad": 0.07954033163248218,
-            "operaciones": 1
           },
           {
             "client_name": "FV HOLDING SRL",
@@ -3373,6 +3373,14 @@
             "operaciones": 2
           },
           {
+            "client_name": "Mas Metros",
+            "client_key": "MAS METROS",
+            "facturacion_validada": 5006990.0,
+            "ganancia_octopus": 344461.0,
+            "rentabilidad": 0.06879602315962284,
+            "operaciones": 1
+          },
+          {
             "client_name": "MAGTIK S A",
             "client_key": "MAGTIK",
             "facturacion_validada": 5222102.0,
@@ -3403,14 +3411,6 @@
             "ganancia_octopus": 17407493.0,
             "rentabilidad": 0.059166992514372296,
             "operaciones": 3
-          },
-          {
-            "client_name": "Alimentos Viandas",
-            "client_key": "ALIMENTOS VIANDAS",
-            "facturacion_validada": 62182426.0,
-            "ganancia_octopus": 3667519.0,
-            "rentabilidad": 0.05897999219264941,
-            "operaciones": 1
           }
         ],
         "billing_ranking": [
@@ -3487,6 +3487,12 @@
             "registros": 3
           },
           {
+            "client_name": "NUKE MEDICA S.R.L.",
+            "client_key": "NUKE MEDICA",
+            "facturacion": 42001052.32,
+            "registros": 1
+          },
+          {
             "client_name": "ITPA S.A.",
             "client_key": "ITPA",
             "facturacion": 41084132.370000005,
@@ -3499,49 +3505,43 @@
             "registros": 4
           },
           {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 36730945.82,
+            "registros": 1
+          },
+          {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 30848355.19,
+            "registros": 8
+          },
+          {
             "client_name": "LOGISTICAL S. A.",
             "client_key": "LOGISTICAL",
             "facturacion": 28581410.86,
             "registros": 2
           },
           {
+            "client_name": "ELIPA SAS",
+            "client_key": "ELIPA",
+            "facturacion": 26000822.16,
+            "registros": 1
+          },
+          {
             "client_name": "FORAIN S. A.",
             "client_key": "FORAIN",
             "facturacion": 20613713.34,
             "registros": 2
-          },
-          {
-            "client_name": "ASOCIACION DEL PERSONAL AERO",
-            "client_key": "ASOCIACION DEL PERSONAL AERO",
-            "facturacion": 18247148.759999998,
-            "registros": 2
-          },
-          {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 15631750.43,
-            "registros": 4
-          },
-          {
-            "client_name": "FUNDACION SOLDADOS FUNDASOL",
-            "client_key": "FUNDACION SOLDADOS FUNDASOL",
-            "facturacion": 14932373.18,
-            "registros": 1
-          },
-          {
-            "client_name": "TRANSPORTE TRACCION S.R.L.",
-            "client_key": "TRANSPORTE TRACCION",
-            "facturacion": 10418658.35,
-            "registros": 1
           }
         ]
       }
     },
-    "published_clients": 90,
-    "valid_operations_all_dates": 287,
+    "published_clients": 92,
+    "valid_operations_all_dates": 294,
     "operation_states": {
-      "OK": 235,
-      "OK_FC_NETA": 30,
+      "OK": 239,
+      "OK_FC_NETA": 33,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,

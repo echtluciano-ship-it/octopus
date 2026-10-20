@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-16T22:17:29+00:00",
+  "last_successful_scan": "2026-10-20T15:16:07+00:00",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -9086,25 +9086,237 @@
       "folder_period": "2026-10",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1smTcu4acC2L5z_09_qKDH4g2v4Rv2Kyn/view?usp=drivesdk"
+    },
+    "18ibiMmq9l9WB9MLBaBn6yV3dBj51k48r": {
+      "drive_id": "18ibiMmq9l9WB9MLBaBn6yV3dBj51k48r",
+      "name": "PHOTO-2026-10-19-18-50-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 369587,
+      "modified_time": "2026-10-20T14:56:09.069Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/18ibiMmq9l9WB9MLBaBn6yV3dBj51k48r/view?usp=drivesdk"
+    },
+    "1lQfnrkYBvrmDzUdmyOmPds0tQsbznunc": {
+      "drive_id": "1lQfnrkYBvrmDzUdmyOmPds0tQsbznunc",
+      "name": "PHOTO-2026-10-19-12-13-27.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 312154,
+      "modified_time": "2026-10-20T14:56:09.053Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1lQfnrkYBvrmDzUdmyOmPds0tQsbznunc/view?usp=drivesdk"
+    },
+    "18f7beyJPoaoS9wcGQjjosgN0CbdaUMGx": {
+      "drive_id": "18f7beyJPoaoS9wcGQjjosgN0CbdaUMGx",
+      "name": "PHOTO-2026-10-19-17-09-36.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 460805,
+      "modified_time": "2026-10-20T14:56:09.023Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/18f7beyJPoaoS9wcGQjjosgN0CbdaUMGx/view?usp=drivesdk"
+    },
+    "15muBhECkdXUeNsfQR84Csa6zdMhX1AH1": {
+      "drive_id": "15muBhECkdXUeNsfQR84Csa6zdMhX1AH1",
+      "name": "PHOTO-2026-10-19-18-44-09.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17986,
+      "modified_time": "2026-10-20T14:56:08.973Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/15muBhECkdXUeNsfQR84Csa6zdMhX1AH1/view?usp=drivesdk"
+    },
+    "1HopoKoecQRa3BsdX_pTt5iHCh8dZ4DQW": {
+      "drive_id": "1HopoKoecQRa3BsdX_pTt5iHCh8dZ4DQW",
+      "name": "PHOTO-2026-10-19-14-30-18.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 175539,
+      "modified_time": "2026-10-20T14:56:08.958Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1HopoKoecQRa3BsdX_pTt5iHCh8dZ4DQW/view?usp=drivesdk"
+    },
+    "1AhR79RLllHqsCw_OAZRWtWAbtHZUNWRT": {
+      "drive_id": "1AhR79RLllHqsCw_OAZRWtWAbtHZUNWRT",
+      "name": "PHOTO-2026-10-19-19-12-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17639,
+      "modified_time": "2026-10-20T14:56:08.930Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1AhR79RLllHqsCw_OAZRWtWAbtHZUNWRT/view?usp=drivesdk"
+    },
+    "1jWMhO_Q6n6fgcE2PfhMQGUOhpFbzEYCI": {
+      "drive_id": "1jWMhO_Q6n6fgcE2PfhMQGUOhpFbzEYCI",
+      "name": "PHOTO-2026-10-19-18-49-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18035,
+      "modified_time": "2026-10-20T14:56:08.899Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1jWMhO_Q6n6fgcE2PfhMQGUOhpFbzEYCI/view?usp=drivesdk"
+    },
+    "1seMElqMMk_HicvXcmv747vSAg28Q-_YK": {
+      "drive_id": "1seMElqMMk_HicvXcmv747vSAg28Q-_YK",
+      "name": "OP 0278 - Faro dieciocho de Tandil Comprobante ECheq.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 6005,
+      "modified_time": "2026-10-20T14:56:56.452Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1seMElqMMk_HicvXcmv747vSAg28Q-_YK/view?usp=drivesdk"
+    },
+    "1tq-NDQ2Tc1F5YN27-7GSjie1Dl2RJw9c": {
+      "drive_id": "1tq-NDQ2Tc1F5YN27-7GSjie1Dl2RJw9c",
+      "name": "PHOTO-2026-10-19-14-10-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 64120,
+      "modified_time": "2026-10-20T14:56:53.485Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1tq-NDQ2Tc1F5YN27-7GSjie1Dl2RJw9c/view?usp=drivesdk"
+    },
+    "1QgfXTuSoZf2qCu5UE7P37dg-7P_DUo6g": {
+      "drive_id": "1QgfXTuSoZf2qCu5UE7P37dg-7P_DUo6g",
+      "name": "PHOTO-2026-10-19-11-50-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 30488,
+      "modified_time": "2026-10-20T14:56:53.425Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1QgfXTuSoZf2qCu5UE7P37dg-7P_DUo6g/view?usp=drivesdk"
+    },
+    "12Tkcz75RvzJ-iDYhPv2CNX-TSM91XYSb": {
+      "drive_id": "12Tkcz75RvzJ-iDYhPv2CNX-TSM91XYSb",
+      "name": "cert 2026-000128 - retencion fc distr espora.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 201767,
+      "modified_time": "2026-10-20T14:56:51.596Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/12Tkcz75RvzJ-iDYhPv2CNX-TSM91XYSb/view?usp=drivesdk"
+    },
+    "1k4eXzPn_ewZu4o61lPdFwXjo0eIck5e5": {
+      "drive_id": "1k4eXzPn_ewZu4o61lPdFwXjo0eIck5e5",
+      "name": "PHOTO-2026-10-19-10-42-55.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 406391,
+      "modified_time": "2026-10-20T14:56:51.558Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1k4eXzPn_ewZu4o61lPdFwXjo0eIck5e5/view?usp=drivesdk"
+    },
+    "1A8ScAF7R1Bd9MaknAfWpnuhZ1bUMPXtR": {
+      "drive_id": "1A8ScAF7R1Bd9MaknAfWpnuhZ1bUMPXtR",
+      "name": "PHOTO-2026-10-19-10-42-23.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 362489,
+      "modified_time": "2026-10-20T14:56:51.426Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1A8ScAF7R1Bd9MaknAfWpnuhZ1bUMPXtR/view?usp=drivesdk"
+    },
+    "1C1_8jKVkEXkXrSOOuq3PNbnhKR3oRJSj": {
+      "drive_id": "1C1_8jKVkEXkXrSOOuq3PNbnhKR3oRJSj",
+      "name": "OP 32359 EL FARO DIECIOCHO DE TANDIL.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 20322,
+      "modified_time": "2026-10-20T14:56:51.319Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1C1_8jKVkEXkXrSOOuq3PNbnhKR3oRJSj/view?usp=drivesdk"
+    },
+    "1caLuz2dPK1ixia22GOvnfZLGe7wfyyEQ": {
+      "drive_id": "1caLuz2dPK1ixia22GOvnfZLGe7wfyyEQ",
+      "name": "OP 0278 - Faro dieciocho de Tandil RET.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 42936,
+      "modified_time": "2026-10-20T14:56:51.308Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1caLuz2dPK1ixia22GOvnfZLGe7wfyyEQ/view?usp=drivesdk"
+    },
+    "1Do2SWNxn8wQvA-TbQoamfnjuMN7bbFBT": {
+      "drive_id": "1Do2SWNxn8wQvA-TbQoamfnjuMN7bbFBT",
+      "name": "RET Distribuidora Espora Fc 72937.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 209719,
+      "modified_time": "2026-10-20T14:56:51.302Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Do2SWNxn8wQvA-TbQoamfnjuMN7bbFBT/view?usp=drivesdk"
+    },
+    "11m_9scalgc3U9hVpQeDc6x0aA00TDWDW": {
+      "drive_id": "11m_9scalgc3U9hVpQeDc6x0aA00TDWDW",
+      "name": "OP 0278 - Faro dieciocho de Tandil.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 59272,
+      "modified_time": "2026-10-20T14:56:51.288Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11m_9scalgc3U9hVpQeDc6x0aA00TDWDW/view?usp=drivesdk"
+    },
+    "1Kv4q_v1myIaJ0ZLSOcjXQAhoGuJiTAVm": {
+      "drive_id": "1Kv4q_v1myIaJ0ZLSOcjXQAhoGuJiTAVm",
+      "name": "OP 00012-00007342.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 61553,
+      "modified_time": "2026-10-20T14:56:51.285Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Kv4q_v1myIaJ0ZLSOcjXQAhoGuJiTAVm/view?usp=drivesdk"
+    },
+    "1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8": {
+      "drive_id": "1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8",
+      "name": "OP 32359 EL FARO DIECIOCHO DE TANDIL RET.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 24398,
+      "modified_time": "2026-10-20T14:56:51.217Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 430402,
-      "modified_time": "2026-10-16T20:54:53.081Z",
-      "sha256": "bbe6f622811de91b1f182b3ef78e2515afd370c8d935fba28c8804150cc49ca6"
+      "size_bytes": 428657,
+      "modified_time": "2026-10-19T23:00:54.671Z",
+      "sha256": "6b88d78c75ed1770e54fd5dbe3620131a2cf6ad9382a136c3bfc1fe3d0aab8b8"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-16T22:21:08+00:00"
+    "recorded_at": "2026-10-20T15:16:10+00:00"
   },
   "last_database_refresh": {
-    "mode": "full_source_refresh",
-    "at": "2026-10-16T22:21:08+00:00",
-    "new_operations": 8,
-    "updated_operations": 0
+    "mode": "source_change_refresh",
+    "at": "2026-10-20T15:16:19+00:00",
+    "new_operations": 7,
+    "updated_operations": 0,
+    "billing_rows_added": 11,
+    "billing_rows_removed": 0,
+    "source_documents_added": 19
   }
 }
