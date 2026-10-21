@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "accounts": [
+    {
+      "key": "primary",
+      "display_name": "Primary account",
+      "document_class": "transfer",
+      "destination_identifiers": [
+        {"kind": "cbu_or_cvu", "value": "CONFIGURE_OUTSIDE_GIT"},
+        {"kind": "tax_id", "value": "CONFIGURE_OUTSIDE_GIT"}
+      ],
+      "amount_validation": null
+    }
+  ],
+  "accepted_deposit_banks": []
+}

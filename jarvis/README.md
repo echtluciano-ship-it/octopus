@@ -67,3 +67,10 @@ Cada respuesta muestra un ID que permite rastrear la ejecucion en
 - `config/permissions.shadow.json`: permisos de lectura y denegaciones externas.
 
 La aplicacion OCTOPUS/Render existente permanece fuera de este laboratorio.
+
+## Tickets
+
+Tickets es ahora el primer caso operativo de JARVIS. El nucleo local y su
+arquitectura estan en `tickets/` y `TICKETS_ARCHITECTURE.md`. No hay cuentas de
+WhatsApp ni correo conectadas: solamente persistencia, estados, reconciliacion,
+reglas de cierre, Excel editable y pruebas sinteticas.

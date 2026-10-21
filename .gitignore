@@ -6,3 +6,4 @@ jarvis/data/*.db
 jarvis/data/*shadow*.json
 jarvis/logs/*.db
 jarvis/logs/*shadow*.json
+jarvis/config/tickets.accounts.local.json

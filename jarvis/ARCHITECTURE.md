@@ -25,7 +25,9 @@ la identidad documental, los calculos y la autoridad sobre los datos.
 - Low-risk automation: tareas idempotentes y reversibles.
 - Production: PostgreSQL, monitoreo, backups y canales controlados.
 
-Tickets permanece fuera del alcance hasta documentar el proceso real.
+Tickets es la prioridad operativa actual. Su proceso fue relevado con Erika y
+se desarrolla como modulo aislado segun `TICKETS_ARCHITECTURE.md`. La conexion
+real a WhatsApp, correo y acciones externas sigue bloqueada hasta autorizacion.
 
 ## Aislamiento de Shadow
 
