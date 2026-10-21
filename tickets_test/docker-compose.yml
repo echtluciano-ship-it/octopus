@@ -1,0 +1,186 @@
+name: octopus-tickets-test
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: octopus
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: evolution
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U octopus -d evolution"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [tickets]
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [tickets]
+
+  minio:
+    image: quay.io/minio/minio:latest
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "127.0.0.1:9001:9001"
+    networks: [tickets]
+
+  minio-init:
+    image: quay.io/minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_started
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    entrypoint: >
+      /bin/sh -c "
+      until mc alias set local http://minio:9000 $$MINIO_ROOT_USER $$MINIO_ROOT_PASSWORD; do sleep 2; done &&
+      mc mb --ignore-existing local/octopus-tickets-test &&
+      mc anonymous set none local/octopus-tickets-test
+      "
+    networks: [tickets]
+
+  tickets-migrate:
+    build:
+      context: ..
+      dockerfile: tickets_test/service/Dockerfile
+    command: ["python", "-m", "service.migrate"]
+    environment: &tickets_environment
+      TICKETS_DATABASE_URL: postgresql://octopus:${POSTGRES_PASSWORD}@postgres:5432/tickets
+      TICKETS_WEBHOOK_TOKEN: ${TICKETS_WEBHOOK_TOKEN}
+      TICKETS_MINIO_ENDPOINT: http://minio:9000
+      TICKETS_MINIO_ACCESS_KEY: ${MINIO_ROOT_USER}
+      TICKETS_MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      TICKETS_MINIO_BUCKET: octopus-tickets-test
+      TICKETS_ACCOUNTS_PATH: /run/config/tickets.accounts.json
+      TICKETS_ACCEPT_ALL_TEST_GROUPS: ${TICKETS_ACCEPT_ALL_TEST_GROUPS:-false}
+      TICKETS_ALLOWED_GROUP_IDS: ${TICKETS_ALLOWED_GROUP_IDS:-}
+      TICKETS_EXPORT_DIR: /exports
+    volumes: &tickets_volumes
+      - ../jarvis/config/tickets.accounts.local.json:/run/config/tickets.accounts.json:ro
+      - ./runtime/exports:/exports
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [tickets]
+
+  tickets-api:
+    build:
+      context: ..
+      dockerfile: tickets_test/service/Dockerfile
+    restart: unless-stopped
+    command: ["uvicorn", "service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *tickets_environment
+    volumes: *tickets_volumes
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      tickets-migrate:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [tickets]
+
+  tickets-worker:
+    build:
+      context: ..
+      dockerfile: tickets_test/service/Dockerfile
+    restart: unless-stopped
+    command: ["python", "-m", "service.worker"]
+    environment: *tickets_environment
+    volumes: *tickets_volumes
+    depends_on:
+      tickets-api:
+        condition: service_healthy
+    networks: [tickets]
+
+  evolution:
+    image: evoapicloud/evolution-api:v2.3.7
+    restart: unless-stopped
+    environment:
+      SERVER_NAME: octopus-tickets-test
+      SERVER_TYPE: http
+      SERVER_PORT: 8080
+      SERVER_URL: http://localhost:8080
+      TELEMETRY_ENABLED: "false"
+      CORS_ORIGIN: http://localhost:8080
+      CORS_METHODS: GET,POST,PUT,DELETE
+      CORS_CREDENTIALS: "false"
+      LOG_LEVEL: ERROR,WARN,INFO,WEBHOOKS
+      LOG_COLOR: "false"
+      LOG_BAILEYS: warn
+      DATABASE_PROVIDER: postgresql
+      DATABASE_CONNECTION_URI: postgresql://octopus:${POSTGRES_PASSWORD}@postgres:5432/evolution?schema=evolution_api
+      DATABASE_CONNECTION_CLIENT_NAME: octopus_tickets_test
+      DATABASE_SAVE_DATA_INSTANCE: "true"
+      DATABASE_SAVE_DATA_NEW_MESSAGE: "true"
+      DATABASE_SAVE_MESSAGE_UPDATE: "true"
+      DATABASE_SAVE_DATA_CONTACTS: "true"
+      DATABASE_SAVE_DATA_CHATS: "true"
+      DATABASE_SAVE_DATA_HISTORIC: "true"
+      DATABASE_DELETE_MESSAGE: "false"
+      CACHE_REDIS_ENABLED: "true"
+      CACHE_REDIS_URI: redis://redis:6379/6
+      CACHE_REDIS_PREFIX_KEY: octopus-tickets-test
+      CACHE_REDIS_SAVE_INSTANCES: "false"
+      CACHE_LOCAL_ENABLED: "false"
+      AUTHENTICATION_API_KEY: ${EVOLUTION_API_KEY}
+      AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES: "false"
+      CONFIG_SESSION_PHONE_CLIENT: OCTOPUS TEST
+      CONFIG_SESSION_PHONE_NAME: Chrome
+      QRCODE_LIMIT: 60
+      WEBHOOK_GLOBAL_ENABLED: "false"
+      WEBHOOK_REQUEST_TIMEOUT_MS: 60000
+      WEBHOOK_RETRY_MAX_ATTEMPTS: 100
+      WEBHOOK_RETRY_INITIAL_DELAY_SECONDS: 5
+      WEBHOOK_RETRY_USE_EXPONENTIAL_BACKOFF: "true"
+      WEBHOOK_RETRY_MAX_DELAY_SECONDS: 300
+      WEBHOOK_RETRY_JITTER_FACTOR: 0.2
+      LANGUAGE: es
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - evolution_instances:/evolution/instances
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      tickets-api:
+        condition: service_healthy
+    networks: [tickets]
+
+networks:
+  tickets:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:
+  evolution_instances:

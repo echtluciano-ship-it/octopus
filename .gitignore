@@ -7,3 +7,5 @@ jarvis/data/*shadow*.json
 jarvis/logs/*.db
 jarvis/logs/*shadow*.json
 jarvis/config/tickets.accounts.local.json
+tickets_test/.env
+tickets_test/runtime/
