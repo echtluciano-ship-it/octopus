@@ -1,14 +1,14 @@
 {
-  "database_sha256": "4e55fe42dda248241b92e6f47db6e623c7fd2947629963b8b6e8f170f28f060a",
+  "database_sha256": "d23930398967feb4d7a102095604d6828ba3c24aa3592fcefcfa1d9f439c183c",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "e791eec403fd9250471db38120aa37dbcffbb691172e76017641fe480b6c5fff",
-    "data/billing_source.json": "906c1ed798536e858e9a4f72363b29e8dd64f8d10838f6783a96bccced8f5a39",
-    "manual_rentability_operations.csv": "124c91d01b354d461389300e60d5ebcf7442601f01a5a57ce2beab058374714a",
+    "data/FACTURACION OCTOPUS.xlsx": "84b11c029fc0cccb4d68d84a767efa6e3022740bea6084d28ed24877b0f5fa94",
+    "data/billing_source.json": "5e36a2d67ab8f0f1f34100945df39f0005b5d9098e1fcbfe2891c3855c031a4c",
+    "manual_rentability_operations.csv": "1cc6ed046257bf6a1ae72bdd579e19996683b8fb7480ab48c3fa9758c56e307c",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "865984b2f24d4b91841d97e807da41c7a7cfc4a21851321ff3c5f3c9f4b513ce"
+    "source_documents.csv": "bc2660d1e2ba1207d30e8c11bc63fc7232ef5202b7134d0db30779af8315ebab"
   },
   "controls": {
-    "as_of": "2026-10-20",
+    "as_of": "2026-10-21",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 2980415132.96,
-        "billing_records": 182,
-        "validated_net": 2184813786.0,
-        "profit": 130756772.0,
-        "profitability": 0.05984801672246497,
-        "valid_operations": 51,
+        "billing_total": 3297906768.12,
+        "billing_records": 199,
+        "validated_net": 2281262446.0,
+        "profit": 136085940.0,
+        "profitability": 0.05965378522695411,
+        "valid_operations": 55,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3349,6 +3349,22 @@
             "operaciones": 5
           },
           {
+            "client_name": "NEA-ELEC S. A.",
+            "client_key": "NEA ELEC",
+            "facturacion_validada": 8345059.0,
+            "ganancia_octopus": 638997.0,
+            "rentabilidad": 0.0765718972148669,
+            "operaciones": 1
+          },
+          {
+            "client_name": "ASHI S.A",
+            "client_key": "ASHI",
+            "facturacion_validada": 9500724.0,
+            "ganancia_octopus": 708074.0,
+            "rentabilidad": 0.07452842541263172,
+            "operaciones": 1
+          },
+          {
             "client_name": "GEM CONSTRUCCIONES S. A.",
             "client_key": "GEM CONSTRUCCIONES",
             "facturacion_validada": 20011360.0,
@@ -3395,22 +3411,6 @@
             "ganancia_octopus": 900681.0,
             "rentabilidad": 0.06,
             "operaciones": 1
-          },
-          {
-            "client_name": "Escalum",
-            "client_key": "ESCALUM",
-            "facturacion_validada": 163532189.0,
-            "ganancia_octopus": 9779999.0,
-            "rentabilidad": 0.059804733611191374,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Ovniplast",
-            "client_key": "OVNIPLAST",
-            "facturacion_validada": 294209529.0,
-            "ganancia_octopus": 17407493.0,
-            "rentabilidad": 0.059166992514372296,
-            "operaciones": 3
           }
         ],
         "billing_ranking": [
@@ -3421,22 +3421,28 @@
             "registros": 23
           },
           {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 366448604.59,
+            "registros": 19
+          },
+          {
             "client_name": "Ovniplast",
             "client_key": "OVNIPLAST",
             "facturacion": 307854527.23,
             "registros": 22
           },
           {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 266519614.59,
-            "registros": 14
-          },
-          {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
             "facturacion": 179857472.76,
             "registros": 3
+          },
+          {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 152605176.73,
+            "registros": 8
           },
           {
             "client_name": "GYULAND S.R.L.",
@@ -3493,6 +3499,12 @@
             "registros": 8
           },
           {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 90917453.97,
+            "registros": 3
+          },
+          {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion": 87083270.56,
@@ -3521,27 +3533,15 @@
             "client_key": "NUKE MEDICA",
             "facturacion": 42001052.32,
             "registros": 1
-          },
-          {
-            "client_name": "ITPA S.A.",
-            "client_key": "ITPA",
-            "facturacion": 41084132.370000005,
-            "registros": 2
-          },
-          {
-            "client_name": "MAGTIK S A",
-            "client_key": "MAGTIK",
-            "facturacion": 38009191.6,
-            "registros": 4
           }
         ]
       }
     },
-    "published_clients": 93,
-    "valid_operations_all_dates": 297,
+    "published_clients": 94,
+    "valid_operations_all_dates": 300,
     "operation_states": {
-      "OK": 239,
-      "OK_FC_NETA": 36,
+      "OK": 241,
+      "OK_FC_NETA": 37,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,
