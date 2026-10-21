@@ -25,6 +25,33 @@ class MediaNotAvailable(RuntimeError):
     pass
 
 
+def record_ingest_failure(payload: dict[str, Any], error: Exception) -> None:
+    parts = _message_parts(payload)
+    if not parts["message_id"] or not parts["remote_jid"]:
+        return
+    with connection() as conn:
+        message = conn.execute(
+            """SELECT message_id FROM inbound_messages
+               WHERE provider='evolution' AND instance_name=%s AND group_id=%s
+                 AND provider_message_id=%s""",
+            (parts["instance"], parts["remote_jid"], parts["message_id"]),
+        ).fetchone()
+        if message is None:
+            return
+        conn.execute(
+            """INSERT INTO ingest_failures(message_id,attachment_index,last_error)
+               VALUES (%s,0,%s)
+               ON CONFLICT(message_id,attachment_index) DO UPDATE SET
+                 status='ERROR_RETRYABLE',
+                 attempts=ingest_failures.attempts+1,
+                 last_error=EXCLUDED.last_error,
+                 last_failed_at=now(),
+                 resolved_at=NULL""",
+            (message["message_id"], f"{type(error).__name__}: {error}"[:2000]),
+        )
+        conn.commit()
+
+
 def _canonical_json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=True, sort_keys=True, separators=(",", ":"), default=str)
 
@@ -263,9 +290,9 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
 
         duplicate = conn.execute(
             """SELECT document_id,sha256,visual_hash FROM ticket_documents
-               WHERE sha256=%s OR (%s IS NOT NULL AND visual_hash=%s)
+               WHERE sha256=%s OR visual_hash=%s
                ORDER BY document_id LIMIT 1""",
-            (sha256, visual_hash, visual_hash),
+            (sha256, visual_hash),
         ).fetchone()
         status = "DUPLICATE_CONFIRMED" if duplicate else "ORIGINAL_STORED"
         reason = None
@@ -297,6 +324,11 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             ),
         ).fetchone()
         document_id = document["document_id"]
+        conn.execute(
+            """UPDATE ingest_failures SET resolved_at=now(),status='RESOLVED'
+               WHERE message_id=%s AND attachment_index=0 AND resolved_at IS NULL""",
+            (message_row["message_id"],),
+        )
         conn.execute(
             """INSERT INTO ticket_state_events(document_id,previous_status,new_status,actor,reason,evidence)
             VALUES (%s,NULL,%s,'evolution-ingest',%s,%s::jsonb)""",

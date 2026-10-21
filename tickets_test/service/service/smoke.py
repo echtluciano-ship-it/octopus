@@ -63,6 +63,19 @@ def main() -> None:
     headers = {"X-Octopus-Webhook-Token": settings.webhook_token}
     content = image_bytes()
     stamp = str(int(time.time()))
+    recoverable_payload = payload(f"SMOKE-{stamp}-A", content)
+    recoverable_payload["data"]["message"].pop("base64")
+    failed = requests.post(
+        f"{api}/webhooks/evolution",
+        json=recoverable_payload,
+        headers=headers,
+        timeout=30,
+    )
+    if failed.status_code != 503:
+        raise RuntimeError(f"Expected durable retry response, got {failed.status_code}: {failed.text}")
+    failed_audit = requests.get(f"{api}/audit/reconciliation", timeout=10).json()
+    if failed_audit["ingest_errors"] < 1 or failed_audit["status"] != "OK":
+        raise RuntimeError(f"Early ingestion failure was not reconciled: {failed_audit}")
     first = requests.post(
         f"{api}/webhooks/evolution",
         json=payload(f"SMOKE-{stamp}-A", content),
@@ -84,9 +97,21 @@ def main() -> None:
     )
     second.raise_for_status()
     audit = requests.get(f"{api}/audit/reconciliation", timeout=10).json()
-    if audit["documents_stored"] < 2 or audit["duplicates"] < 1:
+    if (
+        audit["documents_stored"] < 2
+        or audit["duplicates"] < 1
+        or audit["ingest_errors"] != 0
+        or audit["status"] != "OK"
+    ):
         raise RuntimeError(f"Smoke test did not reconcile: {audit}")
-    print({"first": first.json(), "second": second.json(), "audit": audit})
+    print(
+        {
+            "failed_delivery_reconciled": failed_audit,
+            "first": first.json(),
+            "second": second.json(),
+            "audit": audit,
+        }
+    )
 
 
 if __name__ == "__main__":

@@ -47,6 +47,21 @@ CREATE INDEX IF NOT EXISTS ticket_documents_sha_idx ON ticket_documents(sha256, 
 CREATE INDEX IF NOT EXISTS ticket_documents_visual_idx ON ticket_documents(visual_hash) WHERE visual_hash IS NOT NULL;
 CREATE INDEX IF NOT EXISTS ticket_documents_status_idx ON ticket_documents(status);
 
+CREATE TABLE IF NOT EXISTS ingest_failures (
+    ingest_failure_id BIGSERIAL PRIMARY KEY,
+    message_id BIGINT NOT NULL REFERENCES inbound_messages(message_id),
+    attachment_index INTEGER NOT NULL,
+    status TEXT NOT NULL DEFAULT 'ERROR_RETRYABLE',
+    attempts INTEGER NOT NULL DEFAULT 1 CHECK(attempts > 0),
+    last_error TEXT NOT NULL,
+    first_failed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    last_failed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    resolved_at TIMESTAMPTZ,
+    UNIQUE(message_id, attachment_index)
+);
+CREATE INDEX IF NOT EXISTS ingest_failures_open_idx
+    ON ingest_failures(status, last_failed_at) WHERE resolved_at IS NULL;
+
 CREATE TABLE IF NOT EXISTS ticket_state_events (
     state_event_id BIGSERIAL PRIMARY KEY,
     document_id BIGINT NOT NULL REFERENCES ticket_documents(document_id),

@@ -7,8 +7,8 @@ from fastapi import FastAPI, Header, HTTPException, Query
 from service.config import settings
 from service.db import connection
 from service.export_excel import generate
-from service.ingest import MediaNotAvailable, ingest
-from service.object_store import client as minio_client
+from service.ingest import MediaNotAvailable, ingest, record_ingest_failure
+from service.object_store import ensure_ready
 from service.reconcile import reconciliation
 
 
@@ -25,7 +25,7 @@ def ready() -> dict:
     try:
         with connection() as conn:
             conn.execute("SELECT 1").fetchone()
-        minio_client().head_bucket(Bucket=settings.minio_bucket)
+        ensure_ready()
     except Exception as exc:
         raise HTTPException(status_code=503, detail=f"Dependency unavailable: {exc}") from exc
     return {"status": "ready"}
@@ -45,7 +45,11 @@ def evolution_webhook(
     except MediaNotAvailable as exc:
         # The event/message was already committed. A non-2xx response asks Evolution
         # to retry media delivery without making the original message disappear.
+        record_ingest_failure(payload, exc)
         raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except Exception as exc:
+        record_ingest_failure(payload, exc)
+        raise HTTPException(status_code=503, detail="Durable ingestion failed; retry required") from exc
 
 
 @app.get("/audit/reconciliation")

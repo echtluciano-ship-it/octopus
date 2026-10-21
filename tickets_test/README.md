@@ -7,7 +7,7 @@ credenciales ni bases con OCTOPUS/Render.
 
 - Evolution API 2.3.7/Baileys: WhatsApp TEST y webhooks.
 - PostgreSQL: eventos, mensajes, documentos, estados y auditoria.
-- MinIO: originales inmutables y recuperables.
+- Volumen persistente privado: originales con escritura atomica y recuperables.
 - Tickets API: confirma el webhook solo despues de persistir el ingreso.
 - Tickets worker: OCR, reglas deterministicas, clasificacion y Excel.
 - Redis: estado/cache de Evolution API.
@@ -25,8 +25,21 @@ entorno no escribe en WhatsApp ni envia correo.
 ```
 
 El ultimo comando crea/recupera la instancia y abre
-`runtime/whatsapp-test-qr.png`. El QR debe vincularse solamente con un numero
+`runtime/whatsapp-test-qr-AAAAMMDD-HHMMSS.png`. El QR debe vincularse solamente con un numero
 dedicado de prueba.
+
+### Bloqueo de vinculacion vigente
+
+Al 21/10/2026, WhatsApp puede aceptar la lectura del QR y rechazar el alta con
+`No se pueden vincular nuevos dispositivos en este momento`. Coincide con el
+problema abierto de Baileys `companion_reg_refresh`:
+
+- https://github.com/WhiskeySockets/Baileys/issues/2737
+- https://github.com/WhiskeySockets/Baileys/pull/2765
+
+El arreglo propuesto todavia no esta incorporado. No insistir con el numero ni
+instalar forks no auditados. Revalidar una version estable de Evolution/Baileys
+antes de un nuevo intento de vinculacion.
 
 ## Controles
 
@@ -39,8 +52,9 @@ La reconciliacion exige:
 `documentos almacenados = procesados + duplicados + review + errores + en curso`
 
 Si Evolution anuncia un archivo pero los bytes no llegan, el mensaje permanece
-registrado, la diferencia queda visible y Evolution recibe un error temporal
-para reintentar la entrega.
+registrado como `ERROR_RETRYABLE`, la reconciliacion sigue balanceada y
+Evolution recibe un error temporal para reintentar la entrega. Cuando el
+original llega, ese error queda resuelto y el documento continua normalmente.
 
 Los Excel editables quedan en `runtime/exports/`, siempre ordenados por secuencia
 de llegada. Las reglas no confirmadas quedan como `PENDING_RULE` o `REVIEW`.

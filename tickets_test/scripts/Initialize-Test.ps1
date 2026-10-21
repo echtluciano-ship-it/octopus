@@ -19,8 +19,6 @@ $lines = @(
     "EVOLUTION_API_KEY=$(New-HexSecret 32)"
     "EVOLUTION_INSTANCE_TOKEN=$(New-HexSecret 32)"
     "TICKETS_WEBHOOK_TOKEN=$(New-HexSecret 32)"
-    "MINIO_ROOT_USER=octopus-test"
-    "MINIO_ROOT_PASSWORD=$(New-HexSecret 32)"
     "TICKETS_ACCEPT_ALL_TEST_GROUPS=true"
     "TICKETS_ALLOWED_GROUP_IDS="
 )

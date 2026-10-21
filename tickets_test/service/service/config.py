@@ -14,10 +14,7 @@ def _bool(name: str, default: bool = False) -> bool:
 class Settings:
     database_url: str = os.environ["TICKETS_DATABASE_URL"]
     webhook_token: str = os.environ["TICKETS_WEBHOOK_TOKEN"]
-    minio_endpoint: str = os.environ["TICKETS_MINIO_ENDPOINT"]
-    minio_access_key: str = os.environ["TICKETS_MINIO_ACCESS_KEY"]
-    minio_secret_key: str = os.environ["TICKETS_MINIO_SECRET_KEY"]
-    minio_bucket: str = os.getenv("TICKETS_MINIO_BUCKET", "octopus-tickets-test")
+    object_store_path: Path = Path(os.getenv("TICKETS_OBJECT_STORE_PATH", "/objects"))
     accounts_path: Path = Path(os.getenv("TICKETS_ACCOUNTS_PATH", "/run/config/tickets.accounts.json"))
     accept_all_test_groups: bool = _bool("TICKETS_ACCEPT_ALL_TEST_GROUPS")
     allowed_group_ids: tuple[str, ...] = tuple(

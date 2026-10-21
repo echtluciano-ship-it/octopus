@@ -46,7 +46,8 @@ if (-not $qr) {
 $encoded = $qr -replace '^data:image/[^;]+;base64,', ''
 $runtime = Join-Path $Root "runtime"
 New-Item -ItemType Directory -Force -Path $runtime | Out-Null
-$path = Join-Path $runtime "whatsapp-test-qr.png"
+$stamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$path = Join-Path $runtime "whatsapp-test-qr-$stamp.png"
 [IO.File]::WriteAllBytes($path, [Convert]::FromBase64String($encoded))
 Write-Host "QR ready: $path"
 Start-Process -FilePath $path
