@@ -1,11 +1,11 @@
 {
-  "database_sha256": "03bd05e66ecdf9272e73ea204bfefe6cd01866da33c97defc244c3f12afe9c87",
+  "database_sha256": "e40b3092b432240455dc5cbb2b1e0f22d5130b8bad16c0c52e683abb73acf29f",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "aea3d6722b62ec474bd5b65b5b6acabe8296eac1d6a2963e269a075be266c108",
     "data/billing_source.json": "b3367e37b69dc2b4713e165f5c4f594979bb95aa91760f17109099f82ce978f7",
-    "manual_rentability_operations.csv": "1cc6ed046257bf6a1ae72bdd579e19996683b8fb7480ab48c3fa9758c56e307c",
+    "manual_rentability_operations.csv": "500941526f8c29028268a9a0703f4ad90f6478b12eedebed1f9c95e45fb34747",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "994819bd5755a061205215a807256cfd2657eb0a97194b7cb789d6cdba4d2adf"
+    "source_documents.csv": "91fc71fd491f4db97c50fffa974f8496b845f2ce08a1272345ed4b1b4e1bfeac"
   },
   "controls": {
     "as_of": "2026-10-22",
@@ -3538,9 +3538,9 @@
       }
     },
     "published_clients": 94,
-    "valid_operations_all_dates": 300,
+    "valid_operations_all_dates": 301,
     "operation_states": {
-      "OK": 241,
+      "OK": 242,
       "OK_FC_NETA": 37,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
