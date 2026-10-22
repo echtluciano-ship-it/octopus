@@ -1,14 +1,14 @@
 {
-  "database_sha256": "d23930398967feb4d7a102095604d6828ba3c24aa3592fcefcfa1d9f439c183c",
+  "database_sha256": "03bd05e66ecdf9272e73ea204bfefe6cd01866da33c97defc244c3f12afe9c87",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "84b11c029fc0cccb4d68d84a767efa6e3022740bea6084d28ed24877b0f5fa94",
-    "data/billing_source.json": "5e36a2d67ab8f0f1f34100945df39f0005b5d9098e1fcbfe2891c3855c031a4c",
+    "data/FACTURACION OCTOPUS.xlsx": "aea3d6722b62ec474bd5b65b5b6acabe8296eac1d6a2963e269a075be266c108",
+    "data/billing_source.json": "b3367e37b69dc2b4713e165f5c4f594979bb95aa91760f17109099f82ce978f7",
     "manual_rentability_operations.csv": "1cc6ed046257bf6a1ae72bdd579e19996683b8fb7480ab48c3fa9758c56e307c",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "bc2660d1e2ba1207d30e8c11bc63fc7232ef5202b7134d0db30779af8315ebab"
+    "source_documents.csv": "994819bd5755a061205215a807256cfd2657eb0a97194b7cb789d6cdba4d2adf"
   },
   "controls": {
-    "as_of": "2026-10-21",
+    "as_of": "2026-10-22",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3297906768.12,
-        "billing_records": 199,
-        "validated_net": 2281262446.0,
-        "profit": 136085940.0,
-        "profitability": 0.05965378522695411,
-        "valid_operations": 55,
+        "billing_total": 3549615874.95,
+        "billing_records": 230,
+        "validated_net": 2516284173.0,
+        "profit": 154028010.0,
+        "profitability": 0.06121248611454029,
+        "valid_operations": 61,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3263,9 +3263,17 @@
           {
             "client_name": "MINETECH SRL",
             "client_key": "MINETECH",
-            "facturacion_validada": 3997570.0,
-            "ganancia_octopus": 375947.0,
-            "rentabilidad": 0.0940438816581073,
+            "facturacion_validada": 10020481.0,
+            "ganancia_octopus": 942981.0,
+            "rentabilidad": 0.09410536280643614,
+            "operaciones": 2
+          },
+          {
+            "client_name": "DGSAPIENS S.A.S",
+            "client_key": "DGSAPIENS",
+            "facturacion_validada": 17302493.0,
+            "ganancia_octopus": 1545987.0,
+            "rentabilidad": 0.08935053463104999,
             "operaciones": 1
           },
           {
@@ -3311,10 +3319,10 @@
           {
             "client_name": "Draconis",
             "client_key": "DRACONIS",
-            "facturacion_validada": 24097628.0,
-            "ganancia_octopus": 1925065.0,
-            "rentabilidad": 0.07988607841402481,
-            "operaciones": 1
+            "facturacion_validada": 96842742.0,
+            "ganancia_octopus": 7728026.0,
+            "rentabilidad": 0.07979974379494542,
+            "operaciones": 2
           },
           {
             "client_name": "Star Medical",
@@ -3397,20 +3405,12 @@
             "operaciones": 1
           },
           {
-            "client_name": "MAGTIK S A",
-            "client_key": "MAGTIK",
-            "facturacion_validada": 5222102.0,
-            "ganancia_octopus": 316784.0,
-            "rentabilidad": 0.060662162477868105,
-            "operaciones": 1
-          },
-          {
-            "client_name": "DYKTEL S.A.",
-            "client_key": "DYKTEL",
-            "facturacion_validada": 15011350.0,
-            "ganancia_octopus": 900681.0,
-            "rentabilidad": 0.06,
-            "operaciones": 1
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 251037564.0,
+            "ganancia_octopus": 16761864.0,
+            "rentabilidad": 0.06677034198754414,
+            "operaciones": 2
           }
         ],
         "billing_ranking": [
@@ -3433,10 +3433,22 @@
             "registros": 22
           },
           {
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 226124159.16,
+            "registros": 24
+          },
+          {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
             "facturacion": 179857472.76,
             "registros": 3
+          },
+          {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 165289254.51,
+            "registros": 5
           },
           {
             "client_name": "LX",
@@ -3475,12 +3487,6 @@
             "registros": 6
           },
           {
-            "client_name": "Centro Médico Amenabar",
-            "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion": 124004376.66,
-            "registros": 14
-          },
-          {
             "client_name": "Drogueria Meta",
             "client_key": "DROGUERIA META",
             "facturacion": 120028613.71000001,
@@ -3497,12 +3503,6 @@
             "client_key": "MEDPHARMA",
             "facturacion": 91157351.31,
             "registros": 8
-          },
-          {
-            "client_name": "DAUMAS MOTOFLEX S.R.L.",
-            "client_key": "DAUMAS MOTOFLEX",
-            "facturacion": 90917453.97,
-            "registros": 3
           },
           {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
@@ -3529,10 +3529,10 @@
             "registros": 4
           },
           {
-            "client_name": "NUKE MEDICA S.R.L.",
-            "client_key": "NUKE MEDICA",
-            "facturacion": 42001052.32,
-            "registros": 1
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 46364094.94,
+            "registros": 12
           }
         ]
       }
