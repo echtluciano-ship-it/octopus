@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from service.extract import parse
+from service.human_review import merge_review_fields
 from service.ingest import ingest
 from service.workflow import classify
 
@@ -320,6 +321,51 @@ class ExtractionRulesTests(unittest.TestCase):
             CONFIG,
         )
         self.assertEqual(result["identifier_value"], "5083f1df-d868-5156-9b51-d840bcaedacc")
+
+    def test_identifier_value_may_be_on_the_next_line(self) -> None:
+        result = parse(
+            """Comprobante de transferencia
+            Numero de control
+            7L8GYKNX4Z6838EQNMPRZ5
+            17/10/2026
+            $ 730.000
+            Cuenta origen
+            Fabiola Andrea Muñoz Arias
+            CUIT 23-95610554-4
+            Cuenta destino
+            Cobros Jmc Sa
+            CVU 0000155300000000005630
+            Supervielle""",
+            CONFIG,
+        )
+        self.assertEqual(result["identifier_type"], "receipt_number")
+        self.assertEqual(result["identifier_value"], "7L8GYKNX4Z6838EQNMPRZ5")
+
+    def test_human_review_recomputes_missing_fields(self) -> None:
+        reviewed = merge_review_fields(
+            {
+                "document_type": "transfer",
+                "ticket_date": None,
+                "amount_cents": None,
+                "identifier_value": None,
+                "full_name": None,
+                "tax_id": None,
+                "origin_bank": None,
+                "destination_account_key": None,
+            },
+            {
+                "ticket_date": "2026-10-21",
+                "amount_cents": 134_880_000,
+                "identifier_type": "coelsa_id",
+                "identifier_value": "Z6OLMDN371GO3W5Y9E7RQ5",
+                "full_name": "Silvia Nelida Carranza",
+                "tax_id": "27-12640480-3",
+                "origin_bank": "Naranja X",
+                "destination_account_key": "principal",
+            },
+        )
+        self.assertEqual(reviewed["missing_fields"], [])
+        self.assertEqual(reviewed["account_matches"], ["principal"])
 
     def test_sender_after_standalone_de_label(self) -> None:
         result = parse(

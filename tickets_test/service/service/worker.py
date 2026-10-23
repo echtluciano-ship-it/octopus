@@ -10,6 +10,7 @@ from service.config import settings
 from service.db import connection
 from service.export_excel import generate
 from service.extract import EXTRACTOR_VERSION, ocr, parse
+from service.human_review import latest_review_for_sha, merge_review_fields
 from service.object_store import get_original
 from service.workflow import classify, queue_shadow_action, transition
 
@@ -50,7 +51,7 @@ def claim() -> dict | None:
 def process(job: dict) -> None:
     with connection() as conn:
         document = conn.execute(
-            "SELECT object_key,mime_type FROM ticket_documents WHERE document_id=%s",
+            "SELECT object_key,mime_type,sha256 FROM ticket_documents WHERE document_id=%s",
             (job["document_id"],),
         ).fetchone()
     content = get_original(document["object_key"])
@@ -58,6 +59,10 @@ def process(job: dict) -> None:
     if supported:
         ocr_text = ocr(content, document["mime_type"])
         extracted = parse(ocr_text, settings.account_config())
+        with connection() as conn:
+            human_review = latest_review_for_sha(conn, document["sha256"])
+        if human_review:
+            extracted = merge_review_fields(extracted, human_review["fields"])
         status, reason = classify(extracted, settings.account_config())
     else:
         ocr_text = ""
@@ -76,11 +81,19 @@ def process(job: dict) -> None:
         }
         status = "REVIEW"
         reason = f"Formato no automatizado en TEST: {document['mime_type']}."
+        human_review = None
     evidence = {
         "missing_fields": extracted.get("missing_fields", []),
         "account_matches": extracted.get("account_matches", []),
     }
+    if human_review:
+        evidence["human_correction_id"] = human_review["correction_id"]
+        evidence["correction_key"] = human_review["correction_key"]
     with connection() as conn:
+        extraction_attempt = conn.execute(
+            "SELECT COALESCE(MAX(attempt), 0) + 1 AS value FROM ticket_extractions WHERE document_id=%s",
+            (job["document_id"],),
+        ).fetchone()["value"]
         conn.execute(
             """INSERT INTO ticket_extractions(
                  document_id,attempt,document_type,ticket_date,amount_cents,
@@ -88,13 +101,17 @@ def process(job: dict) -> None:
                  destination_account_key,observations,ocr_text,confidence,evidence,extractor_version
                ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s)""",
             (
-                job["document_id"], job["attempts"], extracted.get("document_type"),
+                job["document_id"], extraction_attempt, extracted.get("document_type"),
                 extracted.get("ticket_date"), extracted.get("amount_cents"),
                 extracted.get("identifier_type"), extracted.get("identifier_value"),
                 extracted.get("full_name"), extracted.get("tax_id"), extracted.get("origin_bank"),
                 extracted.get("destination_account_key"), reason, ocr_text,
-                json.dumps({"mode": "deterministic_ocr_rules", "human_validated": False}),
-                json.dumps(evidence), EXTRACTOR_VERSION,
+                json.dumps({
+                    "mode": "human_visual_review" if human_review else "deterministic_ocr_rules",
+                    "human_validated": bool(human_review),
+                }),
+                json.dumps(evidence),
+                f"{EXTRACTOR_VERSION}+human-review" if human_review else EXTRACTOR_VERSION,
             ),
         )
         transition(

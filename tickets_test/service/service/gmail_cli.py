@@ -72,6 +72,27 @@ Luciano
 PRUEBA DEL SISTEMA OCTOPUS - TICKETS
 """
 
+AUDITED_SUBJECT = "PRUEBA OCTOPUS - TICKETS - 20 comprobantes auditados"
+AUDITED_BODY = """Hola Érika,
+
+Te envío una nueva versión de la planilla única con los 20 comprobantes, revisados nuevamente contra cada archivo original.
+
+Resultado de esta auditoría:
+- 20 comprobantes reconciliados
+- 15 casos completos
+- 5 casos en REVIEW porque el comprobante original no muestra uno o más datos obligatorios
+- 0 comprobantes perdidos
+
+Los casos completos están marcados en verde. Los casos REVIEW están marcados en rojo y detallan en Observaciones qué dato falta confirmar.
+
+Este único Excel editable reemplaza todas las versiones anteriores de esta prueba.
+
+Gracias,
+Luciano
+
+PRUEBA DEL SISTEMA OCTOPUS - TICKETS
+"""
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="OCTOPUS Tickets Gmail outbox")
@@ -82,6 +103,8 @@ def main() -> None:
     corrected.add_argument("attachment")
     editable = subparsers.add_parser("queue-erika-editable")
     editable.add_argument("attachment")
+    audited = subparsers.add_parser("queue-erika-audited")
+    audited.add_argument("attachment")
     send = subparsers.add_parser("send")
     send.add_argument("action_id", type=int)
     args = parser.parse_args()
@@ -111,6 +134,15 @@ def main() -> None:
             body=EDITABLE_BODY,
             attachments=[args.attachment],
             idempotency_key="email:erika:erika-20-2026-10-23:editable-workbook:v3",
+        )
+        print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
+    elif args.command == "queue-erika-audited":
+        action_id = queue_email(
+            recipient=ERIKA,
+            subject=AUDITED_SUBJECT,
+            body=AUDITED_BODY,
+            attachments=[args.attachment],
+            idempotency_key="email:erika:erika-20-2026-10-23:audited-workbook:v4",
         )
         print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
     else:

@@ -13,7 +13,7 @@ from pdf2image import convert_from_bytes
 from PIL import Image, ImageEnhance, ImageOps
 
 
-EXTRACTOR_VERSION = "ocr-rules-v4"
+EXTRACTOR_VERSION = "ocr-rules-v5"
 BANKS = (
     ("dupondio", "Dupondio"),
     ("mercado pago", "Mercado Pago"),
@@ -68,8 +68,11 @@ def ocr(content: bytes, mime_type: str) -> str:
                 check=False,
                 timeout=30,
             ).stdout.decode("utf-8", errors="replace").strip()
-            if len(embedded) >= 20:
-                chunks.append(embedded)
+            if len(embedded) >= 80:
+                # Digital PDF text is materially more reliable than OCR over a
+                # rendered page. Mixing both created conflicting identifiers
+                # from otherwise exact banking receipts.
+                return embedded
         except (OSError, subprocess.SubprocessError):
             pass
         images = convert_from_bytes(content, dpi=300, first_page=1, last_page=3)
@@ -184,12 +187,12 @@ def _identifier(text: str) -> tuple[str | None, str | None, list[str]]:
     token = r"([A-Z0-9\[\]|}{-]{5,})"
     patterns = (
         ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+la\s+" + token + r"\s*\n?\s*operaci[oó]n"),
-        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+(?:la\s+)?operaci[oó]n(?:\s+de\s+[^\n]+)?\s*:?[ ]*" + token),
-        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+transacci[oó]n\s*:?[ ]*" + token),
-        ("operation_number", r"\bid\.?\s*op\.?\s*:?[ ]*" + token),
-        ("receipt_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*(?:de\s+)?comprobante\s*:?[ ]*" + token),
-        ("receipt_number", r"n[uú]mero\s+de\s+control\s*:?[ ]*" + token),
-        ("coelsa_id", r"(?:id\s+coelsa|coelsa\s*id)\s*:?[ ]*" + token),
+        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+(?:la\s+)?operaci[oó]n(?:\s+de\s+[^\n]+)?\s*:?\s*" + token),
+        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+transacci[oó]n\s*:?\s*" + token),
+        ("operation_number", r"\bid\.?\s*op\.?\s*:?\s*" + token),
+        ("receipt_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*(?:de\s+)?comprobante\s*:?\s*" + token),
+        ("receipt_number", r"n[uú]mero\s+de\s+control\s*:?\s*" + token),
+        ("coelsa_id", r"(?:id\s+coelsa|coelsa\s*id)\s*:?\s*" + token),
     )
     for kind, pattern in patterns:
         candidates: list[str] = []
