@@ -1,14 +1,14 @@
 {
-  "database_sha256": "e40b3092b432240455dc5cbb2b1e0f22d5130b8bad16c0c52e683abb73acf29f",
+  "database_sha256": "f2fbc25b80141689a39cc18f7b666cf9eaf3777c7c30b9389347e4f0fdcbb3d7",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "aea3d6722b62ec474bd5b65b5b6acabe8296eac1d6a2963e269a075be266c108",
-    "data/billing_source.json": "b3367e37b69dc2b4713e165f5c4f594979bb95aa91760f17109099f82ce978f7",
-    "manual_rentability_operations.csv": "500941526f8c29028268a9a0703f4ad90f6478b12eedebed1f9c95e45fb34747",
+    "data/FACTURACION OCTOPUS.xlsx": "a41f3b2cf7f2ce5525dbaaadfc556ea376e6b24aa9006ad625e771f96d73534c",
+    "data/billing_source.json": "c2ebe44b3fcbeb32a293b81988fc79305af90e0e4ca480ec1f3f5424f674db3c",
+    "manual_rentability_operations.csv": "d90b40efae8631c529d3acb89545935bf618dd880b0abcf3eda50e87c9c827b7",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "91fc71fd491f4db97c50fffa974f8496b845f2ce08a1272345ed4b1b4e1bfeac"
+    "source_documents.csv": "7300f0975e107078c1b2ae7d6bb952a123dca343ba7b8210deccf41249b6a838"
   },
   "controls": {
-    "as_of": "2026-10-22",
+    "as_of": "2026-10-23",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3247,10 +3247,10 @@
       "2026-10": {
         "billing_total": 3549615874.95,
         "billing_records": 230,
-        "validated_net": 2516284173.0,
-        "profit": 154028010.0,
-        "profitability": 0.06121248611454029,
-        "valid_operations": 61,
+        "validated_net": 2855295810.0,
+        "profit": 173413827.0,
+        "profitability": 0.06073410201235857,
+        "valid_operations": 67,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3283,14 +3283,6 @@
             "ganancia_octopus": 3407199.0,
             "rentabilidad": 0.08442067225802644,
             "operaciones": 2
-          },
-          {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion_validada": 101491091.0,
-            "ganancia_octopus": 8560370.0,
-            "rentabilidad": 0.0843460240268774,
-            "operaciones": 1
           },
           {
             "client_name": "Cemair",
@@ -3365,6 +3357,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion_validada": 140353891.0,
+            "ganancia_octopus": 10503510.0,
+            "rentabilidad": 0.07483590177061782,
+            "operaciones": 2
+          },
+          {
             "client_name": "ASHI S.A",
             "client_key": "ASHI",
             "facturacion_validada": 9500724.0,
@@ -3405,11 +3405,11 @@
             "operaciones": 1
           },
           {
-            "client_name": "Escalum",
-            "client_key": "ESCALUM",
-            "facturacion_validada": 251037564.0,
-            "ganancia_octopus": 16761864.0,
-            "rentabilidad": 0.06677034198754414,
+            "client_name": "MAGTIK S A",
+            "client_key": "MAGTIK",
+            "facturacion_validada": 36968805.0,
+            "ganancia_octopus": 2539053.0,
+            "rentabilidad": 0.06868095952790468,
             "operaciones": 2
           }
         ],
@@ -3538,9 +3538,9 @@
       }
     },
     "published_clients": 94,
-    "valid_operations_all_dates": 301,
+    "valid_operations_all_dates": 303,
     "operation_states": {
-      "OK": 242,
+      "OK": 244,
       "OK_FC_NETA": 37,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
