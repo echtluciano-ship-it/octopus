@@ -65,6 +65,13 @@ original llega, ese error queda resuelto y el documento continua normalmente.
 
 Los Excel editables quedan en `runtime/exports/`, siempre ordenados por secuencia
 de llegada. Las reglas no confirmadas quedan como `PENDING_RULE` o `REVIEW`.
+Cada lote genera un `TICKETS_ERIKA_<grupo>.xlsx` editable por cada grupo de
+WhatsApp. Cada archivo conserva el orden persistido de llegada de ese grupo y
+agrega observaciones para los casos no correctos. El `manifest.json` contiene
+`delivery_gate`: el correo automatico debe permanecer bloqueado salvo que
+`delivery_ready` sea verdadero, la suma de filas de todos los grupos coincida
+con la cantidad recibida y cada grupo tenga `order_verified=true`. Los archivos
+de control y por cuenta son internos y no se adjuntan al correo de Erika.
 
 ## Gmail TEST
 

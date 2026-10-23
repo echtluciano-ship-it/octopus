@@ -47,6 +47,7 @@ services:
       TICKETS_ACCOUNTS_PATH: /run/config/tickets.accounts.json
       TICKETS_ACCEPT_ALL_TEST_GROUPS: ${TICKETS_ACCEPT_ALL_TEST_GROUPS:-false}
       TICKETS_ALLOWED_GROUP_IDS: ${TICKETS_ALLOWED_GROUP_IDS:-}
+      TICKETS_GROUP_NAMES: ${TICKETS_GROUP_NAMES:-}
       TICKETS_EXPORT_DIR: /exports
       TICKETS_GMAIL_CREDENTIALS_PATH: /run/gmail/credentials.json
       TICKETS_GMAIL_TOKEN_PATH: /run/gmail/token.json

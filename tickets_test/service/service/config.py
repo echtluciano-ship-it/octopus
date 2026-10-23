@@ -10,6 +10,17 @@ def _bool(name: str, default: bool = False) -> bool:
     return os.getenv(name, str(default)).lower() in {"1", "true", "yes"}
 
 
+def _group_names() -> tuple[tuple[str, str], ...]:
+    pairs: list[tuple[str, str]] = []
+    for item in os.getenv("TICKETS_GROUP_NAMES", "").split(";"):
+        if "|" not in item:
+            continue
+        group_id, name = (value.strip() for value in item.split("|", 1))
+        if group_id and name:
+            pairs.append((group_id, name))
+    return tuple(pairs)
+
+
 @dataclass(frozen=True)
 class Settings:
     database_url: str = os.environ["TICKETS_DATABASE_URL"]
@@ -20,6 +31,7 @@ class Settings:
     allowed_group_ids: tuple[str, ...] = tuple(
         value.strip() for value in os.getenv("TICKETS_ALLOWED_GROUP_IDS", "").split(",") if value.strip()
     )
+    group_names: tuple[tuple[str, str], ...] = _group_names()
     export_dir: Path = Path(os.getenv("TICKETS_EXPORT_DIR", "/exports"))
     gmail_credentials_path: Path = Path(
         os.getenv("TICKETS_GMAIL_CREDENTIALS_PATH", "/run/gmail/credentials.json")
@@ -40,6 +52,9 @@ class Settings:
 
     def account_config(self) -> dict:
         return json.loads(self.accounts_path.read_text(encoding="utf-8"))
+
+    def group_name(self, group_id: str, fallback: str | None = None) -> str:
+        return dict(self.group_names).get(group_id) or fallback or group_id
 
 
 settings = Settings()

@@ -1,7 +1,12 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
+from openpyxl import load_workbook
+
+from service.export_excel import _write_erika, evaluate_delivery_gate
 from service.extract import parse
 from service.human_review import merge_review_fields
 from service.ingest import ingest
@@ -142,6 +147,97 @@ class ExtractionRulesTests(unittest.TestCase):
             ("WHATSAPP_REACT_DUPLICATE", "⛔️"),
         )
         self.assertIsNone(reaction_for_status("REVIEW"))
+
+    def test_delivery_gate_requires_complete_ordered_terminal_rows(self) -> None:
+        rows = [
+            {
+                "document_id": 10,
+                "arrival_sequence": 100,
+                "attachment_index": 0,
+                "status": "READY_FOR_SHEET",
+                "extraction_id": 1,
+                "group_id": "group-a@g.us",
+                "group_name": "Tickets A",
+            },
+            {
+                "document_id": 11,
+                "arrival_sequence": 101,
+                "attachment_index": 0,
+                "status": "DUPLICATE_CONFIRMED",
+                "extraction_id": 1,
+                "group_id": "group-b@g.us",
+                "group_name": "Tickets B",
+            },
+        ]
+        result = evaluate_delivery_gate(rows)
+        self.assertTrue(result["delivery_ready"])
+        self.assertTrue(result["order_verified"])
+        self.assertEqual(result["received_documents"], result["accounted_documents"])
+        self.assertEqual(result["group_count"], 2)
+        self.assertTrue(all(group["order_verified"] for group in result["groups"]))
+
+    def test_delivery_gate_blocks_in_progress_missing_and_reordered_rows(self) -> None:
+        rows = [
+            {
+                "document_id": 12,
+                "arrival_sequence": 102,
+                "attachment_index": 0,
+                "status": "PROCESSING",
+                "extraction_id": None,
+                "group_id": "group-a@g.us",
+                "group_name": "Tickets A",
+            },
+            {
+                "document_id": 11,
+                "arrival_sequence": 101,
+                "attachment_index": 0,
+                "status": "REVIEW",
+                "extraction_id": None,
+                "group_id": "group-a@g.us",
+                "group_name": "Tickets A",
+            },
+        ]
+        result = evaluate_delivery_gate(rows)
+        self.assertFalse(result["delivery_ready"])
+        codes = {item["code"] for item in result["blockers"]}
+        self.assertIn("GROUP_ORDER_MISMATCH", codes)
+        self.assertIn("NON_DELIVERABLE_STATUS", codes)
+        self.assertIn("MISSING_EXTRACTION", codes)
+
+    def test_erika_workbook_preserves_arrival_order_and_comments(self) -> None:
+        rows = [
+            {
+                "document_id": 10,
+                "status": "READY_FOR_SHEET",
+                "ticket_date": None,
+                "amount": 1000,
+                "identifier_value": "PRIMERO",
+                "full_name": "Persona Uno",
+                "tax_id": "20-00000000-1",
+                "origin_bank": "Banco Uno",
+                "review_reason": "",
+            },
+            {
+                "document_id": 11,
+                "status": "DUPLICATE_CONFIRMED",
+                "ticket_date": None,
+                "amount": 2000,
+                "identifier_value": "SEGUNDO",
+                "full_name": "Persona Dos",
+                "tax_id": "12345678",
+                "origin_bank": "Banco Provincia",
+                "review_reason": "identical SHA-256",
+            },
+        ]
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "tickets.xlsx"
+            _write_erika(path, rows)
+            sheet = load_workbook(path, data_only=True)["Tickets"]
+            self.assertEqual(sheet["C2"].value, "PRIMERO")
+            self.assertEqual(sheet["C3"].value, "SEGUNDO")
+            self.assertEqual(sheet["E3"].value, "12345678")
+            self.assertIn("DUPLICADO", sheet["G3"].value)
+            self.assertFalse(sheet.protection.sheet)
 
     def test_conflicting_coelsa_ocr_passes_require_review(self) -> None:
         result = parse(

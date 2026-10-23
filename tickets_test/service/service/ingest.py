@@ -113,6 +113,10 @@ def _message_parts(payload: dict[str, Any]) -> dict[str, Any]:
     return {
         "instance": str(payload.get("instance") or "unknown"),
         "remote_jid": remote_jid,
+        "group_name": settings.group_name(
+            remote_jid,
+            str(data.get("groupName") or data.get("chatName") or data.get("subject") or "") or None,
+        ),
         "message_id": provider_message_id,
         "participant": str(key.get("participant") or data.get("participant") or ""),
         "sender_name": data.get("pushName"),
@@ -259,7 +263,7 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
                 event_id,
                 parts["instance"],
                 parts["remote_jid"],
-                parts["remote_jid"],
+                parts["group_name"],
                 parts["message_id"],
                 parts["participant"],
                 parts["sender_name"],

@@ -28,6 +28,7 @@ $lines = @(
     "TICKETS_WEBHOOK_TOKEN=$(New-HexSecret 32)"
     "TICKETS_ACCEPT_ALL_TEST_GROUPS=true"
     "TICKETS_ALLOWED_GROUP_IDS="
+    "TICKETS_GROUP_NAMES="
 )
 [IO.File]::WriteAllLines($EnvPath, $lines, [Text.UTF8Encoding]::new($false))
 Write-Host "Generated isolated TEST secrets and runtime folders."
