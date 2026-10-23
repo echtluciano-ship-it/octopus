@@ -48,9 +48,15 @@ services:
       TICKETS_ACCEPT_ALL_TEST_GROUPS: ${TICKETS_ACCEPT_ALL_TEST_GROUPS:-false}
       TICKETS_ALLOWED_GROUP_IDS: ${TICKETS_ALLOWED_GROUP_IDS:-}
       TICKETS_EXPORT_DIR: /exports
+      TICKETS_GMAIL_CREDENTIALS_PATH: /run/gmail/credentials.json
+      TICKETS_GMAIL_TOKEN_PATH: /run/gmail/token.json
+      TICKETS_GMAIL_ATTACHMENT_ROOT: /mail-packages
+      TICKETS_GMAIL_ALLOWED_RECIPIENTS: ${TICKETS_GMAIL_ALLOWED_RECIPIENTS:-oficinaoctopus13@gmail.com}
     volumes: &tickets_volumes
       - ../jarvis/config/tickets.accounts.local.json:/run/config/tickets.accounts.json:ro
       - ./runtime/exports:/exports
+      - ./runtime/gmail:/run/gmail
+      - ./runtime/packages:/mail-packages:ro
       - ticket_objects:/objects
     depends_on:
       postgres:
@@ -84,6 +90,19 @@ services:
     depends_on:
       tickets-api:
         condition: service_healthy
+    networks: [tickets]
+
+  tickets-mailer:
+    profiles: [gmail]
+    build: *tickets_build
+    command: ["python", "-m", "service.gmail_cli", "--help"]
+    environment: *tickets_environment
+    volumes: *tickets_volumes
+    ports:
+      - "127.0.0.1:8765:8765"
+    depends_on:
+      tickets-migrate:
+        condition: service_completed_successfully
     networks: [tickets]
 
   evolution:

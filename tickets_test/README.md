@@ -12,8 +12,9 @@ credenciales ni bases con OCTOPUS/Render.
 - Tickets worker: OCR, reglas deterministicas, clasificacion y Excel.
 - Redis: estado/cache de Evolution API.
 
-Las reacciones y los correos se guardan como acciones `BLOCKED_SHADOW`: este
-entorno no escribe en WhatsApp ni envia correo.
+Las reacciones siguen como acciones `BLOCKED_SHADOW`. El correo de prueba a
+Erika usa una outbox separada, destinatario allowlisted, adjuntos verificados
+por SHA-256 y OAuth oficial de Gmail con alcance limitado a envio.
 
 ## Arranque
 
@@ -62,3 +63,19 @@ original llega, ese error queda resuelto y el documento continua normalmente.
 
 Los Excel editables quedan en `runtime/exports/`, siempre ordenados por secuencia
 de llegada. Las reglas no confirmadas quedan como `PENDING_RULE` o `REVIEW`.
+
+## Gmail TEST
+
+El envio no reutiliza cookies del navegador ni guarda contrasenas. Requiere una
+autorizacion OAuth inicial y despues renueva el acceso mediante el token local,
+ignorado por Git.
+
+1. Habilitar Gmail API en un proyecto de Google Cloud.
+2. Crear un cliente OAuth `Desktop app` y guardar el JSON como
+   `runtime/gmail/credentials.json`.
+3. Ejecutar `scripts/Authorize-Gmail.ps1` y aceptar solamente `gmail.send`.
+4. Ejecutar `scripts/Send-ErikaTest.ps1` para encolar y enviar el paquete.
+
+La accion se identifica con una clave unica. Si el proceso se interrumpe durante
+la llamada a Gmail queda `DELIVERY_UNCERTAIN` y no se reenvia automaticamente,
+evitando duplicados silenciosos.

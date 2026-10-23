@@ -21,6 +21,22 @@ class Settings:
         value.strip() for value in os.getenv("TICKETS_ALLOWED_GROUP_IDS", "").split(",") if value.strip()
     )
     export_dir: Path = Path(os.getenv("TICKETS_EXPORT_DIR", "/exports"))
+    gmail_credentials_path: Path = Path(
+        os.getenv("TICKETS_GMAIL_CREDENTIALS_PATH", "/run/gmail/credentials.json")
+    )
+    gmail_token_path: Path = Path(
+        os.getenv("TICKETS_GMAIL_TOKEN_PATH", "/run/gmail/token.json")
+    )
+    gmail_attachment_root: Path = Path(
+        os.getenv("TICKETS_GMAIL_ATTACHMENT_ROOT", "/mail-packages")
+    )
+    gmail_allowed_recipients: tuple[str, ...] = tuple(
+        value.strip().lower()
+        for value in os.getenv(
+            "TICKETS_GMAIL_ALLOWED_RECIPIENTS", "oficinaoctopus13@gmail.com"
+        ).split(",")
+        if value.strip()
+    )
 
     def account_config(self) -> dict:
         return json.loads(self.accounts_path.read_text(encoding="utf-8"))
