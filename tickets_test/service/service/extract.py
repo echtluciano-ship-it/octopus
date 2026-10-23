@@ -259,6 +259,7 @@ def _labelled_name(text: str) -> str | None:
             continue
         cleaned = re.sub(r"^\([^)]{1,8}\)\s*", "", line)
         cleaned = re.sub(r"^(?:nx|prex)\s+", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ']+", "", cleaned)
         parts = cleaned.split()
         if len(parts) >= 4 and len(parts[0]) == 1 and parts[0].isupper():
             cleaned = " ".join(parts[1:])

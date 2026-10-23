@@ -159,6 +159,26 @@ class ExtractionRulesTests(unittest.TestCase):
         status, _ = classify(extracted, CONFIG)
         self.assertEqual(status, "WRONG_ACCOUNT_REVIEW")
 
+    def test_sender_name_ignores_ocr_icon_prefix(self) -> None:
+        result = parse(
+            """Comprobante de transferencia
+            15/septiembre/2026 a las 9:55
+            $ 3.664.058
+            Origen y destino
+            <3 Ratl Norberto Castillo
+            Mercado Pago
+            CUIT/CUIL: 20-41178892-0
+            CVU: 0000003100026869358786
+            WAYA SA
+            CUIT/CUIL: 30-71764239-9
+            CBU: 0000357302000000050311
+            N. de operacion de Mercado Pago
+            178137568403""",
+            CONFIG,
+        )
+        self.assertEqual(result["full_name"], "Ratl Norberto Castillo")
+        self.assertEqual(result["tax_id"], "20-41178892-0")
+
     def test_us_separators_are_supported(self) -> None:
         result = parse(
             """Transferencia a terceros Otro Banco
