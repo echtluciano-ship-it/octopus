@@ -4,6 +4,8 @@ import base64
 import hashlib
 import json
 import mimetypes
+import os
+import ssl
 from email.message import EmailMessage
 from pathlib import Path
 from typing import Any
@@ -100,8 +102,10 @@ def build_message(payload: dict[str, Any], idempotency_key: str) -> EmailMessage
 
 
 def gmail_service():
+    import httplib2
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
+    from google_auth_httplib2 import AuthorizedHttp
     from googleapiclient.discovery import build
 
     token_path = settings.gmail_token_path
@@ -113,7 +117,10 @@ def gmail_service():
         token_path.write_text(credentials.to_json(), encoding="utf-8")
     if not credentials.valid:
         raise RuntimeError("Gmail authorization is invalid or revoked.")
-    return build("gmail", "v1", credentials=credentials, cache_discovery=False)
+    ca_bundle = os.getenv("SSL_CERT_FILE", "/etc/ssl/certs/ca-certificates.crt")
+    transport = httplib2.Http(ca_certs=ca_bundle)
+    authorized_http = AuthorizedHttp(credentials, http=transport)
+    return build("gmail", "v1", http=authorized_http, cache_discovery=False)
 
 
 def send_action(action_id: int, *, service=None) -> dict[str, Any]:
@@ -131,6 +138,8 @@ def send_action(action_id: int, *, service=None) -> dict[str, Any]:
             return {"action_id": action_id, "status": "SENT", "already_sent": True}
         if row["delivery_status"] == "SENDING":
             raise RuntimeError("Previous delivery is uncertain; manual audit required before retry.")
+        if row["delivery_status"] == "DELIVERY_UNCERTAIN":
+            raise RuntimeError("Delivery is uncertain; manual audit required before retry.")
         conn.execute(
             """UPDATE action_outbox
                SET delivery_status='SENDING',attempts=attempts+1,last_error=NULL
@@ -146,12 +155,13 @@ def send_action(action_id: int, *, service=None) -> dict[str, Any]:
         provider = service or gmail_service()
         response = provider.users().messages().send(userId="me", body={"raw": raw}).execute()
     except Exception as exc:
+        status = "RETRYABLE_ERROR" if isinstance(exc, ssl.SSLCertVerificationError) else "DELIVERY_UNCERTAIN"
         with connection() as conn:
             conn.execute(
                 """UPDATE action_outbox
-                   SET delivery_status='DELIVERY_UNCERTAIN',last_error=%s
+                   SET delivery_status=%s,last_error=%s
                    WHERE action_id=%s""",
-                (str(exc), action_id),
+                (status, str(exc), action_id),
             )
             conn.commit()
         raise

@@ -52,6 +52,8 @@ services:
       TICKETS_GMAIL_TOKEN_PATH: /run/gmail/token.json
       TICKETS_GMAIL_ATTACHMENT_ROOT: /mail-packages
       TICKETS_GMAIL_ALLOWED_RECIPIENTS: ${TICKETS_GMAIL_ALLOWED_RECIPIENTS:-oficinaoctopus13@gmail.com}
+      REQUESTS_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
+      SSL_CERT_FILE: /etc/ssl/certs/ca-certificates.crt
     volumes: &tickets_volumes
       - ../jarvis/config/tickets.accounts.local.json:/run/config/tickets.accounts.json:ro
       - ./runtime/exports:/exports

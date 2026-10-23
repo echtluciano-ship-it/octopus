@@ -17,7 +17,8 @@ def main() -> None:
         str(credentials_path), scopes=[GMAIL_SEND_SCOPE]
     )
     credentials = flow.run_local_server(
-        host="0.0.0.0",
+        host="localhost",
+        bind_addr="0.0.0.0",
         port=8765,
         open_browser=False,
         authorization_prompt_message="Open this URL in your browser:\n{url}",
