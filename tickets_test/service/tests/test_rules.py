@@ -31,6 +31,26 @@ class ExtractionRulesTests(unittest.TestCase):
         self.assertFalse(result["event_inserted"])
         self.assertIsNone(result["event_id"])
 
+    def test_messages_outside_allowlist_are_rejected_before_persistence(self) -> None:
+        result = ingest(
+            {
+                "event": "messages.upsert",
+                "instance": "test",
+                "data": {
+                    "key": {
+                        "remoteJid": "120363999999999999@g.us",
+                        "id": "OUTSIDE-TEST-GROUP",
+                    },
+                    "messageTimestamp": 1_798_510_800,
+                    "message": {"conversation": "must remain outside the inbox"},
+                },
+            }
+        )
+        self.assertFalse(result["ticket"])
+        self.assertFalse(result["event_inserted"])
+        self.assertIsNone(result["event_id"])
+        self.assertIn("outside configured TEST groups", result["reason"])
+
     def test_identifier_priority_prefers_operation(self) -> None:
         result = parse(
             """Comprobante de transferencia
@@ -49,6 +69,31 @@ class ExtractionRulesTests(unittest.TestCase):
         self.assertEqual(result["identifier_value"], "OPERA123456")
         self.assertEqual(result["amount_cents"], 123_456_789)
         self.assertEqual(result["destination_account_key"], "principal")
+
+    def test_conflicting_coelsa_ocr_passes_require_review(self) -> None:
+        result = parse(
+            """Comprobante de transferencia
+            22/10/2026
+            $ 752.000
+            Cuenta origen
+            Leonardo Matias Martinez
+            CUIL 20-42636310-1
+            Cuenta destino
+            Cobros Jmc Sa
+            CVU 0000155300000000005630
+            COELSA ID
+            8DOQ619L363G0N3VN7]JZ5R
+            COELSA ID
+            8D0Q619L363G0OQ3VN7]Z5R
+            Naranja X""",
+            CONFIG,
+        )
+        self.assertEqual(result["identifier_type"], "coelsa_id")
+        self.assertIsNone(result["identifier_value"])
+        self.assertEqual(len(result["identifier_candidates"]), 2)
+        self.assertIn("identifier_value", result["missing_fields"])
+        status, _ = classify(result, CONFIG)
+        self.assertEqual(status, "REVIEW")
 
     def test_amount_never_selects_or_rejects_destination_account(self) -> None:
         extraction = {

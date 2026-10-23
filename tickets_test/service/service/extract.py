@@ -13,7 +13,7 @@ from pdf2image import convert_from_bytes
 from PIL import Image, ImageEnhance, ImageOps
 
 
-EXTRACTOR_VERSION = "ocr-rules-v3"
+EXTRACTOR_VERSION = "ocr-rules-v4"
 BANKS = (
     ("dupondio", "Dupondio"),
     ("mercado pago", "Mercado Pago"),
@@ -180,17 +180,20 @@ def _money(text: str) -> int | None:
     return max(standalone_values) if standalone_values else None
 
 
-def _identifier(text: str) -> tuple[str | None, str | None]:
+def _identifier(text: str) -> tuple[str | None, str | None, list[str]]:
+    token = r"([A-Z0-9\[\]|}{-]{5,})"
     patterns = (
-        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+la\s+([A-Z0-9-]{5,})\s*\n?\s*operaci[oó]n"),
-        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+(?:la\s+)?operaci[oó]n(?:\s+de\s+[^\n]+)?\s*:?[ ]*([A-Z0-9-]{5,})"),
-        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+transacci[oó]n\s*:?[ ]*([A-Z0-9-]{5,})"),
-        ("operation_number", r"\bid\.?\s*op\.?\s*:?[ ]*([A-Z0-9-]{5,})"),
-        ("receipt_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*(?:de\s+)?comprobante\s*:?[ ]*([A-Z0-9-]{5,})"),
-        ("receipt_number", r"n[uú]mero\s+de\s+control\s*:?[ ]*([A-Z0-9-]{5,})"),
-        ("coelsa_id", r"(?:id\s+coelsa|coelsa\s*id)\s*:?[ ]*([A-Z0-9-]{5,})"),
+        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+la\s+" + token + r"\s*\n?\s*operaci[oó]n"),
+        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+(?:la\s+)?operaci[oó]n(?:\s+de\s+[^\n]+)?\s*:?[ ]*" + token),
+        ("operation_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*de\s+transacci[oó]n\s*:?[ ]*" + token),
+        ("operation_number", r"\bid\.?\s*op\.?\s*:?[ ]*" + token),
+        ("receipt_number", r"\bn(?:ro|[uú]mero)?\s*[.*?°ºo'\"”’]*\s*(?:de\s+)?comprobante\s*:?[ ]*" + token),
+        ("receipt_number", r"n[uú]mero\s+de\s+control\s*:?[ ]*" + token),
+        ("coelsa_id", r"(?:id\s+coelsa|coelsa\s*id)\s*:?[ ]*" + token),
     )
     for kind, pattern in patterns:
+        candidates: list[str] = []
+        damaged = False
         for match in re.finditer(pattern, text, re.IGNORECASE):
             value = match.group(1).strip()
             if value.count("-") == 4 and not re.fullmatch(
@@ -198,8 +201,16 @@ def _identifier(text: str) -> tuple[str | None, str | None]:
                 value,
             ):
                 continue
-            return kind, value
-    return None, None
+            candidates.append(value)
+            damaged = damaged or re.fullmatch(r"[A-Z0-9-]+", value, re.IGNORECASE) is None
+        unique_by_normalized = {value.upper(): value for value in candidates}
+        unique = list(unique_by_normalized.values())
+        if not unique:
+            continue
+        if damaged or len(unique) > 1:
+            return kind, None, unique
+        return kind, unique[0], unique
+    return None, None, []
 
 
 def _sender_section(text: str) -> str:
@@ -320,7 +331,7 @@ def parse(text: str, account_config: dict) -> dict[str, Any]:
         document_type = "transfer"
     else:
         document_type = None
-    identifier_type, identifier_value = _identifier(text)
+    identifier_type, identifier_value, identifier_candidates = _identifier(text)
     account_key, account_matches = _account(text, account_config)
     result = {
         "document_type": document_type,
@@ -328,6 +339,7 @@ def parse(text: str, account_config: dict) -> dict[str, Any]:
         "amount_cents": _money(text),
         "identifier_type": identifier_type,
         "identifier_value": identifier_value,
+        "identifier_candidates": identifier_candidates,
         "full_name": _labelled_name(text),
         "tax_id": _tax_id(text, account_config),
         "origin_bank": _bank(text),

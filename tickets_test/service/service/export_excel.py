@@ -29,6 +29,13 @@ def _safe(value: str) -> str:
     return re.sub(r"[^A-Za-z0-9_-]+", "_", value).strip("_") or "sin_cuenta"
 
 
+def _prepare_output(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
+    for pattern in ("*.xlsx", "manifest.json"):
+        for existing in path.glob(pattern):
+            existing.unlink()
+
+
 def _deposit_group_key(origin_bank: str | None) -> str:
     plain = re.sub(r"[^a-z0-9]", "", (origin_bank or "").lower())
     if "macro" in plain:
@@ -177,6 +184,7 @@ def generate(source_batch: str | None = None, document_id: int | None = None) ->
         output = settings.export_dir / f"documento_{document_id}"
     else:
         output = settings.export_dir
+    _prepare_output(output)
     written: list[str] = []
     for key, items in groups.items():
         path = output / f"transferencias_{_safe(key)}.xlsx"

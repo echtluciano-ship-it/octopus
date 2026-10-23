@@ -28,7 +28,11 @@ class MediaNotAvailable(RuntimeError):
 
 def record_ingest_failure(payload: dict[str, Any], error: Exception) -> None:
     parts = _message_parts(payload)
-    if not parts["message_id"] or not parts["remote_jid"]:
+    if (
+        not parts["message_id"]
+        or not parts["remote_jid"]
+        or not _allowed_group(parts["remote_jid"])
+    ):
         return
     with connection() as conn:
         message = conn.execute(
@@ -194,11 +198,29 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             "ticket": False,
             "reason": f"event type {event_type!r} is outside the durable ticket inbox",
         }
+    parts = _message_parts(payload)
+    if not parts["message_id"]:
+        return {
+            "event_id": None,
+            "event_inserted": False,
+            "ticket": False,
+            "reason": "message has no provider identifier",
+        }
+    if not _allowed_group(parts["remote_jid"]):
+        return {
+            "event_id": None,
+            "event_inserted": False,
+            "ticket": False,
+            "reason": "message is outside configured TEST groups",
+        }
+
     clean_payload = _without_binary(payload)
     raw = _canonical_json(clean_payload)
     raw_sha = hashlib.sha256(raw.encode("utf-8")).hexdigest()
     key = event_key(payload, raw_sha)
-    parts = _message_parts(payload)
+    source = parts["source"]
+    source_system = source.get("system") or "whatsapp_evolution"
+    source_document_id = source.get("document_id") or parts["message_id"]
 
     with connection() as conn:
         event_row = conn.execute(
@@ -223,8 +245,7 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             conn.commit()
             return {"event_id": event_id, "event_inserted": inserted_event, "ticket": False}
 
-        target_group = _allowed_group(parts["remote_jid"])
-        expected = 1 if parts["media_node"] is not None and target_group else 0
+        expected = 1 if parts["media_node"] is not None else 0
         message_row = conn.execute(
             """
             INSERT INTO inbound_messages(
@@ -254,13 +275,6 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             ).fetchone()
         conn.commit()
 
-    if not target_group:
-        return {
-            "event_id": event_id,
-            "message_id": message_row["message_id"],
-            "ticket": False,
-            "reason": "message is outside configured TEST groups",
-        }
     if expected == 0:
         return {
             "event_id": event_id,
@@ -289,7 +303,6 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             (message_row["message_id"],),
         ).fetchone()
         if existing_document:
-            source = parts["source"]
             conn.execute(
                 """UPDATE ticket_documents
                       SET source_system=COALESCE(source_system,%s),
@@ -298,8 +311,8 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
                           source_batch=COALESCE(source_batch,%s)
                     WHERE document_id=%s""",
                 (
-                    source.get("system"),
-                    source.get("document_id"),
+                    source_system,
+                    source_document_id,
                     source.get("url"),
                     source.get("batch"),
                     existing_document["document_id"],
@@ -349,10 +362,10 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
                 status,
                 duplicate["document_id"] if duplicate else None,
                 reason,
-                parts["source"].get("system"),
-                parts["source"].get("document_id"),
-                parts["source"].get("url"),
-                parts["source"].get("batch"),
+                source_system,
+                source_document_id,
+                source.get("url"),
+                source.get("batch"),
             ),
         ).fetchone()
         document_id = document["document_id"]
