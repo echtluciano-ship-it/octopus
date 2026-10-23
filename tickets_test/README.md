@@ -12,7 +12,9 @@ credenciales ni bases con OCTOPUS/Render.
 - Tickets worker: OCR, reglas deterministicas, clasificacion y Excel.
 - Redis: estado/cache de Evolution API.
 
-Las reacciones siguen como acciones `BLOCKED_SHADOW`. El correo de prueba a
+Las reacciones (`❎` correcto, `❌` cuenta incorrecta y `⛔️` duplicado)
+siguen como acciones `BLOCKED_SHADOW`. Son marcas del mensaje original y nunca
+excluyen el comprobante de la planilla. El correo de prueba a
 Erika usa una outbox separada, destinatario allowlisted, adjuntos verificados
 por SHA-256 y OAuth oficial de Gmail con alcance limitado a envio.
 

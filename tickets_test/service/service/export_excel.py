@@ -160,14 +160,21 @@ def generate(
             SELECT d.document_id,d.status,d.original_filename,d.source_system,
                    d.source_document_id,d.source_url,d.source_batch,m.arrival_sequence,e.document_type,e.ticket_date,
                    e.amount_cents,e.identifier_type,e.identifier_value,e.full_name,e.tax_id,e.origin_bank,
-                   e.destination_account_key,e.observations
+                   e.destination_account_key,
+                   CASE WHEN d.status='DUPLICATE_CONFIRMED'
+                        THEN COALESCE(d.duplicate_reason,'Duplicado confirmado.')
+                        ELSE e.observations END AS observations
             FROM ticket_documents d
             JOIN inbound_messages m USING(message_id)
             JOIN LATERAL (
-                SELECT * FROM ticket_extractions x WHERE x.document_id=d.document_id
+                SELECT * FROM ticket_extractions x
+                WHERE x.document_id=COALESCE(d.duplicate_of,d.document_id)
                 ORDER BY attempt DESC LIMIT 1
             ) e ON true
-            WHERE d.status IN ('READY_FOR_SHEET','REVIEW','WRONG_ACCOUNT_REVIEW','CHECK_REVIEW')
+            WHERE d.status IN (
+                'READY_FOR_SHEET','REVIEW','WRONG_ACCOUNT_REVIEW','CHECK_REVIEW',
+                'DUPLICATE_CONFIRMED'
+            )
               {where_filter}
             ORDER BY m.arrival_sequence,d.attachment_index
             """,

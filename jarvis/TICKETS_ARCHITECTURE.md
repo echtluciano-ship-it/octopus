@@ -114,15 +114,19 @@ caida deja un intervalo explicito pendiente de recuperar, nunca un cierre OK.
 - Persona, monto o fecha aislados: nunca son prueba suficiente.
 - Coincidencia parcial: `REVIEW`.
 
-Las reacciones futuras se generan mediante outbox y requieren aprobacion. Los
-codigos U+274C (cuenta incorrecta) y U+2716 U+FE0F (duplicado) son distintos y
-deben vincularse al mensaje original correcto.
+Las reacciones se generan mediante outbox y deben vincularse al mensaje
+original correcto: `❌` para cuenta incorrecta, `⛔️` para duplicado confirmado
+y `❎` para ticket correcto. La reaccion es solo una marca en WhatsApp: ningun
+comprobante se descarta ni se omite de la planilla por ese motivo.
 
 ## Datos extraidos
 
 Transferencias conservan fecha ticket, monto, identificador con prioridad
 numero de operacion > numero de comprobante > ID Coelsa, nombre, CUIT, banco de
-origen y cuenta receptora. Se genera un Excel editable por cuenta receptora.
+origen y cuenta receptora. En comprobantes de Cuenta DNI/Banco Provincia, si el
+CUIT/CUIL del emisor no aparece pero existe un DNI explicitamente rotulado, se
+usa el DNI como respaldo en la columna CUIT; un CUIT/CUIL visible siempre tiene
+prioridad. Se genera un Excel editable por cuenta receptora.
 
 Depositos conservan fecha, importe, numero de comprobante y banco en un libro
 separado. Cheques se preservan y pasan a `CHECK_REVIEW`.

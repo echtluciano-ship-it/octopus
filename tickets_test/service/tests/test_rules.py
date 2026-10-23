@@ -5,7 +5,7 @@ import unittest
 from service.extract import parse
 from service.human_review import merge_review_fields
 from service.ingest import ingest
-from service.workflow import classify
+from service.workflow import classify, reaction_for_status
 
 
 CONFIG = {
@@ -70,6 +70,78 @@ class ExtractionRulesTests(unittest.TestCase):
         self.assertEqual(result["identifier_value"], "OPERA123456")
         self.assertEqual(result["amount_cents"], 123_456_789)
         self.assertEqual(result["destination_account_key"], "principal")
+
+    def test_cuenta_dni_uses_cuit_before_dni(self) -> None:
+        result = parse(
+            """Cuenta DNI - Banco Provincia
+            Comprobante de transferencia
+            Cuenta origen
+            Persona Prueba
+            DNI 12345678
+            CUIT/CUIL 20-12345678-9
+            Cuenta destino
+            Cobros Jmc Sa
+            CVU 0000155300000000005630
+            Fecha 21/10/2026
+            Monto $ 10.000
+            Numero de operacion OP123456
+            Banco Provincia""",
+            CONFIG,
+        )
+        self.assertEqual(result["tax_id"], "20-12345678-9")
+        self.assertEqual(result["tax_id_type"], "cuit")
+
+    def test_cuenta_dni_accepts_explicit_sender_dni_as_fallback(self) -> None:
+        result = parse(
+            """Cuenta DNI - Banco Provincia
+            Comprobante de transferencia
+            Cuenta origen
+            Persona Prueba
+            DNI 12345678
+            Cuenta destino
+            Cobros Jmc Sa
+            CVU 0000155300000000005630
+            Fecha 21/10/2026
+            Monto $ 10.000
+            Numero de operacion OP123456""",
+            CONFIG,
+        )
+        self.assertEqual(result["tax_id"], "12345678")
+        self.assertEqual(result["tax_id_type"], "dni")
+        self.assertNotIn("tax_id", result["missing_fields"])
+
+    def test_dni_is_not_invented_outside_cuenta_dni(self) -> None:
+        result = parse(
+            """Comprobante de transferencia
+            Cuenta origen
+            Persona Prueba
+            DNI 12345678
+            Cuenta destino
+            Cobros Jmc Sa
+            CVU 0000155300000000005630
+            Fecha 21/10/2026
+            Monto $ 10.000
+            Numero de operacion OP123456
+            Banco Galicia""",
+            CONFIG,
+        )
+        self.assertIsNone(result["tax_id"])
+        self.assertIsNone(result["tax_id_type"])
+
+    def test_whatsapp_reactions_match_erika_codes(self) -> None:
+        self.assertEqual(
+            reaction_for_status("READY_FOR_SHEET"),
+            ("WHATSAPP_REACT_CORRECT", "❎"),
+        )
+        self.assertEqual(
+            reaction_for_status("WRONG_ACCOUNT_REVIEW"),
+            ("WHATSAPP_REACT_WRONG_ACCOUNT", "❌"),
+        )
+        self.assertEqual(
+            reaction_for_status("DUPLICATE_CONFIRMED"),
+            ("WHATSAPP_REACT_DUPLICATE", "⛔️"),
+        )
+        self.assertIsNone(reaction_for_status("REVIEW"))
 
     def test_conflicting_coelsa_ocr_passes_require_review(self) -> None:
         result = parse(

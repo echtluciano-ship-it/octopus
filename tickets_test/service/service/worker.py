@@ -85,6 +85,7 @@ def process(job: dict) -> None:
     evidence = {
         "missing_fields": extracted.get("missing_fields", []),
         "account_matches": extracted.get("account_matches", []),
+        "sender_identity_type": extracted.get("tax_id_type"),
     }
     if human_review:
         evidence["human_correction_id"] = human_review["correction_id"]

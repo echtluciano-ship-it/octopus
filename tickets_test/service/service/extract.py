@@ -13,7 +13,7 @@ from pdf2image import convert_from_bytes
 from PIL import Image, ImageEnhance, ImageOps
 
 
-EXTRACTOR_VERSION = "ocr-rules-v5"
+EXTRACTOR_VERSION = "ocr-rules-v6"
 BANKS = (
     ("dupondio", "Dupondio"),
     ("mercado pago", "Mercado Pago"),
@@ -240,13 +240,26 @@ def _sender_section(text: str) -> str:
     return ""
 
 
-def _tax_id(text: str, account_config: dict) -> str | None:
+def _tax_id(text: str, account_config: dict) -> tuple[str | None, str | None]:
     section = _sender_section(text)
     match = re.search(r"\b(?:CUIT(?:/CUIL)?\s*:?[ ]*)?(\d{2}[- ]?\d{8}[- ]?\d)\b", section, re.IGNORECASE)
-    if not match:
-        return None
-    digits = re.sub(r"\D", "", match.group(1))
-    return f"{digits[:2]}-{digits[2:10]}-{digits[10]}"
+    if match:
+        digits = re.sub(r"\D", "", match.group(1))
+        return f"{digits[:2]}-{digits[2:10]}-{digits[10]}", "cuit"
+
+    # Cuenta DNI receipts may expose only the sender's DNI. It is a valid
+    # fallback for Erika's CUIT column, but never overrides a visible CUIT/CUIL
+    # and is only accepted when explicitly labelled inside the origin section.
+    plain = _plain(text)
+    if "cuenta dni" in plain or "banco provincia" in plain:
+        dni_match = re.search(
+            r"\bDNI(?:\s+(?:N(?:RO|UMERO)?)[.*?°ºo'\"”’]*)?\s*:?[ ]*(\d{7,8})\b",
+            section,
+            re.IGNORECASE,
+        )
+        if dni_match:
+            return dni_match.group(1), "dni"
+    return None, None
 
 
 def _labelled_name(text: str) -> str | None:
@@ -336,6 +349,7 @@ def parse(text: str, account_config: dict) -> dict[str, Any]:
         document_type = None
     identifier_type, identifier_value, identifier_candidates = _identifier(text)
     account_key, account_matches = _account(text, account_config)
+    tax_id, tax_id_type = _tax_id(text, account_config)
     result = {
         "document_type": document_type,
         "ticket_date": _date(text),
@@ -344,7 +358,8 @@ def parse(text: str, account_config: dict) -> dict[str, Any]:
         "identifier_value": identifier_value,
         "identifier_candidates": identifier_candidates,
         "full_name": _labelled_name(text),
-        "tax_id": _tax_id(text, account_config),
+        "tax_id": tax_id,
+        "tax_id_type": tax_id_type,
         "origin_bank": _bank(text),
         "destination_account_key": account_key,
         "account_matches": account_matches,

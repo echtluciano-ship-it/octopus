@@ -9,6 +9,12 @@ from service.db import connection
 
 TERMINAL_REVIEW = {"REVIEW", "WRONG_ACCOUNT_REVIEW", "CHECK_REVIEW"}
 
+REACTION_BY_STATUS = {
+    "READY_FOR_SHEET": ("WHATSAPP_REACT_CORRECT", "❎"),
+    "WRONG_ACCOUNT_REVIEW": ("WHATSAPP_REACT_WRONG_ACCOUNT", "❌"),
+    "DUPLICATE_CONFIRMED": ("WHATSAPP_REACT_DUPLICATE", "⛔️"),
+}
+
 
 def _plain(value: str | None) -> str:
     return re.sub(r"[^a-z0-9]", "", (value or "").lower())
@@ -76,15 +82,15 @@ def transition(
     )
 
 
+def reaction_for_status(status: str) -> tuple[str, str] | None:
+    return REACTION_BY_STATUS.get(status)
+
+
 def queue_shadow_action(conn, document_id: int, status: str, reason: str) -> None:
-    if status == "DUPLICATE_CONFIRMED":
-        action_type = "WHATSAPP_REACT_DUPLICATE"
-        emoji = "✖️"
-    elif status == "WRONG_ACCOUNT_REVIEW":
-        action_type = "WHATSAPP_REACT_WRONG_ACCOUNT"
-        emoji = "❌"
-    else:
+    reaction = reaction_for_status(status)
+    if reaction is None:
         return
+    action_type, emoji = reaction
     conn.execute(
         """INSERT INTO action_outbox(document_id,action_type,payload,idempotency_key)
            VALUES (%s,%s,%s::jsonb,%s) ON CONFLICT(idempotency_key) DO NOTHING""",
