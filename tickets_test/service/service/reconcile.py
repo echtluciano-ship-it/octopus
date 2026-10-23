@@ -8,7 +8,10 @@ def reconciliation() -> dict:
         row = conn.execute(
             """
             SELECT
-              (SELECT COUNT(*) FROM ingress_events) AS events_received,
+              (SELECT COUNT(*) FROM ingress_events
+                WHERE event_type='messages.upsert') AS events_received,
+              (SELECT COUNT(*) FROM ingress_events
+                WHERE event_type<>'messages.upsert') AS historical_system_events,
               (SELECT COUNT(*) FROM inbound_messages) AS messages_received,
               (SELECT COALESCE(SUM(expected_attachments),0) FROM inbound_messages) AS documents_expected,
               (SELECT COUNT(*) FROM ticket_documents) AS documents_stored,

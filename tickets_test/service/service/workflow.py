@@ -16,7 +16,6 @@ def _plain(value: str | None) -> str:
 
 def classify(extracted: dict[str, Any], account_config: dict) -> tuple[str, str]:
     document_type = extracted.get("document_type")
-    amount_cents = extracted.get("amount_cents")
     account_key = extracted.get("destination_account_key")
     if document_type == "check":
         return "CHECK_REVIEW", "Los cheques estan fuera del alcance inicial."
@@ -35,21 +34,12 @@ def classify(extracted: dict[str, Any], account_config: dict) -> tuple[str, str]
         return "WRONG_ACCOUNT_REVIEW", "Mas de una cuenta destino coincide con el comprobante."
     if not account_key:
         return "WRONG_ACCOUNT_REVIEW", "No se identifico una cuenta receptora valida."
-    if amount_cents == 500_000_000:
-        return "REVIEW", "PENDING_RULE: falta definir el tratamiento exacto de $5.000.000."
     account = next(
         (item for item in account_config.get("accounts", []) if item.get("key") == account_key),
         None,
     )
     if account is None:
         return "WRONG_ACCOUNT_REVIEW", "La cuenta detectada no existe en la configuracion vigente."
-    validation = account.get("amount_validation") or {}
-    if validation.get("max_exclusive_cents") is not None and amount_cents >= validation["max_exclusive_cents"]:
-        return "REVIEW", "El monto no cumple la regla configurada para la cuenta receptora."
-    if validation.get("min_exclusive_cents") is not None and amount_cents <= validation["min_exclusive_cents"]:
-        return "REVIEW", "El monto no cumple la regla configurada para la cuenta receptora."
-    if validation.get("max_inclusive_cents") is not None and amount_cents > validation["max_inclusive_cents"]:
-        return "REVIEW", "El monto supera el maximo configurado para la cuenta receptora."
     return "READY_FOR_SHEET", "Transferencia extraida y cuenta receptora identificada."
 
 

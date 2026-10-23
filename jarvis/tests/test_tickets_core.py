@@ -138,6 +138,18 @@ class TicketsCoreTests(unittest.TestCase):
         self.assertEqual(monday[0].isoformat(), "2026-10-23T15:00:00-03:00")
         self.assertEqual(monday[1], tuesday[0])
 
+    def test_holiday_extends_window_to_next_business_day(self) -> None:
+        tuesday = close_window(
+            date(2026, 10, 13),
+            holidays={date(2026, 10, 12)},
+        )
+        self.assertEqual(tuesday[0].isoformat(), "2026-10-09T15:00:00-03:00")
+        self.assertEqual(tuesday[1].isoformat(), "2026-10-13T15:00:00-03:00")
+
+    def test_close_is_not_allowed_on_holiday(self) -> None:
+        with self.assertRaises(ValueError):
+            close_window(date(2026, 10, 12), holidays={date(2026, 10, 12)})
+
     def test_generated_workbook_matches_reference_columns_and_is_editable(self) -> None:
         output = self.root / "tickets.xlsx"
         write_editable_sheet(

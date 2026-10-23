@@ -2,13 +2,14 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
-from datetime import date
+from collections import Counter, defaultdict
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from openpyxl import Workbook
 from openpyxl.comments import Comment
-from openpyxl.styles import Alignment, PatternFill
+from openpyxl.styles import Alignment, Font, PatternFill
 
 from service.config import settings
 from service.db import connection
@@ -16,10 +17,25 @@ from service.db import connection
 
 TRANSFER_COLUMNS = ("FECHA TICHET", "MONTO", "NRO COMPROBANTE", "NOMBRE Y APELLIDO", "CUIT", "BANCO")
 DEPOSIT_COLUMNS = ("FECHA", "IMPORTE", "NUMERO DE COMPROBANTE", "BANCO")
+CONTROL_COLUMNS = (
+    "DOCUMENT ID", "ORDEN", "ESTADO", "TIPO", "FECHA", "MONTO", "TIPO IDENTIFICADOR",
+    "IDENTIFICADOR", "NOMBRE Y APELLIDO", "CUIT", "BANCO", "CUENTA DESTINO",
+    "RESULTADO / MOTIVO", "ARCHIVO ORIGINAL", "DRIVE ID", "LINK DRIVE",
+    "EXCEL", "FILA",
+)
 
 
 def _safe(value: str) -> str:
     return re.sub(r"[^A-Za-z0-9_-]+", "_", value).strip("_") or "sin_cuenta"
+
+
+def _deposit_group_key(origin_bank: str | None) -> str:
+    plain = re.sub(r"[^a-z0-9]", "", (origin_bank or "").lower())
+    if "macro" in plain:
+        return "macro"
+    if "comafi" in plain:
+        return "comafi"
+    return "sin_banco_confirmado"
 
 
 def _write(path: Path, rows: list[dict], *, deposit: bool = False, review: bool = False) -> None:
@@ -56,12 +72,70 @@ def _write(path: Path, rows: list[dict], *, deposit: bool = False, review: bool 
     workbook.save(path)
 
 
-def generate() -> dict:
+def _write_control(path: Path, rows: list[dict], trace_by_document: dict[int, dict]) -> None:
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "Control"
+    sheet.append(CONTROL_COLUMNS)
+    header_fill = PatternFill("solid", fgColor="1F4E78")
+    for cell in sheet[1]:
+        cell.fill = header_fill
+        cell.font = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+    status_fill = {
+        "READY_FOR_SHEET": "E2F0D9",
+        "REVIEW": "FFF2CC",
+        "WRONG_ACCOUNT_REVIEW": "FCE4D6",
+        "CHECK_REVIEW": "FFF2CC",
+        "DUPLICATE_CONFIRMED": "D9E1F2",
+        "ERROR_FINAL": "F4CCCC",
+        "ERROR_RETRYABLE": "F4CCCC",
+    }
+    for item in rows:
+        trace = trace_by_document.get(item["document_id"], {})
+        sheet.append((
+            item["document_id"], item["arrival_sequence"], item["status"], item["document_type"],
+            item["ticket_date"], item["amount"], item["identifier_type"],
+            item["identifier_value"], item["full_name"], item["tax_id"],
+            item["origin_bank"], item["destination_account_key"],
+            item["review_reason"], item["original_filename"],
+            item["source_document_id"], item["source_url"],
+            trace.get("workbook"), trace.get("row"),
+        ))
+        row_number = sheet.max_row
+        fill = status_fill.get(item["status"])
+        if fill:
+            sheet.cell(row_number, 3).fill = PatternFill("solid", fgColor=fill)
+        if item["source_url"]:
+            link_cell = sheet.cell(row_number, 16)
+            link_cell.hyperlink = item["source_url"]
+            link_cell.style = "Hyperlink"
+    widths = (12, 9, 24, 14, 12, 16, 20, 38, 30, 18, 20, 22, 54, 44, 34, 18, 38, 8)
+    for index, width in enumerate(widths, start=1):
+        sheet.column_dimensions[chr(64 + index) if index <= 26 else "A"].width = width
+    sheet.freeze_panes = "A2"
+    sheet.auto_filter.ref = f"A1:R{sheet.max_row}"
+    sheet.sheet_view.showGridLines = False
+    for cell in sheet["E"][1:]:
+        cell.number_format = "dd/mm/yyyy"
+    for cell in sheet["F"][1:]:
+        cell.number_format = '$#,##0.00'
+    for row in sheet.iter_rows(min_row=2, max_row=sheet.max_row):
+        for cell in row:
+            cell.alignment = Alignment(vertical="center", wrap_text=False)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    workbook.save(path)
+
+
+def generate(source_batch: str | None = None) -> dict:
+    where_batch = "AND d.source_batch=%s" if source_batch else ""
+    params = (source_batch,) if source_batch else ()
     with connection() as conn:
         rows = conn.execute(
-            """
-            SELECT d.document_id,d.status,m.arrival_sequence,e.document_type,e.ticket_date,
-                   e.amount_cents,e.identifier_value,e.full_name,e.tax_id,e.origin_bank,
+            f"""
+            SELECT d.document_id,d.status,d.original_filename,d.source_system,
+                   d.source_document_id,d.source_url,d.source_batch,m.arrival_sequence,e.document_type,e.ticket_date,
+                   e.amount_cents,e.identifier_type,e.identifier_value,e.full_name,e.tax_id,e.origin_bank,
                    e.destination_account_key,e.observations
             FROM ticket_documents d
             JOIN inbound_messages m USING(message_id)
@@ -70,12 +144,14 @@ def generate() -> dict:
                 ORDER BY attempt DESC LIMIT 1
             ) e ON true
             WHERE d.status IN ('READY_FOR_SHEET','REVIEW','WRONG_ACCOUNT_REVIEW','CHECK_REVIEW')
+              {where_batch}
             ORDER BY m.arrival_sequence,d.attachment_index
-            """
+            """,
+            params,
         ).fetchall()
     groups: dict[str, list[dict]] = defaultdict(list)
     review_rows: list[dict] = []
-    deposits: list[dict] = []
+    deposits: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
         item = dict(row)
         item["amount"] = item["amount_cents"] / 100 if item["amount_cents"] is not None else None
@@ -83,24 +159,71 @@ def generate() -> dict:
         if item["status"] != "READY_FOR_SHEET":
             review_rows.append(item)
         elif item["document_type"] == "deposit":
-            deposits.append(item)
+            deposits[_deposit_group_key(item.get("origin_bank"))].append(item)
         else:
             groups[item["destination_account_key"] or "sin_cuenta"].append(item)
-    output = settings.export_dir
+    output = settings.export_dir / _safe(source_batch) if source_batch else settings.export_dir
     written: list[str] = []
     for key, items in groups.items():
         path = output / f"transferencias_{_safe(key)}.xlsx"
         _write(path, items)
         written.append(str(path))
-    if deposits:
-        path = output / "depositos.xlsx"
-        _write(path, deposits, deposit=True)
+    row_trace: list[dict] = []
+    for key, items in groups.items():
+        filename = f"transferencias_{_safe(key)}.xlsx"
+        for excel_row, item in enumerate(items, start=2):
+            row_trace.append({
+                "document_id": item["document_id"],
+                "arrival_sequence": item["arrival_sequence"],
+                "original_filename": item["original_filename"],
+                "source_system": item["source_system"],
+                "source_document_id": item["source_document_id"],
+                "source_url": item["source_url"],
+                "workbook": filename,
+                "row": excel_row,
+            })
+    for key, items in deposits.items():
+        path = output / f"depositos_{_safe(key)}.xlsx"
+        _write(path, items, deposit=True)
         written.append(str(path))
+        for excel_row, item in enumerate(items, start=2):
+            row_trace.append({
+                "document_id": item["document_id"],
+                "arrival_sequence": item["arrival_sequence"],
+                "original_filename": item["original_filename"],
+                "source_system": item["source_system"],
+                "source_document_id": item["source_document_id"],
+                "source_url": item["source_url"],
+                "workbook": path.name,
+                "row": excel_row,
+            })
     if review_rows:
         path = output / "REVIEW.xlsx"
         _write(path, review_rows, review=True)
         written.append(str(path))
-    report = {"generated_at": date.today().isoformat(), "files": written, "rows": len(rows)}
+        for excel_row, item in enumerate(review_rows, start=2):
+            row_trace.append({
+                "document_id": item["document_id"],
+                "arrival_sequence": item["arrival_sequence"],
+                "original_filename": item["original_filename"],
+                "source_system": item["source_system"],
+                "source_document_id": item["source_document_id"],
+                "source_url": item["source_url"],
+                "workbook": path.name,
+                "row": excel_row,
+            })
+    trace_by_document = {item["document_id"]: item for item in row_trace}
+    control_path = output / "CONTROL_LOTE.xlsx"
+    _write_control(control_path, [dict(item, amount=item["amount_cents"] / 100 if item["amount_cents"] is not None else None, review_reason=item["observations"] or item["status"]) for item in map(dict, rows)], trace_by_document)
+    written.append(str(control_path))
+    report = {
+        "generated_at": datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date().isoformat(),
+        "source_batch": source_batch,
+        "files": written,
+        "rows": len(rows),
+        "status_counts": dict(Counter(item["status"] for item in map(dict, rows))),
+        "row_trace": row_trace,
+    }
     output.mkdir(parents=True, exist_ok=True)
     (output / "manifest.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report

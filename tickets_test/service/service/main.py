@@ -64,6 +64,7 @@ def tickets(limit: int = Query(default=100, ge=1, le=1000)) -> list[dict]:
             """SELECT d.document_id,d.status,d.original_filename,d.sha256,d.duplicate_of,
                       d.duplicate_reason,d.last_error,m.arrival_sequence,m.group_id,
                       m.sender_name,m.message_timestamp,m.provider_message_id,
+                      d.source_system,d.source_document_id,d.source_url,d.source_batch,
                       x.document_type,x.ticket_date,x.amount_cents,x.identifier_type,
                       x.identifier_value,x.full_name,x.tax_id,x.origin_bank,
                       x.destination_account_key,x.observations
@@ -79,5 +80,5 @@ def tickets(limit: int = Query(default=100, ge=1, le=1000)) -> list[dict]:
 
 
 @app.post("/exports/generate")
-def generate_exports() -> dict:
-    return generate()
+def generate_exports(source_batch: str | None = Query(default=None)) -> dict:
+    return generate(source_batch=source_batch)

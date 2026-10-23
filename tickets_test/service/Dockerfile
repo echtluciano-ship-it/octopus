@@ -4,10 +4,15 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app
 
-RUN apt-get update \
+RUN --mount=type=secret,id=host_ca,required=false \
+    if [ -s /run/secrets/host_ca ]; then \
+      cp /run/secrets/host_ca /usr/local/share/ca-certificates/octopus-host-proxy.crt; \
+    fi \
+    && apt-get update \
     && apt-get install -y --no-install-recommends \
-       poppler-utils tesseract-ocr tesseract-ocr-spa \
+       ca-certificates poppler-utils tesseract-ocr tesseract-ocr-spa \
        fonts-dejavu-core \
+    && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app

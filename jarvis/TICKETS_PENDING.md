@@ -11,8 +11,7 @@ conectar una cuenta real siguen requiriendo autorizacion explicita:
 - cuentas receptoras cargadas en configuracion segura;
 - archivos de instrucciones de depositos Comafi y Macro;
 - politica de retencion y acceso a comprobantes con datos personales;
-- formato del Excel manual de cada cuenta secundaria y depositos;
-- criterio de feriados para ventanas de cierre;
+- formato del Excel manual de cada cuenta secundaria;
 - autorizacion separada para reacciones, correo y cualquier escritura real.
 
 Hasta entonces no se conecta WhatsApp, no se reacciona, no se envia correo y

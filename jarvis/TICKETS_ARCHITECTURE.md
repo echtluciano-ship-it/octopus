@@ -130,16 +130,17 @@ separado. Cheques se preservan y pasan a `CHECK_REVIEW`.
 Las cuentas reales se cargan desde configuracion segura fuera de Git. Nunca se
 incorporan secretos o datos bancarios completos al codigo.
 
-La cuenta se identifica por CBU/CVU, alias, CUIT o titular visibles. Los rangos
-de importe de cuentas secundarias son validaciones de consistencia, no una
-forma suficiente de inferir destino. El importe exacto de $5.000.000 queda en
-REVIEW hasta que negocio defina a cual regla pertenece.
+La cuenta se identifica por CBU/CVU, alias, CUIT o titular visibles. El monto
+no determina la cuenta receptora ni se usa para aceptar o rechazar una
+transferencia. Si el destino real no puede identificarse, el caso queda en
+REVIEW aunque el importe coincida con operaciones anteriores.
 
 ## Ventanas de cierre
 
 Las ventanas son semiabiertas `[inicio, fin)` para impedir huecos o doble
-conteo. Un cierre normal cubre 15:00 del dia anterior a 15:00 del dia actual;
-el lunes cubre viernes 15:00 a lunes 15:00. Feriados aun requieren definicion.
+conteo. Un cierre normal cubre 15:00 del dia habil anterior a 15:00 del dia
+actual. Fines de semana y feriados extienden la ventana hasta el proximo dia
+habil a las 15:00; no se ejecuta un cierre sobre un dia no habil.
 
 ## Shadow mode
 

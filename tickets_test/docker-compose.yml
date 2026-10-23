@@ -1,5 +1,11 @@
 name: octopus-tickets-test
 
+x-tickets-build: &tickets_build
+  context: ..
+  dockerfile: tickets_test/service/Dockerfile
+  secrets:
+    - host_ca
+
 services:
   postgres:
     image: postgres:16-alpine
@@ -32,9 +38,7 @@ services:
     networks: [tickets]
 
   tickets-migrate:
-    build:
-      context: ..
-      dockerfile: tickets_test/service/Dockerfile
+    build: *tickets_build
     command: ["python", "-m", "service.migrate"]
     environment: &tickets_environment
       TICKETS_DATABASE_URL: postgresql://octopus:${POSTGRES_PASSWORD}@postgres:5432/tickets
@@ -54,9 +58,7 @@ services:
     networks: [tickets]
 
   tickets-api:
-    build:
-      context: ..
-      dockerfile: tickets_test/service/Dockerfile
+    build: *tickets_build
     restart: unless-stopped
     command: ["uvicorn", "service.main:app", "--host", "0.0.0.0", "--port", "8000"]
     environment: *tickets_environment
@@ -74,9 +76,7 @@ services:
     networks: [tickets]
 
   tickets-worker:
-    build:
-      context: ..
-      dockerfile: tickets_test/service/Dockerfile
+    build: *tickets_build
     restart: unless-stopped
     command: ["python", "-m", "service.worker"]
     environment: *tickets_environment
@@ -151,3 +151,7 @@ volumes:
   redis_data:
   ticket_objects:
   evolution_instances:
+
+secrets:
+  host_ca:
+    file: ${TICKETS_HOST_CA_FILE:-./runtime/certs/host-proxy-ca.crt}

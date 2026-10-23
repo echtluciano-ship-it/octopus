@@ -3,6 +3,13 @@ param([switch]$Force)
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $EnvPath = Join-Path $Root ".env"
+$Runtime = Join-Path $Root "runtime"
+New-Item -ItemType Directory -Force -Path (Join-Path $Runtime "exports") | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $Runtime "certs") | Out-Null
+$HostCaPath = Join-Path $Runtime "certs\host-proxy-ca.crt"
+if (-not (Test-Path -LiteralPath $HostCaPath)) {
+    New-Item -ItemType File -Path $HostCaPath | Out-Null
+}
 if ((Test-Path -LiteralPath $EnvPath) -and -not $Force) {
     Write-Host "TEST secrets already exist: $EnvPath"
     exit 0
@@ -23,5 +30,4 @@ $lines = @(
     "TICKETS_ALLOWED_GROUP_IDS="
 )
 [IO.File]::WriteAllLines($EnvPath, $lines, [Text.UTF8Encoding]::new($false))
-New-Item -ItemType Directory -Force -Path (Join-Path $Root "runtime\exports") | Out-Null
 Write-Host "Generated isolated TEST secrets and runtime folders."

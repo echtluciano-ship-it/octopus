@@ -19,6 +19,7 @@ from service.workflow import record_duplicate_shadow_action
 
 
 MEDIA_KEYS = ("imageMessage", "documentMessage", "videoMessage")
+TICKET_EVENT_TYPES = frozenset({"messages.upsert"})
 
 
 class MediaNotAvailable(RuntimeError):
@@ -115,6 +116,7 @@ def _message_parts(payload: dict[str, Any]) -> dict[str, Any]:
         "message": message,
         "media_key": media_key,
         "media_node": media_node,
+        "source": data.get("source") if isinstance(data.get("source"), dict) else {},
     }
 
 
@@ -184,11 +186,18 @@ def _allowed_group(group_id: str) -> bool:
 
 
 def ingest(payload: dict[str, Any]) -> dict[str, Any]:
+    event_type = str(payload.get("event") or "unknown")
+    if event_type not in TICKET_EVENT_TYPES:
+        return {
+            "event_id": None,
+            "event_inserted": False,
+            "ticket": False,
+            "reason": f"event type {event_type!r} is outside the durable ticket inbox",
+        }
     clean_payload = _without_binary(payload)
     raw = _canonical_json(clean_payload)
     raw_sha = hashlib.sha256(raw.encode("utf-8")).hexdigest()
     key = event_key(payload, raw_sha)
-    event_type = str(payload.get("event") or "unknown")
     parts = _message_parts(payload)
 
     with connection() as conn:
@@ -280,6 +289,23 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             (message_row["message_id"],),
         ).fetchone()
         if existing_document:
+            source = parts["source"]
+            conn.execute(
+                """UPDATE ticket_documents
+                      SET source_system=COALESCE(source_system,%s),
+                          source_document_id=COALESCE(source_document_id,%s),
+                          source_url=COALESCE(source_url,%s),
+                          source_batch=COALESCE(source_batch,%s)
+                    WHERE document_id=%s""",
+                (
+                    source.get("system"),
+                    source.get("document_id"),
+                    source.get("url"),
+                    source.get("batch"),
+                    existing_document["document_id"],
+                ),
+            )
+            conn.commit()
             return {
                 "event_id": event_id,
                 "message_id": message_row["message_id"],
@@ -306,8 +332,10 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
             """
             INSERT INTO ticket_documents(
                 message_id,attachment_index,original_filename,mime_type,size_bytes,
-                sha256,visual_hash,object_key,status,duplicate_of,duplicate_reason
-            ) VALUES (%s,0,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                sha256,visual_hash,object_key,status,duplicate_of,duplicate_reason,
+                source_system,source_document_id,source_url
+                ,source_batch
+            ) VALUES (%s,0,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
             RETURNING document_id
             """,
             (
@@ -321,6 +349,10 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
                 status,
                 duplicate["document_id"] if duplicate else None,
                 reason,
+                parts["source"].get("system"),
+                parts["source"].get("document_id"),
+                parts["source"].get("url"),
+                parts["source"].get("batch"),
             ),
         ).fetchone()
         document_id = document["document_id"]
@@ -336,7 +368,12 @@ def ingest(payload: dict[str, Any]) -> dict[str, Any]:
                 document_id,
                 status,
                 reason or "original persisted before interpretation",
-                _canonical_json({"sha256": sha256, "visual_hash": visual_hash, "object_key": object_key}),
+                _canonical_json({
+                    "sha256": sha256,
+                    "visual_hash": visual_hash,
+                    "object_key": object_key,
+                    "source": parts["source"],
+                }),
             ),
         )
         if not duplicate:

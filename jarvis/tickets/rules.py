@@ -21,9 +21,17 @@ TIMEZONE = ZoneInfo("America/Buenos_Aires")
 CUT_TIME = time(15, 0)
 
 
-def close_window(closing_day: date) -> tuple[datetime, datetime]:
-    """Return [start, end) for a normal or Monday operational close."""
+def close_window(
+    closing_day: date,
+    *,
+    holidays: set[date] | frozenset[date] = frozenset(),
+) -> tuple[datetime, datetime]:
+    """Return the half-open window from the previous business-day cutoff."""
+    if closing_day.weekday() >= 5 or closing_day in holidays:
+        raise ValueError("A close can only run on a business day")
     end = datetime.combine(closing_day, CUT_TIME, tzinfo=TIMEZONE)
-    days_back = 3 if closing_day.weekday() == 0 else 1
-    start = end - timedelta(days=days_back)
+    previous = closing_day - timedelta(days=1)
+    while previous.weekday() >= 5 or previous in holidays:
+        previous -= timedelta(days=1)
+    start = datetime.combine(previous, CUT_TIME, tzinfo=TIMEZONE)
     return start, end

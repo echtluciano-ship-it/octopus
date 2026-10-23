@@ -24,6 +24,10 @@ entorno no escribe en WhatsApp ni envia correo.
 .\scripts\New-EvolutionInstance.ps1
 ```
 
+El arranque conserva la verificacion TLS. Si AVG inspecciona HTTPS en esta PC,
+exporta su certificado raiz publico a `runtime/certs/` y lo incorpora a las
+imagenes Linux como autoridad local. El certificado no se guarda en Git.
+
 El ultimo comando crea/recupera la instancia y abre
 `runtime/whatsapp-test-qr-AAAAMMDD-HHMMSS.png`. El QR debe vincularse solamente con un numero
 dedicado de prueba.
