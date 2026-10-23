@@ -31,12 +31,38 @@ Luciano
 PRUEBA DEL SISTEMA OCTOPUS - TICKETS
 """
 
+CORRECTED_SUBJECT = "PRUEBA OCTOPUS - TICKETS - planilla única corregida"
+CORRECTED_BODY = """Hola Érika,
+
+Te envío nuevamente la prueba de OCTOPUS - Tickets, esta vez en una única planilla con los 20 comprobantes.
+
+La planilla contiene solamente los campos operativos acordados:
+- Fecha ticket
+- Monto
+- Número de comprobante
+- Nombre y apellido
+- CUIT
+- Banco
+- Observaciones
+
+Los casos completos están marcados en verde. Los casos que requieren control están marcados en rojo y explican el motivo en Observaciones.
+
+Esta entrega reemplaza la anterior para la revisión funcional.
+
+Gracias,
+Luciano
+
+PRUEBA DEL SISTEMA OCTOPUS - TICKETS
+"""
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="OCTOPUS Tickets Gmail outbox")
     subparsers = parser.add_subparsers(dest="command", required=True)
     queue = subparsers.add_parser("queue-erika-test")
     queue.add_argument("attachment")
+    corrected = subparsers.add_parser("queue-erika-corrected")
+    corrected.add_argument("attachment")
     send = subparsers.add_parser("send")
     send.add_argument("action_id", type=int)
     args = parser.parse_args()
@@ -48,6 +74,15 @@ def main() -> None:
             body=BODY,
             attachments=[args.attachment],
             idempotency_key="email:erika:erika-20-2026-10-23:v1",
+        )
+        print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
+    elif args.command == "queue-erika-corrected":
+        action_id = queue_email(
+            recipient=ERIKA,
+            subject=CORRECTED_SUBJECT,
+            body=CORRECTED_BODY,
+            attachments=[args.attachment],
+            idempotency_key="email:erika:erika-20-2026-10-23:single-workbook:v2",
         )
         print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
     else:
