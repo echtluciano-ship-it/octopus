@@ -80,5 +80,10 @@ def tickets(limit: int = Query(default=100, ge=1, le=1000)) -> list[dict]:
 
 
 @app.post("/exports/generate")
-def generate_exports(source_batch: str | None = Query(default=None)) -> dict:
-    return generate(source_batch=source_batch)
+def generate_exports(
+    source_batch: str | None = Query(default=None),
+    document_id: int | None = Query(default=None, ge=1),
+) -> dict:
+    if source_batch and document_id is not None:
+        raise HTTPException(status_code=400, detail="Use source_batch or document_id, not both")
+    return generate(source_batch=source_batch, document_id=document_id)

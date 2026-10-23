@@ -127,9 +127,18 @@ def _write_control(path: Path, rows: list[dict], trace_by_document: dict[int, di
     workbook.save(path)
 
 
-def generate(source_batch: str | None = None) -> dict:
-    where_batch = "AND d.source_batch=%s" if source_batch else ""
-    params = (source_batch,) if source_batch else ()
+def generate(source_batch: str | None = None, document_id: int | None = None) -> dict:
+    if source_batch and document_id is not None:
+        raise ValueError("source_batch and document_id are mutually exclusive")
+    if source_batch:
+        where_filter = "AND d.source_batch=%s"
+        params = (source_batch,)
+    elif document_id is not None:
+        where_filter = "AND d.document_id=%s"
+        params = (document_id,)
+    else:
+        where_filter = ""
+        params = ()
     with connection() as conn:
         rows = conn.execute(
             f"""
@@ -144,7 +153,7 @@ def generate(source_batch: str | None = None) -> dict:
                 ORDER BY attempt DESC LIMIT 1
             ) e ON true
             WHERE d.status IN ('READY_FOR_SHEET','REVIEW','WRONG_ACCOUNT_REVIEW','CHECK_REVIEW')
-              {where_batch}
+              {where_filter}
             ORDER BY m.arrival_sequence,d.attachment_index
             """,
             params,
@@ -162,7 +171,12 @@ def generate(source_batch: str | None = None) -> dict:
             deposits[_deposit_group_key(item.get("origin_bank"))].append(item)
         else:
             groups[item["destination_account_key"] or "sin_cuenta"].append(item)
-    output = settings.export_dir / _safe(source_batch) if source_batch else settings.export_dir
+    if source_batch:
+        output = settings.export_dir / _safe(source_batch)
+    elif document_id is not None:
+        output = settings.export_dir / f"documento_{document_id}"
+    else:
+        output = settings.export_dir
     written: list[str] = []
     for key, items in groups.items():
         path = output / f"transferencias_{_safe(key)}.xlsx"
@@ -219,6 +233,7 @@ def generate(source_batch: str | None = None) -> dict:
     report = {
         "generated_at": datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date().isoformat(),
         "source_batch": source_batch,
+        "document_id": document_id,
         "files": written,
         "rows": len(rows),
         "status_counts": dict(Counter(item["status"] for item in map(dict, rows))),

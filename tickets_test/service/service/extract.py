@@ -13,8 +13,9 @@ from pdf2image import convert_from_bytes
 from PIL import Image, ImageEnhance, ImageOps
 
 
-EXTRACTOR_VERSION = "ocr-rules-v2"
+EXTRACTOR_VERSION = "ocr-rules-v3"
 BANKS = (
+    ("dupondio", "Dupondio"),
     ("mercado pago", "Mercado Pago"),
     ("personal pay", "Personal Pay"),
     ("naranjax", "Naranja X"),
@@ -93,7 +94,8 @@ def ocr(content: bytes, mime_type: str) -> str:
 def _date(text: str) -> date | None:
     plain = _plain(text)
     named = re.search(
-        r"\b(\d{1,2})[ /-]+(" + "|".join(MONTHS) + r")[ /-]+(\d{4})\b",
+        r"\b(\d{1,2})(?:\s+de\s+|[ /-]+)(" + "|".join(MONTHS)
+        + r")(?:\s+de\s+|[ /-]+)(\d{4})\b",
         plain,
         re.IGNORECASE,
     )
@@ -298,6 +300,15 @@ def _account(text: str, account_config: dict) -> tuple[str | None, list[str]]:
     return (unique[0] if len(unique) == 1 else None), unique
 
 
+def _visible_destination_identifiers(text: str) -> list[str]:
+    values = re.findall(
+        r"(?:cbu|cvu)(?:\s*/\s*(?:cbu|cvu))?\s*:?[ ]*([0-9][0-9 .-]{20,30})",
+        text,
+        re.IGNORECASE,
+    )
+    return sorted({re.sub(r"\D", "", value) for value in values if len(re.sub(r"\D", "", value)) == 22})
+
+
 def parse(text: str, account_config: dict) -> dict[str, Any]:
     plain = _plain(text)
     if "cheque" in plain:
@@ -321,6 +332,7 @@ def parse(text: str, account_config: dict) -> dict[str, Any]:
         "origin_bank": _bank(text),
         "destination_account_key": account_key,
         "account_matches": account_matches,
+        "destination_identifiers_seen": _visible_destination_identifiers(text),
     }
     required = {
         "transfer": ("ticket_date", "amount_cents", "identifier_value", "full_name", "tax_id", "origin_bank"),

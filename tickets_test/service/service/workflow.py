@@ -21,10 +21,10 @@ def classify(extracted: dict[str, Any], account_config: dict) -> tuple[str, str]
         return "CHECK_REVIEW", "Los cheques estan fuera del alcance inicial."
     if document_type not in {"transfer", "deposit"}:
         return "REVIEW", "No se pudo clasificar con certeza como transferencia o deposito."
-    if extracted.get("missing_fields"):
-        fields = ", ".join(extracted["missing_fields"])
-        return "REVIEW", f"Campos obligatorios no determinados: {fields}."
     if document_type == "deposit":
+        if extracted.get("missing_fields"):
+            fields = ", ".join(extracted["missing_fields"])
+            return "REVIEW", f"Campos obligatorios no determinados: {fields}."
         accepted = {_plain(value) for value in account_config.get("accepted_deposit_banks", [])}
         bank = _plain(extracted.get("origin_bank"))
         if not any(value and (value in bank or bank in value) for value in accepted):
@@ -32,6 +32,12 @@ def classify(extracted: dict[str, Any], account_config: dict) -> tuple[str, str]
         return "READY_FOR_SHEET", "Deposito extraido con los campos obligatorios."
     if len(extracted.get("account_matches") or []) > 1:
         return "WRONG_ACCOUNT_REVIEW", "Mas de una cuenta destino coincide con el comprobante."
+    if not account_key and extracted.get("destination_identifiers_seen"):
+        values = ", ".join(extracted["destination_identifiers_seen"])
+        return "WRONG_ACCOUNT_REVIEW", f"La cuenta receptora visible ({values}) no coincide con una cuenta valida."
+    if extracted.get("missing_fields"):
+        fields = ", ".join(extracted["missing_fields"])
+        return "REVIEW", f"Campos obligatorios no determinados: {fields}."
     if not account_key:
         return "WRONG_ACCOUNT_REVIEW", "No se identifico una cuenta receptora valida."
     account = next(

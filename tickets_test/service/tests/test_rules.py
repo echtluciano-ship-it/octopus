@@ -122,6 +122,43 @@ class ExtractionRulesTests(unittest.TestCase):
         self.assertEqual(result["amount_cents"], 225_930_000)
         self.assertEqual(result["identifier_value"], "184278863117")
 
+    def test_spanish_date_with_de_separators(self) -> None:
+        result = parse(
+            """DUPONDIO
+            Transferencia enviada
+            10 de Junio de 2026 11:48hs
+            ARS $ 2.745.000,00
+            De
+            Li Lan
+            27-93931913-7
+            Para
+            Verne It Group
+            CBU/CVU: 0000357301000003710039
+            Referencia 7A84D56A8557680""",
+            CONFIG,
+        )
+        self.assertEqual(result["ticket_date"].isoformat(), "2026-06-10")
+        self.assertEqual(result["origin_bank"], "Dupondio")
+        self.assertEqual(result["destination_identifiers_seen"], ["0000357301000003710039"])
+
+    def test_visible_unknown_destination_precedes_missing_identifier_review(self) -> None:
+        extracted = parse(
+            """DUPONDIO
+            Transferencia enviada
+            10 de Junio de 2026
+            ARS $ 2.745.000,00
+            De
+            Li Lan
+            27-93931913-7
+            Para
+            Verne It Group
+            CBU/CVU: 0000357301000003710039""",
+            CONFIG,
+        )
+        self.assertIn("identifier_value", extracted["missing_fields"])
+        status, _ = classify(extracted, CONFIG)
+        self.assertEqual(status, "WRONG_ACCOUNT_REVIEW")
+
     def test_us_separators_are_supported(self) -> None:
         result = parse(
             """Transferencia a terceros Otro Banco
