@@ -55,6 +55,23 @@ Luciano
 PRUEBA DEL SISTEMA OCTOPUS - TICKETS
 """
 
+EDITABLE_SUBJECT = "PRUEBA OCTOPUS - TICKETS - Excel editable"
+EDITABLE_BODY = """Hola Érika,
+
+Te envío la planilla única con los 20 comprobantes en formato Excel editable (.xlsx).
+
+Para modificarla, descargá el archivo adjunto y abrilo con Microsoft Excel. La vista previa de Gmail permite visualizarlo, pero no editarlo directamente.
+
+Los casos completos están marcados en verde. Los casos que requieren control están marcados en rojo y explican el motivo en Observaciones.
+
+Esta versión reemplaza las entregas anteriores para la revisión funcional.
+
+Gracias,
+Luciano
+
+PRUEBA DEL SISTEMA OCTOPUS - TICKETS
+"""
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="OCTOPUS Tickets Gmail outbox")
@@ -63,6 +80,8 @@ def main() -> None:
     queue.add_argument("attachment")
     corrected = subparsers.add_parser("queue-erika-corrected")
     corrected.add_argument("attachment")
+    editable = subparsers.add_parser("queue-erika-editable")
+    editable.add_argument("attachment")
     send = subparsers.add_parser("send")
     send.add_argument("action_id", type=int)
     args = parser.parse_args()
@@ -83,6 +102,15 @@ def main() -> None:
             body=CORRECTED_BODY,
             attachments=[args.attachment],
             idempotency_key="email:erika:erika-20-2026-10-23:single-workbook:v2",
+        )
+        print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
+    elif args.command == "queue-erika-editable":
+        action_id = queue_email(
+            recipient=ERIKA,
+            subject=EDITABLE_SUBJECT,
+            body=EDITABLE_BODY,
+            attachments=[args.attachment],
+            idempotency_key="email:erika:erika-20-2026-10-23:editable-workbook:v3",
         )
         print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
     else:
