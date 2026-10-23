@@ -157,9 +157,11 @@ Durante shadow, Erika mantiene el proceso manual. Por cada cierre se comparan:
 5. cantidad y orden de filas por Excel;
 6. diferencias campo por campo y su causa.
 
-No se habilitan reacciones ni emails reales. La salida es un paquete local de
-comparacion. El paso a aprobacion requiere varios cierres consecutivos con
-100% de integridad y umbrales de exactitud acordados con Erika.
+Las reacciones permanecen bloqueadas. Se permiten correos TEST controlados
+unicamente a Erika, mediante outbox idempotente y solo despues de superar el
+delivery gate; no se envia a terceros. El paso a produccion requiere varios
+cierres consecutivos con 100% de integridad y umbrales de exactitud acordados
+con Erika.
 
 ## Etapas
 

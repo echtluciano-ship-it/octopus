@@ -31,22 +31,15 @@ El arranque conserva la verificacion TLS. Si AVG inspecciona HTTPS en esta PC,
 exporta su certificado raiz publico a `runtime/certs/` y lo incorpora a las
 imagenes Linux como autoridad local. El certificado no se guarda en Git.
 
-El ultimo comando crea/recupera la instancia y abre
-`runtime/whatsapp-test-qr-AAAAMMDD-HHMMSS.png`. El QR debe vincularse solamente con un numero
-dedicado de prueba.
+El ultimo comando crea o recupera la instancia y, si no existe una sesion,
+abre `runtime/whatsapp-test-qr-AAAAMMDD-HHMMSS.png`. La instancia TEST quedo
+vinculada correctamente el 22/10/2026 y al 23/10/2026 su estado es `open`.
+No volver a generar QR mientras esa sesion siga activa. Si la sesion se pierde,
+usar solamente un numero autorizado para TEST y verificar el estado antes de
+reintentar.
 
-### Bloqueo de vinculacion vigente
-
-Al 21/10/2026, WhatsApp puede aceptar la lectura del QR y rechazar el alta con
-`No se pueden vincular nuevos dispositivos en este momento`. Coincide con el
-problema abierto de Baileys `companion_reg_refresh`:
-
-- https://github.com/WhiskeySockets/Baileys/issues/2737
-- https://github.com/WhiskeySockets/Baileys/pull/2765
-
-El arreglo propuesto todavia no esta incorporado. No insistir con el numero ni
-instalar forks no auditados. Revalidar una version estable de Evolution/Baileys
-antes de un nuevo intento de vinculacion.
+Las llamadas de WhatsApp no deben rechazarse: la instancia activa y
+`scripts/New-EvolutionInstance.ps1` usan `rejectCall=false`.
 
 ## Controles
 
@@ -84,6 +77,10 @@ ignorado por Git.
    `runtime/gmail/credentials.json`.
 3. Ejecutar `scripts/Authorize-Gmail.ps1` y aceptar solamente `gmail.send`.
 4. Ejecutar `scripts/Send-ErikaTest.ps1` para encolar y enviar el paquete.
+
+La autorizacion OAuth y el envio TEST ya fueron completados. Erika confirmo la
+recepcion. Los archivos de credenciales y token son locales, estan ignorados
+por Git y no deben copiarse a documentos, commits o mensajes.
 
 La accion se identifica con una clave unica. Si el proceso se interrumpe durante
 la llamada a Gmail queda `DELIVERY_UNCERTAIN` y no se reenvia automaticamente,
