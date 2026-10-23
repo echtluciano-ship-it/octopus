@@ -134,15 +134,23 @@ def _write_control(path: Path, rows: list[dict], trace_by_document: dict[int, di
     workbook.save(path)
 
 
-def generate(source_batch: str | None = None, document_id: int | None = None) -> dict:
-    if source_batch and document_id is not None:
+def generate(
+    source_batch: str | None = None,
+    document_id: int | list[int] | None = None,
+) -> dict:
+    document_ids = (
+        [document_id]
+        if isinstance(document_id, int)
+        else list(document_id or [])
+    )
+    if source_batch and document_ids:
         raise ValueError("source_batch and document_id are mutually exclusive")
     if source_batch:
         where_filter = "AND d.source_batch=%s"
         params = (source_batch,)
-    elif document_id is not None:
-        where_filter = "AND d.document_id=%s"
-        params = (document_id,)
+    elif document_ids:
+        where_filter = "AND d.document_id = ANY(%s)"
+        params = (document_ids,)
     else:
         where_filter = ""
         params = ()
@@ -180,8 +188,10 @@ def generate(source_batch: str | None = None, document_id: int | None = None) ->
             groups[item["destination_account_key"] or "sin_cuenta"].append(item)
     if source_batch:
         output = settings.export_dir / _safe(source_batch)
-    elif document_id is not None:
-        output = settings.export_dir / f"documento_{document_id}"
+    elif len(document_ids) == 1:
+        output = settings.export_dir / f"documento_{document_ids[0]}"
+    elif document_ids:
+        output = settings.export_dir / ("documentos_" + "_".join(map(str, document_ids)))
     else:
         output = settings.export_dir
     _prepare_output(output)
@@ -241,7 +251,8 @@ def generate(source_batch: str | None = None, document_id: int | None = None) ->
     report = {
         "generated_at": datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).date().isoformat(),
         "source_batch": source_batch,
-        "document_id": document_id,
+        "document_id": document_ids[0] if len(document_ids) == 1 else None,
+        "document_ids": document_ids,
         "files": written,
         "rows": len(rows),
         "status_counts": dict(Counter(item["status"] for item in map(dict, rows))),
