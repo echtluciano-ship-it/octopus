@@ -85,3 +85,26 @@ por Git y no deben copiarse a documentos, commits o mensajes.
 La accion se identifica con una clave unica. Si el proceso se interrumpe durante
 la llamada a Gmail queda `DELIVERY_UNCERTAIN` y no se reenvia automaticamente,
 evitando duplicados silenciosos.
+
+## Delivery gate obligatorio (2026-10-23)
+
+`queue_email` y `send_action` ahora exigen un `manifest.json` validado.
+Las acciones antiguas sin manifiesto quedan bloqueadas. Los comandos historicos
+`queue-erika-*` y `Send-ErikaTest.ps1` no deben usarse para nuevas tandas.
+
+Para preparar una entrega, copiar solamente los Excel de `erika_workbooks` y
+su `manifest.json` a una carpeta de `runtime/packages/`. El manifiesto es
+control interno: no se adjunta. Dentro del mailer, el comando
+`python -m service.gmail_cli queue-batch /mail-packages/<tanda>/manifest.json --idempotency-key <clave-unica>`
+valida y encola; no envia. El envio sigue siendo una accion separada y vuelve
+a validar antes de contactar Gmail. No se ejecutaron envios durante esta correccion.
+
+La validacion consulta estados y extracciones actuales, compara cada fila del
+Excel con el ledger, exige una sola planilla editable por grupo y verifica
+los bytes/hash de los originales. Cuenta adjuntos esperados por mensaje,
+incluidos mensajes sin ningun original; un sobrante no compensa un faltante.
+
+Limite conservador: hasta tener limites de tanda persistidos por mensaje,
+un faltante de ingreso o error de ingesta abierto en cualquier lote bloquea
+las entregas. No se infiere que una seleccion de documentos cubra todo lo
+visto en WhatsApp: ese total sigue contrastandose con Erika en shadow.

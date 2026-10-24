@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 
 from service.gmail import queue_email, send_action
 
@@ -97,6 +98,9 @@ PRUEBA DEL SISTEMA OCTOPUS - TICKETS
 def main() -> None:
     parser = argparse.ArgumentParser(description="OCTOPUS Tickets Gmail outbox")
     subparsers = parser.add_subparsers(dest="command", required=True)
+    batch = subparsers.add_parser("queue-batch", help="Validate and queue one workbook per group; does not send")
+    batch.add_argument("manifest")
+    batch.add_argument("--idempotency-key", required=True)
     queue = subparsers.add_parser("queue-erika-test")
     queue.add_argument("attachment")
     corrected = subparsers.add_parser("queue-erika-corrected")
@@ -109,7 +113,20 @@ def main() -> None:
     send.add_argument("action_id", type=int)
     args = parser.parse_args()
 
-    if args.command == "queue-erika-test":
+    if args.command == "queue-batch":
+        manifest = Path(args.manifest)
+        report = json.loads(manifest.read_text(encoding="utf-8"))
+        action_id = queue_email(
+            recipient=ERIKA,
+            subject="PRUEBA OCTOPUS - TICKETS - Excel por grupo",
+            body="Hola Érika,\n\nAdjuntamos un Excel editable por grupo TEST para comparar con tu registro manual.\nLos casos REVIEW están explicados en OBSERVACIONES.\n\nPRUEBA DEL SISTEMA OCTOPUS - TICKETS",
+            attachments=[manifest.parent / Path(book["path"]).name
+                         for book in report.get("erika_workbooks", [])],
+            manifest=manifest,
+            idempotency_key=args.idempotency_key,
+        )
+        print(json.dumps({"action_id": action_id, "status": "QUEUED"}))
+    elif args.command == "queue-erika-test":
         action_id = queue_email(
             recipient=ERIKA,
             subject=SUBJECT,

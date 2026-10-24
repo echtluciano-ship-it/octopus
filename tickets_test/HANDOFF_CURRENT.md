@@ -240,3 +240,30 @@ intervencion.
 - `3c725b9`: endurecimiento de validacion e ingreso aislado.
 - `be261a5`: flujo WhatsApp TEST y revision trazable.
 
+
+## Verificacion y correccion posterior al traspaso (2026-10-23)
+
+- Se detectaron y corrigieron dos brechas: Gmail no exigia el delivery gate,
+  y la exportacion no contrastaba adjuntos esperados contra originales.
+- `service/delivery.py` valida recepcion por mensaje, estados actuales,
+  manifiesto, un Excel editable por grupo, filas/orden/campos y originales
+  por tamano y SHA-256. Se ejecuta antes de encolar y antes de enviar.
+- Acciones antiguas sin evidencia de manifiesto se bloquean. La nueva ruta
+  `queue-batch` encola sin enviar; el manifiesto nunca se adjunta.
+- Se alineo la cabecera visible con `FECHA TICHET`.
+- 80 pruebas aprobadas: 54 del servicio (22 regresiones nuevas) y 26 JARVIS.
+- API y worker actualizados con el codigo corregido; imagen mailer preparada.
+  Dependencias reutilizadas desde cache; Evolution, Postgres y Redis conservados.
+- Verificacion real sin envio: 28 filas, 28 originales verificados, 3 grupos
+  historicos y un Excel temporal por grupo. Los dos grupos de la prueba
+  sintetica producen exactamente dos Excel editables.
+- Salud OK, WhatsApp open, rejectCall=false, reacciones BLOCKED_SHADOW.
+  Reconciliacion sigue 28/28, 18 procesados, 2 duplicados, 8 review, cero errores.
+- No se enviaron correos ni reacciones durante esta correccion.
+- Limitacion deliberada: faltantes/errores de ingesta globales bloquean todos
+  los envios hasta persistir limites de tanda por mensaje. El cotejo externo
+  WhatsApp/Erika sigue siendo obligatorio; el ledger no demuestra eventos que
+  nunca llegaron del proveedor.
+- Siguiente paso: recibir la nueva tanda de los dos grupos TEST, delimitarla
+  con evidencia de llegada y compararla fila por fila con Erika. Todavia no
+  hay tres tandas limpias ni autorizacion de produccion.

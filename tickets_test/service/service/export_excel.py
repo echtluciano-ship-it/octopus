@@ -18,7 +18,7 @@ from service.db import connection
 TRANSFER_COLUMNS = ("FECHA TICHET", "MONTO", "NRO COMPROBANTE", "NOMBRE Y APELLIDO", "CUIT", "BANCO")
 DEPOSIT_COLUMNS = ("FECHA", "IMPORTE", "NUMERO DE COMPROBANTE", "BANCO")
 ERIKA_COLUMNS = (
-    "FECHA TICKET", "MONTO", "NRO COMPROBANTE", "NOMBRE Y APELLIDO",
+    "FECHA TICHET", "MONTO", "NRO COMPROBANTE", "NOMBRE Y APELLIDO",
     "CUIT", "BANCO", "OBSERVACIONES",
 )
 DELIVERABLE_STATUSES = frozenset({
@@ -271,10 +271,10 @@ def _write_control(path: Path, rows: list[dict], trace_by_document: dict[int, di
     workbook.save(path)
 
 
-def generate(
+def load_delivery_rows(
     source_batch: str | None = None,
     document_id: int | list[int] | None = None,
-) -> dict:
+) -> list[dict]:
     document_ids = (
         [document_id]
         if isinstance(document_id, int)
@@ -314,6 +314,21 @@ def generate(
             """,
             params,
         ).fetchall()
+    result = []
+    for row in rows:
+        item = dict(row)
+        item["amount"] = item["amount_cents"] / 100 if item["amount_cents"] is not None else None
+        item["review_reason"] = item["observations"] or item["status"]
+        result.append(item)
+    return result
+
+
+def generate(
+    source_batch: str | None = None,
+    document_id: int | list[int] | None = None,
+) -> dict:
+    document_ids = [document_id] if isinstance(document_id, int) else list(document_id or [])
+    rows = load_delivery_rows(source_batch, document_id)
     all_rows: list[dict] = []
     groups: dict[str, list[dict]] = defaultdict(list)
     review_rows: list[dict] = []
@@ -346,6 +361,12 @@ def generate(
     _prepare_output(output)
     written: list[str] = []
     delivery_gate = evaluate_delivery_gate(all_rows)
+    from service.delivery import receipt_integrity
+    integrity = receipt_integrity()
+    delivery_gate["receipt_integrity"] = integrity
+    if not integrity["ready"]:
+        delivery_gate["blockers"].append({"code": "INCOMPLETE_RECEIPTS", "detail": integrity})
+        delivery_gate["delivery_ready"] = False
     erika_groups: dict[str, list[dict]] = defaultdict(list)
     for item in all_rows:
         erika_groups[str(item.get("group_id") or "sin_grupo")].append(item)

@@ -12,6 +12,7 @@ from typing import Any
 
 from service.config import settings
 from service.db import connection
+from service.delivery import validate_delivery
 
 
 GMAIL_SEND_SCOPE = "https://www.googleapis.com/auth/gmail.send"
@@ -50,15 +51,22 @@ def queue_email(
     body: str,
     attachments: list[str | Path],
     idempotency_key: str,
+    manifest: str | Path | None = None,
 ) -> int:
     recipient = recipient.strip().lower()
     if recipient not in settings.gmail_allowed_recipients:
         raise ValueError(f"Recipient is not allowlisted: {recipient}")
+    if not attachments:
+        raise ValueError("Group workbooks and manifest are required")
+    paths = [_resolved_attachment(path) for path in attachments]
+    manifest_path = _resolved_attachment(manifest or paths[0].parent / "manifest.json")
+    validate_delivery(manifest_path, paths)
     payload = {
         "recipient": recipient,
         "subject": subject,
         "body": body,
         "attachments": [attachment_evidence(path) for path in attachments],
+        "delivery_manifest": attachment_evidence(manifest_path),
     }
     with connection() as conn:
         inserted = conn.execute(
@@ -140,6 +148,22 @@ def send_action(action_id: int, *, service=None) -> dict[str, Any]:
             raise RuntimeError("Previous delivery is uncertain; manual audit required before retry.")
         if row["delivery_status"] == "DELIVERY_UNCERTAIN":
             raise RuntimeError("Delivery is uncertain; manual audit required before retry.")
+        payload = row["payload"]
+        if payload["recipient"] not in settings.gmail_allowed_recipients:
+            raise ValueError("Recipient is no longer allowlisted")
+        manifest = payload.get("delivery_manifest")
+        if not manifest:
+            raise ValueError("Legacy email lacks a validated delivery manifest")
+        manifest_path = _resolved_attachment(manifest["path"])
+        if attachment_evidence(manifest_path) != manifest:
+            raise ValueError("Delivery manifest changed after queueing")
+        validate_delivery(manifest_path, [
+            _resolved_attachment(item["path"]) for item in payload["attachments"]
+        ])
+        # Validate and build before SENDING so local validation failures do not
+        # become uncertain deliveries. No provider is contacted before this point.
+        message = build_message(payload, row["idempotency_key"])
+        raw = base64.urlsafe_b64encode(message.as_bytes()).decode("ascii")
         conn.execute(
             """UPDATE action_outbox
                SET delivery_status='SENDING',attempts=attempts+1,last_error=NULL
@@ -148,9 +172,6 @@ def send_action(action_id: int, *, service=None) -> dict[str, Any]:
         )
         conn.commit()
 
-    payload = row["payload"]
-    message = build_message(payload, row["idempotency_key"])
-    raw = base64.urlsafe_b64encode(message.as_bytes()).decode("ascii")
     try:
         provider = service or gmail_service()
         response = provider.users().messages().send(userId="me", body={"raw": raw}).execute()
