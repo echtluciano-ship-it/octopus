@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+import hashlib
 import sqlite3
 import tempfile
 import unittest
@@ -8,9 +10,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pandas as pd
+from openpyxl import Workbook
 
 import data_loader
 import metrics
+from billing_freshness import reconcile_billing_load_date, verify_live_billing_source
 from data_access import clear_cache, read_sql
 from sync_checks import reconcile_database, verify_manifest, write_manifest, SOURCE_FILES
 
@@ -202,6 +206,54 @@ class SyncTests(unittest.TestCase):
         (root / SOURCE_FILES[1]).write_text("new card", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "rebuild and reconcile"):
             verify_manifest(root)
+
+
+class BillingFreshnessTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name)
+        (self.root / "data").mkdir()
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.append(["Fecha Carga", "contacto CL", "cliente", "proveedor", "Num Fact", "Periodo", "Neto", "Iva", "Perc Iva", "Perc IIBB", "TOTAL"])
+        sheet.append([date(2026, 10, 23), None, "CLIENTE A", "HYF", "0001", "oct-26", 100, None, None, None, 121])
+        workbook.save(self.root / "data" / "FACTURACION OCTOPUS.xlsx")
+        content = (self.root / "data" / "FACTURACION OCTOPUS.xlsx").read_bytes()
+        digest = hashlib.sha256(content).hexdigest()
+        (self.root / "data" / "billing_source.json").write_text(
+            json.dumps({"drive_id": "sheet-id", "sha256": digest}), encoding="utf-8"
+        )
+        self.conn = sqlite3.connect(self.root / "octopus.db")
+        data_loader.reset_schema(self.conn)
+        self.conn.execute(
+            """INSERT INTO billing_operations
+            (client_key, client_name, original_client_name, channel, load_date,
+             period_date, month, invoice_number, net_amount, total_amount, source)
+            VALUES ('CLIENTE A','CLIENTE A','CLIENTE A','HYF','2026-10-23',
+                    '2026-10-01','2026-10','0001',100,121,'fixture')"""
+        )
+        self.conn.commit()
+        self.conn.close()
+        self.content = content
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def test_live_source_and_daily_rows_reconcile(self):
+        self.assertTrue(verify_live_billing_source(self.root, fetch=lambda _: self.content))
+        self.assertEqual(reconcile_billing_load_date(self.root, date(2026, 10, 23))["rows"], 1)
+
+    def test_live_source_change_blocks_publication(self):
+        with self.assertRaisesRegex(ValueError, "cambio durante la actualizacion"):
+            verify_live_billing_source(self.root, fetch=lambda _: b"new version")
+
+    def test_missing_daily_invoice_blocks_publication(self):
+        conn = sqlite3.connect(self.root / "octopus.db")
+        conn.execute("DELETE FROM billing_operations")
+        conn.commit()
+        conn.close()
+        with self.assertRaisesRegex(ValueError, "no reconcilia"):
+            reconcile_billing_load_date(self.root, date(2026, 10, 23))
 
 
 if __name__ == "__main__":
