@@ -1,14 +1,14 @@
 {
-  "database_sha256": "9b36c13af8f614ec72cd0c7c9f1bc49e10976c6c5fb4e0aff6ec0ad81a891b69",
+  "database_sha256": "c011018cf0a2414321ddbac08f60711e1cf22e10f131ec5f752ab0f9bb0f518e",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "281555786582d77ed8a0c44398af5c1aff41dedc78e7471c1540af4adb25a569",
-    "data/billing_source.json": "4a72c3130472e7846a2c7720ee25a513b90239622cf264807bf0a183f4763698",
-    "manual_rentability_operations.csv": "d90b40efae8631c529d3acb89545935bf618dd880b0abcf3eda50e87c9c827b7",
+    "data/billing_source.json": "9744aa7410c7a783849cddb696ab7c016b88bc1e5a0363038ec66c7e91d6a732",
+    "manual_rentability_operations.csv": "8afca013870f707158bebe2a29c5c5de48facf8295c011194468748aa4cdf336",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "7300f0975e107078c1b2ae7d6bb952a123dca343ba7b8210deccf41249b6a838"
+    "source_documents.csv": "3b43407bebb55fc2aa2209a197b010859f86a47859f20765d813e17a77750cb1"
   },
   "controls": {
-    "as_of": "2026-10-23",
+    "as_of": "2026-10-24",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3247,10 +3247,10 @@
       "2026-10": {
         "billing_total": 3688571690.08,
         "billing_records": 245,
-        "validated_net": 2855295810.0,
-        "profit": 173413827.0,
-        "profitability": 0.06073410201235857,
-        "valid_operations": 67,
+        "validated_net": 2973967005.0,
+        "profit": 181707806.0,
+        "profitability": 0.061099469393743326,
+        "valid_operations": 70,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3357,20 +3357,20 @@
             "operaciones": 1
           },
           {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion_validada": 140353891.0,
-            "ganancia_octopus": 10503510.0,
-            "rentabilidad": 0.07483590177061782,
-            "operaciones": 2
-          },
-          {
             "client_name": "ASHI S.A",
             "client_key": "ASHI",
             "facturacion_validada": 9500724.0,
             "ganancia_octopus": 708074.0,
             "rentabilidad": 0.07452842541263172,
             "operaciones": 1
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion_validada": 204838578.0,
+            "ganancia_octopus": 15017438.0,
+            "rentabilidad": 0.07331352397886691,
+            "operaciones": 4
           },
           {
             "client_name": "GEM CONSTRUCCIONES S. A.",
@@ -3538,10 +3538,10 @@
       }
     },
     "published_clients": 94,
-    "valid_operations_all_dates": 303,
+    "valid_operations_all_dates": 306,
     "operation_states": {
       "OK": 244,
-      "OK_FC_NETA": 37,
+      "OK_FC_NETA": 40,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,
