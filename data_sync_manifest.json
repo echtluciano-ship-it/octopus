@@ -1,8 +1,8 @@
 {
-  "database_sha256": "f2fbc25b80141689a39cc18f7b666cf9eaf3777c7c30b9389347e4f0fdcbb3d7",
+  "database_sha256": "9b36c13af8f614ec72cd0c7c9f1bc49e10976c6c5fb4e0aff6ec0ad81a891b69",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "a41f3b2cf7f2ce5525dbaaadfc556ea376e6b24aa9006ad625e771f96d73534c",
-    "data/billing_source.json": "c2ebe44b3fcbeb32a293b81988fc79305af90e0e4ca480ec1f3f5424f674db3c",
+    "data/FACTURACION OCTOPUS.xlsx": "281555786582d77ed8a0c44398af5c1aff41dedc78e7471c1540af4adb25a569",
+    "data/billing_source.json": "4a72c3130472e7846a2c7720ee25a513b90239622cf264807bf0a183f4763698",
     "manual_rentability_operations.csv": "d90b40efae8631c529d3acb89545935bf618dd880b0abcf3eda50e87c9c827b7",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
     "source_documents.csv": "7300f0975e107078c1b2ae7d6bb952a123dca343ba7b8210deccf41249b6a838"
@@ -3245,8 +3245,8 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3549615874.95,
-        "billing_records": 230,
+        "billing_total": 3688571690.08,
+        "billing_records": 245,
         "validated_net": 2855295810.0,
         "profit": 173413827.0,
         "profitability": 0.06073410201235857,
@@ -3457,6 +3457,12 @@
             "registros": 8
           },
           {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 150733203.46,
+            "registros": 10
+          },
+          {
             "client_name": "GYULAND S.R.L.",
             "client_key": "GYULAND",
             "facturacion": 140556940.0,
@@ -3491,12 +3497,6 @@
             "client_key": "DROGUERIA META",
             "facturacion": 120028613.71000001,
             "registros": 8
-          },
-          {
-            "client_name": "Alimentos Viandas",
-            "client_key": "ALIMENTOS VIANDAS",
-            "facturacion": 109708642.49000001,
-            "registros": 7
           },
           {
             "client_name": "MEDPHARMA S.A.",

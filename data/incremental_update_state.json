@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-23T19:15:00.719Z",
+  "last_successful_scan": "2026-10-24T00:08:15.000Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -9994,22 +9994,22 @@
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 468496,
-      "modified_time": "2026-10-23T14:07:44.000Z",
-      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-23\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "a41f3b2cf7f2ce5525dbaaadfc556ea376e6b24aa9006ad625e771f96d73534c"
+      "size_bytes": 471731,
+      "modified_time": "2026-10-24T00:05:43.000Z",
+      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-23-late\\FACTURACION OCTOPUS.xlsx",
+      "sha256": "281555786582d77ed8a0c44398af5c1aff41dedc78e7471c1540af4adb25a569"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-23T23:16:43+00:00"
+    "recorded_at": "2026-10-24T00:08:15+00:00"
   },
   "last_database_refresh": {
     "mode": "full_facturacion_refresh",
-    "at": "2026-10-23T23:16:29+00:00",
-    "new_operations": 2,
+    "at": "2026-10-24T00:08:06+00:00",
+    "new_operations": 0,
     "updated_operations": 0,
-    "billing_rows": 4970,
+    "billing_rows": 4985,
     "billing_source_changed": true
   }
 }
