@@ -1,14 +1,14 @@
 {
-  "database_sha256": "c011018cf0a2414321ddbac08f60711e1cf22e10f131ec5f752ab0f9bb0f518e",
+  "database_sha256": "eb1aa04beed4046069da18ed9231b82b09185cdb40cec628d4e5878fb997d239",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "281555786582d77ed8a0c44398af5c1aff41dedc78e7471c1540af4adb25a569",
-    "data/billing_source.json": "9744aa7410c7a783849cddb696ab7c016b88bc1e5a0363038ec66c7e91d6a732",
-    "manual_rentability_operations.csv": "8afca013870f707158bebe2a29c5c5de48facf8295c011194468748aa4cdf336",
+    "data/FACTURACION OCTOPUS.xlsx": "5cbeba4d06031a5593bc79bcc6b9d4beb66cb0bcec3053f8292a653fcc3434bf",
+    "data/billing_source.json": "3d909087492eadb449ec77c699486b980315a91d6d1db9ed964795f58f7ebe01",
+    "manual_rentability_operations.csv": "f4aa39f6f1fdc292273776b8c42a885844d2b6df09fddc90e8a39485722cdef1",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "3b43407bebb55fc2aa2209a197b010859f86a47859f20765d813e17a77750cb1"
+    "source_documents.csv": "aa40dfca4ecf49fe465f1e893330b60e9e79519a784a6820d533d58ebecc78c1"
   },
   "controls": {
-    "as_of": "2026-10-24",
+    "as_of": "2026-10-26",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 4431843521.81,
         "billing_records": 303,
-        "validated_net": 2263555641.77,
-        "profit": 126718371.67,
-        "profitability": 0.05598199988179299,
-        "valid_operations": 74,
+        "validated_net": 2304639773.77,
+        "profit": 129163699.67,
+        "profitability": 0.05604507096512965,
+        "valid_operations": 75,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3688571690.08,
-        "billing_records": 245,
-        "validated_net": 2973967005.0,
-        "profit": 181707806.0,
-        "profitability": 0.061099469393743326,
-        "valid_operations": 70,
+        "billing_total": 3813225341.15,
+        "billing_records": 251,
+        "validated_net": 3002400453.0,
+        "profit": 183426581.0,
+        "profitability": 0.0610933097937419,
+        "valid_operations": 72,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3381,6 +3381,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "TRANSPORTE TRACCION S.R.L.",
+            "client_key": "TRANSPORTE TRACCION",
+            "facturacion_validada": 10418658.0,
+            "ganancia_octopus": 727962.0,
+            "rentabilidad": 0.06987099490164664,
+            "operaciones": 1
+          },
+          {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
             "facturacion_validada": 32867790.0,
@@ -3403,14 +3411,6 @@
             "ganancia_octopus": 344461.0,
             "rentabilidad": 0.06879602315962284,
             "operaciones": 1
-          },
-          {
-            "client_name": "MAGTIK S A",
-            "client_key": "MAGTIK",
-            "facturacion_validada": 36968805.0,
-            "ganancia_octopus": 2539053.0,
-            "rentabilidad": 0.06868095952790468,
-            "operaciones": 2
           }
         ],
         "billing_ranking": [
@@ -3433,6 +3433,12 @@
             "registros": 22
           },
           {
+            "client_name": "LX",
+            "client_key": "LX",
+            "facturacion": 252436615.55,
+            "registros": 13
+          },
+          {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
             "facturacion": 226124159.16,
@@ -3449,12 +3455,6 @@
             "client_key": "DAUMAS MOTOFLEX",
             "facturacion": 165289254.51,
             "registros": 5
-          },
-          {
-            "client_name": "LX",
-            "client_key": "LX",
-            "facturacion": 152605176.73,
-            "registros": 8
           },
           {
             "client_name": "Alimentos Viandas",
@@ -3538,10 +3538,10 @@
       }
     },
     "published_clients": 94,
-    "valid_operations_all_dates": 306,
+    "valid_operations_all_dates": 309,
     "operation_states": {
-      "OK": 244,
-      "OK_FC_NETA": 40,
+      "OK": 246,
+      "OK_FC_NETA": 41,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 4,
