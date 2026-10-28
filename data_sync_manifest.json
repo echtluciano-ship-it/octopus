@@ -1,14 +1,14 @@
 {
-  "database_sha256": "6148449e7ba641192befd69ff0a4e7bdfbc0f8da56469d5bc42405fad6f924b1",
+  "database_sha256": "ccb851bbc88491da09dcb68638a4c9688159fa913ce5bf5d496d01db923b4d71",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "8332f96d9e30b80a7fd2cc67b2de8e382a125709f4e3c41d8ea20c8d32cdc0c4",
-    "data/billing_source.json": "896f56f99dd27bdc1bb80c01d62ca21873dde1fea0181890d56fc02004a6042e",
-    "manual_rentability_operations.csv": "f4aa39f6f1fdc292273776b8c42a885844d2b6df09fddc90e8a39485722cdef1",
+    "data/FACTURACION OCTOPUS.xlsx": "7be893156426590679d43d4ccc1539b960ae6b21405433509e712e13b795c229",
+    "data/billing_source.json": "c72542142417ccb7e9c9cb9e17e9a04cfe81b5f9a00580965ecccbd8b06e5a3b",
+    "manual_rentability_operations.csv": "b28e1f597a8f64645ff072cd113ab1f6d5942d38117a42f3cb0b18050e1819ef",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "1b3e4101d0352988c0a5bf7ee7177e7067a96ae95234936d52b088ccbf969fa7"
+    "source_documents.csv": "03b739a0f23b4b5a446317650758e0c7e9dfadaa7e4edab00651d1e5c9e47b79"
   },
   "controls": {
-    "as_of": "2026-10-27",
+    "as_of": "2026-10-28",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,8 +3245,8 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3881252151.98,
-        "billing_records": 261,
+        "billing_total": 3920404813.35,
+        "billing_records": 265,
         "validated_net": 3002400453.0,
         "profit": 183426581.0,
         "profitability": 0.0610933097937419,
@@ -3537,14 +3537,14 @@
         ]
       }
     },
-    "published_clients": 94,
-    "valid_operations_all_dates": 309,
+    "published_clients": 96,
+    "valid_operations_all_dates": 315,
     "operation_states": {
       "OK": 246,
       "OK_FC_NETA": 41,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
-      "OK_MULTI_MONTH_SPLIT": 4,
+      "OK_MULTI_MONTH_SPLIT": 10,
       "REVISION": 2,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2
