@@ -1,14 +1,14 @@
 {
-  "database_sha256": "eb1aa04beed4046069da18ed9231b82b09185cdb40cec628d4e5878fb997d239",
+  "database_sha256": "6148449e7ba641192befd69ff0a4e7bdfbc0f8da56469d5bc42405fad6f924b1",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "5cbeba4d06031a5593bc79bcc6b9d4beb66cb0bcec3053f8292a653fcc3434bf",
-    "data/billing_source.json": "3d909087492eadb449ec77c699486b980315a91d6d1db9ed964795f58f7ebe01",
+    "data/FACTURACION OCTOPUS.xlsx": "8332f96d9e30b80a7fd2cc67b2de8e382a125709f4e3c41d8ea20c8d32cdc0c4",
+    "data/billing_source.json": "896f56f99dd27bdc1bb80c01d62ca21873dde1fea0181890d56fc02004a6042e",
     "manual_rentability_operations.csv": "f4aa39f6f1fdc292273776b8c42a885844d2b6df09fddc90e8a39485722cdef1",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "aa40dfca4ecf49fe465f1e893330b60e9e79519a784a6820d533d58ebecc78c1"
+    "source_documents.csv": "1b3e4101d0352988c0a5bf7ee7177e7067a96ae95234936d52b088ccbf969fa7"
   },
   "controls": {
-    "as_of": "2026-10-26",
+    "as_of": "2026-10-27",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,8 +3245,8 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3813225341.15,
-        "billing_records": 251,
+        "billing_total": 3881252151.98,
+        "billing_records": 261,
         "validated_net": 3002400453.0,
         "profit": 183426581.0,
         "profitability": 0.0610933097937419,
@@ -3523,16 +3523,16 @@
             "registros": 4
           },
           {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 63436676.31,
+            "registros": 16
+          },
+          {
             "client_name": "LOGISTICAL S. A.",
             "client_key": "LOGISTICAL",
             "facturacion": 57162821.66,
             "registros": 4
-          },
-          {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 46364094.94,
-            "registros": 12
           }
         ]
       }
