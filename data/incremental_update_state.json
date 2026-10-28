@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-28T16:15:45Z",
+  "last_successful_scan": "2026-10-28T21:03:25.824248Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -9,7 +9,9 @@
     "pagos/2026-08": "1MxMI04k8PXD2zzXYRS6sK5kFVAffe4oU",
     "pagos/2026-09": "1TQKK0nLbBWWlBag8XSmZp5hyOzIMl37c",
     "pendientes/2026-10": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
-    "pagos/2026-10": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14"
+    "pagos/2026-10": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+    "pendientes/2026-11": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+    "pagos/2026-11": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye"
   },
   "documents": {
     "1jQFzxHetZ7oVOWRh8QiPeD_Bg_nh4duU": {
@@ -9829,7 +9831,7 @@
       "name": "MAGTIK- DIST. ESPORA- COMP RET  GCIAS PAGO 22-10.pdf",
       "mime_type": "application/pdf",
       "size_bytes": 209096,
-      "modified_time": "2026-10-22T19:22:33.44Z",
+      "modified_time": "2026-10-22T19:22:47Z",
       "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
       "folder_period": "2026-10",
       "source_type": "pagos",
@@ -10340,29 +10342,62 @@
       "folder_period": "2026-10",
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/12C7XyU2xkwK5bEAPgGFBkg09WREYocSe/view?usp=drivesdk"
+    },
+    "1aoZZgj8VubB-JfICCQyOykZyQq69byUP": {
+      "drive_id": "1aoZZgj8VubB-JfICCQyOykZyQq69byUP",
+      "name": "PHOTO-2026-10-27-10-19-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 189002,
+      "modified_time": "2026-10-28T00:33:25Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1aoZZgj8VubB-JfICCQyOykZyQq69byUP/view?usp=drivesdk"
+    },
+    "1-4SsWeq-35cXs-dxu4IcnfwBKM17miCK": {
+      "drive_id": "1-4SsWeq-35cXs-dxu4IcnfwBKM17miCK",
+      "name": "PHOTO-2026-10-27-16-07-34.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 301205,
+      "modified_time": "2026-10-28T00:33:22Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1-4SsWeq-35cXs-dxu4IcnfwBKM17miCK/view?usp=drivesdk"
+    },
+    "1NohIhlI_twfcg_OQOSJzEZsWdvgDiqsg": {
+      "drive_id": "1NohIhlI_twfcg_OQOSJzEZsWdvgDiqsg",
+      "name": "PHOTO-2026-10-28-17-06-49.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17269,
+      "modified_time": "2026-10-28T20:48:09Z",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1NohIhlI_twfcg_OQOSJzEZsWdvgDiqsg/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 470517,
-      "modified_time": "2026-10-28T15:52:25Z",
-      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-28\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "7be893156426590679d43d4ccc1539b960ae6b21405433509e712e13b795c229",
+      "size_bytes": 472406,
+      "modified_time": "2026-10-28T20:22:23Z",
+      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-28_late\\FACTURACION OCTOPUS.xlsx",
+      "sha256": "88735cc0b16bb6a0e979029efba29f4115257860ca196ec5ad95b6ccbfd631fd",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit?usp=drivesdk&rtpof=true&sd=true"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-28T16:21:22+00:00"
+    "recorded_at": "2026-10-28T21:05:42+00:00"
   },
   "last_database_refresh": {
     "mode": "full_facturacion_refresh",
-    "at": "2026-10-28T16:21:22+00:00",
-    "new_operations": 6,
+    "at": "2026-10-28T21:04:44+00:00",
+    "new_operations": 3,
     "updated_operations": 0,
-    "billing_rows": 5005,
+    "billing_rows": 5039,
     "billing_source_changed": true
   }
 }

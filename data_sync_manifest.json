@@ -1,11 +1,11 @@
 {
-  "database_sha256": "ccb851bbc88491da09dcb68638a4c9688159fa913ce5bf5d496d01db923b4d71",
+  "database_sha256": "74e03135a7858fff8a14cc3773ad7cd7ff856725538680b10b7a8ae8ddc20c04",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "7be893156426590679d43d4ccc1539b960ae6b21405433509e712e13b795c229",
-    "data/billing_source.json": "c72542142417ccb7e9c9cb9e17e9a04cfe81b5f9a00580965ecccbd8b06e5a3b",
-    "manual_rentability_operations.csv": "b28e1f597a8f64645ff072cd113ab1f6d5942d38117a42f3cb0b18050e1819ef",
+    "data/FACTURACION OCTOPUS.xlsx": "88735cc0b16bb6a0e979029efba29f4115257860ca196ec5ad95b6ccbfd631fd",
+    "data/billing_source.json": "5e7d022349a61542cdeada5e497165b8d0cc8e5b994c856834d4821cf31255a4",
+    "manual_rentability_operations.csv": "579bdded120bfa514915bd0bdccb8a0485b0bfea90fd03f6caf58df3b216ed60",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "03b739a0f23b4b5a446317650758e0c7e9dfadaa7e4edab00651d1e5c9e47b79"
+    "source_documents.csv": "1cc70d67fb334affe6427405d7d65610aa9f7007cc0c42a0e5a163e4a903d7c4"
   },
   "controls": {
     "as_of": "2026-10-28",
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 3920404813.35,
-        "billing_records": 265,
-        "validated_net": 3002400453.0,
-        "profit": 183426581.0,
-        "profitability": 0.0610933097937419,
-        "valid_operations": 72,
+        "billing_total": 4402768721.47,
+        "billing_records": 297,
+        "validated_net": 3043427303.0,
+        "profit": 185713057.0,
+        "profitability": 0.06102102613620405,
+        "valid_operations": 74,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3445,6 +3445,12 @@
             "registros": 24
           },
           {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 186556720.38,
+            "registros": 9
+          },
+          {
             "client_name": "Wolfpack",
             "client_key": "WOLFPACK",
             "facturacion": 179857472.76,
@@ -3461,6 +3467,12 @@
             "client_key": "ALIMENTOS VIANDAS",
             "facturacion": 150733203.46,
             "registros": 10
+          },
+          {
+            "client_name": "Comite Ejecutivo",
+            "client_key": "COMITE EJECUTIVO",
+            "facturacion": 141897306.72,
+            "registros": 11
           },
           {
             "client_name": "GYULAND S.R.L.",
@@ -3499,6 +3511,12 @@
             "registros": 8
           },
           {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 115205972.83,
+            "registros": 7
+          },
+          {
             "client_name": "MEDPHARMA S.A.",
             "client_key": "MEDPHARMA",
             "facturacion": 91157351.31,
@@ -3515,33 +3533,15 @@
             "client_key": "VEGA Y CAMJI",
             "facturacion": 86645141.86,
             "registros": 3
-          },
-          {
-            "client_name": "APR Energy",
-            "client_key": "APR ENERGY",
-            "facturacion": 80385015.19999999,
-            "registros": 4
-          },
-          {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 63436676.31,
-            "registros": 16
-          },
-          {
-            "client_name": "LOGISTICAL S. A.",
-            "client_key": "LOGISTICAL",
-            "facturacion": 57162821.66,
-            "registros": 4
           }
         ]
       }
     },
-    "published_clients": 96,
-    "valid_operations_all_dates": 315,
+    "published_clients": 97,
+    "valid_operations_all_dates": 318,
     "operation_states": {
-      "OK": 246,
-      "OK_FC_NETA": 41,
+      "OK": 248,
+      "OK_FC_NETA": 42,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 10,
