@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-28T21:03:25.824248Z",
+  "last_successful_scan": "2026-10-30T01:28:34.224978Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -10375,29 +10375,128 @@
       "folder_period": "2026-11",
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/1NohIhlI_twfcg_OQOSJzEZsWdvgDiqsg/view?usp=drivesdk"
+    },
+    "1FdX6E4gGdhlyEWnJX8Mz8qNb8j3HOeY4": {
+      "drive_id": "1FdX6E4gGdhlyEWnJX8Mz8qNb8j3HOeY4",
+      "name": "PHOTO-2026-10-28-23-59-13.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 323335,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1FdX6E4gGdhlyEWnJX8Mz8qNb8j3HOeY4/view?usp=drivesdk"
+    },
+    "1DtaJl8ao4Wu4gI3c2NbDFbnY9wVgXJeA": {
+      "drive_id": "1DtaJl8ao4Wu4gI3c2NbDFbnY9wVgXJeA",
+      "name": "PHOTO-2026-10-29-10-56-25.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 376849,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1DtaJl8ao4Wu4gI3c2NbDFbnY9wVgXJeA/view?usp=drivesdk"
+    },
+    "18nzfzuFPZavnadJ5EKo3aEa6OooHd7uw": {
+      "drive_id": "18nzfzuFPZavnadJ5EKo3aEa6OooHd7uw",
+      "name": "PHOTO-2026-10-29-20-33-18.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18238,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/18nzfzuFPZavnadJ5EKo3aEa6OooHd7uw/view?usp=drivesdk"
+    },
+    "1VaBud4iSZOK2TR_u5uK5HSKd7fKilGyp": {
+      "drive_id": "1VaBud4iSZOK2TR_u5uK5HSKd7fKilGyp",
+      "name": "PHOTO-2026-10-29-21-34-56.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17737,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1VaBud4iSZOK2TR_u5uK5HSKd7fKilGyp/view?usp=drivesdk"
+    },
+    "147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1": {
+      "drive_id": "147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1",
+      "name": "PHOTO-2026-10-29-21-39-43.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 16542,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1/view?usp=drivesdk"
+    },
+    "1OnIstVaTlmTq3VO9bpG22T61n-QtBn8j": {
+      "drive_id": "1OnIstVaTlmTq3VO9bpG22T61n-QtBn8j",
+      "name": "PHOTO-2026-10-29-21-50-50.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17825,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1OnIstVaTlmTq3VO9bpG22T61n-QtBn8j/view?usp=drivesdk"
+    },
+    "1vxMi7mY56CmMLIYDU8nGT4MuOZLzD8eK": {
+      "drive_id": "1vxMi7mY56CmMLIYDU8nGT4MuOZLzD8eK",
+      "name": "PHOTO-2026-10-29-21-59-38.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17519,
+      "modified_time": "2026-10-30T01:23:50Z",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1vxMi7mY56CmMLIYDU8nGT4MuOZLzD8eK/view?usp=drivesdk"
+    },
+    "12UF6TAenAEwVm6ZYKixVI_0GoyyxmkBs": {
+      "drive_id": "12UF6TAenAEwVm6ZYKixVI_0GoyyxmkBs",
+      "name": "PHOTO-2026-10-29-10-50-10.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 29227,
+      "modified_time": "2026-10-29T19:04:58Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/12UF6TAenAEwVm6ZYKixVI_0GoyyxmkBs/view?usp=drivesdk"
+    },
+    "1r02diEP3BHwdCGl8CBkYfJUkfilXMURX": {
+      "drive_id": "1r02diEP3BHwdCGl8CBkYfJUkfilXMURX",
+      "name": "RET HyF Distribuciones MAS METROS CATAMARCA S.R.L.-FCVTA-A-5-63408.pdf",
+      "mime_type": "application/octet-stream",
+      "size_bytes": 210652,
+      "modified_time": "2026-10-29T19:04:59Z",
+      "folder_id": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
+      "folder_period": "2026-10",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1r02diEP3BHwdCGl8CBkYfJUkfilXMURX/view?usp=drivesdk"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 472406,
-      "modified_time": "2026-10-28T20:22:23Z",
-      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-28_late\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "88735cc0b16bb6a0e979029efba29f4115257860ca196ec5ad95b6ccbfd631fd",
+      "size_bytes": 474966,
+      "modified_time": "2026-10-30T00:58:10Z",
+      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-29\\FACTURACION OCTOPUS.xlsx",
+      "sha256": "58c30e55976e250e9c9c3099ea4d775cc4627a809849b950de9418329d07692e",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit?usp=drivesdk&rtpof=true&sd=true"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-28T21:05:42+00:00"
+    "recorded_at": "2026-10-30T01:34:34+00:00"
   },
   "last_database_refresh": {
     "mode": "full_facturacion_refresh",
-    "at": "2026-10-28T21:04:44+00:00",
-    "new_operations": 3,
+    "at": "2026-10-30T01:34:19+00:00",
+    "new_operations": 7,
     "updated_operations": 0,
-    "billing_rows": 5039,
+    "billing_rows": 5047,
     "billing_source_changed": true
   }
 }

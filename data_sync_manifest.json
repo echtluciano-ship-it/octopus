@@ -1,14 +1,14 @@
 {
-  "database_sha256": "74e03135a7858fff8a14cc3773ad7cd7ff856725538680b10b7a8ae8ddc20c04",
+  "database_sha256": "24ed38b5440d23ef8c56cb64ba6c3c5bf4d1524782b47ae269229b1614594563",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "88735cc0b16bb6a0e979029efba29f4115257860ca196ec5ad95b6ccbfd631fd",
-    "data/billing_source.json": "5e7d022349a61542cdeada5e497165b8d0cc8e5b994c856834d4821cf31255a4",
-    "manual_rentability_operations.csv": "579bdded120bfa514915bd0bdccb8a0485b0bfea90fd03f6caf58df3b216ed60",
+    "data/FACTURACION OCTOPUS.xlsx": "58c30e55976e250e9c9c3099ea4d775cc4627a809849b950de9418329d07692e",
+    "data/billing_source.json": "eb643343666348baf4961a7220059bd247e2436463c8235b9cdb4cb082a03376",
+    "manual_rentability_operations.csv": "24b401617e4ef701d65432765b1c32791fe160ecb8495e2c36b5845c0ca478d9",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "1cc70d67fb334affe6427405d7d65610aa9f7007cc0c42a0e5a163e4a903d7c4"
+    "source_documents.csv": "c3ad4ac6486a69fa932f674f8d5981c92dd053948a028bbdac2df5ea52eceeba"
   },
   "controls": {
-    "as_of": "2026-10-28",
+    "as_of": "2026-10-29",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 4402768721.47,
-        "billing_records": 297,
-        "validated_net": 3043427303.0,
-        "profit": 185713057.0,
-        "profitability": 0.06102102613620405,
-        "valid_operations": 74,
+        "billing_total": 4573738255.59,
+        "billing_records": 305,
+        "validated_net": 3086448013.67,
+        "profit": 187943021.33,
+        "profitability": 0.06089298134865481,
+        "valid_operations": 77,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3407,10 +3407,10 @@
           {
             "client_name": "Mas Metros",
             "client_key": "MAS METROS",
-            "facturacion_validada": 5006990.0,
-            "ganancia_octopus": 344461.0,
-            "rentabilidad": 0.06879602315962284,
-            "operaciones": 1
+            "facturacion_validada": 10019820.0,
+            "ganancia_octopus": 689352.0,
+            "rentabilidad": 0.06879884069773709,
+            "operaciones": 2
           }
         ],
         "billing_ranking": [
@@ -3538,14 +3538,14 @@
       }
     },
     "published_clients": 97,
-    "valid_operations_all_dates": 318,
+    "valid_operations_all_dates": 324,
     "operation_states": {
-      "OK": 248,
-      "OK_FC_NETA": 42,
+      "OK": 250,
+      "OK_FC_NETA": 46,
       "OK_TRANSFERENCIA_1_2": 18,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 10,
-      "REVISION": 2,
+      "REVISION": 3,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2
     }
