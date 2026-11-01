@@ -1,34 +1,50 @@
 {
   "period": "2026-10",
   "status": "EN_REVISION",
-  "audit_complete": false,
-  "run_at": "2026-10-31T20:05:54.668940-03:00",
-  "starting_commit": "e6c985f0b2f63bdcab7b70432e513b6b70cc45dc",
-  "last_successful_scan": "2026-10-30T01:28:34.224978Z",
-  "source_hashes": {
-    "local_billing": "58c30e55976e250e9c9c3099ea4d775cc4627a809849b950de9418329d07692e",
-    "live_billing": "129bb2c396e13a68bef578afb5df063084d887df1c713b1dc9d85de227cf19a0",
-    "database": "24ed38b5440d23ef8c56cb64ba6c3c5bf4d1524782b47ae269229b1614594563"
+  "run_at": "2026-11-01T20:21:49.737961-03:00",
+  "starting_commit": "8761a1fad72425bf2e817442074f46977ede65d3",
+  "inventory_count": 492,
+  "target_and_adjacent_folder_counts": {
+    "pendientes/2026-09": 80,
+    "pagos/2026-09": 193,
+    "pendientes/2026-10": 101,
+    "pagos/2026-10": 117,
+    "pendientes/2026-11": 1,
+    "pagos/2026-11": 0
   },
-  "document_counts_scope": "known local registry folder_period October; not certified live inventory",
-  "known_document_counts": {
-    "OK_PAGOS_SUPPORT": 109,
-    "DUPLICADO": 14,
+  "classification_counts": {
+    "OK_TRANSFERENCIA_1_2": 10,
+    "OK_MULTI_MONTH_SPLIT": 5,
+    "OK": 115,
+    "DUPLICADO": 21,
+    "OK_FC_NETA": 34,
+    "REVISION": 4,
+    "VALIDACION_PAGOS": 80,
+    "OK_PAGOS": 24,
+    "OK_PAGOS_SUPPORT": 198,
+    "VALIDADO_SIN_FC_NETA": 1
+  },
+  "october_folder_classification_counts": {
     "REVISION": 3,
-    "OK_TRANSFERENCIA_1_2": 4,
-    "OK": 47,
+    "OK_TRANSFERENCIA_1_2": 7,
+    "OK": 49,
     "OK_FC_NETA": 31,
-    "OK_MULTI_MONTH_SPLIT": 4
+    "DUPLICADO": 14,
+    "OK_MULTI_MONTH_SPLIT": 4,
+    "VALIDADO_SIN_FC_NETA": 1,
+    "OK_PAGOS_SUPPORT": 109
   },
-  "new_documents_visually_reviewed": 6,
-  "new_documents_applied": 0,
-  "known_reviews_in_scope": 4,
+  "new_documents": 6,
+  "new_operations": 5,
+  "new_october_operations": 2,
+  "new_december_operations": 3,
+  "review_count": 3,
   "review_documents": [
     {
       "drive_id": "1_Vjz4S5fLwZrKkh2FIYhs62DPqFpVomJ",
       "file_name": "PHOTO-2026-09-22-11-23-21.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 308111,
+      "size_bytes": "308111",
       "sha256": "447f61757248ae50391a25c3ff36f1bb935f01d65f0d0cc59667b07175c7c60f",
       "visual_sha256": "64487dc46072200921ff5a6ae52fb85baccfd5f077c29287bbf990c4ac0dc77c",
       "detected_at": "2026-09-22T21:24:36+00:00",
@@ -45,7 +61,7 @@
       "drive_id": "15tB-lgr3L7lJNj_ggHXQjgQZ63xXC888",
       "file_name": "PHOTO-2026-09-22-14-58-07.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 18498,
+      "size_bytes": "18498",
       "sha256": "a46108a072f0499c6a22d0b372daaf503cf5ee2c1f6e136029e09f793c0f96fb",
       "visual_sha256": "7464509d6f623b13015f17fc0a525a9dcdebff5b3d1e1085e86a0a534082acef",
       "detected_at": "2026-09-22T21:24:36+00:00",
@@ -59,30 +75,13 @@
       "note": "BASIC A - Espora. Fechas visibles 08/16/21/28-10 y 09/13/18/25-11; FC neta 84.501.076; Ganancia 5.925.215. Confirmar si corresponde dividir entre octubre/noviembre o que mes utilizar; posible alias BASICS S.A."
     },
     {
-      "drive_id": "147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1",
-      "file_name": "PHOTO-2026-10-29-21-39-43.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 16542,
-      "sha256": "0070a9e50b89a19df7e9264d618624666e9eedcf378bf6857679993e765ac4c9",
-      "visual_sha256": "4b59c91271b540eac4c629e36cb7e93b0a1901d1aefe25a747248b64a42954d5",
-      "detected_at": "2026-10-30T01:28:34Z",
-      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
-      "folder_period": "2026-10",
-      "operation_ref": "drive:147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1",
-      "status": "REVISION",
-      "duplicate_of": "",
-      "duplicate_reason": "",
-      "source_url": "https://drive.google.com/file/d/147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1/view?usp=drivesdk",
-      "note": "Lumbrera Espora; ECHEQ y Ganancia visibles, pero falta Facturacion Neta o Facturado para calcular rentabilidad."
-    },
-    {
       "drive_id": "1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO",
       "file_name": "PHOTO-2026-10-30-14-58-08.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 302432,
+      "size_bytes": "302432",
       "sha256": "06568705748e5ee8bc8bf4f1cabfcbd375e1a73f7d84f8afcaba00a04abebdef",
       "visual_sha256": "4ece35b5f172f010b36a2a505e7b8d4c770540bb95d85d8c1c11f94dd4c84ab3",
-      "detected_at": "2026-10-31T23:05:53+00:00",
+      "detected_at": "2026-11-01T23:16:28+00:00",
       "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
       "folder_period": "2026-10",
       "operation_ref": "",
@@ -90,24 +89,39 @@
       "duplicate_of": "",
       "duplicate_reason": "",
       "source_url": "https://drive.google.com/file/d/1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO/view",
-      "note": "",
-      "client": "Mantovana",
-      "channel": "Espora",
-      "economic_date": "30/10 y 30/11/2026",
-      "net": 20408666,
-      "profit": 1412914,
-      "check": 24576515,
-      "duplicate_evidence": null,
-      "applied_to_production": false
+      "note": "Cuadro con ECHEQ 30/10 y 30/11/2026. FC neta 20.408.666, ganancia 1.412.914, ECHEQ 24.576.515. Falta orden de pago inequivoca con importes por vencimiento; no asumir reparto."
     }
   ],
-  "local_published_metrics": {
-    "billing_total": 4573738255.59,
-    "billing_records": 305,
-    "validated_net": 3488093329.0,
-    "profit": 217047437.0,
-    "profitability": 0.06222523783852574,
-    "valid_operations": 84,
+  "human_decisions": [
+    {
+      "drive_id": "147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1",
+      "file_name": "PHOTO-2026-10-29-21-39-43.jpg",
+      "client": "Lumbrera",
+      "channel": "Espora",
+      "recorded_at": "2026-11-01T20:11:06.3349617-03:00",
+      "user_statement": "No lleva facturación neta me dijeron",
+      "confirmed": "Excepcion exclusiva de este Drive ID: sin Facturacion Neta; Ganancia Octopus 1199509; Neto a devolver 38784139. No generalizar a Lumbrera ni a otros cuadros.",
+      "pending": null,
+      "status": "HUMAN_VALIDATED_DOCUMENT",
+      "production_changed": false,
+      "updated_at": "2026-11-01T20:12:07.024914-03:00",
+      "user_clarification": "Solo en ese cuadro es así, no tiene facturación neta, lo de abajo es la ganancia y después lo importante es el neto a devolver.",
+      "net_billing_amount": null,
+      "net_billing_applicable": false,
+      "octopus_profit": 1199509,
+      "net_to_return": 38784139,
+      "check_amount": 39983648,
+      "application_status": "Applied to database and UI; awaiting deployed verification",
+      "local_database_applied": true
+    }
+  ],
+  "metrics": {
+    "billing_total": 4932458746.64,
+    "billing_records": 331,
+    "validated_net": 3607763349.0,
+    "profit": 223425759.0,
+    "profitability": 0.06192916147394456,
+    "valid_operations": 86,
     "rentability_ranking": [
       {
         "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -230,14 +244,6 @@
         "operaciones": 4
       },
       {
-        "client_name": "LABORATORIOS JAYOR S.R.L.",
-        "client_key": "LABORATORIOS JAYOR",
-        "facturacion_validada": 305382413.0,
-        "ganancia_octopus": 22055506.0,
-        "rentabilidad": 0.07222258080723201,
-        "operaciones": 5
-      },
-      {
         "client_name": "GEM CONSTRUCCIONES S. A.",
         "client_key": "GEM CONSTRUCCIONES",
         "facturacion_validada": 20011360.0,
@@ -268,9 +274,23 @@
         "ganancia_octopus": 2277134.0,
         "rentabilidad": 0.06928162800115249,
         "operaciones": 1
+      },
+      {
+        "client_name": "Aeronáuticos",
+        "client_key": "AERONAUTICOS",
+        "facturacion_validada": 18247149.0,
+        "ganancia_octopus": 1263404.0,
+        "rentabilidad": 0.06923843280942135,
+        "operaciones": 2
       }
     ],
     "billing_ranking": [
+      {
+        "client_name": "Ovniplast",
+        "client_key": "OVNIPLAST",
+        "facturacion": 511038572.1,
+        "registros": 33
+      },
       {
         "client_name": "Escalum",
         "client_key": "ESCALUM",
@@ -284,22 +304,16 @@
         "registros": 19
       },
       {
-        "client_name": "Ovniplast",
-        "client_key": "OVNIPLAST",
-        "facturacion": 307854527.23,
-        "registros": 22
+        "client_name": "Centro Médico Amenabar",
+        "client_key": "CENTRO MEDICO AMENABAR",
+        "facturacion": 326126967.28,
+        "registros": 34
       },
       {
         "client_name": "LX",
         "client_key": "LX",
         "facturacion": 252436615.55,
         "registros": 13
-      },
-      {
-        "client_name": "Centro Médico Amenabar",
-        "client_key": "CENTRO MEDICO AMENABAR",
-        "facturacion": 226124159.16,
-        "registros": 24
       },
       {
         "client_name": "TEYLEM SA",
@@ -393,36 +407,74 @@
       }
     ]
   },
-  "live_billing_preview": {
-    "records": 331,
-    "billing_total": 4932458746.64
+  "november_metrics": {
+    "billing_total": 0.0,
+    "billing_records": 0,
+    "validated_net": 0.0,
+    "profit": 0.0,
+    "profitability": null,
+    "valid_operations": 0,
+    "rentability_ranking": [],
+    "billing_ranking": []
   },
-  "billing_difference": 358720491.05,
-  "billing_changed_rows": 100,
-  "tests": {
-    "command": "python -m pytest tests -q",
-    "passed": 28,
-    "local_verify_sync": "OK with --skip-live-billing; 22 months,97 clients",
-    "live_verify_sync": "ERROR: live billing SHA differs"
+  "published_clients": 97,
+  "source_hashes": {
+    "data/FACTURACION OCTOPUS.xlsx": "129bb2c396e13a68bef578afb5df063084d887df1c713b1dc9d85de227cf19a0",
+    "data/billing_source.json": "163b099fae6289a4b60384ad9069771881cbe1624b8f67033c22510d957dc842",
+    "manual_rentability_operations.csv": "a47a282f82431f948ab371563d9cd65f91be4f84a2cd78a7739cce86a37f5e96",
+    "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
+    "source_documents.csv": "44c8efb2934edec10efedcd20ac4f544dba8e687e158babab2d9775b04b421bc"
   },
-  "render": {
-    "url": "https://octopus-clientes.onrender.com/",
-    "deployed_commit": "e6c985f0b2f63bdcab7b70432e513b6b70cc45dc",
-    "state": "SIN CAMBIOS; old snapshot verified, current closure not published",
-    "verified": "Four October indicators, 84 operations, Top20,97 clients and ACMED card observed. Old snapshot matches local; freshness fails."
+  "database_sha256": "4fbde5be8a13ebd4c53eba5e5c42cdc22838be57f3430604064315d95fbd5396",
+  "billing_difference_corrected": 358720491.05,
+  "controls": {
+    "tests": "29 passed",
+    "application_smoke_test": "Streamlit AppTest October: no exceptions; Lumbrera exact values displayed",
+    "live_billing": "OK hash 129bb2c396e13a68bef578afb5df063084d887df1c713b1dc9d85de227cf19a0",
+    "verify_sync": "OK:23 months,97 published clients",
+    "duplicate_identity": "OK: no duplicate lacking matching SHA256/pixels in target and adjacent months",
+    "semantic_source_diff": "Only 5 new operations,6 new documents,Lumbrera confirmed change",
+    "payment_search": "71 candidate PDFs searched,0 textual matches for BASIC/Mantovana,0 errors; local search also no matches. Image-only/unindexed support not ruled out."
   },
-  "github": "SIN CAMBIOS; evidence local only; no publish while end-to-end controls incomplete",
-  "blockers": [
-    "Four documentary REVIEW cases require resolution; see review_documents.",
-    "100 changed rows in live billing; full source preview retained, production not rebuilt.",
-    "Six new Pendientes documents reviewed; two October candidates, three December documents and one multi-month REVIEW; none applied.",
-    "Complete fresh inventory, exact modification metadata and adjacent-month economic-date reconciliation remain incomplete; connector unavailable and browser inspection was partial.",
-    "Payments cross-match for BASIC A and Mantovana not completed; no assumption of missing orders or equal splits.",
-    "Not a certified final-day snapshot: run before local midnight."
+  "explained_quality_issues": [
+    {
+      "source": "FACTURACION OCTOPUS.xlsx",
+      "row": 5076,
+      "reason": "Only period 2026-10-26 and zero formulas; no client/invoice/net amount. Loader rejects, no amount to add; not converted into an operation."
+    },
+    {
+      "source": "FACTURACION OCTOPUS.xlsx",
+      "row": 2432,
+      "reason": "SANCOR period 2026-12-25 remains future period excluded by existing loader rule."
+    }
   ],
-  "decisions": [
-    "No business rules changed. No source files moved or deleted. No successful watermark advanced.",
-    "Existing human overrides preserved; Hasar remains September and Fashion Cook October."
+  "remaining_work": [
+    "Resolve BASIC A HYF, BASIC A Espora and Mantovana October/November allocation with unequivocal payment amounts; no equal split assumed.",
+    "Exact live modification metadata unavailable in read fallback; no successful incremental scan watermark advanced.",
+    "Three Alimentaria documents correctly dated December in database; Drive move cancelled because UI warned of access changes. Empty Diciembre 2026 folder created, ID 1EXyIDWP2nxFIxnp4HSldvv8o774zKtSY; sharing untouched.",
+    "Adjacent September cropped image 1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe has no client/channel/date; cannot rule out October. Preserve REVIEW, do not infer identity from amounts."
   ],
-  "evidence_directory": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\monthly_closure_2026-10"
+  "github": "PENDING_PUSH",
+  "render": "PENDING_DEPLOY_AND_VERIFY",
+  "evidence_directory": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\data\\monthly_closures\\runs\\2026-10",
+  "adjacent_month_unresolved_documents": [
+    {
+      "drive_id": "1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe",
+      "file_name": "PHOTO-2026-09-24-19-19-03.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": "18066",
+      "sha256": "087a7f201fb7db3b69087d6044b607a9f9709de200e4dfa5b433953f16651d54",
+      "visual_sha256": "15d48b280fa81915dfcaa88e8fdfcb20d09830ebf0e0e2b094141a33442a3607",
+      "detected_at": "2026-09-24T22:31:46+00:00",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "operation_ref": "",
+      "status": "REVISION",
+      "duplicate_of": "",
+      "duplicate_reason": "",
+      "source_url": "https://drive.google.com/file/d/1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe/view?usp=drivesdk",
+      "note": "Imagen recortada: se leen ECHEQ 47.014.815, Facturacion Neta 39.277.206 y Ganancia 2.331.652, pero no cliente, canal ni fecha. No contabilizar hasta confirmar esos datos."
+    }
+  ],
+  "unresolved_documents_including_unknown_period": 4
 }

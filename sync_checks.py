@@ -41,6 +41,12 @@ def reconcile_database(conn: sqlite3.Connection, as_of: date) -> dict:
         raise ValueError("SQLite integrity check failed")
     all_rent = read("SELECT * FROM rentability_operations")
     all_bill = read("SELECT * FROM billing_operations")
+    for row in all_rent[all_rent.status == "VALIDADO_SIN_FC_NETA"].itertuples(index=False):
+        if pd.notna(row.billed_amount) or pd.notna(row.net_billing_amount):
+            raise ValueError("Validated cash-only document must not acquire a billing denominator")
+        if any(pd.isna(value) for value in (row.check_amount, row.octopus_profit, row.net_to_return)):
+            raise ValueError("Validated cash-only document is missing confirmed amounts")
+        same_amount(row.check_amount - row.octopus_profit, row.net_to_return, "cash-only net to return")
     valid = all_rent[
         all_rent.status.str.startswith("OK")
         & (all_rent.billed_amount > 0)

@@ -378,6 +378,14 @@ if available_months:
         "Facturacion total es el historico del mes. "
         f"Rentabilidad usa {operaciones_rentabilidad} operaciones validadas."
     )
+    cash_only = metrics.validated_without_billing(selected_month, CURRENT_DATE)
+    if not cash_only.empty:
+        with st.expander("Cuadros validados sin Facturacion Neta"):
+            st.caption("Ganancia y neto a devolver confirmados. No integran los indicadores de rentabilidad.")
+            cash_display = cash_only.copy()
+            for column in ("ECHEQ", "Ganancia", "Neto a devolver"):
+                cash_display[column] = cash_display[column].map(money)
+            st.dataframe(cash_display, use_container_width=True, hide_index=True)
     st.divider()
 
     st.subheader("Rankings")

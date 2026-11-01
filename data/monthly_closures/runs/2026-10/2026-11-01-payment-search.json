@@ -1,0 +1,712 @@
+[
+  {
+    "drive_id": "17hGDp43v_rWZfkNGW6XX1Hfmpzgu9bB4",
+    "name": "30708609982_OP_00027216_09-09-2026_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\17hGDp43v_rWZfkNGW6XX1Hfmpzgu9bB4.pdf",
+    "text_length": 664,
+    "match": false,
+    "text": null,
+    "sha256": "52bd4586ebe7bd81f650683c96b364b13e13a26c2213e610eb86997ec1d4aa90"
+  },
+  {
+    "drive_id": "1o7dpNV7VoYisY1zUxnMnMLixdmWlOIkU",
+    "name": "30708609982_OP_00027217_09-09-2026_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1o7dpNV7VoYisY1zUxnMnMLixdmWlOIkU.pdf",
+    "text_length": 667,
+    "match": false,
+    "text": null,
+    "sha256": "4a0033496d29535d6215f376963781eb3026b84f875f264bf68e037a913245b7"
+  },
+  {
+    "drive_id": "1v_0NstrBBdm2ijBwYiVeX7DhrJyaHbYw",
+    "name": "30709899496_OP_00027250_10-09-2026_FORTEDEIMARMISA.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1v_0NstrBBdm2ijBwYiVeX7DhrJyaHbYw.pdf",
+    "text_length": 655,
+    "match": false,
+    "text": null,
+    "sha256": "05ec7f3da0359d9bfba4f3d67be0fd4a8f37b4ef7cfe3804091e9efce2cb1e6a"
+  },
+  {
+    "drive_id": "1U1XKWOTIG23AIzuONdI5HJdCXphJBNrM",
+    "name": "A_El_Faro_Dieciocho_De_Tandil_OP_20260917.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1U1XKWOTIG23AIzuONdI5HJdCXphJBNrM.pdf",
+    "text_length": 1059,
+    "match": false,
+    "text": null,
+    "sha256": "3d54af2d83d50c0d65617aed7772cfe91f4e32e5d37ed4afbfae47f67aaab389"
+  },
+  {
+    "drive_id": "1yhhDOfvkGv3zIdCOfXb7jIfG0HjolI89",
+    "name": "Detalles_operacion_nroLR9FBa5458.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1yhhDOfvkGv3zIdCOfXb7jIfG0HjolI89.pdf",
+    "text_length": 251,
+    "match": false,
+    "text": null,
+    "sha256": "e67a87d818d61f8461b99fb557d08d617761daf00d18bd4ff02bf0e26bc641e1"
+  },
+  {
+    "drive_id": "1gX1DJfrher0irnMpqC7W4_dDBUxNLh7U",
+    "name": "EL FARO OP.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260925\\pago_3.pdf",
+    "text_length": 941,
+    "match": false,
+    "text": null,
+    "sha256": "c8bfecf39cd958e02397e49591a415093e97da5addabc2c76d88e210997715dc"
+  },
+  {
+    "drive_id": "1Synuvh2xhmqxFg8Zxg8W6SN0GeS5bIHS",
+    "name": "espora MINUTA_DE_PAGO_100187718.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1Synuvh2xhmqxFg8Zxg8W6SN0GeS5bIHS.pdf",
+    "text_length": 1322,
+    "match": false,
+    "text": null,
+    "sha256": "e320791900c8b8c4ec88aa872701ee5a187da863b05a9c5e5a1bb5d78277e3f4"
+  },
+  {
+    "drive_id": "1PIPhgQUXPtYFW4LVxI-h9BWDPHX2dOEO",
+    "name": "ESPORA OP.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260925\\pago_9.pdf",
+    "text_length": 1009,
+    "match": false,
+    "text": null,
+    "sha256": "93c571a35260e3621dda23d0e56ba556e22ab5e9fb25bfd4ca6bc858256615a6"
+  },
+  {
+    "drive_id": "1Xjd-u-YUFDJBMoHlIFQ5dvBJelh4AW57",
+    "name": "ESPORA_OP_0202600000947.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1Xjd-u-YUFDJBMoHlIFQ5dvBJelh4AW57.pdf",
+    "text_length": 1435,
+    "match": false,
+    "text": null,
+    "sha256": "37648b7ae3aa7e974e1d5447ee5dcbe0834a547c566f2baa750b609f9eb0e73f"
+  },
+  {
+    "drive_id": "1h6l26bzSyVsriyD_ZttuvLFgca6S0e6Q",
+    "name": "FVHOLDINGSRL_op0001-00003533_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\gsep4.pdf",
+    "text_length": 2115,
+    "match": false,
+    "text": null,
+    "sha256": "b438b809c36156bcdc35852603bc40688df72a9f86bfe51bd4b325d3502148c9"
+  },
+  {
+    "drive_id": "1-mV9vfx_QCkXxJpSEgqjnhjnOncJFGlU",
+    "name": "FVHOLDINGSRL_op0001-00003534_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\gsep5.pdf",
+    "text_length": 2135,
+    "match": false,
+    "text": null,
+    "sha256": "7bf79e70eb9a24afc8a5396f45dec28c0475281924dc1a67c012a3b0330829c6"
+  },
+  {
+    "drive_id": "1TKjjTv05kAB1LZGIUjwdUu1bhIPQdFVZ",
+    "name": "FVHOLDINGSRL_op0001-00003535_HYFDISTRIBUCIONESSA.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\gsep3.pdf",
+    "text_length": 2117,
+    "match": false,
+    "text": null,
+    "sha256": "c9f4cc6fb13e2a91f86f5c8b10509ff12affcfd1c404a6a54a4d16a2fe8902d2"
+  },
+  {
+    "drive_id": "101UwNGT7a0AyK6DPZO8y_lir09DIhfSU",
+    "name": "FVHOLDINGSRL_op0001-00003536_HYFDISTRIBUCIONESSA.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\gsep7.pdf",
+    "text_length": 2122,
+    "match": false,
+    "text": null,
+    "sha256": "b9ad42becb34642fc4d782db6e5ac747f52b235cb9ae9526860cada57eb7e085"
+  },
+  {
+    "drive_id": "1ltETI5sIr5oW5HbtQvo19KDLVPCY0zmE",
+    "name": "hyf MINUTA_DE_PAGO_100187719.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1ltETI5sIr5oW5HbtQvo19KDLVPCY0zmE.pdf",
+    "text_length": 1330,
+    "match": false,
+    "text": null,
+    "sha256": "a205104ea0186c3dc687736310e09fb98b67dd94e39b49ed07a5e338076dbea6"
+  },
+  {
+    "drive_id": "1vfJcdXMjkJc5eHN7sNw3uj6-ZzR2bees",
+    "name": "HyF_OP_0202600000952.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1vfJcdXMjkJc5eHN7sNw3uj6-ZzR2bees.pdf",
+    "text_length": 1269,
+    "match": false,
+    "text": null,
+    "sha256": "9e70d669e3965306f55901d06566cc4740daf3277a1f5e0c59160ce247678e16"
+  },
+  {
+    "drive_id": "16b4fDgyyQLdzJndLSFxdQyCz5ur4mX94",
+    "name": "OP 14912 HYF DISTRIBUCIONES SA FC VARIAS SEPT.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\16b4fDgyyQLdzJndLSFxdQyCz5ur4mX94.pdf",
+    "text_length": 10,
+    "match": false,
+    "text": null,
+    "sha256": "b86331be3fc729089ec48e346a79b07e9a10b10de6b07a79cd5784dfc6633669"
+  },
+  {
+    "drive_id": "1eH39fdAICgEJ7FvadKkHtGxdmovvbJNR",
+    "name": "OP 14921 DISTRIBUIDORA ESPORA SRL FC VARIAS SEPT.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1eH39fdAICgEJ7FvadKkHtGxdmovvbJNR.pdf",
+    "text_length": 11,
+    "match": false,
+    "text": null,
+    "sha256": "1c3466417fa051bffb131ce11ac3d98924e1f9342d3b28c884f74aa2f730a1bd"
+  },
+  {
+    "drive_id": "1X0GZQtP1wNTtSwKQq2M7Cdtlb3rRiAeH",
+    "name": "OP 7026 DISTRIBUIDORA ESPORA SRL RET.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1X0GZQtP1wNTtSwKQq2M7Cdtlb3rRiAeH.pdf",
+    "text_length": 925,
+    "match": false,
+    "text": null,
+    "sha256": "6e05a0c497aa5d83d2f2b3359e86938bea3690a9ee23e289839fcf4b26ee9f0d"
+  },
+  {
+    "drive_id": "13Ow__KKapWnZ9v1UC0Xc9dOa1d3-fYY8",
+    "name": "OP 7026 DISTRIBUIDORA ESPORA SRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\13Ow__KKapWnZ9v1UC0Xc9dOa1d3-fYY8.pdf",
+    "text_length": 938,
+    "match": false,
+    "text": null,
+    "sha256": "3b8d089e1df3c5a5ccbb93c39f5afc38f87228861f3734988d02c9ba6dd3397c"
+  },
+  {
+    "drive_id": "14xVqTwjDovwA7hdhGgi_AUvTryooqzSQ",
+    "name": "OP HYF.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\14xVqTwjDovwA7hdhGgi_AUvTryooqzSQ.pdf",
+    "text_length": 2340,
+    "match": false,
+    "text": null,
+    "sha256": "e7e1cbe392afdabebb1ac8bb2a55d1e52c91858602afc06d65df6990354c6c2b"
+  },
+  {
+    "drive_id": "11Cqx02909BAOlAeB998N_vWhFdkpgd1E",
+    "name": "ORDEN_DE_PAGO_12387.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\11Cqx02909BAOlAeB998N_vWhFdkpgd1E.pdf",
+    "text_length": 4897,
+    "match": false,
+    "text": null,
+    "sha256": "6624de76f79034dd33ec7a62bb3d47091e5f83a2241205ce22c125d7b7c7db56"
+  },
+  {
+    "drive_id": "1IkgUdsS4MAKgDjFDoeCtJOmvmOcpvF-f",
+    "name": "ORDEN_DE_PAGO_12693.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1IkgUdsS4MAKgDjFDoeCtJOmvmOcpvF-f.pdf",
+    "text_length": 9729,
+    "match": false,
+    "text": null,
+    "sha256": "5ca42c6af37945834d0b7c854bd1b1fabc1e206de68ba89e85e64d4389abfa9a"
+  },
+  {
+    "drive_id": "1IEKNSCRRYvghiY2bttmWc2FKeABwuAxl",
+    "name": "ORDEN_DE_PAGO_12722.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260924\\ORDEN_DE_PAGO_12722.pdf",
+    "text_length": 1891,
+    "match": false,
+    "text": null,
+    "sha256": "3a901fdc22c6b657ad0c887629bac974bd01529c05dc2811a1e358e630fc6058"
+  },
+  {
+    "drive_id": "1-UIO5yUssdv2wVbn26GuId9FW8Vg8Vis",
+    "name": "ORDEN_DE_PAGO_12731 (1).pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260924\\ORDEN_DE_PAGO_12731_1.pdf",
+    "text_length": 5223,
+    "match": false,
+    "text": null,
+    "sha256": "9e506d870bd72436b45d047bc682c24c2ce6180ec4ff09c967add5e572d49bf3"
+  },
+  {
+    "drive_id": "1wAxIl3qU9yN-bpNtzCdu23xuq4mthl72",
+    "name": "ORDEN_DE_PAGO_12736.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260924\\ORDEN_DE_PAGO_12736.pdf",
+    "text_length": 4327,
+    "match": false,
+    "text": null,
+    "sha256": "946e2f1eafb1785e8c9dfdbca60bff2912126361481f46307f2cf2bef8febc3c"
+  },
+  {
+    "drive_id": "1LycUZjLlnV6FO9fijqVaChEvGYVUgU0M",
+    "name": "Ordenes de Pago  DISTRIBUIDORA ESPORA SRL 22-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-2026-09-22\\Ordenes de Pago  DISTRIBUIDORA ESPORA SRL 22-9-26.pdf",
+    "text_length": 3192,
+    "match": false,
+    "text": null,
+    "sha256": "f73689d4e4fd5f2643a68ebb2995932ca82b3209aa3ce74044d5adf52792d232"
+  },
+  {
+    "drive_id": "1xsBid74E2TaA175LmzN-N0gb0STHCg_1",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL cma 10-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1xsBid74E2TaA175LmzN-N0gb0STHCg_1.pdf",
+    "text_length": 4079,
+    "match": false,
+    "text": null,
+    "sha256": "7965434d9da6734aff9e2198a3cd58ea9220e60bc26930a44d8fc07b5eaf9d71"
+  },
+  {
+    "drive_id": "183o5H-Jalsad72alVTFUwyNW5LboBmAI",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL CMA 18-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\183o5H-Jalsad72alVTFUwyNW5LboBmAI.pdf",
+    "text_length": 2642,
+    "match": false,
+    "text": null,
+    "sha256": "183fc11c5834ae629775b7c8ef7b533ee4d09d10c28ef94cd7cbfa2a461f8a7f"
+  },
+  {
+    "drive_id": "1SIY0NmPExIjn-VuomzVEoYc0HQCTKwsi",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL cma 28-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\goct1.pdf",
+    "text_length": 2513,
+    "match": false,
+    "text": null,
+    "sha256": "4c2529f88fde5b1873a2cc8b1605dfc5f319de336b1c23ac2e83360e525e82ba"
+  },
+  {
+    "drive_id": "1NJ0YGPttSK32M5rEeSiSIo97JIHt_QO2",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL pilar 28-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\goct2.pdf",
+    "text_length": 5745,
+    "match": false,
+    "text": null,
+    "sha256": "bd33cbc2b4612211a6dbed57a43d96146a1d0190f07dd24f4afe8e2f65378369"
+  },
+  {
+    "drive_id": "108-B4udoEd-hl5eJlj6k1jFBySrJ9Vqc",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL rsc 28-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental-2026-09-28\\goct3.pdf",
+    "text_length": 2438,
+    "match": false,
+    "text": null,
+    "sha256": "d5804937876520198904ce3ea3b7d080934363a61ae8f5783b3d4f1600888e09"
+  },
+  {
+    "drive_id": "1S7Z74IfnL75y0Bc5Dd2VvzOkhPqhm5yZ",
+    "name": "Ordenes de Pago HYF DISTRIBUCIONES SA 22-9-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-2026-09-22\\Ordenes de Pago HYF DISTRIBUCIONES SA 22-9-26.pdf",
+    "text_length": 2402,
+    "match": false,
+    "text": null,
+    "sha256": "b42795565fa82d41a011128c8cc3adc5be3cdd31442fffe90132ccda468c06cc"
+  },
+  {
+    "drive_id": "1ZdtF5hf_FzsXPs5QaOrOEeECWtPgBT8k",
+    "name": "PAGO EL FARO DIECIOCHO DE TANDIL E-CHEQ.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20260924\\PAGO_EL_FARO_DIECIOCHO_DE_TANDIL_E-CHEQ.pdf",
+    "text_length": 645,
+    "match": false,
+    "text": null,
+    "sha256": "fa0fdbfc8dbec529ec20d19890de940c5e4a57525e92ece3c658fe101e83cd17"
+  },
+  {
+    "drive_id": "1iR0Swsbe_JAPlNn2GkW1Vm5EQ16rtlDa",
+    "name": "Pagos efectuados_20260916_104708.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\closure_resume_2026-11-01\\payment_support\\1iR0Swsbe_JAPlNn2GkW1Vm5EQ16rtlDa.pdf",
+    "text_length": 3546,
+    "match": false,
+    "text": null,
+    "sha256": "5683b76f1073f68c6f6edd186eb34d240e4e937c77652d4a534f3cef777ad0bd"
+  },
+  {
+    "drive_id": "1NbWIJ943etBWCWkotHSZaqMC9vuIgwg8",
+    "name": "30708609982_OP_00027703_09-10-2026_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1NbWIJ943etBWCWkotHSZaqMC9vuIgwg8.pdf",
+    "text_length": 657,
+    "match": false,
+    "text": null,
+    "sha256": "f7f46f4e8d5a277288bfd1eeb7a0cb2d8aa19cd4ff5a3275ec7a2b43da07f42c"
+  },
+  {
+    "drive_id": "1-iXaBqJXDR6KOzpsz4dPiPllQa5PW4C7",
+    "name": "30718086481_OP_00027704_09-10-2026_ELFARODIECIOCHODETANDILSRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1-iXaBqJXDR6KOzpsz4dPiPllQa5PW4C7.pdf",
+    "text_length": 674,
+    "match": false,
+    "text": null,
+    "sha256": "c7f5f6281f80a6503a1bbc4b54fb5d66ffff012e8af54a10a1d994a076e82bb5"
+  },
+  {
+    "drive_id": "1twI6mJOm-IpjmutwawSoWCkCXabzXYUO",
+    "name": "A_El_Faro_Dieciocho_De_Tandil_OP_20261016.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-16\\1twI6mJOm-IpjmutwawSoWCkCXabzXYUO.pdf",
+    "text_length": 1068,
+    "match": false,
+    "text": null,
+    "sha256": "bd63316df279105ee3c083b2f94f41d2a64df7f9b24ccec063606fdd94894e73"
+  },
+  {
+    "drive_id": "1rB0yvVX1CC0ZgtSPsjdRFb_2USqog78B",
+    "name": "Detalles_operacion_nroLRA2EV2515.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261002\\pagos\\1rB0yvVX1CC0ZgtSPsjdRFb_2USqog78B__Detalles_operacion_nroLRA2EV2515.pdf",
+    "text_length": 250,
+    "match": false,
+    "text": null,
+    "sha256": "b6c4ca1476948dd1770b5c2cc67b264ae15b98fcbdd876ee0c6545ce4c1b9af8"
+  },
+  {
+    "drive_id": "1RT-fFGtfbW-Hc0o6DgUaiVC0XgK1-Ssg",
+    "name": "Detalles_operacion_nroLRAT8nF900.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-28\\pagos\\1RT-fFGtfbW-Hc0o6DgUaiVC0XgK1-Ssg__Detalles_operacion_nroLRAT8nF900.pdf",
+    "text_length": 251,
+    "match": false,
+    "text": null,
+    "sha256": "960b657e4227afc97fd7ca3b435396f900c1941cbb37ba36ce085dcb145f440f"
+  },
+  {
+    "drive_id": "17bvQ62OUQX0cAHejSyk4WttgwMME3912",
+    "name": "EL FARO OP 2497 RET.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261002\\pagos\\17bvQ62OUQX0cAHejSyk4WttgwMME3912__EL FARO OP 2497 RET.pdf",
+    "text_length": 554,
+    "match": false,
+    "text": null,
+    "sha256": "7440ff8e15c778ff4e33c63d19af57a3c5498f42fa662749630ca36329d03c3e"
+  },
+  {
+    "drive_id": "1F9Jx2vJ6V20tNd9epDrks8Ssu29wh3S8",
+    "name": "FVHOLDINGSRL_op0001-00003600_DISTRIBUIDORAESPORASRL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1F9Jx2vJ6V20tNd9epDrks8Ssu29wh3S8.pdf",
+    "text_length": 2146,
+    "match": false,
+    "text": null,
+    "sha256": "fd2c6e68c4ccf0a3f3718ba95511466f2ff162f650f3a0cb1f8fd3ae7cbc3d49"
+  },
+  {
+    "drive_id": "16TFe_Q3x4ouSXZnFPkijvwX0FC16EfMo",
+    "name": "FVHOLDINGSRL_op0001-00003601_HYFDISTRIBUCIONESSA.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\16TFe_Q3x4ouSXZnFPkijvwX0FC16EfMo.pdf",
+    "text_length": 2109,
+    "match": false,
+    "text": null,
+    "sha256": "c1cba1e23c92720e8449f8ade1e88ad6de5b35b4c67ab705c0a00c5303115766"
+  },
+  {
+    "drive_id": "19fxTCURxCmPm0-FtQzDBdy22scuLSKaz",
+    "name": "MAGTIK- DIST. ESPORA- COMP RET  GCIAS PAGO 22-10.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-28_late\\MAGTIK- DIST. ESPORA- COMP RET GCIAS PAGO 22-10.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "8ee92b3803fa1bd08fe917fff9b20da49d8ab8bc19a830a39d3b4f3a86c32030"
+  },
+  {
+    "drive_id": "1wHv4YGHrZUPyO-yA6TEbGJtSPv_2U9rG",
+    "name": "MAGTIK- DIST. ESPORA- O.PAGO 22-10.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-22\\1wHv4YGHrZUPyO-yA6TEbGJtSPv_2U9rG__MAGTIK- DIST. ESPORA- O.PAGO 22-10.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "dd69b30763927dd2956ba8db0e4e862f52e08b1a3c9d9e3553ab46f1a63eef23"
+  },
+  {
+    "drive_id": "1vN55g569O_cU4ydMgnIjgEggUd_ibvIk",
+    "name": "MAGTIK- DISTRIBUIDORA ESPORA-  COMP RET- O.PAGO 8-10.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261008\\incoming\\pagos\\1vN55g569O_cU4ydMgnIjgEggUd_ibvIk__MAGTIK- DISTRIBUIDORA ESPORA-  COMP RET- O.PAGO 8-10.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "4db7fdb7efac1a6fe6bc2d9e4b0142640972e2471d6e89aa11080d9302c859c9"
+  },
+  {
+    "drive_id": "1arsq-BRjZvcB5OFQSViNzPzGO8ZEQpHZ",
+    "name": "MAGTIK- DISTRIBUIDORA ESPORA- O.PAGO 8-10.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261008\\incoming\\pagos\\1arsq-BRjZvcB5OFQSViNzPzGO8ZEQpHZ__MAGTIK- DISTRIBUIDORA ESPORA- O.PAGO 8-10.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "071574782fcd015c9f22a0ad3d21cfd8423310fa5481986c67ca75d77cd1d301"
+  },
+  {
+    "drive_id": "1YzdXTn-8SmCeWr7BvIYkrnpb0FfnZT_Y",
+    "name": "NOVOMEDICALSRL_op0001-00000157_HYFDISTRIBUCIONESSA.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261002\\pagos\\1YzdXTn-8SmCeWr7BvIYkrnpb0FfnZT_Y__NOVOMEDICALSRL_op0001-00000157_HYFDISTRIBUCIONESSA.pdf",
+    "text_length": 2129,
+    "match": false,
+    "text": null,
+    "sha256": "c4ba1368cdf80a1c3b39fdbfaeb69b130ad4a63771acaae8c0300fb88196d64e"
+  },
+  {
+    "drive_id": "1tbj16vMl0L4y4e6-2Nb2rfF3WrkcgAVp",
+    "name": "OP 00012-00007193.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261005\\pagos\\1tbj16vMl0L4y4e6-2Nb2rfF3WrkcgAVp__OP 00012-00007193.pdf",
+    "text_length": 1932,
+    "match": false,
+    "text": null,
+    "sha256": "57170be1f53346ece4ef669ea3a7be0ebd84c7b0dd464ef2c579f3d27a832432"
+  },
+  {
+    "drive_id": "1Kv4q_v1myIaJ0ZLSOcjXQAhoGuJiTAVm",
+    "name": "OP 00012-00007342.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__1Kv4q_v1myIaJ0ZLSOcjXQAhoGuJiTAVm__OP 00012-00007342.pdf",
+    "text_length": 2054,
+    "match": false,
+    "text": null,
+    "sha256": "dbea6cfdffd3b041166a115300eeb80cc6ecdbe69c7192968051f0c6c94433d9"
+  },
+  {
+    "drive_id": "1seMElqMMk_HicvXcmv747vSAg28Q-_YK",
+    "name": "OP 0278 - Faro dieciocho de Tandil Comprobante ECheq.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__1seMElqMMk_HicvXcmv747vSAg28Q-_YK__OP 0278 - Faro dieciocho de Tandil Comprobante ECheq.pdf",
+    "text_length": 458,
+    "match": false,
+    "text": null,
+    "sha256": "f800a9451453f06b40eddd391410a7d9833dfd646ff59c1cb30e7153435f8e2a"
+  },
+  {
+    "drive_id": "1caLuz2dPK1ixia22GOvnfZLGe7wfyyEQ",
+    "name": "OP 0278 - Faro dieciocho de Tandil RET.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__1caLuz2dPK1ixia22GOvnfZLGe7wfyyEQ__OP 0278 - Faro dieciocho de Tandil RET.pdf",
+    "text_length": 480,
+    "match": false,
+    "text": null,
+    "sha256": "0d029837b4e0549e2451a0ecf70fe971a0790c58c14294ea0136b645974bbfb3"
+  },
+  {
+    "drive_id": "11m_9scalgc3U9hVpQeDc6x0aA00TDWDW",
+    "name": "OP 0278 - Faro dieciocho de Tandil.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__11m_9scalgc3U9hVpQeDc6x0aA00TDWDW__OP 0278 - Faro dieciocho de Tandil.pdf",
+    "text_length": 635,
+    "match": false,
+    "text": null,
+    "sha256": "451a7fc32d9e3be950641f8a5cbadc10b166171c194e0af2413976b407087257"
+  },
+  {
+    "drive_id": "1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8",
+    "name": "OP 32359 EL FARO DIECIOCHO DE TANDIL RET.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__1h64Jw7L99oFYo5Z7xy0AMjAvs8CQeUA8__OP 32359 EL FARO DIECIOCHO DE TANDIL RET.pdf",
+    "text_length": 1230,
+    "match": false,
+    "text": null,
+    "sha256": "e981d90cefe68e1d266d25b66aad8bc76ed1a0b46160bd1dc37f9d03b1d60217"
+  },
+  {
+    "drive_id": "1C1_8jKVkEXkXrSOOuq3PNbnhKR3oRJSj",
+    "name": "OP 32359 EL FARO DIECIOCHO DE TANDIL.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update_2026-10-20\\pag__1C1_8jKVkEXkXrSOOuq3PNbnhKR3oRJSj__OP 32359 EL FARO DIECIOCHO DE TANDIL.pdf",
+    "text_length": 772,
+    "match": false,
+    "text": null,
+    "sha256": "8c2dba2764863536dc6ecb9a01767745963f2a9ec892d43c0f1f4b625d42f9c9"
+  },
+  {
+    "drive_id": "1ybzZgll4YXpzPKkadrBwOrZ1b7U-kths",
+    "name": "OP HYF.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1ybzZgll4YXpzPKkadrBwOrZ1b7U-kths__OP HYF.pdf",
+    "text_length": 2354,
+    "match": false,
+    "text": null,
+    "sha256": "2d544d519dcfa49662008aa6824abef07040a37a80a6863be108596fff6a7b6c"
+  },
+  {
+    "drive_id": "1cXGLP23ZzVvQrU3C3Mi06JFD1dxIWKsm",
+    "name": "OP HYF.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1ybzZgll4YXpzPKkadrBwOrZ1b7U-kths__OP HYF.pdf",
+    "text_length": 2354,
+    "match": false,
+    "text": null,
+    "sha256": "2d544d519dcfa49662008aa6824abef07040a37a80a6863be108596fff6a7b6c"
+  },
+  {
+    "drive_id": "1WFSzD-8xIuxgJriB2RPhaPsOEdzdbViS",
+    "name": "ORDEN DE PAGO 309.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1WFSzD-8xIuxgJriB2RPhaPsOEdzdbViS.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "2dace7928e9577f972214371de760d8cfe2be978b56ae20af95783ab44998163"
+  },
+  {
+    "drive_id": "1kID0ZwRMykIFjwQIcZPMD9ECJlBq-TtQ",
+    "name": "ORDEN_DE_PAGO_12873 (1).pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261002\\pagos\\1kID0ZwRMykIFjwQIcZPMD9ECJlBq-TtQ__ORDEN_DE_PAGO_12873 (1).pdf",
+    "text_length": 5473,
+    "match": false,
+    "text": null,
+    "sha256": "906d2b5f3bb94a40e3a9dcfd43d2997e2193130d532979684becadfab640dd5b"
+  },
+  {
+    "drive_id": "1SLRjfMbgEGzMbTmnUElNnuL8L10iKkK7",
+    "name": "ORDEN_DE_PAGO_12875.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261002\\pagos\\1SLRjfMbgEGzMbTmnUElNnuL8L10iKkK7__ORDEN_DE_PAGO_12875.pdf",
+    "text_length": 4717,
+    "match": false,
+    "text": null,
+    "sha256": "ff963621f8074e60e6c39ebbaef9036ab1c2a9593cef288cb35fa1a87645e705"
+  },
+  {
+    "drive_id": "1uRTuJomUKnlnovNnUmPfAep-L4yxI9fn",
+    "name": "ORDEN_DE_PAGO_13167.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-23\\1uRTuJomUKnlnovNnUmPfAep-L4yxI9fn__ORDEN_DE_PAGO_13167.pdf",
+    "text_length": 2381,
+    "match": false,
+    "text": null,
+    "sha256": "db730e83b049159d579a08122146852204f5f5d1873911df502743fb1f43b547"
+  },
+  {
+    "drive_id": "1aqE_Ju34mXlIrLG44u0YByii41A5lj1A",
+    "name": "ORDEN_DE_PAGO_13169.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-23\\1aqE_Ju34mXlIrLG44u0YByii41A5lj1A__ORDEN_DE_PAGO_13169.pdf",
+    "text_length": 6547,
+    "match": false,
+    "text": null,
+    "sha256": "3be49c5cf7e95d1a1227ca6031696489fed0db78f86ebfdf29676afc09f6443d"
+  },
+  {
+    "drive_id": "1scAGTqGKuGf734YvW5yTp-rX3paLrF9F",
+    "name": "ORDEN_DE_PAGO_13171.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-23\\1scAGTqGKuGf734YvW5yTp-rX3paLrF9F__ORDEN_DE_PAGO_13171.pdf",
+    "text_length": 6235,
+    "match": false,
+    "text": null,
+    "sha256": "472040dcab9cd0b923147f6a0036b9adf58625fd2f2d600ffd25536b80ab0ded"
+  },
+  {
+    "drive_id": "1dm7176Osl0MUPV8Nd2Q-5oj2kAXw4Qq1",
+    "name": "Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261008\\incoming\\pagos\\1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw__Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+    "text_length": 4113,
+    "match": false,
+    "text": null,
+    "sha256": "c50463a340c96902adb08ec02177320842081f94710b052c2633a5e22a284cc9"
+  },
+  {
+    "drive_id": "1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw",
+    "name": "Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261008\\incoming\\pagos\\1LMNNJVghU3e7zETncv_sFcxRgI2QO7Cw__Ordenes de Pago CECO DIRECCION COD01 FC   6-10-26 sg.pdf",
+    "text_length": 4113,
+    "match": false,
+    "text": null,
+    "sha256": "c50463a340c96902adb08ec02177320842081f94710b052c2633a5e22a284cc9"
+  },
+  {
+    "drive_id": "18QfaR-FHc-EnaFY_JS6y7txYKPdpeSzZ",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL cma 16-10-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-16\\18QfaR-FHc-EnaFY_JS6y7txYKPdpeSzZ.pdf",
+    "text_length": 4379,
+    "match": false,
+    "text": null,
+    "sha256": "3868eb244464d8303accd6a71987878a6be77d52570f8d7dbb19099f1c4d56ed"
+  },
+  {
+    "drive_id": "1OEhWAeOgAhQE4LHDzjWUHMD1UqswI6le",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL CMA 26-10-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1tQdYAl7PCkBR3Ui6mNqIdFDRUFFeTedc__Ordenes de Pago DISTRIBUIDORA ESPORA SRL CMA 26-10-26.pdf",
+    "text_length": 3056,
+    "match": false,
+    "text": null,
+    "sha256": "4984c268165d656de703daf489d2a5e875cf4a7af77cca0450b72c0e9fcfa345"
+  },
+  {
+    "drive_id": "1tQdYAl7PCkBR3Ui6mNqIdFDRUFFeTedc",
+    "name": "Ordenes de Pago DISTRIBUIDORA ESPORA SRL CMA 26-10-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1tQdYAl7PCkBR3Ui6mNqIdFDRUFFeTedc__Ordenes de Pago DISTRIBUIDORA ESPORA SRL CMA 26-10-26.pdf",
+    "text_length": 3056,
+    "match": false,
+    "text": null,
+    "sha256": "4984c268165d656de703daf489d2a5e875cf4a7af77cca0450b72c0e9fcfa345"
+  },
+  {
+    "drive_id": "15wKWInd5pDXzdg8ubkjxoCpOI10ciVCS",
+    "name": "Ordenes de Pago HYF DISTRIBUCIONES SA CMA 26-10-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1RnWFHuOYyUJYI-xkH7X1iq8tAOxak1FS__Ordenes de Pago HYF DISTRIBUCIONES SA CMA 26-10-26.pdf",
+    "text_length": 2668,
+    "match": false,
+    "text": null,
+    "sha256": "b1371f3cb605af863a23ccbcc3b43f0c21779e660cd2726ab81efead27ab68fe"
+  },
+  {
+    "drive_id": "1RnWFHuOYyUJYI-xkH7X1iq8tAOxak1FS",
+    "name": "Ordenes de Pago HYF DISTRIBUCIONES SA CMA 26-10-26.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-27\\pagos\\1RnWFHuOYyUJYI-xkH7X1iq8tAOxak1FS__Ordenes de Pago HYF DISTRIBUCIONES SA CMA 26-10-26.pdf",
+    "text_length": 2668,
+    "match": false,
+    "text": null,
+    "sha256": "b1371f3cb605af863a23ccbcc3b43f0c21779e660cd2726ab81efead27ab68fe"
+  },
+  {
+    "drive_id": "1EYTwttr91yoLEa32DIkZlaje5CHEXaoh",
+    "name": "Pagos efectuados_20261028_104009.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\incremental_2026-10-28\\pagos\\1EYTwttr91yoLEa32DIkZlaje5CHEXaoh__Pagos efectuados_20261028_104009.pdf",
+    "text_length": 3258,
+    "match": false,
+    "text": null,
+    "sha256": "42279c180914fcf5e7ed733812daeab6aa8b573624741469678e80fcd8ccfee4"
+  },
+  {
+    "drive_id": "1V6qRNZBtsCd8Cbo0B1QoGdj5e5nb8QT9",
+    "name": "RETENCION OP 309.pdf",
+    "mime_type": "application/octet-stream",
+    "path": "outputs\\update-20261014\\incoming\\pagos\\1V6qRNZBtsCd8Cbo0B1QoGdj5e5nb8QT9.pdf",
+    "text_length": 0,
+    "match": false,
+    "text": null,
+    "sha256": "dce50e0c45d49dced9425105b1393e7be3d4f7033f7e562189a51bcc90ce71e7"
+  }
+]

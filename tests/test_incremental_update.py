@@ -79,6 +79,7 @@ class MultiMonthOperationTests(unittest.TestCase):
             "net_billing_amount": billed,
             "billed_amount": billed,
             "octopus_profit": profit,
+            "net_to_return": None,
             "status": "OK_MULTI_MONTH_SPLIT",
             "operation_type": "MULTI_MONTH_SPLIT",
             "source_file": "card.jpg",

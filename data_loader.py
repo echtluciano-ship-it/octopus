@@ -422,6 +422,7 @@ def reset_schema(conn: sqlite3.Connection) -> None:
             net_billing_amount REAL,
             billed_amount REAL,
             octopus_profit REAL,
+            net_to_return REAL,
             status TEXT NOT NULL,
             operation_type TEXT NOT NULL DEFAULT 'NORMAL',
             source_file TEXT,
@@ -774,6 +775,7 @@ def manual_rentability_record(row: dict[str, str]) -> dict | None:
         "net_billing_amount": net_billing_amount,
         "billed_amount": billed_amount,
         "octopus_profit": profit,
+        "net_to_return": parse_decimal(row.get("net_to_return")),
         "status": status,
         "operation_type": operation_type,
         "source_file": Path(source_path).name,
@@ -788,7 +790,7 @@ def insert_manual_rentability(conn: sqlite3.Connection, record: dict) -> None:
     columns = (
         "operation_key", "client_key", "client_name", "original_client_name", "channel",
         "operation_date", "month", "check_amount", "net_billing_amount", "billed_amount",
-        "octopus_profit", "status", "operation_type", "source_file", "source_path",
+        "octopus_profit", "net_to_return", "status", "operation_type", "source_file", "source_path",
         "reference", "note", "source_drive_id",
     )
     conn.execute(

@@ -10474,6 +10474,78 @@
       "folder_period": "2026-10",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1r02diEP3BHwdCGl8CBkYfJUkfilXMURX/view?usp=drivesdk"
+    },
+    "1IEMWX0EALUAgaCDtBMz6amH8E9wplj7l": {
+      "drive_id": "1IEMWX0EALUAgaCDtBMz6amH8E9wplj7l",
+      "name": "PHOTO-2026-10-30-11-38-50.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 378148,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1IEMWX0EALUAgaCDtBMz6amH8E9wplj7l/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1q9tFZjktVt114UEnx2JtlMoNxRhX0IE8": {
+      "drive_id": "1q9tFZjktVt114UEnx2JtlMoNxRhX0IE8",
+      "name": "PHOTO-2026-10-30-14-23-35.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 452782,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1q9tFZjktVt114UEnx2JtlMoNxRhX0IE8/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1uptl6lEr9davCOhn4tauyFs_JwdyoObb": {
+      "drive_id": "1uptl6lEr9davCOhn4tauyFs_JwdyoObb",
+      "name": "PHOTO-2026-10-30-14-34-23.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 42850,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1uptl6lEr9davCOhn4tauyFs_JwdyoObb/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1kD4G8ZavmIizAhQUnIoTyyPRBYPLMIdf": {
+      "drive_id": "1kD4G8ZavmIizAhQUnIoTyyPRBYPLMIdf",
+      "name": "PHOTO-2026-10-30-14-34-26.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 286666,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1kD4G8ZavmIizAhQUnIoTyyPRBYPLMIdf/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1ocu_OJ5r6dsjW-zxHovkKXZshDM1PW1_": {
+      "drive_id": "1ocu_OJ5r6dsjW-zxHovkKXZshDM1PW1_",
+      "name": "PHOTO-2026-10-30-14-34-26.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 192309,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ocu_OJ5r6dsjW-zxHovkKXZshDM1PW1_/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO": {
+      "drive_id": "1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO",
+      "name": "PHOTO-2026-10-30-14-58-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 302432,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO/view",
+      "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
     }
   },
   "official_sources": {
@@ -10488,15 +10560,20 @@
     }
   },
   "source_baseline": {
-    "manual_legacy_sha256": "ea4b9fa8c200633900768688db1afe569ea8294549129dea55fca9ab9dd93e25",
-    "recorded_at": "2026-10-30T01:34:34+00:00"
+    "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
+    "recorded_at": "2026-11-01T23:20:20+00:00"
   },
   "last_database_refresh": {
-    "mode": "full_facturacion_refresh",
-    "at": "2026-10-30T01:34:19+00:00",
-    "new_operations": 7,
-    "updated_operations": 0,
-    "billing_rows": 5047,
-    "billing_source_changed": true
+    "mode": "full_atomic",
+    "at": "2026-11-01T20:21:49.737961-03:00",
+    "reason": "Changed official billing and explicit net_to_return schema",
+    "new_operations": 5,
+    "updated_operations": 1
+  },
+  "last_closure_inventory": {
+    "period": "2026-10",
+    "at": "2026-11-01T20:21:49.737961-03:00",
+    "files": 492,
+    "exact_modified_time_verified": false
   }
 }

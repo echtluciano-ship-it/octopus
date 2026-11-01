@@ -1,0 +1,21 @@
+{
+  "drive_id": "147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1",
+  "file_name": "PHOTO-2026-10-29-21-39-43.jpg",
+  "client": "Lumbrera",
+  "channel": "Espora",
+  "recorded_at": "2026-11-01T20:11:06.3349617-03:00",
+  "user_statement": "No lleva facturación neta me dijeron",
+  "confirmed": "Excepcion exclusiva de este Drive ID: sin Facturacion Neta; Ganancia Octopus 1199509; Neto a devolver 38784139. No generalizar a Lumbrera ni a otros cuadros.",
+  "pending": null,
+  "status": "HUMAN_VALIDATED_DOCUMENT",
+  "production_changed": false,
+  "updated_at": "2026-11-01T20:12:07.024914-03:00",
+  "user_clarification": "Solo en ese cuadro es así, no tiene facturación neta, lo de abajo es la ganancia y después lo importante es el neto a devolver.",
+  "net_billing_amount": null,
+  "net_billing_applicable": false,
+  "octopus_profit": 1199509,
+  "net_to_return": 38784139,
+  "check_amount": 39983648,
+  "application_status": "Applied to database and UI; awaiting deployed verification",
+  "local_database_applied": true
+}

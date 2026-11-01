@@ -73,3 +73,11 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - La orden `ORDEN_DE_PAGO_12731 (1).pdf` respalda los importes y el ECHEQ con vencimiento 02/10/2026. La operacion debe permanecer en rentabilidad de octubre.
 - El chat del 02/10/2026 registra la duda de Andy sobre si los 68.464.095 ya fueron devueltos y la respuesta de Mariano `tenes razon, aho reviso`, pero no contiene una confirmacion final. Mantener pendiente de confirmacion solo el estado operativo de devolucion; no excluir ni modificar la operacion de rentabilidad por esta duda.
 
+
+## Lumbrera - cuadro sin Facturacion Neta
+
+- Drive ID 147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1, PHOTO-2026-10-29-21-39-43.jpg, Espora, ECHEQ 31/10/2026.
+- Luciano aclaro: 'No lleva facturacion neta me dijeron'. No volver a solicitar ese importe como dato faltante.
+- ECHEQ visible 39.983.648; ganancia visible 1.199.509; el cuadro indica 3%. No aplicar automaticamente la excepcion del 1,20%.
+- Aclaracion definitiva posterior de Luciano: SOLO este cuadro no lleva Facturacion Neta; GANANCIA OCTOPUS = 1.199.509 y NETO A DEVOLVER = 38.784.139. No generalizar a otros cuadros o clientes. No volver a pedir confirmacion de modalidad ni Facturacion Neta. Conservar ambos importes separados; no sustituir el denominador por ECHEQ, no inventar rentabilidad ni tomar neto a devolver como facturacion. Validacion documental resuelta; aplicacion a base/Render pendiente. Evidencia en data/human_decisions/lumbrera-147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1.json.
+

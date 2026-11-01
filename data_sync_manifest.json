@@ -1,14 +1,14 @@
 {
-  "database_sha256": "24ed38b5440d23ef8c56cb64ba6c3c5bf4d1524782b47ae269229b1614594563",
+  "database_sha256": "4fbde5be8a13ebd4c53eba5e5c42cdc22838be57f3430604064315d95fbd5396",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "58c30e55976e250e9c9c3099ea4d775cc4627a809849b950de9418329d07692e",
-    "data/billing_source.json": "eb643343666348baf4961a7220059bd247e2436463c8235b9cdb4cb082a03376",
-    "manual_rentability_operations.csv": "24b401617e4ef701d65432765b1c32791fe160ecb8495e2c36b5845c0ca478d9",
+    "data/FACTURACION OCTOPUS.xlsx": "129bb2c396e13a68bef578afb5df063084d887df1c713b1dc9d85de227cf19a0",
+    "data/billing_source.json": "163b099fae6289a4b60384ad9069771881cbe1624b8f67033c22510d957dc842",
+    "manual_rentability_operations.csv": "a47a282f82431f948ab371563d9cd65f91be4f84a2cd78a7739cce86a37f5e96",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "c3ad4ac6486a69fa932f674f8d5981c92dd053948a028bbdac2df5ea52eceeba"
+    "source_documents.csv": "44c8efb2934edec10efedcd20ac4f544dba8e687e158babab2d9775b04b421bc"
   },
   "controls": {
-    "as_of": "2026-10-29",
+    "as_of": "2026-11-01",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 4573738255.59,
-        "billing_records": 305,
-        "validated_net": 3086448013.67,
-        "profit": 187943021.33,
-        "profitability": 0.06089298134865481,
-        "valid_operations": 77,
+        "billing_total": 4932458746.64,
+        "billing_records": 331,
+        "validated_net": 3607763349.0,
+        "profit": 223425759.0,
+        "profitability": 0.06192916147394456,
+        "valid_operations": 86,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3365,11 +3365,11 @@
             "operaciones": 1
           },
           {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion_validada": 204838578.0,
-            "ganancia_octopus": 15017438.0,
-            "rentabilidad": 0.07331352397886691,
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 457076468.0,
+            "ganancia_octopus": 33171255.0,
+            "rentabilidad": 0.0725726597677306,
             "operaciones": 4
           },
           {
@@ -3389,6 +3389,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "HT CONTENIDOS S. A.",
+            "client_key": "HT CONTENIDOS",
+            "facturacion_validada": 8138800.0,
+            "ganancia_octopus": 565809.0,
+            "rentabilidad": 0.06951995380154323,
+            "operaciones": 1
+          },
+          {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
             "facturacion_validada": 32867790.0,
@@ -3403,17 +3411,15 @@
             "ganancia_octopus": 1263404.0,
             "rentabilidad": 0.06923843280942135,
             "operaciones": 2
-          },
-          {
-            "client_name": "Mas Metros",
-            "client_key": "MAS METROS",
-            "facturacion_validada": 10019820.0,
-            "ganancia_octopus": 689352.0,
-            "rentabilidad": 0.06879884069773709,
-            "operaciones": 2
           }
         ],
         "billing_ranking": [
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion": 511038572.1,
+            "registros": 33
+          },
           {
             "client_name": "Escalum",
             "client_key": "ESCALUM",
@@ -3427,22 +3433,16 @@
             "registros": 19
           },
           {
-            "client_name": "Ovniplast",
-            "client_key": "OVNIPLAST",
-            "facturacion": 307854527.23,
-            "registros": 22
+            "client_name": "Centro Médico Amenabar",
+            "client_key": "CENTRO MEDICO AMENABAR",
+            "facturacion": 326126967.28,
+            "registros": 34
           },
           {
             "client_name": "LX",
             "client_key": "LX",
             "facturacion": 252436615.55,
             "registros": 13
-          },
-          {
-            "client_name": "Centro Médico Amenabar",
-            "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion": 226124159.16,
-            "registros": 24
           },
           {
             "client_name": "TEYLEM SA",
@@ -3535,19 +3535,30 @@
             "registros": 3
           }
         ]
+      },
+      "2026-11": {
+        "billing_total": 0.0,
+        "billing_records": 0,
+        "validated_net": 0.0,
+        "profit": 0.0,
+        "profitability": null,
+        "valid_operations": 0,
+        "rentability_ranking": [],
+        "billing_ranking": []
       }
     },
     "published_clients": 97,
-    "valid_operations_all_dates": 324,
+    "valid_operations_all_dates": 329,
     "operation_states": {
-      "OK": 250,
+      "OK": 252,
       "OK_FC_NETA": 46,
-      "OK_TRANSFERENCIA_1_2": 18,
+      "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 10,
-      "REVISION": 3,
+      "REVISION": 2,
       "EXCLUIDO": 2,
-      "NO_PROCESAR": 2
+      "NO_PROCESAR": 2,
+      "VALIDADO_SIN_FC_NETA": 1
     }
   }
 }

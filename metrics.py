@@ -9,6 +9,20 @@ VALID_RENTABILITY = "status LIKE 'OK%' AND billed_amount > 0 AND octopus_profit 
 VALID_BILLING = "net_amount IS NOT NULL AND net_amount > 0"
 
 
+def validated_without_billing(month: str, as_of: date, read=read_sql):
+    """Validated cash-only documents, kept outside profitability indicators."""
+    return read(
+        """SELECT operation_date AS Fecha, client_name AS Cliente, channel AS Canal,
+        check_amount AS ECHEQ, octopus_profit AS Ganancia,
+        net_to_return AS "Neto a devolver"
+        FROM rentability_operations
+        WHERE status = 'VALIDADO_SIN_FC_NETA' AND billed_amount IS NULL
+          AND net_billing_amount IS NULL AND month = ? AND operation_date <= ?
+        ORDER BY operation_date, client_name""",
+        (month, as_of.isoformat()),
+    )
+
+
 def period_filter(kind: str, month: str, as_of: date) -> tuple[str, tuple]:
     current_month = as_of.strftime("%Y-%m")
     validity = {

@@ -37,6 +37,7 @@ OPERATION_FIELDS = (
     "net_billing_amount",
     "billed_amount",
     "octopus_profit",
+    "net_to_return",
     "status",
     "operation_type",
     "source_file",
