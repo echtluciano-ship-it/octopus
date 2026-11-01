@@ -103,7 +103,7 @@
       "confirmed": "Excepcion exclusiva de este Drive ID: sin Facturacion Neta; Ganancia Octopus 1199509; Neto a devolver 38784139. No generalizar a Lumbrera ni a otros cuadros.",
       "pending": null,
       "status": "HUMAN_VALIDATED_DOCUMENT",
-      "production_changed": false,
+      "production_changed": true,
       "updated_at": "2026-11-01T20:12:07.024914-03:00",
       "user_clarification": "Solo en ese cuadro es así, no tiene facturación neta, lo de abajo es la ganancia y después lo importante es el neto a devolver.",
       "net_billing_amount": null,
@@ -111,8 +111,9 @@
       "octopus_profit": 1199509,
       "net_to_return": 38784139,
       "check_amount": 39983648,
-      "application_status": "Applied to database and UI; awaiting deployed verification",
-      "local_database_applied": true
+      "application_status": "Applied and verified on Render",
+      "local_database_applied": true,
+      "production_verified_at": "2026-11-01T20:27:25.863337-03:00"
     }
   ],
   "metrics": {
@@ -454,8 +455,8 @@
     "Three Alimentaria documents correctly dated December in database; Drive move cancelled because UI warned of access changes. Empty Diciembre 2026 folder created, ID 1EXyIDWP2nxFIxnp4HSldvv8o774zKtSY; sharing untouched.",
     "Adjacent September cropped image 1w0dBKUham_C97fwfRwR8-VyPgXw4bzHe has no client/channel/date; cannot rule out October. Preserve REVIEW, do not infer identity from amounts."
   ],
-  "github": "PENDING_PUSH",
-  "render": "PENDING_DEPLOY_AND_VERIFY",
+  "github": "OK",
+  "render": "OK",
   "evidence_directory": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\data\\monthly_closures\\runs\\2026-10",
   "adjacent_month_unresolved_documents": [
     {
@@ -476,5 +477,24 @@
       "note": "Imagen recortada: se leen ECHEQ 47.014.815, Facturacion Neta 39.277.206 y Ganancia 2.331.652, pero no cliente, canal ni fecha. No contabilizar hasta confirmar esos datos."
     }
   ],
-  "unresolved_documents_including_unknown_period": 4
+  "unresolved_documents_including_unknown_period": 4,
+  "completed_at": "2026-11-01T20:27:25.863337-03:00",
+  "deployed_code_commit": "26fa4212da491de2722f4142cd18b6db633c9d52",
+  "production_verification": {
+    "verified_at": "2026-11-01T20:27:25.863337-03:00",
+    "url": "https://octopus-clientes.onrender.com/",
+    "deploy_url": "https://dashboard.render.com/web/srv-d9pub3lbedkc73anmhog/deploys/dep-dbjsjhjm8hqs7386ds70",
+    "dashboard_status": "Deploy succeeded | Live",
+    "checks": [
+      "October four indicators match local database; 86 valid operations",
+      "Top 20 billing and profitability match persisted rankings",
+      "97 published clients",
+      "Magtik October net 56709835, profit 3920925; all-time 122392533 / 8354037",
+      "Jayor October net 405311403, profit 27051956; all-time 506247378 / 34117474",
+      "Lumbrera: no net billing; cheque 39983648, profit 1199509, net_to_return 38784139",
+      "November zero current indicators; future operations excluded under existing as-of rule"
+    ],
+    "screenshot": "outputs/closure_resume_2026-11-01/render-octubre-lumbrera.jpg",
+    "scope_note": "Verification of deployed application and data at code commit above. Subsequent evidence-only commit does not change runtime/data."
+  }
 }
