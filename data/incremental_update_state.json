@@ -11270,19 +11270,19 @@
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-03T01:18:15.164888-03:00",
+    "at": "2026-11-03T10:51:17.968574-03:00",
     "reason": "Changed official billing plus new Drive-backed rentability operations and payment evidence",
     "new_operations": 6,
     "updated_source_documents": 1
   },
   "last_closure_inventory": {
     "period": "2026-10",
-    "at": "2026-11-03T01:18:15.164888-03:00",
+    "at": "2026-11-03T10:51:17.968574-03:00",
     "files": 556,
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-03T01:18:15.164888-03:00",
+    "at": "2026-11-03T10:51:17.968574-03:00",
     "detected_files": 556,
     "known_unchanged": 492,
     "new_files": 64,
@@ -11298,6 +11298,34 @@
       "2026-11"
     ],
     "tests": "29 passed",
-    "sync": "23 months reconciled; live billing hash verified"
+    "sync": "23 months reconciled; live billing hash verified",
+    "github": "OK",
+    "github_commit": "b4e1201",
+    "render": "OK",
+    "production_verification": {
+      "verified_at": "2026-11-03T10:51:17.968574-03:00",
+      "url": "https://octopus-clientes.onrender.com/",
+      "http_status": 200,
+      "november": {
+        "billing_total": 316107377.03,
+        "validated_net": 18889372.0,
+        "profit": 878167.0,
+        "profitability": 0.0465,
+        "valid_operations": 3
+      },
+      "october": {
+        "billing_total": 5295739364.17,
+        "validated_net": 3818507163.9,
+        "profit": 235596956.76,
+        "profitability": 0.0617,
+        "valid_operations": 90
+      },
+      "checks": [
+        "November executive indicators match local reconciled database",
+        "October executive indicators and operation count match local reconciled database",
+        "November billing ranking includes Alimentos Viandas and Drogueria Meta",
+        "October billing and profitability rankings match local ordering"
+      ]
+    }
   }
 }
