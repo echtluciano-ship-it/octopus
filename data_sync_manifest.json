@@ -1,14 +1,14 @@
 {
-  "database_sha256": "4fbde5be8a13ebd4c53eba5e5c42cdc22838be57f3430604064315d95fbd5396",
+  "database_sha256": "214ef5af6082b04b5ed97f473dc0c18f81ee91e5bd7dbc61f68115a5bb6fa9d2",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "129bb2c396e13a68bef578afb5df063084d887df1c713b1dc9d85de227cf19a0",
-    "data/billing_source.json": "163b099fae6289a4b60384ad9069771881cbe1624b8f67033c22510d957dc842",
-    "manual_rentability_operations.csv": "a47a282f82431f948ab371563d9cd65f91be4f84a2cd78a7739cce86a37f5e96",
+    "data/FACTURACION OCTOPUS.xlsx": "04fe8df820a6fb6f496e613610f11b70557b13b5d286d0ca084696d1656a3dd2",
+    "data/billing_source.json": "a460c31c9b80e9f4883846643c7cdc8ac09e32e4aceb71bb581af257f538504f",
+    "manual_rentability_operations.csv": "af92d02b8a3eae2b9f08250585d69cfa0172a1eba6ee20adb7dd17bea8eb1e01",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "44c8efb2934edec10efedcd20ac4f544dba8e687e158babab2d9775b04b421bc"
+    "source_documents.csv": "0dad217543085560c6c4764bf725f9efcd3307c0f9d8ce2b3a875b2f79d8751e"
   },
   "controls": {
-    "as_of": "2026-11-01",
+    "as_of": "2026-11-03",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -2955,10 +2955,10 @@
       "2026-09": {
         "billing_total": 4431843521.81,
         "billing_records": 303,
-        "validated_net": 2304639773.77,
-        "profit": 129163699.67,
-        "profitability": 0.05604507096512965,
-        "valid_operations": 75,
+        "validated_net": 2340164101.77,
+        "profit": 131276828.67,
+        "profitability": 0.0560972747897072,
+        "valid_operations": 76,
         "rentability_ranking": [
           {
             "client_name": "Medipremium",
@@ -3245,12 +3245,12 @@
         ]
       },
       "2026-10": {
-        "billing_total": 4932458746.64,
-        "billing_records": 331,
-        "validated_net": 3607763349.0,
-        "profit": 223425759.0,
-        "profitability": 0.06192916147394456,
-        "valid_operations": 86,
+        "billing_total": 5295739364.17,
+        "billing_records": 358,
+        "validated_net": 3818507163.9,
+        "profit": 235596956.76,
+        "profitability": 0.06169870754396465,
+        "valid_operations": 90,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3421,16 +3421,16 @@
             "registros": 33
           },
           {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion": 465488878.15,
+            "registros": 24
+          },
+          {
             "client_name": "Escalum",
             "client_key": "ESCALUM",
             "facturacion": 437673873.87,
             "registros": 23
-          },
-          {
-            "client_name": "LABORATORIOS JAYOR S.R.L.",
-            "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 366448604.59,
-            "registros": 19
           },
           {
             "client_name": "Centro Médico Amenabar",
@@ -3505,6 +3505,12 @@
             "registros": 6
           },
           {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 130067966.31,
+            "registros": 5
+          },
+          {
             "client_name": "Drogueria Meta",
             "client_key": "DROGUERIA META",
             "facturacion": 120028613.71000001,
@@ -3527,34 +3533,66 @@
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion": 87083270.56,
             "registros": 3
-          },
-          {
-            "client_name": "Vega y Camji",
-            "client_key": "VEGA Y CAMJI",
-            "facturacion": 86645141.86,
-            "registros": 3
           }
         ]
       },
       "2026-11": {
-        "billing_total": 0.0,
-        "billing_records": 0,
-        "validated_net": 0.0,
-        "profit": 0.0,
-        "profitability": null,
-        "valid_operations": 0,
-        "rentability_ranking": [],
-        "billing_ranking": []
+        "billing_total": 316107377.03,
+        "billing_records": 22,
+        "validated_net": 18889372.0,
+        "profit": 878166.9999999999,
+        "profitability": 0.0464900050673998,
+        "valid_operations": 3,
+        "rentability_ranking": [
+          {
+            "client_name": "LIBERTADOR 15000 S.R.L",
+            "client_key": "LIBERTADOR 15000",
+            "facturacion_validada": 8203394.0,
+            "ganancia_octopus": 381376.0,
+            "rentabilidad": 0.04649002595754879,
+            "operaciones": 1
+          },
+          {
+            "client_name": "KIOTO GROUP S.A.",
+            "client_key": "KIOTO GROUP",
+            "facturacion_validada": 6383409.33,
+            "ganancia_octopus": 296764.67,
+            "rentabilidad": 0.04648999533921475,
+            "operaciones": 1
+          },
+          {
+            "client_name": "SUSHINOR S.A.",
+            "client_key": "SUSHINOR",
+            "facturacion_validada": 4302568.67,
+            "ganancia_octopus": 200026.33,
+            "rentabilidad": 0.04648997967067891,
+            "operaciones": 1
+          }
+        ],
+        "billing_ranking": [
+          {
+            "client_name": "Alimentos Viandas",
+            "client_key": "ALIMENTOS VIANDAS",
+            "facturacion": 166000003.12,
+            "registros": 12
+          },
+          {
+            "client_name": "Drogueria Meta",
+            "client_key": "DROGUERIA META",
+            "facturacion": 150107373.91,
+            "registros": 10
+          }
+        ]
       }
     },
     "published_clients": 97,
-    "valid_operations_all_dates": 329,
+    "valid_operations_all_dates": 335,
     "operation_states": {
-      "OK": 252,
-      "OK_FC_NETA": 46,
+      "OK": 254,
+      "OK_FC_NETA": 48,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
-      "OK_MULTI_MONTH_SPLIT": 10,
+      "OK_MULTI_MONTH_SPLIT": 12,
       "REVISION": 2,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2,

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-10-30T01:28:34.224978Z",
+  "last_successful_scan": "2026-11-03T04:12:29.160682Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11,7 +11,8 @@
     "pendientes/2026-10": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
     "pagos/2026-10": "1OEx9fqjM0cRqPDw3Ae3QlYWlOEMGW-14",
     "pendientes/2026-11": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
-    "pagos/2026-11": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye"
+    "pagos/2026-11": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+    "pendientes/2026-12": "1EXyIDWP2nxFIxnp4HSldvv8o774zKtSY"
   },
   "documents": {
     "1jQFzxHetZ7oVOWRh8QiPeD_Bg_nh4duU": {
@@ -10546,34 +10547,757 @@
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/1y8oL9qz6rKTMK4wSPu5mINpYnt0NdcaO/view",
       "modified_time_note": "Only day Oct 30 observed in Drive UI; exact timestamp unknown"
+    },
+    "1gur3pHHYXAVDguggWVP3IxyZRr-aUq1j": {
+      "drive_id": "1gur3pHHYXAVDguggWVP3IxyZRr-aUq1j",
+      "name": "PHOTO-2026-11-02-18-16-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17855,
+      "modified_time": "",
+      "folder_id": "1Q_FQ8HtFFTGWwBpQrVwKtepzcFzCfqXz",
+      "folder_period": "2026-09",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1gur3pHHYXAVDguggWVP3IxyZRr-aUq1j/view"
+    },
+    "1RW-VgqHbfMSpEl0M9XRsxJ8bjJjj1vO0": {
+      "drive_id": "1RW-VgqHbfMSpEl0M9XRsxJ8bjJjj1vO0",
+      "name": "PHOTO-2026-11-02-15-58-29.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18264,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1RW-VgqHbfMSpEl0M9XRsxJ8bjJjj1vO0/view"
+    },
+    "108PudFC-4YE6bqv-kTdRHp4YdnBbsL9i": {
+      "drive_id": "108PudFC-4YE6bqv-kTdRHp4YdnBbsL9i",
+      "name": "PHOTO-2026-11-02-16-37-23.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 322708,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/108PudFC-4YE6bqv-kTdRHp4YdnBbsL9i/view"
+    },
+    "1oWv9qz5d_VEtQHfZLuSxmxx1MCZRWGqu": {
+      "drive_id": "1oWv9qz5d_VEtQHfZLuSxmxx1MCZRWGqu",
+      "name": "PHOTO-2026-11-02-16-37-24.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 516627,
+      "modified_time": "",
+      "folder_id": "1J7uk6ykAO8uIghtEFwRQmxVHfEdT5eXy",
+      "folder_period": "2026-10",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1oWv9qz5d_VEtQHfZLuSxmxx1MCZRWGqu/view"
+    },
+    "1NqTJivpgUetLhCLS-ZH6H_DvpPZLQbS0": {
+      "drive_id": "1NqTJivpgUetLhCLS-ZH6H_DvpPZLQbS0",
+      "name": "DISTRIBUIDORA ESPORA S.R.L..pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 276635,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NqTJivpgUetLhCLS-ZH6H_DvpPZLQbS0/view"
+    },
+    "1UzLAaPFdcXW9Qao-uXionKnTf2h5VrUJ": {
+      "drive_id": "1UzLAaPFdcXW9Qao-uXionKnTf2h5VrUJ",
+      "name": "MAGTIK- DIST. ESPORA- Comp Ret. PAGO 29-10-2026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 211430,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1UzLAaPFdcXW9Qao-uXionKnTf2h5VrUJ/view"
+    },
+    "1NCvZzbVL-cvrqO-0KPnVrYirIiHfcbRc": {
+      "drive_id": "1NCvZzbVL-cvrqO-0KPnVrYirIiHfcbRc",
+      "name": "MAGTIK- DIST. ESPORA- O. PAGO 29-10-2026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 291264,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NCvZzbVL-cvrqO-0KPnVrYirIiHfcbRc/view"
+    },
+    "1914TG8y3Y8-YNwZau4JykOK09tJCMtjx": {
+      "drive_id": "1914TG8y3Y8-YNwZau4JykOK09tJCMtjx",
+      "name": "ORDEN_DE_PAGO_13280.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 56219,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1914TG8y3Y8-YNwZau4JykOK09tJCMtjx/view"
+    },
+    "1KlAdEYbKl2LLhq43NWtFeoJQhHhFvksb": {
+      "drive_id": "1KlAdEYbKl2LLhq43NWtFeoJQhHhFvksb",
+      "name": "ORDEN_DE_PAGO_13281 (1).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 57125,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KlAdEYbKl2LLhq43NWtFeoJQhHhFvksb/view"
+    },
+    "1KfMmL2wRCilUqbk2c7kcGo8JV3E7k5R6": {
+      "drive_id": "1KfMmL2wRCilUqbk2c7kcGo8JV3E7k5R6",
+      "name": "PHOTO-2026-10-30-10-50-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 62187,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KfMmL2wRCilUqbk2c7kcGo8JV3E7k5R6/view"
+    },
+    "1p0Dg7FtLun81AIrLmc27XXiXtkGYS6QM": {
+      "drive_id": "1p0Dg7FtLun81AIrLmc27XXiXtkGYS6QM",
+      "name": "PHOTO-2026-10-30-10-50-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 40937,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1p0Dg7FtLun81AIrLmc27XXiXtkGYS6QM/view"
+    },
+    "1eoiQrwckyeGA9oMbE_Gl3jwvGgCQb8UK": {
+      "drive_id": "1eoiQrwckyeGA9oMbE_Gl3jwvGgCQb8UK",
+      "name": "PHOTO-2026-10-30-10-50-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 41193,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1eoiQrwckyeGA9oMbE_Gl3jwvGgCQb8UK/view"
+    },
+    "19s_uykpw7AhpOJodw8gLeo2F89i-fjqP": {
+      "drive_id": "19s_uykpw7AhpOJodw8gLeo2F89i-fjqP",
+      "name": "PHOTO-2026-10-30-10-50-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 64867,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/19s_uykpw7AhpOJodw8gLeo2F89i-fjqP/view"
+    },
+    "1cE8jOWCy_nAwQO1DM91n4GRlwwAR_Y1J": {
+      "drive_id": "1cE8jOWCy_nAwQO1DM91n4GRlwwAR_Y1J",
+      "name": "PHOTO-2026-10-30-10-50-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 41306,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1cE8jOWCy_nAwQO1DM91n4GRlwwAR_Y1J/view"
+    },
+    "1pMZUBr04pXZ7L4J2QeWRXQ1-1Y4Y-mvz": {
+      "drive_id": "1pMZUBr04pXZ7L4J2QeWRXQ1-1Y4Y-mvz",
+      "name": "PHOTO-2026-10-30-10-50-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 64533,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1pMZUBr04pXZ7L4J2QeWRXQ1-1Y4Y-mvz/view"
+    },
+    "1bnD0L6IKizQT1iwrPWA3PCsNvYdmeTW7": {
+      "drive_id": "1bnD0L6IKizQT1iwrPWA3PCsNvYdmeTW7",
+      "name": "PHOTO-2026-10-30-11-21-14.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 449529,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1bnD0L6IKizQT1iwrPWA3PCsNvYdmeTW7/view"
+    },
+    "1bohTcYlmOfK6mlw_tmaoEXo7-hSKnfnL": {
+      "drive_id": "1bohTcYlmOfK6mlw_tmaoEXo7-hSKnfnL",
+      "name": "PHOTO-2026-11-02-12-12-31.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 125865,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1bohTcYlmOfK6mlw_tmaoEXo7-hSKnfnL/view"
+    },
+    "1OJh4kGkJ8f4ekpTsr8BhXaSeQbP_bISF": {
+      "drive_id": "1OJh4kGkJ8f4ekpTsr8BhXaSeQbP_bISF",
+      "name": "PHOTO-2026-11-02-12-13-11.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 334128,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1OJh4kGkJ8f4ekpTsr8BhXaSeQbP_bISF/view"
+    },
+    "1TH2XdUu3M5uuCSaK8-bPMro9qEF8Jsz8": {
+      "drive_id": "1TH2XdUu3M5uuCSaK8-bPMro9qEF8Jsz8",
+      "name": "PHOTO-2026-11-02-17-28-59.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 183100,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1TH2XdUu3M5uuCSaK8-bPMro9qEF8Jsz8/view"
+    },
+    "1qdlHrJJqyVZiQRI-Ow48Ee_sYstdSLa0": {
+      "drive_id": "1qdlHrJJqyVZiQRI-Ow48Ee_sYstdSLa0",
+      "name": "PHOTO-2026-11-02-17-29-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 255088,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1qdlHrJJqyVZiQRI-Ow48Ee_sYstdSLa0/view"
+    },
+    "1wZZR0zIeuXUYSImHe7nrun-2oe9F6Dun": {
+      "drive_id": "1wZZR0zIeuXUYSImHe7nrun-2oe9F6Dun",
+      "name": "PHOTO-2026-11-02-17-29-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 181180,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1wZZR0zIeuXUYSImHe7nrun-2oe9F6Dun/view"
+    },
+    "1Rw70st81TMTEX8JifR-858lctbX88YEh": {
+      "drive_id": "1Rw70st81TMTEX8JifR-858lctbX88YEh",
+      "name": "PHOTO-2026-11-02-17-29-00.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 177784,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Rw70st81TMTEX8JifR-858lctbX88YEh/view"
+    },
+    "11PpRrwCMu0kQcMidU7obRy3caYygv-ym": {
+      "drive_id": "11PpRrwCMu0kQcMidU7obRy3caYygv-ym",
+      "name": "PHOTO-2026-11-02-17-30-04.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 189572,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11PpRrwCMu0kQcMidU7obRy3caYygv-ym/view"
+    },
+    "1k81XaUuFRJNtCVJmfJpmuvavBsW3KGzs": {
+      "drive_id": "1k81XaUuFRJNtCVJmfJpmuvavBsW3KGzs",
+      "name": "PHOTO-2026-11-02-17-30-04.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 193591,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1k81XaUuFRJNtCVJmfJpmuvavBsW3KGzs/view"
+    },
+    "1W0VbOJ1sXYRZXQP-aXpotmE_b42a54IJ": {
+      "drive_id": "1W0VbOJ1sXYRZXQP-aXpotmE_b42a54IJ",
+      "name": "PHOTO-2026-11-02-17-30-05.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 269857,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1W0VbOJ1sXYRZXQP-aXpotmE_b42a54IJ/view"
+    },
+    "1oNxwth_IlZmVliwkdiTK6ZUVCaJCZbaC": {
+      "drive_id": "1oNxwth_IlZmVliwkdiTK6ZUVCaJCZbaC",
+      "name": "PHOTO-2026-11-02-17-30-05.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 196392,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1oNxwth_IlZmVliwkdiTK6ZUVCaJCZbaC/view"
+    },
+    "17mgDrrmwBZRxfpOHYVIAGqzGBH47fR2b": {
+      "drive_id": "17mgDrrmwBZRxfpOHYVIAGqzGBH47fR2b",
+      "name": "PHOTO-2026-11-02-17-31-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 196554,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/17mgDrrmwBZRxfpOHYVIAGqzGBH47fR2b/view"
+    },
+    "11Syy-Qvo5BDpWcsJcJotVYE_htPsxeO2": {
+      "drive_id": "11Syy-Qvo5BDpWcsJcJotVYE_htPsxeO2",
+      "name": "PHOTO-2026-11-02-17-31-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 189998,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11Syy-Qvo5BDpWcsJcJotVYE_htPsxeO2/view"
+    },
+    "1IhFNPvqpxesL_pVaOeyRi7ZTe0Z_ltSy": {
+      "drive_id": "1IhFNPvqpxesL_pVaOeyRi7ZTe0Z_ltSy",
+      "name": "PHOTO-2026-11-02-17-31-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 191336,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1IhFNPvqpxesL_pVaOeyRi7ZTe0Z_ltSy/view"
+    },
+    "147M20VnlUGA5S8Khpjxfy9lmgS7Zsme-": {
+      "drive_id": "147M20VnlUGA5S8Khpjxfy9lmgS7Zsme-",
+      "name": "PHOTO-2026-11-02-17-31-29.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 239700,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/147M20VnlUGA5S8Khpjxfy9lmgS7Zsme-/view"
+    },
+    "12EZAW-aWndUWg_TXxPagIVZ_jlvdt1cs": {
+      "drive_id": "12EZAW-aWndUWg_TXxPagIVZ_jlvdt1cs",
+      "name": "PHOTO-2026-11-02-17-34-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 186910,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/12EZAW-aWndUWg_TXxPagIVZ_jlvdt1cs/view"
+    },
+    "1Vgj1P89-XmOveq-ERUfC9JxUpgc0hrOC": {
+      "drive_id": "1Vgj1P89-XmOveq-ERUfC9JxUpgc0hrOC",
+      "name": "PHOTO-2026-11-02-17-34-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 191429,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Vgj1P89-XmOveq-ERUfC9JxUpgc0hrOC/view"
+    },
+    "1oBukSgThyBDcREyyJqiA4243Odqx3iUE": {
+      "drive_id": "1oBukSgThyBDcREyyJqiA4243Odqx3iUE",
+      "name": "PHOTO-2026-11-02-17-34-28.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 193015,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1oBukSgThyBDcREyyJqiA4243Odqx3iUE/view"
+    },
+    "1m3_ChBAHVs6rFh_A8BpcP9mhIZHuhd0V": {
+      "drive_id": "1m3_ChBAHVs6rFh_A8BpcP9mhIZHuhd0V",
+      "name": "PHOTO-2026-11-02-17-34-29.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 270522,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1m3_ChBAHVs6rFh_A8BpcP9mhIZHuhd0V/view"
+    },
+    "1LZ8v-Hcoi6PP_5kQ_H_e5Nbz6LO9IQfj": {
+      "drive_id": "1LZ8v-Hcoi6PP_5kQ_H_e5Nbz6LO9IQfj",
+      "name": "PHOTO-2026-11-02-17-35-33.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 141501,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1LZ8v-Hcoi6PP_5kQ_H_e5Nbz6LO9IQfj/view"
+    },
+    "1lZS-RcZ3ueOTS6z8UMQ26FAe3at7eGf7": {
+      "drive_id": "1lZS-RcZ3ueOTS6z8UMQ26FAe3at7eGf7",
+      "name": "PHOTO-2026-11-02-17-35-33.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 190135,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1lZS-RcZ3ueOTS6z8UMQ26FAe3at7eGf7/view"
+    },
+    "1mKPAP_rDfSqPrwqAJd-A1_aqG0CFaaOH": {
+      "drive_id": "1mKPAP_rDfSqPrwqAJd-A1_aqG0CFaaOH",
+      "name": "PHOTO-2026-11-02-17-35-34.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 200043,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1mKPAP_rDfSqPrwqAJd-A1_aqG0CFaaOH/view"
+    },
+    "1FhtfHdaW9EJ9nGZQGutr4EySVKGP9igD": {
+      "drive_id": "1FhtfHdaW9EJ9nGZQGutr4EySVKGP9igD",
+      "name": "PHOTO-2026-11-02-17-35-34.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 256708,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1FhtfHdaW9EJ9nGZQGutr4EySVKGP9igD/view"
+    },
+    "1vW-KMRPCtm2m8uvp5-E2U9EyaOZQsD0G": {
+      "drive_id": "1vW-KMRPCtm2m8uvp5-E2U9EyaOZQsD0G",
+      "name": "PHOTO-2026-11-02-17-37-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 205659,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1vW-KMRPCtm2m8uvp5-E2U9EyaOZQsD0G/view"
+    },
+    "1Tv5edp5XTbpTxx02PrFJXP6coWDL6gwc": {
+      "drive_id": "1Tv5edp5XTbpTxx02PrFJXP6coWDL6gwc",
+      "name": "PHOTO-2026-11-02-17-37-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 205178,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Tv5edp5XTbpTxx02PrFJXP6coWDL6gwc/view"
+    },
+    "1Q4ll2HpnyC5JYYVJyME_GSPtzeM92XMY": {
+      "drive_id": "1Q4ll2HpnyC5JYYVJyME_GSPtzeM92XMY",
+      "name": "PHOTO-2026-11-02-17-37-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 196335,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Q4ll2HpnyC5JYYVJyME_GSPtzeM92XMY/view"
+    },
+    "11z_BWFu_sLtoQR7v7sjo_wXqZgOaenL6": {
+      "drive_id": "11z_BWFu_sLtoQR7v7sjo_wXqZgOaenL6",
+      "name": "PHOTO-2026-11-02-17-37-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 255557,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11z_BWFu_sLtoQR7v7sjo_wXqZgOaenL6/view"
+    },
+    "1-AAnsJmeojZC7qkDLWI6m62cY6Y6k6bb": {
+      "drive_id": "1-AAnsJmeojZC7qkDLWI6m62cY6Y6k6bb",
+      "name": "PHOTO-2026-11-02-17-38-52.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 175990,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1-AAnsJmeojZC7qkDLWI6m62cY6Y6k6bb/view"
+    },
+    "1T-wPTJLIb0ejeBOCMzOwO1BTBJ9FFrn_": {
+      "drive_id": "1T-wPTJLIb0ejeBOCMzOwO1BTBJ9FFrn_",
+      "name": "PHOTO-2026-11-02-17-38-52.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 202479,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1T-wPTJLIb0ejeBOCMzOwO1BTBJ9FFrn_/view"
+    },
+    "1JBUPX0I2OCO58G8_s968zUiuby5LwKzA": {
+      "drive_id": "1JBUPX0I2OCO58G8_s968zUiuby5LwKzA",
+      "name": "PHOTO-2026-11-02-17-38-52.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 175990,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1JBUPX0I2OCO58G8_s968zUiuby5LwKzA/view"
+    },
+    "1y-oCHmqHb1Wzeqs9NgFOwjQrUEhWlUXR": {
+      "drive_id": "1y-oCHmqHb1Wzeqs9NgFOwjQrUEhWlUXR",
+      "name": "PHOTO-2026-11-02-17-38-52.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 202479,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1y-oCHmqHb1Wzeqs9NgFOwjQrUEhWlUXR/view"
+    },
+    "1CUSwju9rlCpqT5c6vrFc2PeZZabolt0M": {
+      "drive_id": "1CUSwju9rlCpqT5c6vrFc2PeZZabolt0M",
+      "name": "PHOTO-2026-11-02-17-38-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 186083,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1CUSwju9rlCpqT5c6vrFc2PeZZabolt0M/view"
+    },
+    "1TGo_f-YQxWeZWRexs4et56CUP6RoexwN": {
+      "drive_id": "1TGo_f-YQxWeZWRexs4et56CUP6RoexwN",
+      "name": "PHOTO-2026-11-02-17-38-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 258027,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1TGo_f-YQxWeZWRexs4et56CUP6RoexwN/view"
+    },
+    "1DqH3JXPEsRev323jYSqW_OUKgps-jgMz": {
+      "drive_id": "1DqH3JXPEsRev323jYSqW_OUKgps-jgMz",
+      "name": "PHOTO-2026-11-02-17-38-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 258027,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1DqH3JXPEsRev323jYSqW_OUKgps-jgMz/view"
+    },
+    "1FtL8kUmWAvIxRiraNF8OvuJAQYd6u4Ur": {
+      "drive_id": "1FtL8kUmWAvIxRiraNF8OvuJAQYd6u4Ur",
+      "name": "PHOTO-2026-11-02-17-38-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 186083,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1FtL8kUmWAvIxRiraNF8OvuJAQYd6u4Ur/view"
+    },
+    "1KDtiweOKa-xn837hxmaqahiaR4TsHmfQ": {
+      "drive_id": "1KDtiweOKa-xn837hxmaqahiaR4TsHmfQ",
+      "name": "PHOTO-2026-11-02-17-40-19.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 162759,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KDtiweOKa-xn837hxmaqahiaR4TsHmfQ/view"
+    },
+    "1xdKf9FbrAToQjNYARxd1VpOYKRk4IDqx": {
+      "drive_id": "1xdKf9FbrAToQjNYARxd1VpOYKRk4IDqx",
+      "name": "PHOTO-2026-11-02-17-40-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 218403,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1xdKf9FbrAToQjNYARxd1VpOYKRk4IDqx/view"
+    },
+    "1cFkIepG7oK-PvE_jVS8e0HerlbpZXGfI": {
+      "drive_id": "1cFkIepG7oK-PvE_jVS8e0HerlbpZXGfI",
+      "name": "PHOTO-2026-11-02-17-40-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 167148,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1cFkIepG7oK-PvE_jVS8e0HerlbpZXGfI/view"
+    },
+    "1knuMXUL-lC_mmPI6BMfvPdwrfF-qkLPU": {
+      "drive_id": "1knuMXUL-lC_mmPI6BMfvPdwrfF-qkLPU",
+      "name": "PHOTO-2026-11-02-17-40-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 161743,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1knuMXUL-lC_mmPI6BMfvPdwrfF-qkLPU/view"
+    },
+    "19VIKVgoFKX0zTyLfBhYbYUTcJ6vsBUL5": {
+      "drive_id": "19VIKVgoFKX0zTyLfBhYbYUTcJ6vsBUL5",
+      "name": "PHOTO-2026-11-02-17-41-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 203187,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/19VIKVgoFKX0zTyLfBhYbYUTcJ6vsBUL5/view"
+    },
+    "1ERWfcQLfrxg1VLna93An1pSl57QQ6Ika": {
+      "drive_id": "1ERWfcQLfrxg1VLna93An1pSl57QQ6Ika",
+      "name": "PHOTO-2026-11-02-17-41-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 194691,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1ERWfcQLfrxg1VLna93An1pSl57QQ6Ika/view"
+    },
+    "1PSfwAp5gxeNAV2pkq8nc6E0p_jyvWlFd": {
+      "drive_id": "1PSfwAp5gxeNAV2pkq8nc6E0p_jyvWlFd",
+      "name": "PHOTO-2026-11-02-17-41-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 265624,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1PSfwAp5gxeNAV2pkq8nc6E0p_jyvWlFd/view"
+    },
+    "1BZsi2ZZmdS6x-VD6P65Ct93WWO8CB_6R": {
+      "drive_id": "1BZsi2ZZmdS6x-VD6P65Ct93WWO8CB_6R",
+      "name": "PHOTO-2026-11-02-17-41-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 225889,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1BZsi2ZZmdS6x-VD6P65Ct93WWO8CB_6R/view"
+    },
+    "1Nlvt8t_Qd9lhCDbmO817H0MQu4Q79zis": {
+      "drive_id": "1Nlvt8t_Qd9lhCDbmO817H0MQu4Q79zis",
+      "name": "PHOTO-2026-11-02-17-42-15.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 200661,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Nlvt8t_Qd9lhCDbmO817H0MQu4Q79zis/view"
+    },
+    "1zSVO5xlkdOvffKFyrDieTqorbFFLz2ni": {
+      "drive_id": "1zSVO5xlkdOvffKFyrDieTqorbFFLz2ni",
+      "name": "PHOTO-2026-11-02-17-42-15.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 265774,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1zSVO5xlkdOvffKFyrDieTqorbFFLz2ni/view"
+    },
+    "1k3mcvFXHZIlm_ufDqjH1ImoGtQCEJ1Ed": {
+      "drive_id": "1k3mcvFXHZIlm_ufDqjH1ImoGtQCEJ1Ed",
+      "name": "PHOTO-2026-11-02-17-42-15.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 205259,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1k3mcvFXHZIlm_ufDqjH1ImoGtQCEJ1Ed/view"
+    },
+    "11_N1u1ajRAMGaeabMnqznLeqolJzg47q": {
+      "drive_id": "11_N1u1ajRAMGaeabMnqznLeqolJzg47q",
+      "name": "PHOTO-2026-11-02-17-42-15.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 170086,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11_N1u1ajRAMGaeabMnqznLeqolJzg47q/view"
+    },
+    "19cmMmF2ulzjI4sjV7H7UMcG9oe9J5mJn": {
+      "drive_id": "19cmMmF2ulzjI4sjV7H7UMcG9oe9J5mJn",
+      "name": "PHOTO-2026-11-02-17-42-16.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 247108,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/19cmMmF2ulzjI4sjV7H7UMcG9oe9J5mJn/view"
+    },
+    "1IuF_iTQYRxRnrZPU-TtxdX-iU2ZqUCx3": {
+      "drive_id": "1IuF_iTQYRxRnrZPU-TtxdX-iU2ZqUCx3",
+      "name": "23328254794_011_00001_00000005.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 0,
+      "modified_time": "",
+      "folder_id": "1hrkaiIoIidXz9_PhtfaUX8iSrVsiDN3h",
+      "folder_period": "",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1IuF_iTQYRxRnrZPU-TtxdX-iU2ZqUCx3/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 474966,
-      "modified_time": "2026-10-30T00:58:10Z",
-      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-10-29\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "58c30e55976e250e9c9c3099ea4d775cc4627a809849b950de9418329d07692e",
-      "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit?usp=drivesdk&rtpof=true&sd=true"
+      "size_bytes": 478810,
+      "modified_time": "",
+      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-11-03\\FACTURACION OCTOPUS.xlsx",
+      "sha256": "04fe8df820a6fb6f496e613610f11b70557b13b5d286d0ca084696d1656a3dd2",
+      "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-01T23:20:20+00:00"
+    "recorded_at": "2026-11-03T04:15:11+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-01T20:21:49.737961-03:00",
-    "reason": "Changed official billing and explicit net_to_return schema",
-    "new_operations": 5,
-    "updated_operations": 1
+    "at": "2026-11-03T01:18:15.164888-03:00",
+    "reason": "Changed official billing plus new Drive-backed rentability operations and payment evidence",
+    "new_operations": 6,
+    "updated_source_documents": 1
   },
   "last_closure_inventory": {
     "period": "2026-10",
-    "at": "2026-11-01T20:21:49.737961-03:00",
-    "files": 492,
+    "at": "2026-11-03T01:18:15.164888-03:00",
+    "files": 556,
     "exact_modified_time_verified": false
+  },
+  "last_incremental_update": {
+    "at": "2026-11-03T01:18:15.164888-03:00",
+    "detected_files": 556,
+    "known_unchanged": 492,
+    "new_files": 64,
+    "modified_files": 0,
+    "duplicates_confirmed": 4,
+    "rentability_operations_added": 6,
+    "review_documents_added": 1,
+    "billing_changed": true,
+    "billing_rows_added": 49,
+    "affected_months": [
+      "2026-09",
+      "2026-10",
+      "2026-11"
+    ],
+    "tests": "29 passed",
+    "sync": "23 months reconciled; live billing hash verified"
   }
 }
