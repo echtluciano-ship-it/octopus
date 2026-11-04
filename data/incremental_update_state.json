@@ -11303,10 +11303,10 @@
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-03T10:51:17.968574-03:00",
+    "at": "2026-11-03T23:28:30.6653265-03:00",
     "reason": "Changed official billing plus new Drive-backed rentability operations and payment evidence",
-    "new_operations": 6,
-    "updated_source_documents": 1
+    "new_operations": 2,
+    "updated_source_documents": 3
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -11315,28 +11315,27 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-03T10:51:17.968574-03:00",
-    "detected_files": 556,
-    "known_unchanged": 492,
-    "new_files": 64,
+    "at": "2026-11-03T23:28:30.6653265-03:00",
+    "detected_files": 63,
+    "known_unchanged": 60,
+    "new_files": 3,
     "modified_files": 0,
-    "duplicates_confirmed": 4,
-    "rentability_operations_added": 6,
-    "review_documents_added": 1,
+    "duplicates_confirmed": 0,
+    "rentability_operations_added": 2,
+    "review_documents_added": 0,
     "billing_changed": true,
-    "billing_rows_added": 49,
+    "billing_rows_added": 20,
     "affected_months": [
-      "2026-09",
       "2026-10",
       "2026-11"
     ],
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
     "github": "OK",
-    "github_commit": "b4e1201",
+    "github_commit": "be15e7b",
     "render": "OK",
     "production_verification": {
-      "verified_at": "2026-11-03T10:51:17.968574-03:00",
+      "verified_at": "2026-11-03T23:28:30.6653265-03:00",
       "url": "https://octopus-clientes.onrender.com/",
       "http_status": 200,
       "november": {
@@ -11347,17 +11346,36 @@
         "valid_operations": 3
       },
       "october": {
-        "billing_total": 5295739364.17,
+        "billing_total": 5601185638.24,
         "validated_net": 3818507163.9,
         "profit": 235596956.76,
         "profitability": 0.0617,
         "valid_operations": 90
       },
+      "clients": {
+        "STAY HOME": {
+          "net_billing": 42020230.0,
+          "profit": 2351089.0,
+          "profitability": 0.056,
+          "last_operation": "2026-11-10",
+          "channel": "ESPORA-FARO 18"
+        },
+        "TRICO": {
+          "net_billing": 40019389.0,
+          "profit": 2796073.0,
+          "profitability": 0.0699,
+          "last_operation": "2026-11-11",
+          "channel": "Espora"
+        }
+      },
       "checks": [
         "November executive indicators match local reconciled database",
-        "October executive indicators and operation count match local reconciled database",
+        "October billing total increased by exactly 305446274.07 and matches local reconciled database",
+        "October operation count remains 90 validated rentability operations",
         "November billing ranking includes Alimentos Viandas and Drogueria Meta",
-        "October billing and profitability rankings match local ordering"
+        "October billing and profitability rankings match local ordering",
+        "STAY HOME card shows the combined ESPORA-FARO 18 operation",
+        "TRICO card shows the new November operation in its accumulated totals"
       ]
     }
   }
