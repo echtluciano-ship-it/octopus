@@ -1,11 +1,11 @@
 {
-  "database_sha256": "214ef5af6082b04b5ed97f473dc0c18f81ee91e5bd7dbc61f68115a5bb6fa9d2",
+  "database_sha256": "23aa1f5d6956048c44ddc75e4146d99f06510bef3ebacd9e1df61dbf19ac7993",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "04fe8df820a6fb6f496e613610f11b70557b13b5d286d0ca084696d1656a3dd2",
-    "data/billing_source.json": "a460c31c9b80e9f4883846643c7cdc8ac09e32e4aceb71bb581af257f538504f",
-    "manual_rentability_operations.csv": "af92d02b8a3eae2b9f08250585d69cfa0172a1eba6ee20adb7dd17bea8eb1e01",
+    "data/FACTURACION OCTOPUS.xlsx": "ee2ec6f566aae58858c7dc0cf54d4e49f60bfc2e1bda30f12ea2d949457cf993",
+    "data/billing_source.json": "a54f82ab24b92e100e29d90f0419bc89d2fdf851b9979b0b90affbcaf35976b3",
+    "manual_rentability_operations.csv": "38e49c2105940833d30021f5d128ea4eaadfe459b2aff9cb0e67d4764255cb19",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "0dad217543085560c6c4764bf725f9efcd3307c0f9d8ce2b3a875b2f79d8751e"
+    "source_documents.csv": "ea107b74cd14d6a49df60ba25d4ac1fab97f2fb7afe13f598ca9628439ca9f29"
   },
   "controls": {
     "as_of": "2026-11-03",
@@ -3245,8 +3245,8 @@
         ]
       },
       "2026-10": {
-        "billing_total": 5295739364.17,
-        "billing_records": 358,
+        "billing_total": 5601185638.24,
+        "billing_records": 378,
         "validated_net": 3818507163.9,
         "profit": 235596956.76,
         "profitability": 0.06169870754396465,
@@ -3433,6 +3433,12 @@
             "registros": 23
           },
           {
+            "client_name": "Protección Inteligente",
+            "client_key": "PROTECCION INTELIGENTE",
+            "facturacion": 344774817.61,
+            "registros": 15
+          },
+          {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
             "facturacion": 326126967.28,
@@ -3503,12 +3509,6 @@
             "client_key": "DRACONIS",
             "facturacion": 130444989.88,
             "registros": 6
-          },
-          {
-            "client_name": "Protección Inteligente",
-            "client_key": "PROTECCION INTELIGENTE",
-            "facturacion": 130067966.31,
-            "registros": 5
           },
           {
             "client_name": "Drogueria Meta",
@@ -3585,10 +3585,10 @@
         ]
       }
     },
-    "published_clients": 97,
-    "valid_operations_all_dates": 335,
+    "published_clients": 98,
+    "valid_operations_all_dates": 337,
     "operation_states": {
-      "OK": 254,
+      "OK": 256,
       "OK_FC_NETA": 48,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,

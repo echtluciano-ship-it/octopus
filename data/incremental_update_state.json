@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-03T04:12:29.160682Z",
+  "last_successful_scan": "2026-11-04T01:58:27.283032Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11251,22 +11251,55 @@
       "folder_period": "",
       "source_type": "pendientes",
       "url": "https://drive.google.com/file/d/1IuF_iTQYRxRnrZPU-TtxdX-iU2ZqUCx3/view"
+    },
+    "1BQyMM3ccJnVaHGk--Eb0G9NPYC0elQ9k": {
+      "drive_id": "1BQyMM3ccJnVaHGk--Eb0G9NPYC0elQ9k",
+      "name": "PHOTO-2026-11-03-17-50-40.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 228754,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1BQyMM3ccJnVaHGk--Eb0G9NPYC0elQ9k/view"
+    },
+    "1EDE3yrsZoQyXZ8lx_l3uGtSB53q-3DP0": {
+      "drive_id": "1EDE3yrsZoQyXZ8lx_l3uGtSB53q-3DP0",
+      "name": "PHOTO-2026-11-03-17-50-40.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 304292,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1EDE3yrsZoQyXZ8lx_l3uGtSB53q-3DP0/view"
+    },
+    "10qY5fsUSll66g4fxl6AjyieG-Lfcxkwf": {
+      "drive_id": "10qY5fsUSll66g4fxl6AjyieG-Lfcxkwf",
+      "name": "Comprobante de transferencia inmediata.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 29266,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/10qY5fsUSll66g4fxl6AjyieG-Lfcxkwf/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 478810,
+      "size_bytes": 479580,
       "modified_time": "",
-      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental_2026-11-03\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "04fe8df820a6fb6f496e613610f11b70557b13b5d286d0ca084696d1656a3dd2",
+      "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
+      "sha256": "ee2ec6f566aae58858c7dc0cf54d4e49f60bfc2e1bda30f12ea2d949457cf993",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-03T04:15:11+00:00"
+    "recorded_at": "2026-11-04T02:04:11+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",

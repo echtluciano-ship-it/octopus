@@ -26,6 +26,10 @@ class NormalizationTests(unittest.TestCase):
     def test_combined_hyf_espora_channel_is_preserved(self):
         self.assertEqual(data_loader.normalize_channel("HYF-ESPORA"), "HYF-ESPORA")
         self.assertEqual(data_loader.normalize_channel("Wolfpack - HYF - Espora"), "HYF-ESPORA")
+        self.assertEqual(
+            data_loader.normalize_channel("STAY HOME-ESPORA-FARO 18"),
+            "ESPORA-FARO 18",
+        )
 
     def test_billing_period_is_normalized_to_month_start(self):
         self.assertEqual(data_loader.parse_period("Agos-26"), date(2026, 8, 1))
