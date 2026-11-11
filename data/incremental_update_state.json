@@ -11632,10 +11632,37 @@
     ],
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
-    "github": "PENDING_PUSH",
-    "render": "PENDING_DEPLOY_AND_VERIFY",
+    "github": "OK",
+    "render": "OK",
     "production_verification": {
-      "status": "PENDING_DEPLOY"
-    }
+      "verified_at": "2026-11-10T23:30:20.791297-03:00",
+      "as_of_date": "2026-11-10",
+      "url": "https://octopus-clientes.onrender.com/",
+      "http_status": 200,
+      "november": {
+        "billing_total": 1031560571.92,
+        "validated_net": 297641372.0,
+        "profit": 17113847.0,
+        "profitability": 0.05749821298364395,
+        "valid_operations": 11
+      },
+      "october": {
+        "billing_total": 5685495926.05,
+        "validated_net": 3818507163.9,
+        "profit": 235596956.76,
+        "profitability": 0.06169870754396465,
+        "valid_operations": 90
+      },
+      "checks": [
+        "Production HTTP 200 and Streamlit application loaded without errors",
+        "November executive indicators match the local database as of 2026-11-10",
+        "October executive indicators and 90 validated operations match locally",
+        "November profitability ranking includes ASHI, Centro Medico Amenabar and Drogueria Meta",
+        "November billing ranking includes Drogueria Meta and Vega y Camji",
+        "STAY HOME appears on 2026-11-10 with combined ESPORA-FARO 18 channel",
+        "Future operations dated 2026-11-11 through 2026-11-13 remain excluded until their dates"
+      ]
+    },
+    "github_commit": "3b53ca7516b70079b08e416623f4348bbc6072d4"
   }
 }
