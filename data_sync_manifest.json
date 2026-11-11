@@ -1,14 +1,14 @@
 {
-  "database_sha256": "87dbf49e516bd645a3831c26ed2e58faabf26aa811c2ee3effeaece6988b217f",
+  "database_sha256": "1f9fd98d0bcfa81f47f4a6847247c584463fd9e310ca96172003e5929c2ca7ba",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "a3fffca136ce474f288f12b1f90b7239759593e537c474c2ea4279aa7e189cfd",
-    "data/billing_source.json": "e04d19ebad51209d021f985b073eb7d36ade77bc2a7526f2348c3f3073425618",
-    "manual_rentability_operations.csv": "14453adb25529447c0b019a7f919f9cc3e3a2fcb65e3133cbd1b605ce298c7f8",
+    "data/FACTURACION OCTOPUS.xlsx": "a3698e5e6c232c408248e9cdc8f2e41e5945f9e4bdd10e5fc7c4bee870f3277f",
+    "data/billing_source.json": "1ef1a0f0891df1c74aedc6eb2c079d99c1327eea77581893097bc839fceac587",
+    "manual_rentability_operations.csv": "c8d5efea7d59ef4064f4159705809e3298dfcc71a23aa6d54b3967fac142a41f",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "59d14c587412bd1f6887ae9ca45dea39cd2d75cde9489695315566fef1b9da50"
+    "source_documents.csv": "c881fb3b85ee2bfe6dc418946822600a9924a99a4f87799bbb8f1e2e791ba554"
   },
   "controls": {
-    "as_of": "2026-11-08",
+    "as_of": "2026-11-11",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 1031560571.92,
-        "billing_records": 59,
-        "validated_net": 255621142.0,
-        "profit": 14762758.0,
-        "profitability": 0.05775249216279614,
-        "valid_operations": 10,
+        "billing_total": 1452562515.46,
+        "billing_records": 82,
+        "validated_net": 329674050.0,
+        "profit": 19436008.0,
+        "profitability": 0.05895522562361217,
+        "valid_operations": 14,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3553,11 +3553,35 @@
             "operaciones": 1
           },
           {
+            "client_name": "Imágenes del Parque",
+            "client_key": "IMAGENES DEL PARQUE",
+            "facturacion_validada": 8601126.0,
+            "ganancia_octopus": 683608.0,
+            "rentabilidad": 0.07947889613522695,
+            "operaciones": 1
+          },
+          {
             "client_name": "ASHI S.A",
             "client_key": "ASHI",
             "facturacion_validada": 28500956.0,
             "ganancia_octopus": 2133092.0,
             "rentabilidad": 0.07484282281618904,
+            "operaciones": 1
+          },
+          {
+            "client_name": "TRICO",
+            "client_key": "TRICO",
+            "facturacion_validada": 13012571.0,
+            "ganancia_octopus": 910568.0,
+            "rentabilidad": 0.06997602549104247,
+            "operaciones": 1
+          },
+          {
+            "client_name": "TRANSPORTE TRACCION S.R.L.",
+            "client_key": "TRANSPORTE TRACCION",
+            "facturacion_validada": 10418981.0,
+            "ganancia_octopus": 727985.0,
+            "rentabilidad": 0.06987103633263177,
             "operaciones": 1
           },
           {
@@ -3575,6 +3599,14 @@
             "ganancia_octopus": 5132682.0,
             "rentabilidad": 0.05694149639276069,
             "operaciones": 2
+          },
+          {
+            "client_name": "STAY HOME",
+            "client_key": "STAY HOME",
+            "facturacion_validada": 42020230.0,
+            "ganancia_octopus": 2351089.0,
+            "rentabilidad": 0.05595135961892641,
+            "operaciones": 1
           },
           {
             "client_name": "DAUMAS MOTOFLEX S.R.L.",
@@ -3613,8 +3645,8 @@
           {
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
-            "facturacion": 225221863.26999998,
-            "registros": 7
+            "facturacion": 641214476.55,
+            "registros": 28
           },
           {
             "client_name": "LABORATORIOS JAYOR S.R.L.",
@@ -3677,6 +3709,12 @@
             "registros": 1
           },
           {
+            "client_name": "PIRCA SERVICIOS S. A. S.",
+            "client_key": "PIRCA SERVICIOS",
+            "facturacion": 5009330.26,
+            "registros": 2
+          },
+          {
             "client_name": "ASOCIACION DEL PERSONAL AERO",
             "client_key": "ASOCIACION DEL PERSONAL AERO",
             "facturacion": 4836016.53,
@@ -3686,9 +3724,9 @@
       }
     },
     "published_clients": 98,
-    "valid_operations_all_dates": 349,
+    "valid_operations_all_dates": 350,
     "operation_states": {
-      "OK": 268,
+      "OK": 269,
       "OK_FC_NETA": 48,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,

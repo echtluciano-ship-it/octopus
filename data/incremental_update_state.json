@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-09T02:25:51.402515Z",
+  "last_successful_scan": "2026-11-11T23:47:58.877160Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11581,29 +11581,73 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1s_D4vF5E17N1iMWKTlmfNjg354MUscCZ/view"
+    },
+    "1ILxqcLFRjx7TdmYsZKpZH-KwYs5pgZb0": {
+      "drive_id": "1ILxqcLFRjx7TdmYsZKpZH-KwYs5pgZb0",
+      "name": "PHOTO-2026-11-11-13-05-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 398080,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ILxqcLFRjx7TdmYsZKpZH-KwYs5pgZb0/view"
+    },
+    "1JodzcrZ-YP7-GZeFytU_A0iJTCyOyIeK": {
+      "drive_id": "1JodzcrZ-YP7-GZeFytU_A0iJTCyOyIeK",
+      "name": "HYF DISTRIBUCIONES (1).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 8309,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1JodzcrZ-YP7-GZeFytU_A0iJTCyOyIeK/view"
+    },
+    "12tZ314HMp2BdIBJMVdRIbdfCxQboReV6": {
+      "drive_id": "12tZ314HMp2BdIBJMVdRIbdfCxQboReV6",
+      "name": "PHOTO-2026-11-11-11-31-03.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 52096,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/12tZ314HMp2BdIBJMVdRIbdfCxQboReV6/view"
+    },
+    "1GBW8kEW0XIzOQQ58ebhHLBxp6OwG4rd5": {
+      "drive_id": "1GBW8kEW0XIzOQQ58ebhHLBxp6OwG4rd5",
+      "name": "PHOTO-2026-11-11-15-26-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 353520,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1GBW8kEW0XIzOQQ58ebhHLBxp6OwG4rd5/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 478964,
+      "size_bytes": 480206,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "a3fffca136ce474f288f12b1f90b7239759593e537c474c2ea4279aa7e189cfd",
+      "sha256": "a3698e5e6c232c408248e9cdc8f2e41e5945f9e4bdd10e5fc7c4bee870f3277f",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-09T02:38:40+00:00"
+    "recorded_at": "2026-11-11T23:53:09+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-08T23:36:28.153346-03:00",
-    "reason": "Changed official billing plus new Drive-backed rentability operations and payment evidence",
-    "new_operations": 12,
-    "updated_source_documents": 27
+    "at": "2026-11-11T20:54:56.536711-03:00",
+    "reason": "Changed official billing plus one new Drive-backed rentability operation and three payment-support documents",
+    "new_operations": 1,
+    "updated_source_documents": 4
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -11612,57 +11656,44 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-08T23:36:28.153346-03:00",
+    "at": "2026-11-11T20:54:56.536711-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
-    "detected_files": 90,
-    "known_unchanged": 63,
-    "new_files": 27,
+    "detected_files": 94,
+    "known_unchanged": 90,
+    "new_files": 4,
     "modified_files": 0,
     "duplicates_confirmed": 0,
-    "rentability_operations_added": 12,
-    "payment_support_documents_added": 15,
+    "rentability_operations_added": 1,
+    "payment_support_documents_added": 3,
     "review_documents_added": 0,
     "billing_changed": true,
-    "billing_rows_added": 39,
-    "billing_rows_corrected": 5,
+    "billing_rows_added": 23,
+    "billing_rows_corrected": 0,
+    "billing_load_dates": {
+      "2026-11-10": {
+        "rows": 16,
+        "total": 393321797.63
+      },
+      "2026-11-11": {
+        "rows": 7,
+        "total": 127648150.8
+      }
+    },
     "affected_months": [
-      "2026-10",
       "2026-11"
     ],
+    "november": {
+      "billing_total": 1452562515.46,
+      "validated_net": 329674050.0,
+      "profit": 19436008.0,
+      "profitability": 0.05895522562361217,
+      "valid_operations": 14
+    },
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
-    "github": "OK",
-    "render": "OK",
-    "production_verification": {
-      "verified_at": "2026-11-10T23:30:20.791297-03:00",
-      "as_of_date": "2026-11-10",
-      "url": "https://octopus-clientes.onrender.com/",
-      "http_status": 200,
-      "november": {
-        "billing_total": 1031560571.92,
-        "validated_net": 297641372.0,
-        "profit": 17113847.0,
-        "profitability": 0.05749821298364395,
-        "valid_operations": 11
-      },
-      "october": {
-        "billing_total": 5685495926.05,
-        "validated_net": 3818507163.9,
-        "profit": 235596956.76,
-        "profitability": 0.06169870754396465,
-        "valid_operations": 90
-      },
-      "checks": [
-        "Production HTTP 200 and Streamlit application loaded without errors",
-        "November executive indicators match the local database as of 2026-11-10",
-        "October executive indicators and 90 validated operations match locally",
-        "November profitability ranking includes ASHI, Centro Medico Amenabar and Drogueria Meta",
-        "November billing ranking includes Drogueria Meta and Vega y Camji",
-        "STAY HOME appears on 2026-11-10 with combined ESPORA-FARO 18 channel",
-        "Future operations dated 2026-11-11 through 2026-11-13 remain excluded until their dates"
-      ]
-    },
-    "github_commit": "3b53ca7516b70079b08e416623f4348bbc6072d4"
+    "local_smoke": "Streamlit health endpoint OK",
+    "github": "PENDING",
+    "render": "PENDING"
   }
 }
