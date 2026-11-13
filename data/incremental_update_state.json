@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-13T19:38:32.674859Z",
+  "last_successful_scan": "2026-11-13T19:58:56.147971Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11961,21 +11961,21 @@
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 482002,
+      "size_bytes": 482642,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "6c4e680e83c8856ff1fe261013ddaeb5f1784ded5f9e4a6c4b85298c4b7a68be",
+      "sha256": "22c8f93da38fa47237dcda5d472c996ddf9ce09043d7fa28ee8b9c46dd8355e6",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-13T19:39:04+00:00"
+    "recorded_at": "2026-11-13T19:59:28+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-13T16:40:32.898169-03:00",
-    "reason": "Changed official billing plus ten new Drive-backed rentability operations and thirteen payment-support documents",
+    "at": "2026-11-13T17:00:57.548454-03:00",
+    "reason": "Official billing stabilized after live editing plus ten new Drive-backed rentability operations and thirteen payment-support documents",
     "new_operations": 10,
     "updated_source_documents": 23
   },
@@ -11986,10 +11986,10 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-13T16:40:32.898169-03:00",
+    "at": "2026-11-13T17:00:57.548454-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
-    "source_stability": "two consecutive identical billing scans",
+    "source_stability": "two consecutive identical billing scans after deployment drift",
     "detected_files": 124,
     "known_unchanged": 101,
     "new_files": 23,
@@ -11999,14 +11999,14 @@
     "payment_support_documents_added": 13,
     "review_documents_added": 0,
     "billing_changed": true,
-    "billing_rows_added": 7,
-    "billing_valid_rows_added": 6,
+    "billing_rows_added": 18,
+    "billing_valid_rows_added": 18,
     "billing_rows_corrected": 0,
     "billing_load_dates": {
       "2026-11-13": {
-        "rows": 7,
-        "valid_rows": 6,
-        "net_amount": 96156854.32
+        "rows": 18,
+        "valid_rows": 18,
+        "net_amount": 253663730.67
       }
     },
     "future_operations": {
@@ -12022,7 +12022,7 @@
       "2026-11"
     ],
     "november": {
-      "billing_total": 1837123812.08,
+      "billing_total": 1994630688.43,
       "validated_net": 481048500.0,
       "profit": 30970370.0,
       "profitability": 0.06438097198099568,

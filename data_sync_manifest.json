@@ -1,8 +1,8 @@
 {
-  "database_sha256": "4ed4ed685d169a24c1de933c9e038b15d17aec0934a607c96ef296450d39fee8",
+  "database_sha256": "8e8a920a8b701c5a133ec5d3b37e27e3df41ad2a050415abd9c17fe527a8e4f2",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "6c4e680e83c8856ff1fe261013ddaeb5f1784ded5f9e4a6c4b85298c4b7a68be",
-    "data/billing_source.json": "a3e6833317173dac6bfc4b9a314698f0ac551312668ed50fce82cf2731e91174",
+    "data/FACTURACION OCTOPUS.xlsx": "22c8f93da38fa47237dcda5d472c996ddf9ce09043d7fa28ee8b9c46dd8355e6",
+    "data/billing_source.json": "79f8c9c07b8f7c3478ad29938241a5e03453153776caa75ec79d7a264451c07b",
     "manual_rentability_operations.csv": "ab75116b7aae967939aa9d31fa2400fce5da4ea9cc3d55f90358f06ab9207b11",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
     "source_documents.csv": "7678cb7acf1e357e03e5f656e4aea9f284d9c072497f5c19376d8dd1b07d95b6"
@@ -3537,8 +3537,8 @@
         ]
       },
       "2026-11": {
-        "billing_total": 1837123812.08,
-        "billing_records": 111,
+        "billing_total": 1994630688.43,
+        "billing_records": 123,
         "validated_net": 481048500.0,
         "profit": 30970370.0,
         "profitability": 0.06438097198099568,
@@ -3693,14 +3693,14 @@
           {
             "client_name": "TEYLEM SA",
             "client_key": "TEYLEM",
-            "facturacion": 99302470.63,
-            "registros": 4
+            "facturacion": 127995940.97,
+            "registros": 6
           },
           {
             "client_name": "LOGISTICAL S. A.",
             "client_key": "LOGISTICAL",
-            "facturacion": 86866960.9,
-            "registros": 5
+            "facturacion": 106361937.24,
+            "registros": 7
           },
           {
             "client_name": "Vega y Camji",
@@ -3713,6 +3713,12 @@
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion": 77037200.86,
             "registros": 3
+          },
+          {
+            "client_name": "TRANS BOX S. R. L.",
+            "client_key": "TRANS BOX",
+            "facturacion": 64178101.19,
+            "registros": 4
           },
           {
             "client_name": "AEQUALIS S A",
@@ -3733,6 +3739,12 @@
             "registros": 4
           },
           {
+            "client_name": "FORAIN S. A.",
+            "client_key": "FORAIN",
+            "facturacion": 27966058.1,
+            "registros": 2
+          },
+          {
             "client_name": "HASAR SERVICIOS SOCIEDAD DE",
             "client_key": "HASAR SERVICIOS SOCIEDAD DE",
             "facturacion": 25100585.470000003,
@@ -3751,6 +3763,12 @@
             "registros": 1
           },
           {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 12161440.26,
+            "registros": 1
+          },
+          {
             "client_name": "Sigma Line",
             "client_key": "SIGMA LINE",
             "facturacion": 12002130.18,
@@ -3763,15 +3781,9 @@
             "registros": 1
           },
           {
-            "client_name": "PIRCA SERVICIOS S. A. S.",
-            "client_key": "PIRCA SERVICIOS",
-            "facturacion": 5009330.26,
-            "registros": 2
-          },
-          {
-            "client_name": "ASOCIACION DEL PERSONAL AERO",
-            "client_key": "ASOCIACION DEL PERSONAL AERO",
-            "facturacion": 4836016.53,
+            "client_name": "Mas Metros",
+            "client_key": "MAS METROS",
+            "facturacion": 5012830.12,
             "registros": 1
           }
         ]
