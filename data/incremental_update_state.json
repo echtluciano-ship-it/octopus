@@ -11772,7 +11772,37 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
     "local_smoke": "Streamlit health endpoint OK",
-    "github": "PENDING",
-    "render": "PENDING"
+    "github": "OK",
+    "render": "OK",
+    "github_commit": "c6a137a3808d121be861850808c6de18b2c75c62",
+    "production_verification": {
+      "verified_at": "2026-11-12T21:58:14.109520-03:00",
+      "as_of_date": "2026-11-12",
+      "url": "https://octopus-clientes.onrender.com/",
+      "http_status": 200,
+      "november": {
+        "billing_total": 1740966957.76,
+        "validated_net": 421196250.0,
+        "profit": 26822081.0,
+        "profitability": 0.06368072127897625,
+        "valid_operations": 18
+      },
+      "october": {
+        "billing_total": 5685495926.05,
+        "validated_net": 3818507163.9,
+        "profit": 235596956.76,
+        "profitability": 0.06169870754396465,
+        "valid_operations": 90
+      },
+      "checks": [
+        "Production HTTP 200 and Streamlit application loaded without errors",
+        "November executive indicators match the local database as of 2026-11-12",
+        "October executive indicators and 90 validated operations remain unchanged",
+        "HT CONTENIDOS canonical client card reports last operation 2026-11-12",
+        "HT CONTENIDOS card includes PPP and 6.95% current profitability",
+        "Three future operations remain excluded until 2026-11-14, 2026-11-17 and 2026-11-21",
+        "November billing and profitability rankings render without errors"
+      ]
+    }
   }
 }
