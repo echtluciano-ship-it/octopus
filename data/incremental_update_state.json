@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-11T23:47:58.877160Z",
+  "last_successful_scan": "2026-11-13T00:43:48.393134Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11625,29 +11625,106 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1GBW8kEW0XIzOQQ58ebhHLBxp6OwG4rd5/view"
+    },
+    "1b7T--Lw6P65tzMfxM3P6kXxA5iIu-Tmv": {
+      "drive_id": "1b7T--Lw6P65tzMfxM3P6kXxA5iIu-Tmv",
+      "name": "PHOTO-2026-11-12-20-09-25.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17666,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1b7T--Lw6P65tzMfxM3P6kXxA5iIu-Tmv/view"
+    },
+    "1aOPwoNT8lmRXAVN-gtogm0Io3ylCnxvV": {
+      "drive_id": "1aOPwoNT8lmRXAVN-gtogm0Io3ylCnxvV",
+      "name": "PHOTO-2026-11-12-20-19-14.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18242,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1aOPwoNT8lmRXAVN-gtogm0Io3ylCnxvV/view"
+    },
+    "1WjOqxzm9SInRTcGAXp1QEPEzGVCylT32": {
+      "drive_id": "1WjOqxzm9SInRTcGAXp1QEPEzGVCylT32",
+      "name": "PHOTO-2026-11-12-21-23-16.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18782,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1WjOqxzm9SInRTcGAXp1QEPEzGVCylT32/view"
+    },
+    "12Von-rOYj1zLAg9RiPuSIzjrn5Oox8CT": {
+      "drive_id": "12Von-rOYj1zLAg9RiPuSIzjrn5Oox8CT",
+      "name": "PHOTO-2026-11-12-21-35-35.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 18189,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/12Von-rOYj1zLAg9RiPuSIzjrn5Oox8CT/view"
+    },
+    "1euy4FowYXn8riqfTK9zqib0p_MitOVmI": {
+      "drive_id": "1euy4FowYXn8riqfTK9zqib0p_MitOVmI",
+      "name": "cheque clan est.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 5424,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1euy4FowYXn8riqfTK9zqib0p_MitOVmI/view"
+    },
+    "1ukRuk5wBiVG-15dcxYGNXCsv1-cPG6qf": {
+      "drive_id": "1ukRuk5wBiVG-15dcxYGNXCsv1-cPG6qf",
+      "name": "cheque nueva charcas.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 5424,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1ukRuk5wBiVG-15dcxYGNXCsv1-cPG6qf/view"
+    },
+    "1sOKresmLj0YbkrikcNqqDyd8Pqw2-C-O": {
+      "drive_id": "1sOKresmLj0YbkrikcNqqDyd8Pqw2-C-O",
+      "name": "comprobante11160885013261112.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 21862,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1sOKresmLj0YbkrikcNqqDyd8Pqw2-C-O/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 480206,
+      "size_bytes": 484124,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "a3698e5e6c232c408248e9cdc8f2e41e5945f9e4bdd10e5fc7c4bee870f3277f",
+      "sha256": "942288ebb26dccc2be51de72727dae6dd189f4eac088ec1d9881ac6f4c64694f",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-11T23:53:09+00:00"
+    "recorded_at": "2026-11-13T00:47:57+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-11T20:54:56.536711-03:00",
-    "reason": "Changed official billing plus one new Drive-backed rentability operation and three payment-support documents",
-    "new_operations": 1,
-    "updated_source_documents": 4
+    "at": "2026-11-12T21:49:33.284196-03:00",
+    "reason": "Changed official billing plus four new Drive-backed rentability operations and three payment-support documents",
+    "new_operations": 4,
+    "updated_source_documents": 7
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -11656,73 +11733,46 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-11T20:54:56.536711-03:00",
+    "at": "2026-11-12T21:49:33.284196-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
-    "detected_files": 94,
-    "known_unchanged": 90,
-    "new_files": 4,
+    "detected_files": 101,
+    "known_unchanged": 94,
+    "new_files": 7,
     "modified_files": 0,
     "duplicates_confirmed": 0,
-    "rentability_operations_added": 1,
+    "rentability_operations_added": 4,
     "payment_support_documents_added": 3,
     "review_documents_added": 0,
     "billing_changed": true,
     "billing_rows_added": 23,
     "billing_rows_corrected": 0,
     "billing_load_dates": {
-      "2026-11-10": {
-        "rows": 16,
-        "total": 393321797.63
-      },
-      "2026-11-11": {
-        "rows": 7,
-        "total": 127648150.8
+      "2026-11-12": {
+        "rows": 23,
+        "total": 360051701.86,
+        "net_amount": 288404442.3
       }
+    },
+    "future_operations": {
+      "2026-11-14": 1,
+      "2026-11-17": 1,
+      "2026-11-21": 1
     },
     "affected_months": [
       "2026-11"
     ],
     "november": {
-      "billing_total": 1452562515.46,
-      "validated_net": 329674050.0,
-      "profit": 19436008.0,
-      "profitability": 0.05895522562361217,
-      "valid_operations": 14
+      "billing_total": 1740966957.76,
+      "validated_net": 421196250.0,
+      "profit": 26822081.0,
+      "profitability": 0.06368072127897625,
+      "valid_operations": 18
     },
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
     "local_smoke": "Streamlit health endpoint OK",
-    "github": "OK",
-    "render": "OK",
-    "github_commit": "f5dc42818b2d8770cf3b8745ff15d03026f36139",
-    "production_verification": {
-      "verified_at": "2026-11-11T21:15:37.316738-03:00",
-      "as_of_date": "2026-11-11",
-      "url": "https://octopus-clientes.onrender.com/",
-      "http_status": 200,
-      "november": {
-        "billing_total": 1452562515.46,
-        "validated_net": 329674050.0,
-        "profit": 19436008.0,
-        "profitability": 0.05895522562361217,
-        "valid_operations": 14
-      },
-      "october": {
-        "billing_total": 5685495926.05,
-        "validated_net": 3818507163.9,
-        "profit": 235596956.76,
-        "profitability": 0.06169870754396465,
-        "valid_operations": 90
-      },
-      "checks": [
-        "Production HTTP 200 and Streamlit application loaded without errors",
-        "November executive indicators match the local database as of 2026-11-11",
-        "October executive indicators and 90 validated operations remain unchanged",
-        "Imagenes del Parque appears with 7.95% profitability, $8,601,126 validated net and $683,608 profit",
-        "Imagenes del Parque detail reports last operation 2026-11-11",
-        "November billing and profitability rankings render without errors"
-      ]
-    }
+    "github": "PENDING",
+    "render": "PENDING"
   }
 }

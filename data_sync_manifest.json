@@ -1,14 +1,14 @@
 {
-  "database_sha256": "1f9fd98d0bcfa81f47f4a6847247c584463fd9e310ca96172003e5929c2ca7ba",
+  "database_sha256": "6854cd64f9424094dfd74313570fa4bbb858d357a2c54e51b50483a5dc347643",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "a3698e5e6c232c408248e9cdc8f2e41e5945f9e4bdd10e5fc7c4bee870f3277f",
-    "data/billing_source.json": "1ef1a0f0891df1c74aedc6eb2c079d99c1327eea77581893097bc839fceac587",
-    "manual_rentability_operations.csv": "c8d5efea7d59ef4064f4159705809e3298dfcc71a23aa6d54b3967fac142a41f",
+    "data/FACTURACION OCTOPUS.xlsx": "942288ebb26dccc2be51de72727dae6dd189f4eac088ec1d9881ac6f4c64694f",
+    "data/billing_source.json": "3aa874a49b25bb2ab2a12332abc77b1e74e0692e62c4befa0d26046dce1e59ab",
+    "manual_rentability_operations.csv": "b011b40618944f75e436d9763df86d7f257d815efe5b7faf6c9026a7c1c8a44d",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "c881fb3b85ee2bfe6dc418946822600a9924a99a4f87799bbb8f1e2e791ba554"
+    "source_documents.csv": "d00e5dba60443e3a19d87b28b88549398e39e75ac38a32fb39829a9424609c6f"
   },
   "controls": {
-    "as_of": "2026-11-11",
+    "as_of": "2026-11-12",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 1452562515.46,
-        "billing_records": 82,
-        "validated_net": 329674050.0,
-        "profit": 19436008.0,
-        "profitability": 0.05895522562361217,
-        "valid_operations": 14,
+        "billing_total": 1740966957.76,
+        "billing_records": 105,
+        "validated_net": 421196250.0,
+        "profit": 26822081.0,
+        "profitability": 0.06368072127897625,
+        "valid_operations": 18,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3551,6 +3551,14 @@
             "ganancia_octopus": 23963.0,
             "rentabilidad": 0.08467132135739827,
             "operaciones": 1
+          },
+          {
+            "client_name": "SAENZ VALIENTE & ASOCIADOS",
+            "client_key": "SAENZ VALIENTE ASOCIADOS",
+            "facturacion_validada": 77037200.0,
+            "ganancia_octopus": 6379076.0,
+            "rentabilidad": 0.08280513829682283,
+            "operaciones": 3
           },
           {
             "client_name": "Imágenes del Parque",
@@ -3582,6 +3590,14 @@
             "facturacion_validada": 10418981.0,
             "ganancia_octopus": 727985.0,
             "rentabilidad": 0.06987103633263177,
+            "operaciones": 1
+          },
+          {
+            "client_name": "HT CONTENIDOS S. A.",
+            "client_key": "HT CONTENIDOS",
+            "facturacion_validada": 14485000.0,
+            "ganancia_octopus": 1006997.0,
+            "rentabilidad": 0.06951998619261304,
             "operaciones": 1
           },
           {
@@ -3667,6 +3683,18 @@
             "registros": 10
           },
           {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 99302470.63,
+            "registros": 4
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 86866960.9,
+            "registros": 5
+          },
+          {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
             "facturacion": 86748110.2,
@@ -3679,16 +3707,34 @@
             "registros": 3
           },
           {
+            "client_name": "AEQUALIS S A",
+            "client_key": "AEQUALIS",
+            "facturacion": 51441125.93,
+            "registros": 8
+          },
+          {
             "client_name": "ITPA S.A.",
             "client_key": "ITPA",
             "facturacion": 50656325.124,
             "registros": 3
           },
           {
-            "client_name": "AEQUALIS S A",
-            "client_key": "AEQUALIS",
-            "facturacion": 34403535.63,
+            "client_name": "DROGUERIA VARADERO S. A.",
+            "client_key": "DROGUERIA VARADERO",
+            "facturacion": 45611835.0,
             "registros": 4
+          },
+          {
+            "client_name": "HASAR SERVICIOS SOCIEDAD DE",
+            "client_key": "HASAR SERVICIOS SOCIEDAD DE",
+            "facturacion": 25100585.470000003,
+            "registros": 5
+          },
+          {
+            "client_name": "HT CONTENIDOS S. A.",
+            "client_key": "HT CONTENIDOS",
+            "facturacion": 14485000.0,
+            "registros": 1
           },
           {
             "client_name": "ASOCIACION DEL PERSONAL AERONAUTICO",
@@ -3724,10 +3770,10 @@
       }
     },
     "published_clients": 98,
-    "valid_operations_all_dates": 350,
+    "valid_operations_all_dates": 354,
     "operation_states": {
       "OK": 269,
-      "OK_FC_NETA": 48,
+      "OK_FC_NETA": 52,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
