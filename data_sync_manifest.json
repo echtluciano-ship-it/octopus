@@ -1,14 +1,14 @@
 {
-  "database_sha256": "6854cd64f9424094dfd74313570fa4bbb858d357a2c54e51b50483a5dc347643",
+  "database_sha256": "4ed4ed685d169a24c1de933c9e038b15d17aec0934a607c96ef296450d39fee8",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "942288ebb26dccc2be51de72727dae6dd189f4eac088ec1d9881ac6f4c64694f",
-    "data/billing_source.json": "3aa874a49b25bb2ab2a12332abc77b1e74e0692e62c4befa0d26046dce1e59ab",
-    "manual_rentability_operations.csv": "b011b40618944f75e436d9763df86d7f257d815efe5b7faf6c9026a7c1c8a44d",
+    "data/FACTURACION OCTOPUS.xlsx": "6c4e680e83c8856ff1fe261013ddaeb5f1784ded5f9e4a6c4b85298c4b7a68be",
+    "data/billing_source.json": "a3e6833317173dac6bfc4b9a314698f0ac551312668ed50fce82cf2731e91174",
+    "manual_rentability_operations.csv": "ab75116b7aae967939aa9d31fa2400fce5da4ea9cc3d55f90358f06ab9207b11",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "d00e5dba60443e3a19d87b28b88549398e39e75ac38a32fb39829a9424609c6f"
+    "source_documents.csv": "7678cb7acf1e357e03e5f656e4aea9f284d9c072497f5c19376d8dd1b07d95b6"
   },
   "controls": {
-    "as_of": "2026-11-12",
+    "as_of": "2026-11-13",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 1740966957.76,
-        "billing_records": 105,
-        "validated_net": 421196250.0,
-        "profit": 26822081.0,
-        "profitability": 0.06368072127897625,
-        "valid_operations": 18,
+        "billing_total": 1837123812.08,
+        "billing_records": 111,
+        "validated_net": 481048500.0,
+        "profit": 30970370.0,
+        "profitability": 0.06438097198099568,
+        "valid_operations": 20,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3599,6 +3599,14 @@
             "ganancia_octopus": 1006997.0,
             "rentabilidad": 0.06951998619261304,
             "operaciones": 1
+          },
+          {
+            "client_name": "Vega y Camji",
+            "client_key": "VEGA Y CAMJI",
+            "facturacion_validada": 59852250.0,
+            "ganancia_octopus": 4148289.0,
+            "rentabilidad": 0.06930882297657982,
+            "operaciones": 2
           },
           {
             "client_name": "Centro Médico Amenabar",
@@ -3667,8 +3675,8 @@
           {
             "client_name": "LABORATORIOS JAYOR S.R.L.",
             "client_key": "LABORATORIOS JAYOR",
-            "facturacion": 201627142.3,
-            "registros": 12
+            "facturacion": 297783996.62,
+            "registros": 18
           },
           {
             "client_name": "Alimentos Viandas",
@@ -3769,11 +3777,11 @@
         ]
       }
     },
-    "published_clients": 98,
-    "valid_operations_all_dates": 354,
+    "published_clients": 101,
+    "valid_operations_all_dates": 364,
     "operation_states": {
       "OK": 269,
-      "OK_FC_NETA": 52,
+      "OK_FC_NETA": 62,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,

@@ -2,8 +2,8 @@
   "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
   "name": "FACTURACION OCTOPUS.xlsx",
   "modified_time": null,
-  "checked_on": "2026-11-12",
-  "sha256": "942288ebb26dccc2be51de72727dae6dd189f4eac088ec1d9881ac6f4c64694f",
+  "checked_on": "2026-11-13",
+  "sha256": "6c4e680e83c8856ff1fe261013ddaeb5f1784ded5f9e4a6c4b85298c4b7a68be",
   "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit",
-  "verification": "Live bytes verified 2026-11-12; exact Drive modifiedTime not exposed by public fallback"
+  "verification": "Live bytes verified stable in two consecutive scans on 2026-11-13; exact Drive modifiedTime not exposed by public fallback"
 }
