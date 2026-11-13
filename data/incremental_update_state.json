@@ -12031,7 +12031,38 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
     "local_smoke": "Streamlit health endpoint OK",
-    "github": "PENDING",
-    "render": "PENDING"
+    "github": "OK",
+    "render": "OK",
+    "github_commit": "1cd5d2d630bc0f4a603fd52b434f4cb458095b67",
+    "production_verification": {
+      "verified_at": "2026-11-13T17:07:03.867322-03:00",
+      "as_of_date": "2026-11-13",
+      "url": "https://octopus-clientes.onrender.com/#base-de-clientes",
+      "http_status": 200,
+      "november": {
+        "billing_total": 1994630688.43,
+        "validated_net": 481048500.0,
+        "profit": 30970370.0,
+        "profitability": 0.06438097198099568,
+        "valid_operations": 20
+      },
+      "october": {
+        "billing_total": 5685495926.05,
+        "validated_net": 3818507163.9,
+        "profit": 235596956.76,
+        "profitability": 0.06169870754396465,
+        "valid_operations": 90
+      },
+      "checks": [
+        "Production returned HTTP 200 and the Streamlit application loaded without errors",
+        "November executive indicators match the local database as of 2026-11-13",
+        "October executive indicators and 90 validated operations remain unchanged",
+        "The 18 billing rows dated 2026-11-13 total 253663730.67 net",
+        "Ten new rentability operations and thirteen payment-support documents were incorporated",
+        "Future-dated operations remain excluded until their effective dates",
+        "Billing and profitability rankings render without errors",
+        "LABORATORIOS JAYOR is present in the production client base"
+      ]
+    }
   }
 }
