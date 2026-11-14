@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-13T19:58:56.147971Z",
+  "last_successful_scan": "2026-11-14T03:29:23.167538Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -11955,29 +11955,95 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/142F8FVOYgxxz19jR4DM-jXRWJHvrReAl/view"
+    },
+    "1-FPFJYPpwxqvHMIwvb3IWKNhiCr5I_wj": {
+      "drive_id": "1-FPFJYPpwxqvHMIwvb3IWKNhiCr5I_wj",
+      "name": "PHOTO-2026-11-13-17-48-26.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17721,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1-FPFJYPpwxqvHMIwvb3IWKNhiCr5I_wj/view"
+    },
+    "1QuNXXdyUaWb-rW6xtXlejCPIiF82bcxn": {
+      "drive_id": "1QuNXXdyUaWb-rW6xtXlejCPIiF82bcxn",
+      "name": "PHOTO-2026-11-13-18-10-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17538,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1QuNXXdyUaWb-rW6xtXlejCPIiF82bcxn/view"
+    },
+    "1WHdyEg4z-Ou8VZ5CKqDLXKJIFe4Jpd9V": {
+      "drive_id": "1WHdyEg4z-Ou8VZ5CKqDLXKJIFe4Jpd9V",
+      "name": "PHOTO-2026-11-13-18-16-31.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17444,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1WHdyEg4z-Ou8VZ5CKqDLXKJIFe4Jpd9V/view"
+    },
+    "1S3DeU2a7aZ28-tq9Hm1SmYofqZV6eNwv": {
+      "drive_id": "1S3DeU2a7aZ28-tq9Hm1SmYofqZV6eNwv",
+      "name": "PHOTO-2026-11-13-19-15-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17608,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1S3DeU2a7aZ28-tq9Hm1SmYofqZV6eNwv/view"
+    },
+    "1XIPOidCrfekjXgdVki2danLId514fzFy": {
+      "drive_id": "1XIPOidCrfekjXgdVki2danLId514fzFy",
+      "name": "ESPORA_202611_0245.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10589,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1XIPOidCrfekjXgdVki2danLId514fzFy/view"
+    },
+    "1AWZRE0f7kvzcfS0v2ZuWlyXKFP16zuGZ": {
+      "drive_id": "1AWZRE0f7kvzcfS0v2ZuWlyXKFP16zuGZ",
+      "name": "ESPORA_OP_0202600001236.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 51589,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1AWZRE0f7kvzcfS0v2ZuWlyXKFP16zuGZ/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 482642,
+      "size_bytes": 485157,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "22c8f93da38fa47237dcda5d472c996ddf9ce09043d7fa28ee8b9c46dd8355e6",
+      "sha256": "38ae0647446eb5dfdcf8e818ba45ae95cbefdd4cf2f81f13ea446c7cf405dcfe",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-13T19:59:28+00:00"
+    "recorded_at": "2026-11-14T03:30:40+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-13T17:00:57.548454-03:00",
-    "reason": "Official billing stabilized after live editing plus ten new Drive-backed rentability operations and thirteen payment-support documents",
-    "new_operations": 10,
-    "updated_source_documents": 23
+    "at": "2026-11-14T00:33:39.987237-03:00",
+    "reason": "Official billing workbook bytes changed without worksheet-row changes, plus four new Drive-backed rentability operations and two payment-support documents",
+    "new_operations": 4,
+    "updated_source_documents": 6
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -11986,83 +12052,57 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-13T17:00:57.548454-03:00",
+    "at": "2026-11-14T00:33:39.987237-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
-    "source_stability": "two consecutive identical billing scans after deployment drift",
-    "detected_files": 124,
-    "known_unchanged": 101,
-    "new_files": 23,
+    "source_stability": "two consecutive identical billing scans; all 5907 worksheet rows match the prior source",
+    "detected_files": 130,
+    "known_unchanged": 124,
+    "new_files": 6,
     "modified_files": 0,
     "duplicates_confirmed": 0,
-    "rentability_operations_added": 10,
-    "payment_support_documents_added": 13,
+    "rentability_operations_added": 4,
+    "payment_support_documents_added": 2,
     "review_documents_added": 0,
     "billing_changed": true,
-    "billing_rows_added": 18,
-    "billing_valid_rows_added": 18,
+    "billing_data_changed": false,
+    "billing_rows_added": 0,
+    "billing_valid_rows_added": 0,
     "billing_rows_corrected": 0,
     "billing_load_dates": {
-      "2026-11-13": {
-        "rows": 18,
-        "valid_rows": 18,
-        "net_amount": 253663730.67
+      "2026-11-14": {
+        "rows": 0,
+        "valid_rows": 0,
+        "net_amount": 0
       }
     },
     "future_operations": {
-      "2026-11-14": 1,
-      "2026-11-16": 3,
+      "2026-11-16": 4,
       "2026-11-17": 1,
       "2026-11-18": 3,
       "2026-11-19": 2,
       "2026-11-20": 1,
-      "2026-11-21": 2
+      "2026-11-21": 2,
+      "2026-11-30": 1
     },
     "affected_months": [
       "2026-11"
     ],
+    "affected_clients": [
+      "LABORATORIOS JAYOR",
+      "SIGMA LINE"
+    ],
     "november": {
       "billing_total": 1994630688.43,
-      "validated_net": 481048500.0,
-      "profit": 30970370.0,
-      "profitability": 0.06438097198099568,
-      "valid_operations": 20
+      "validated_net": 696177109.0,
+      "profit": 46220845.0,
+      "profitability": 0.06639236539447894,
+      "valid_operations": 24
     },
     "tests": "29 passed",
     "sync": "23 months reconciled; live billing hash verified",
-    "local_smoke": "Streamlit health endpoint OK",
-    "github": "OK",
-    "render": "OK",
-    "github_commit": "1cd5d2d630bc0f4a603fd52b434f4cb458095b67",
-    "production_verification": {
-      "verified_at": "2026-11-13T17:07:03.867322-03:00",
-      "as_of_date": "2026-11-13",
-      "url": "https://octopus-clientes.onrender.com/#base-de-clientes",
-      "http_status": 200,
-      "november": {
-        "billing_total": 1994630688.43,
-        "validated_net": 481048500.0,
-        "profit": 30970370.0,
-        "profitability": 0.06438097198099568,
-        "valid_operations": 20
-      },
-      "october": {
-        "billing_total": 5685495926.05,
-        "validated_net": 3818507163.9,
-        "profit": 235596956.76,
-        "profitability": 0.06169870754396465,
-        "valid_operations": 90
-      },
-      "checks": [
-        "Production returned HTTP 200 and the Streamlit application loaded without errors",
-        "November executive indicators match the local database as of 2026-11-13",
-        "October executive indicators and 90 validated operations remain unchanged",
-        "The 18 billing rows dated 2026-11-13 total 253663730.67 net",
-        "Ten new rentability operations and thirteen payment-support documents were incorporated",
-        "Future-dated operations remain excluded until their effective dates",
-        "Billing and profitability rankings render without errors",
-        "LABORATORIOS JAYOR is present in the production client base"
-      ]
-    }
+    "local_smoke": "Streamlit HTTP 200; November and October indicators verified with Playwright",
+    "github": "PENDING",
+    "render": "PENDING"
   }
 }

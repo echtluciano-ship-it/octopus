@@ -1,14 +1,14 @@
 {
-  "database_sha256": "8e8a920a8b701c5a133ec5d3b37e27e3df41ad2a050415abd9c17fe527a8e4f2",
+  "database_sha256": "2b9fd427b4004caffc11475f62120ef0a126d8513f892ebf2d7e1d35261b3fc1",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "22c8f93da38fa47237dcda5d472c996ddf9ce09043d7fa28ee8b9c46dd8355e6",
-    "data/billing_source.json": "79f8c9c07b8f7c3478ad29938241a5e03453153776caa75ec79d7a264451c07b",
-    "manual_rentability_operations.csv": "ab75116b7aae967939aa9d31fa2400fce5da4ea9cc3d55f90358f06ab9207b11",
+    "data/FACTURACION OCTOPUS.xlsx": "38ae0647446eb5dfdcf8e818ba45ae95cbefdd4cf2f81f13ea446c7cf405dcfe",
+    "data/billing_source.json": "fa6bab69ca0cbe520dba60ebc99b0ceacb45a0ef21c03a784a3bc7783d8fe9cd",
+    "manual_rentability_operations.csv": "7295f3073c05b541aa810949933c4c3262e6744e33fa91bca8fc0edf2ccb3be5",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "7678cb7acf1e357e03e5f656e4aea9f284d9c072497f5c19376d8dd1b07d95b6"
+    "source_documents.csv": "adeb9bc05adf0d648e24294f0d7deb434bce78dcadfe49f0fdcf6e192d9c8448"
   },
   "controls": {
-    "as_of": "2026-11-13",
+    "as_of": "2026-11-14",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3539,10 +3539,10 @@
       "2026-11": {
         "billing_total": 1994630688.43,
         "billing_records": 123,
-        "validated_net": 481048500.0,
-        "profit": 30970370.0,
-        "profitability": 0.06438097198099568,
-        "valid_operations": 20,
+        "validated_net": 696177109.0,
+        "profit": 46220845.0,
+        "profitability": 0.06639236539447894,
+        "valid_operations": 24,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3550,6 +3550,14 @@
             "facturacion_validada": 283012.0,
             "ganancia_octopus": 23963.0,
             "rentabilidad": 0.08467132135739827,
+            "operaciones": 1
+          },
+          {
+            "client_name": "El Perro de la Luna",
+            "client_key": "EL PERRO DE LA LUNA",
+            "facturacion_validada": 13501468.0,
+            "ganancia_octopus": 1136576.0,
+            "rentabilidad": 0.08418166083865844,
             "operaciones": 1
           },
           {
@@ -3575,6 +3583,14 @@
             "ganancia_octopus": 2133092.0,
             "rentabilidad": 0.07484282281618904,
             "operaciones": 1
+          },
+          {
+            "client_name": "LABORATORIOS JAYOR S.R.L.",
+            "client_key": "LABORATORIOS JAYOR",
+            "facturacion_validada": 201627141.0,
+            "ganancia_octopus": 14113899.0,
+            "rentabilidad": 0.06999999568510472,
+            "operaciones": 3
           },
           {
             "client_name": "TRICO",
@@ -3790,10 +3806,10 @@
       }
     },
     "published_clients": 101,
-    "valid_operations_all_dates": 364,
+    "valid_operations_all_dates": 368,
     "operation_states": {
       "OK": 269,
-      "OK_FC_NETA": 62,
+      "OK_FC_NETA": 66,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
