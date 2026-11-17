@@ -1,14 +1,14 @@
 {
-  "database_sha256": "2b9fd427b4004caffc11475f62120ef0a126d8513f892ebf2d7e1d35261b3fc1",
+  "database_sha256": "1cba286454aba5d2d8edc5fe39aa583fdb0b1faea0258ba4c6e51c04a301af0a",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "38ae0647446eb5dfdcf8e818ba45ae95cbefdd4cf2f81f13ea446c7cf405dcfe",
-    "data/billing_source.json": "fa6bab69ca0cbe520dba60ebc99b0ceacb45a0ef21c03a784a3bc7783d8fe9cd",
-    "manual_rentability_operations.csv": "7295f3073c05b541aa810949933c4c3262e6744e33fa91bca8fc0edf2ccb3be5",
+    "data/FACTURACION OCTOPUS.xlsx": "607a046d1cbf2dc739e2dc4f9edce4f098a82aab3028881927574ecf25afcbc7",
+    "data/billing_source.json": "058c45bb88f1e959b4f89c1e1f65df949f59a1059e3c9d7493808f71c0b2c312",
+    "manual_rentability_operations.csv": "dc7bfde374f381f8b8d1d98048fbef316192cedcae489cf49b28490ab470c02c",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "adeb9bc05adf0d648e24294f0d7deb434bce78dcadfe49f0fdcf6e192d9c8448"
+    "source_documents.csv": "0314886fc106b401591e1c37765de8fe99bcc8f6a248d6ec4133783b4926a16a"
   },
   "controls": {
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 1994630688.43,
-        "billing_records": 123,
-        "validated_net": 696177109.0,
-        "profit": 46220845.0,
-        "profitability": 0.06639236539447894,
-        "valid_operations": 24,
+        "billing_total": 2398225791.89,
+        "billing_records": 146,
+        "validated_net": 777809477.0,
+        "profit": 50980957.0,
+        "profitability": 0.06554427338251627,
+        "valid_operations": 30,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3625,6 +3625,46 @@
             "operaciones": 2
           },
           {
+            "client_name": "Chahab Myrtha",
+            "client_key": "CHAHAB MYRTHA",
+            "facturacion_validada": 5011790.0,
+            "ganancia_octopus": 323361.0,
+            "rentabilidad": 0.06452006169452432,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Nuevas Charcas",
+            "client_key": "NUEVAS CHARCAS",
+            "facturacion_validada": 3004880.0,
+            "ganancia_octopus": 193875.0,
+            "rentabilidad": 0.06452004738957962,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Clan Est S.A.",
+            "client_key": "CLAN EST",
+            "facturacion_validada": 7502360.0,
+            "ganancia_octopus": 484052.0,
+            "rentabilidad": 0.06451996438454033,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Sigma Line",
+            "client_key": "SIGMA LINE",
+            "facturacion_validada": 12002130.0,
+            "ganancia_octopus": 720848.0,
+            "rentabilidad": 0.060060006015598896,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Ovniplast",
+            "client_key": "OVNIPLAST",
+            "facturacion_validada": 35075578.0,
+            "ganancia_octopus": 2083910.0,
+            "rentabilidad": 0.05941199315375501,
+            "operaciones": 1
+          },
+          {
             "client_name": "Centro Médico Amenabar",
             "client_key": "CENTRO MEDICO AMENABAR",
             "facturacion_validada": 100002806.0,
@@ -3651,10 +3691,10 @@
           {
             "client_name": "DAUMAS MOTOFLEX S.R.L.",
             "client_key": "DAUMAS MOTOFLEX",
-            "facturacion_validada": 17805426.0,
-            "ganancia_octopus": 892408.0,
-            "rentabilidad": 0.05012000274523058,
-            "operaciones": 1
+            "facturacion_validada": 36841056.0,
+            "ganancia_octopus": 1846474.0,
+            "rentabilidad": 0.05012000741781126,
+            "operaciones": 2
           },
           {
             "client_name": "LIBERTADOR 15000 S.R.L",
@@ -3662,22 +3702,6 @@
             "facturacion_validada": 8203394.0,
             "ganancia_octopus": 381376.0,
             "rentabilidad": 0.04649002595754879,
-            "operaciones": 1
-          },
-          {
-            "client_name": "KIOTO GROUP S.A.",
-            "client_key": "KIOTO GROUP",
-            "facturacion_validada": 6383409.33,
-            "ganancia_octopus": 296764.67,
-            "rentabilidad": 0.04648999533921475,
-            "operaciones": 1
-          },
-          {
-            "client_name": "SUSHINOR S.A.",
-            "client_key": "SUSHINOR",
-            "facturacion_validada": 4302568.67,
-            "ganancia_octopus": 200026.33,
-            "rentabilidad": 0.04648997967067891,
             "operaciones": 1
           }
         ],
@@ -3695,6 +3719,24 @@
             "registros": 18
           },
           {
+            "client_name": "TEYLEM SA",
+            "client_key": "TEYLEM",
+            "facturacion": 204733095.97,
+            "registros": 11
+          },
+          {
+            "client_name": "EXPANSION S.A.S.",
+            "client_key": "EXPANSION",
+            "facturacion": 200199129.13,
+            "registros": 10
+          },
+          {
+            "client_name": "LOGISTICAL S. A.",
+            "client_key": "LOGISTICAL",
+            "facturacion": 179055694.32,
+            "registros": 11
+          },
+          {
             "client_name": "Alimentos Viandas",
             "client_key": "ALIMENTOS VIANDAS",
             "facturacion": 166000003.12,
@@ -3705,18 +3747,6 @@
             "client_key": "DROGUERIA META",
             "facturacion": 150107373.91,
             "registros": 10
-          },
-          {
-            "client_name": "TEYLEM SA",
-            "client_key": "TEYLEM",
-            "facturacion": 127995940.97,
-            "registros": 6
-          },
-          {
-            "client_name": "LOGISTICAL S. A.",
-            "client_key": "LOGISTICAL",
-            "facturacion": 106361937.24,
-            "registros": 7
           },
           {
             "client_name": "Vega y Camji",
@@ -3757,14 +3787,26 @@
           {
             "client_name": "FORAIN S. A.",
             "client_key": "FORAIN",
-            "facturacion": 27966058.1,
-            "registros": 2
+            "facturacion": 40446170.72,
+            "registros": 3
+          },
+          {
+            "client_name": "EQUIS QUINCE S.A",
+            "client_key": "EQUIS QUINCE",
+            "facturacion": 38481095.5,
+            "registros": 3
           },
           {
             "client_name": "HASAR SERVICIOS SOCIEDAD DE",
             "client_key": "HASAR SERVICIOS SOCIEDAD DE",
             "facturacion": 25100585.470000003,
             "registros": 5
+          },
+          {
+            "client_name": "FUNDACION SOLDADOS FUNDASOL",
+            "client_key": "FUNDACION SOLDADOS FUNDASOL",
+            "facturacion": 15165294.39,
+            "registros": 1
           },
           {
             "client_name": "HT CONTENIDOS S. A.",
@@ -3779,36 +3821,18 @@
             "registros": 1
           },
           {
-            "client_name": "EQUIS QUINCE S.A",
-            "client_key": "EQUIS QUINCE",
-            "facturacion": 12161440.26,
-            "registros": 1
-          },
-          {
             "client_name": "Sigma Line",
             "client_key": "SIGMA LINE",
             "facturacion": 12002130.18,
             "registros": 2
-          },
-          {
-            "client_name": "Imágenes del Parque",
-            "client_key": "IMAGENES DEL PARQUE",
-            "facturacion": 8601126.94,
-            "registros": 1
-          },
-          {
-            "client_name": "Mas Metros",
-            "client_key": "MAS METROS",
-            "facturacion": 5012830.12,
-            "registros": 1
           }
         ]
       }
     },
     "published_clients": 101,
-    "valid_operations_all_dates": 368,
+    "valid_operations_all_dates": 369,
     "operation_states": {
-      "OK": 269,
+      "OK": 270,
       "OK_FC_NETA": 66,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,

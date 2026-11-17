@@ -2,8 +2,8 @@
   "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
   "name": "FACTURACION OCTOPUS.xlsx",
   "modified_time": null,
-  "checked_on": "2026-11-14",
-  "sha256": "38ae0647446eb5dfdcf8e818ba45ae95cbefdd4cf2f81f13ea446c7cf405dcfe",
+  "checked_on": "2026-11-17",
+  "sha256": "607a046d1cbf2dc739e2dc4f9edce4f098a82aab3028881927574ecf25afcbc7",
   "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit",
-  "verification": "Live bytes verified stable in two consecutive scans on 2026-11-14; all 5907 worksheet rows are unchanged from the prior source"
+  "verification": "Live bytes verified stable in two consecutive scans on 2026-11-17; 23 meaningful worksheet rows were added (83 raw row differences including formatting), all loaded 2026-11-16, with net total $403.595.103,46"
 }
