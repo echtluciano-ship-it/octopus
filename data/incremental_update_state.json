@@ -12588,7 +12588,8 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; 105 published clients; live billing hash and 14-row load verified",
     "local_smoke": "OK: November, October and Pirca verified in Streamlit",
-    "github": "PENDING",
-    "render": "PENDING"
+    "github": "OK: data commit 699b484 pushed to origin/main",
+    "render": "OK: production verified for November, October and Pirca",
+    "production_verified_at": "2026-11-18T18:37:17.757703-03:00"
   }
 }
