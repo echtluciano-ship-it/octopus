@@ -1,11 +1,11 @@
 {
-  "database_sha256": "1cba286454aba5d2d8edc5fe39aa583fdb0b1faea0258ba4c6e51c04a301af0a",
+  "database_sha256": "1349ff86c9f48f22933e99d6e3cc6380c61777a7f32a92f6f5d33d4155b70efd",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "607a046d1cbf2dc739e2dc4f9edce4f098a82aab3028881927574ecf25afcbc7",
-    "data/billing_source.json": "058c45bb88f1e959b4f89c1e1f65df949f59a1059e3c9d7493808f71c0b2c312",
-    "manual_rentability_operations.csv": "dc7bfde374f381f8b8d1d98048fbef316192cedcae489cf49b28490ab470c02c",
+    "data/FACTURACION OCTOPUS.xlsx": "877af3645dcdb8f9e0e86af99c73ec97fa99c02bcfa9eba819d25b17eb033e04",
+    "data/billing_source.json": "67d37a9a33b6e84e1338714ba184c2e3009e5a7622bb2a56adfaef386e589d21",
+    "manual_rentability_operations.csv": "4b84e925aaead26e5c2ed3ba338853852ae59b8388f0ef5103a5426a609d4acf",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "0314886fc106b401591e1c37765de8fe99bcc8f6a248d6ec4133783b4926a16a"
+    "source_documents.csv": "8d47452b6aceea27208cd0b6e480f12fb7be1ccb574c1770505ed2eaf8277df8"
   },
   "controls": {
     "as_of": "2026-11-17",
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 2398225791.89,
-        "billing_records": 146,
-        "validated_net": 777809477.0,
-        "profit": 50980957.0,
-        "profitability": 0.06554427338251627,
-        "valid_operations": 30,
+        "billing_total": 2815289793.07,
+        "billing_records": 164,
+        "validated_net": 841428492.0,
+        "profit": 54917795.0,
+        "profitability": 0.0652673346839793,
+        "valid_operations": 35,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3617,12 +3617,36 @@
             "operaciones": 1
           },
           {
+            "client_name": "Fundacion Soldados",
+            "client_key": "FUNDACION SOLDADOS",
+            "facturacion_validada": 15165294.0,
+            "ganancia_octopus": 1054291.0,
+            "rentabilidad": 0.06951998424824471,
+            "operaciones": 1
+          },
+          {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
             "facturacion_validada": 59852250.0,
             "ganancia_octopus": 4148289.0,
             "rentabilidad": 0.06930882297657982,
             "operaciones": 2
+          },
+          {
+            "client_name": "Aeronáuticos",
+            "client_key": "AERONAUTICOS",
+            "facturacion_validada": 19155761.0,
+            "ganancia_octopus": 1326314.0,
+            "rentabilidad": 0.06923838734467401,
+            "operaciones": 2
+          },
+          {
+            "client_name": "Mas Metros",
+            "client_key": "MAS METROS",
+            "facturacion_validada": 5012830.0,
+            "ganancia_octopus": 344891.0,
+            "rentabilidad": 0.06880165495338961,
+            "operaciones": 1
           },
           {
             "client_name": "Chahab Myrtha",
@@ -3679,30 +3703,6 @@
             "ganancia_octopus": 5132682.0,
             "rentabilidad": 0.05694149639276069,
             "operaciones": 2
-          },
-          {
-            "client_name": "STAY HOME",
-            "client_key": "STAY HOME",
-            "facturacion_validada": 42020230.0,
-            "ganancia_octopus": 2351089.0,
-            "rentabilidad": 0.05595135961892641,
-            "operaciones": 1
-          },
-          {
-            "client_name": "DAUMAS MOTOFLEX S.R.L.",
-            "client_key": "DAUMAS MOTOFLEX",
-            "facturacion_validada": 36841056.0,
-            "ganancia_octopus": 1846474.0,
-            "rentabilidad": 0.05012000741781126,
-            "operaciones": 2
-          },
-          {
-            "client_name": "LIBERTADOR 15000 S.R.L",
-            "client_key": "LIBERTADOR 15000",
-            "facturacion_validada": 8203394.0,
-            "ganancia_octopus": 381376.0,
-            "rentabilidad": 0.04649002595754879,
-            "operaciones": 1
           }
         ],
         "billing_ranking": [
@@ -3710,6 +3710,12 @@
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
             "facturacion": 641214476.55,
+            "registros": 28
+          },
+          {
+            "client_name": "EXPANSION S.A.S.",
+            "client_key": "EXPANSION",
+            "facturacion": 617263130.3100001,
             "registros": 28
           },
           {
@@ -3723,12 +3729,6 @@
             "client_key": "TEYLEM",
             "facturacion": 204733095.97,
             "registros": 11
-          },
-          {
-            "client_name": "EXPANSION S.A.S.",
-            "client_key": "EXPANSION",
-            "facturacion": 200199129.13,
-            "registros": 10
           },
           {
             "client_name": "LOGISTICAL S. A.",
@@ -3830,14 +3830,14 @@
       }
     },
     "published_clients": 101,
-    "valid_operations_all_dates": 369,
+    "valid_operations_all_dates": 374,
     "operation_states": {
-      "OK": 270,
-      "OK_FC_NETA": 66,
+      "OK": 274,
+      "OK_FC_NETA": 67,
       "OK_TRANSFERENCIA_1_2": 21,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
-      "REVISION": 2,
+      "REVISION": 4,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2,
       "VALIDADO_SIN_FC_NETA": 1
