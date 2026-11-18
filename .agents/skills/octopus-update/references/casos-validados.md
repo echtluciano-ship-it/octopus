@@ -81,3 +81,11 @@ Este archivo resume decisiones ya tomadas para no volver a preguntarlas. La fuen
 - ECHEQ visible 39.983.648; ganancia visible 1.199.509; el cuadro indica 3%. No aplicar automaticamente la excepcion del 1,20%.
 - Aclaracion definitiva posterior de Luciano: SOLO este cuadro no lleva Facturacion Neta; GANANCIA OCTOPUS = 1.199.509 y NETO A DEVOLVER = 38.784.139. No generalizar a otros cuadros o clientes. No volver a pedir confirmacion de modalidad ni Facturacion Neta. Conservar ambos importes separados; no sustituir el denominador por ECHEQ, no inventar rentabilidad ni tomar neto a devolver como facturacion. Validacion documental resuelta; aplicacion a base/Render pendiente. Evidencia en data/human_decisions/lumbrera-147dIXc9jXqZWVV9kUn6Ize1EGy5z8qH1.json.
 
+## Lumbrera - facturas ya pagadas, modalidad 1,20%
+
+- Andy confirmo el 17/11/2026, por medio de Luciano, que las facturas de los dos cuadros siguientes ya estaban pagadas y que se devuelve el importe transferido menos 1,20%.
+- Drive ID `1v4OEZDQbbe4HsbRGG6swYMqKHZQhcbPm`, Espora: ECHEQ 70.422.868; Ganancia Octopus 845.074; Neto a devolver 69.577.794.
+- Drive ID `1yD1lqdkoNsi6CE_sqRsWlEm-8mR8YTEJ`, HYF: ECHEQ 38.941.551; Ganancia Octopus 467.299; Neto a devolver 38.474.252.
+- Para estos dos documentos usar `OK_TRANSFERENCIA_1_2` / `TRANSFERENCIA_1_2`: la base es el ECHEQ transferido y no se requiere Facturacion Neta adicional. No conservar el 3% visible del cuadro original ni generalizar esta correccion a otros documentos sin evidencia humana.
+- Evidencia estructurada en `data/human_decisions/lumbrera-1v4OEZDQbbe4HsbRGG6swYMqKHZQhcbPm.json` y `data/human_decisions/lumbrera-1yD1lqdkoNsi6CE_sqRsWlEm-8mR8YTEJ.json`.
+

@@ -1,0 +1,22 @@
+{
+  "drive_id": "1v4OEZDQbbe4HsbRGG6swYMqKHZQhcbPm",
+  "file_name": "PHOTO-2026-11-17-19-28-47.jpg",
+  "client": "GRUPO LUMBRERA S.A.S.",
+  "channel": "Espora",
+  "recorded_at": "2026-11-17T22:33:48.733622-03:00",
+  "human_source": "Andy, relayed by Luciano",
+  "user_statement": "Es q ya pago esas facturas. O sea le devolvemos lo transferido - 1.2",
+  "confirmed": "Facturas ya pagadas: modalidad TRANSFERENCIA_1_2. Base igual al importe transferido visible; ganancia 1,20%; neto a devolver igual a transferencia menos 1,20%.",
+  "scope": "Only these two Lumbrera documents; do not generalize without evidence.",
+  "status": "HUMAN_VALIDATED_DOCUMENT",
+  "check_amount": 70422868,
+  "net_billing_amount": null,
+  "net_billing_applicable": false,
+  "profit_rate": 0.012,
+  "octopus_profit": 845074,
+  "net_to_return": 69577794,
+  "operation_type": "TRANSFERENCIA_1_2",
+  "local_database_applied": true,
+  "application_status": "Applied locally; pending GitHub and Render verification",
+  "updated_at": "2026-11-17T22:36:44.082327-03:00"
+}

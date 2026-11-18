@@ -1,11 +1,11 @@
 {
-  "database_sha256": "1349ff86c9f48f22933e99d6e3cc6380c61777a7f32a92f6f5d33d4155b70efd",
+  "database_sha256": "f03589d395566e8872d90fe6183da5011d7fe9115ee201f3b9e0fbcabee4ab4c",
   "source_sha256": {
     "data/FACTURACION OCTOPUS.xlsx": "877af3645dcdb8f9e0e86af99c73ec97fa99c02bcfa9eba819d25b17eb033e04",
     "data/billing_source.json": "67d37a9a33b6e84e1338714ba184c2e3009e5a7622bb2a56adfaef386e589d21",
-    "manual_rentability_operations.csv": "4b84e925aaead26e5c2ed3ba338853852ae59b8388f0ef5103a5426a609d4acf",
+    "manual_rentability_operations.csv": "d03b2b93110302c2ab736a76e3717a7d1fbce217df1a240a61f7557eb7c0fb88",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "8d47452b6aceea27208cd0b6e480f12fb7be1ccb574c1770505ed2eaf8277df8"
+    "source_documents.csv": "45fe376b9225ee73a6fe91c67f822c9922b7f3122964ae096325d1c03df4e062"
   },
   "controls": {
     "as_of": "2026-11-17",
@@ -3539,10 +3539,10 @@
       "2026-11": {
         "billing_total": 2815289793.07,
         "billing_records": 164,
-        "validated_net": 841428492.0,
-        "profit": 54917795.0,
-        "profitability": 0.0652673346839793,
-        "valid_operations": 35,
+        "validated_net": 950792911.0,
+        "profit": 56230168.0,
+        "profitability": 0.05914028948833843,
+        "valid_operations": 37,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3829,15 +3829,15 @@
         ]
       }
     },
-    "published_clients": 101,
-    "valid_operations_all_dates": 374,
+    "published_clients": 102,
+    "valid_operations_all_dates": 376,
     "operation_states": {
       "OK": 274,
       "OK_FC_NETA": 67,
-      "OK_TRANSFERENCIA_1_2": 21,
+      "OK_TRANSFERENCIA_1_2": 23,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
-      "REVISION": 4,
+      "REVISION": 2,
       "EXCLUIDO": 2,
       "NO_PROCESAR": 2,
       "VALIDADO_SIN_FC_NETA": 1

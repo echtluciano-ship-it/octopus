@@ -12306,7 +12306,7 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-17T22:28:49.791853-03:00",
+    "at": "2026-11-17T22:36:44.074085-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
     "source_stability": "two consecutive identical billing scans; stable SHA-256 verified live",
@@ -12315,9 +12315,9 @@
     "new_files": 16,
     "modified_files": 0,
     "duplicates_confirmed": 1,
-    "rentability_operations_added": 5,
+    "rentability_operations_added": 7,
     "payment_support_documents_added": 8,
-    "review_documents_added": 2,
+    "review_documents_added": 0,
     "billing_changed": true,
     "billing_data_changed": true,
     "billing_rows_added": 18,
@@ -12352,31 +12352,30 @@
       "GRUPO LUMBRERA",
       "EXPANSION"
     ],
-    "reviews": [
-      {
-        "client": "GRUPO LUMBRERA S.A.S.",
-        "channel": "Espora",
-        "date": "2026-11-12",
-        "reason": "FC neta absent and no unique match in Facturacion Historica"
-      },
-      {
-        "client": "GRUPO LUMBRERA S.A.S.",
-        "channel": "HYF",
-        "date": "2026-11-14",
-        "reason": "FC neta absent and no unique match in Facturacion Historica"
-      }
-    ],
+    "reviews": [],
     "november": {
       "billing_total": 2815289793.07,
-      "validated_net": 841428492.0,
-      "profit": 54917795.0,
-      "profitability": 0.0652673346839793,
-      "valid_operations": 35
+      "validated_net": 950792911.0,
+      "profit": 56230168.0,
+      "profitability": 0.05914028948833843,
+      "valid_operations": 37
     },
     "tests": "29 passed",
-    "sync": "23 months reconciled; live billing hash and 18-row load verified",
-    "local_smoke": "OK: November, October and Cocina y Patagonia verified in Streamlit",
+    "sync": "23 months reconciled; 102 published clients; live billing hash and 18-row load verified",
+    "local_smoke": "OK: corrected November metrics and Lumbrera verified in Streamlit",
     "github": "PENDING",
-    "render": "PENDING"
+    "render": "PENDING",
+    "human_corrections": [
+      {
+        "source": "Andy, relayed by Luciano",
+        "client": "GRUPO LUMBRERA S.A.S.",
+        "drive_ids": [
+          "1v4OEZDQbbe4HsbRGG6swYMqKHZQhcbPm",
+          "1yD1lqdkoNsi6CE_sqRsWlEm-8mR8YTEJ"
+        ],
+        "rule": "Invoices already paid; return transferred amount minus 1.20%",
+        "scope": "Only these two documents"
+      }
+    ]
   }
 }
