@@ -17,6 +17,9 @@
   "net_to_return": 69577794,
   "operation_type": "TRANSFERENCIA_1_2",
   "local_database_applied": true,
-  "application_status": "Applied locally; pending GitHub and Render verification",
-  "updated_at": "2026-11-17T22:36:44.082327-03:00"
+  "application_status": "Applied and verified on Render",
+  "updated_at": "2026-11-17T22:36:44.082327-03:00",
+  "production_changed": true,
+  "production_verified_at": "2026-11-17T22:39:57.328090-03:00",
+  "data_commit": "d675b15"
 }

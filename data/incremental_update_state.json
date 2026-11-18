@@ -12363,8 +12363,8 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; 102 published clients; live billing hash and 18-row load verified",
     "local_smoke": "OK: corrected November metrics and Lumbrera verified in Streamlit",
-    "github": "PENDING",
-    "render": "PENDING",
+    "github": "OK: data commit d675b15 pushed to origin/main",
+    "render": "OK: production verified with corrected November metrics and Lumbrera client card",
     "human_corrections": [
       {
         "source": "Andy, relayed by Luciano",
@@ -12376,6 +12376,7 @@
         "rule": "Invoices already paid; return transferred amount minus 1.20%",
         "scope": "Only these two documents"
       }
-    ]
+    ],
+    "production_verified_at": "2026-11-17T22:39:57.328090-03:00"
   }
 }
