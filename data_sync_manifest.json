@@ -1,14 +1,14 @@
 {
-  "database_sha256": "f03589d395566e8872d90fe6183da5011d7fe9115ee201f3b9e0fbcabee4ab4c",
+  "database_sha256": "1f1577c69b4bf490b8bd942146c585642b6ba005eed7f5fc5cc2fa1c20c9ab00",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "877af3645dcdb8f9e0e86af99c73ec97fa99c02bcfa9eba819d25b17eb033e04",
-    "data/billing_source.json": "67d37a9a33b6e84e1338714ba184c2e3009e5a7622bb2a56adfaef386e589d21",
-    "manual_rentability_operations.csv": "d03b2b93110302c2ab736a76e3717a7d1fbce217df1a240a61f7557eb7c0fb88",
+    "data/FACTURACION OCTOPUS.xlsx": "fa9eaca10298be83009c8a0aedd98dbdb0784fc66f8e5f4cb374a58eb428e025",
+    "data/billing_source.json": "fea005db49e7029a2cf337e153ea8cb988ebe7acd20ed643223f6fa7729cbc2f",
+    "manual_rentability_operations.csv": "5c592c382b2090142b543a18e6725307b157c91f1f2d65d88c61290870d84610",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "45fe376b9225ee73a6fe91c67f822c9922b7f3122964ae096325d1c03df4e062"
+    "source_documents.csv": "025a047829e4588cca3d7a5ec1225cd3b212fe45e10d889b133b10a7ecf2027f"
   },
   "controls": {
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3245,8 +3245,8 @@
         ]
       },
       "2026-10": {
-        "billing_total": 5685495926.05,
-        "billing_records": 380,
+        "billing_total": 5728471132.87,
+        "billing_records": 381,
         "validated_net": 3818507163.9,
         "profit": 235596956.76,
         "profitability": 0.06169870754396465,
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 2815289793.07,
-        "billing_records": 164,
-        "validated_net": 950792911.0,
-        "profit": 56230168.0,
-        "profitability": 0.05914028948833843,
-        "valid_operations": 37,
+        "billing_total": 3072327135.91,
+        "billing_records": 178,
+        "validated_net": 1105051953.0,
+        "profit": 64659598.0,
+        "profitability": 0.05851272225207316,
+        "valid_operations": 44,
         "rentability_ranking": [
           {
             "client_name": "FORMAS ARGENTINAS SR",
@@ -3579,10 +3579,18 @@
           {
             "client_name": "ASHI S.A",
             "client_key": "ASHI",
-            "facturacion_validada": 28500956.0,
-            "ganancia_octopus": 2133092.0,
-            "rentabilidad": 0.07484282281618904,
-            "operaciones": 1
+            "facturacion_validada": 36600461.0,
+            "ganancia_octopus": 2734731.0,
+            "rentabilidad": 0.07471848510323409,
+            "operaciones": 3
+          },
+          {
+            "client_name": "PIRCA SERVICIOS S. A. S.",
+            "client_key": "PIRCA SERVICIOS",
+            "facturacion_validada": 5009330.0,
+            "ganancia_octopus": 373295.0,
+            "rentabilidad": 0.07451994578117234,
+            "operaciones": 2
           },
           {
             "client_name": "LABORATORIOS JAYOR S.R.L.",
@@ -3627,10 +3635,10 @@
           {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
-            "facturacion_validada": 59852250.0,
-            "ganancia_octopus": 4148289.0,
-            "rentabilidad": 0.06930882297657982,
-            "operaciones": 2
+            "facturacion_validada": 86666830.0,
+            "ganancia_octopus": 6007612.0,
+            "rentabilidad": 0.06931846936134621,
+            "operaciones": 3
           },
           {
             "client_name": "Aeronáuticos",
@@ -3695,27 +3703,19 @@
             "ganancia_octopus": 5702446.0,
             "rentabilidad": 0.05702285993855012,
             "operaciones": 2
-          },
-          {
-            "client_name": "Drogueria Meta",
-            "client_key": "DROGUERIA META",
-            "facturacion_validada": 90139570.0,
-            "ganancia_octopus": 5132682.0,
-            "rentabilidad": 0.05694149639276069,
-            "operaciones": 2
           }
         ],
         "billing_ranking": [
           {
+            "client_name": "EXPANSION S.A.S.",
+            "client_key": "EXPANSION",
+            "facturacion": 700000422.08,
+            "registros": 32
+          },
+          {
             "client_name": "Protección Inteligente",
             "client_key": "PROTECCION INTELIGENTE",
             "facturacion": 641214476.55,
-            "registros": 28
-          },
-          {
-            "client_name": "EXPANSION S.A.S.",
-            "client_key": "EXPANSION",
-            "facturacion": 617263130.3100001,
             "registros": 28
           },
           {
@@ -3735,6 +3735,12 @@
             "client_key": "LOGISTICAL",
             "facturacion": 179055694.32,
             "registros": 11
+          },
+          {
+            "client_name": "DAUMAS MOTOFLEX S.R.L.",
+            "client_key": "DAUMAS MOTOFLEX",
+            "facturacion": 168290000.66,
+            "registros": 8
           },
           {
             "client_name": "Alimentos Viandas",
@@ -3819,21 +3825,15 @@
             "client_key": "ASOCIACION DEL PERSONAL AERONAUTICO",
             "facturacion": 14319743.86,
             "registros": 1
-          },
-          {
-            "client_name": "Sigma Line",
-            "client_key": "SIGMA LINE",
-            "facturacion": 12002130.18,
-            "registros": 2
           }
         ]
       }
     },
-    "published_clients": 102,
-    "valid_operations_all_dates": 376,
+    "published_clients": 105,
+    "valid_operations_all_dates": 384,
     "operation_states": {
       "OK": 274,
-      "OK_FC_NETA": 67,
+      "OK_FC_NETA": 75,
       "OK_TRANSFERENCIA_1_2": 23,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
