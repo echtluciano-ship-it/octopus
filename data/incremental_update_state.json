@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-20T03:34:51.217904Z",
+  "last_successful_scan": "2026-11-20T22:45:43.535167Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -12780,16 +12780,269 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1lB6N-PvTJOZivCSoTxEU-IfToDJaefNF/view"
+    },
+    "1lJCWdMyM_XwC66UPsXXwhiTB51VFTto-": {
+      "drive_id": "1lJCWdMyM_XwC66UPsXXwhiTB51VFTto-",
+      "name": "PHOTO-2026-11-20-09-56-11.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 397289,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1lJCWdMyM_XwC66UPsXXwhiTB51VFTto-/view"
+    },
+    "1ekZ9soKBqCiVGA64GNOUHAXKRKAKdwSn": {
+      "drive_id": "1ekZ9soKBqCiVGA64GNOUHAXKRKAKdwSn",
+      "name": "PHOTO-2026-11-20-16-36-13.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 275594,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ekZ9soKBqCiVGA64GNOUHAXKRKAKdwSn/view"
+    },
+    "1HwO1jWOS6iEAQwozc-K9yduCnG3uJISJ": {
+      "drive_id": "1HwO1jWOS6iEAQwozc-K9yduCnG3uJISJ",
+      "name": "PHOTO-2026-11-20-16-36-27.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 414198,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1HwO1jWOS6iEAQwozc-K9yduCnG3uJISJ/view"
+    },
+    "1jsulmBVr1mW8-CKWw3hmA_al5AWXlq4x": {
+      "drive_id": "1jsulmBVr1mW8-CKWw3hmA_al5AWXlq4x",
+      "name": "PHOTO-2026-11-20-16-36-51.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 478518,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1jsulmBVr1mW8-CKWw3hmA_al5AWXlq4x/view"
+    },
+    "1gE7i6mpun4OcjhJp_jDeuQh_l6XCt2eD": {
+      "drive_id": "1gE7i6mpun4OcjhJp_jDeuQh_l6XCt2eD",
+      "name": "PHOTO-2026-11-20-17-26-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 440789,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1gE7i6mpun4OcjhJp_jDeuQh_l6XCt2eD/view"
+    },
+    "1JA3dAyxbyNUN14Aip5u1QsiNS0csjNCi": {
+      "drive_id": "1JA3dAyxbyNUN14Aip5u1QsiNS0csjNCi",
+      "name": "PHOTO-2026-11-20-17-26-43.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 406417,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1JA3dAyxbyNUN14Aip5u1QsiNS0csjNCi/view"
+    },
+    "1qgnvIHap9cnyIWCledmeJD9-FCbNazz5": {
+      "drive_id": "1qgnvIHap9cnyIWCledmeJD9-FCbNazz5",
+      "name": "PHOTO-2026-11-20-17-26-59.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 172238,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1qgnvIHap9cnyIWCledmeJD9-FCbNazz5/view"
+    },
+    "17gMDk-MS0X_H4u-A0veWU0P-ZPYJgiDT": {
+      "drive_id": "17gMDk-MS0X_H4u-A0veWU0P-ZPYJgiDT",
+      "name": "PHOTO-2026-11-20-17-27-12.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 379379,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/17gMDk-MS0X_H4u-A0veWU0P-ZPYJgiDT/view"
+    },
+    "1fvh1ro7bk5VEitLmq2vsMi4x_wMhfpx4": {
+      "drive_id": "1fvh1ro7bk5VEitLmq2vsMi4x_wMhfpx4",
+      "name": "PHOTO-2026-11-20-17-59-22.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 475286,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1fvh1ro7bk5VEitLmq2vsMi4x_wMhfpx4/view"
+    },
+    "1a78ewkeVIJFVvWr01PpT2L6J48UnqaIX": {
+      "drive_id": "1a78ewkeVIJFVvWr01PpT2L6J48UnqaIX",
+      "name": "PHOTO-2026-11-20-18-16-55.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17720,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1a78ewkeVIJFVvWr01PpT2L6J48UnqaIX/view"
+    },
+    "1a6QEt6edICBcpyKrxubv6JmFjGUHgCgB": {
+      "drive_id": "1a6QEt6edICBcpyKrxubv6JmFjGUHgCgB",
+      "name": "PHOTO-2026-11-20-18-29-32.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17559,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1a6QEt6edICBcpyKrxubv6JmFjGUHgCgB/view"
+    },
+    "1tWcgOSOEi24Z4v5T71dmHBYJJxTQmeHA": {
+      "drive_id": "1tWcgOSOEi24Z4v5T71dmHBYJJxTQmeHA",
+      "name": "certret espora cemair 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10617,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1tWcgOSOEi24Z4v5T71dmHBYJJxTQmeHA/view"
+    },
+    "1K6L5D8cyQx-MDUia4_ncG6pp8tsSJ-Ae": {
+      "drive_id": "1K6L5D8cyQx-MDUia4_ncG6pp8tsSJ-Ae",
+      "name": "certret mc espora 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10627,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1K6L5D8cyQx-MDUia4_ncG6pp8tsSJ-Ae/view"
+    },
+    "1fq8QS55UX94o_7PX5m4Yfb2ekupqTHmw": {
+      "drive_id": "1fq8QS55UX94o_7PX5m4Yfb2ekupqTHmw",
+      "name": "certret mp espora 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10607,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1fq8QS55UX94o_7PX5m4Yfb2ekupqTHmw/view"
+    },
+    "18km5ufebknGG3_VJXb1CIIhjN1tDkwKQ": {
+      "drive_id": "18km5ufebknGG3_VJXb1CIIhjN1tDkwKQ",
+      "name": "ESPORA_202611_0248.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10614,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/18km5ufebknGG3_VJXb1CIIhjN1tDkwKQ/view"
+    },
+    "1EgP0NwBc5LtL7u4TLbVOS2WO0izFYarw": {
+      "drive_id": "1EgP0NwBc5LtL7u4TLbVOS2WO0izFYarw",
+      "name": "ESPORA_OP_0202600001310.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 51185,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1EgP0NwBc5LtL7u4TLbVOS2WO0izFYarw/view"
+    },
+    "1NO7GULB0RNcpfLqepTRa9N0TfumT3vg-": {
+      "drive_id": "1NO7GULB0RNcpfLqepTRa9N0TfumT3vg-",
+      "name": "O_P_0000000051253 (2).pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 64753,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1NO7GULB0RNcpfLqepTRa9N0TfumT3vg-/view"
+    },
+    "1QTXZcqnjyh-GMNPGOkl0UThRdLPMD5Xa": {
+      "drive_id": "1QTXZcqnjyh-GMNPGOkl0UThRdLPMD5Xa",
+      "name": "O_P_0000000051253_G00019693.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 12109,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1QTXZcqnjyh-GMNPGOkl0UThRdLPMD5Xa/view"
+    },
+    "1jDLIiDWkm33yekvbpUS1C11hPKyWikuV": {
+      "drive_id": "1jDLIiDWkm33yekvbpUS1C11hPKyWikuV",
+      "name": "PHOTO-2026-11-20-11-08-08.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 77848,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1jDLIiDWkm33yekvbpUS1C11hPKyWikuV/view"
+    },
+    "1FUiJdKnjSFrSDroDNZQnfLNEkPaJaZXD": {
+      "drive_id": "1FUiJdKnjSFrSDroDNZQnfLNEkPaJaZXD",
+      "name": "PHOTO-2026-11-20-16-35-47.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 354248,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1FUiJdKnjSFrSDroDNZQnfLNEkPaJaZXD/view"
+    },
+    "104aGPZkDcEwi4oskncxqW9VfrHpAgsQO": {
+      "drive_id": "104aGPZkDcEwi4oskncxqW9VfrHpAgsQO",
+      "name": "PHOTO-2026-11-20-16-36-38.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 155331,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/104aGPZkDcEwi4oskncxqW9VfrHpAgsQO/view"
+    },
+    "1g5u_z5NL5_7Eat-CQQ2fwfc8kuDFpcyJ": {
+      "drive_id": "1g5u_z5NL5_7Eat-CQQ2fwfc8kuDFpcyJ",
+      "name": "PHOTO-2026-11-20-16-37-52.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 103743,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1g5u_z5NL5_7Eat-CQQ2fwfc8kuDFpcyJ/view"
+    },
+    "1vhEvkxrK4-x1UIyuMVAmONtqX2XnQSPZ": {
+      "drive_id": "1vhEvkxrK4-x1UIyuMVAmONtqX2XnQSPZ",
+      "name": "PHOTO-2026-11-20-17-26-38.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 100085,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1vhEvkxrK4-x1UIyuMVAmONtqX2XnQSPZ/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 489653,
+      "size_bytes": 488985,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "98940d6190e50ffe03224fc63928c7b7dde07fe9df348b10bf8c50e96de4c8e9",
+      "sha256": "aac3cb28b22267b60185dae7da1c91d8f9e7e154d1e25ad6c969aaab07c25ec4",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
@@ -12799,11 +13052,11 @@
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-20T00:46:09.635757-03:00",
-    "reason": "Official billing workbook added seven November rows loaded 2026-11-19; eight rentability operations and nineteen instruction/payment supports were reconciled",
-    "new_valid_operations": 8,
+    "at": "2026-11-20T19:56:35.072536-03:00",
+    "reason": "Official billing workbook changed; eleven rentability operations and twelve payment supports were reconciled",
+    "new_valid_operations": 11,
     "new_review_operations": 0,
-    "updated_source_documents": 27
+    "updated_source_documents": 23
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -12812,68 +13065,59 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-20T00:46:09.635757-03:00",
+    "at": "2026-11-20T19:56:35.072536-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
     "source_stability": "two consecutive identical Drive scans; stable billing SHA-256 verified live",
-    "detected_files": 199,
-    "known_unchanged": 172,
-    "new_files": 27,
+    "detected_files": 222,
+    "known_unchanged": 199,
+    "new_files": 23,
     "modified_files": 0,
     "duplicates_confirmed": 0,
-    "rentability_operations_added": 8,
-    "instruction_support_documents_added": 5,
-    "payment_support_documents_added": 14,
+    "rentability_operations_added": 11,
+    "payment_support_documents_added": 12,
     "review_documents_added": 0,
     "billing_changed": true,
     "billing_data_changed": true,
-    "billing_rows_added": 7,
-    "billing_valid_rows_added": 7,
-    "billing_rows_corrected": 1,
+    "billing_rows_completed": 2,
+    "billing_rows_effective_today": 1,
+    "billing_rows_future_load": 1,
     "billing_load_dates": {
-      "2026-11-19": {
-        "rows": 7,
-        "valid_rows": 7,
-        "net_amount": 105687593.07
-      },
-      "2026-11-18_metadata_only": {
+      "2026-11-20": {
         "rows": 1,
-        "client": "MUTUAL ASOCIACION DE CONDUCTORES",
-        "net_amount_change": 0,
-        "note": "The existing historical October row received its load date; amount unchanged."
+        "client": "COMPLEJO AKIRA SA",
+        "net_amount": 42170445.28
+      },
+      "2026-11-21_future": {
+        "rows": 1,
+        "client": "SOLMARA S.A",
+        "net_amount": 35186496.14,
+        "note": "Excluded from the 20/11 cutoff until its load date."
       }
     },
-    "previous_operations_now_effective": {
-      "2026-11-19": 5,
-      "2026-11-20": 2
-    },
     "new_operations_effective": {
-      "2026-10-08": 1,
-      "2026-11-19": 5
+      "2026-11-19": 1,
+      "2026-11-20": 7
     },
-    "future_operations": {
-      "2026-11-25": 1,
-      "2026-11-27": 1
+    "new_future_operations": {
+      "2026-11-26": 1,
+      "2026-11-27": 2
     },
     "affected_months": [
-      "2026-10",
       "2026-11"
     ],
     "affected_clients": [
-      "GYULAND",
-      "DOTTORI EZEQUIEL",
-      "NEW GATE",
+      "EXPANSION S.A.S.",
+      "VEGA Y CAMJI",
+      "TRANS BOX",
       "MEDICAL CROSS",
       "MEDIPREMIUM",
       "CEMAIR",
-      "IT PATAGONIA",
-      "MINETECH",
-      "HASAR",
-      "DRACONIS",
-      "APR ENERGY",
-      "DGSAPIENS",
-      "ESCALUM",
-      "VEGA Y CAMJI"
+      "COMITE EJECUTIVO",
+      "DROGUERIA VARADERO",
+      "LABORATORIOS JAYOR S.R.L.",
+      "COMPLEJO AKIRA SA",
+      "SOLMARA S.A"
     ],
     "reviews": [],
     "october": {
@@ -12885,18 +13129,17 @@
       "valid_operations": 91
     },
     "november": {
-      "billing_total": 3178014728.98,
-      "billing_records": 185,
-      "validated_net": 1331336239.0,
-      "profit": 82226843.0,
-      "profitability": 0.06176264161618754,
-      "valid_operations": 56
+      "billing_total": 3220185174.26,
+      "billing_records": 186,
+      "validated_net": 1665255734.0,
+      "profit": 101866091.0,
+      "profitability": 0.06117143986966749,
+      "valid_operations": 64
     },
     "tests": "29 passed",
-    "sync": "23 months reconciled; 107 published clients; live billing hash and seven-row load verified",
-    "local_smoke": "OK: November, October and Gyuland verified in Streamlit",
-    "github": "OK: data commit 8fa646a pushed to origin/main",
-    "render": "OK: production verified for November, October and Gyuland",
-    "production_verified_at": "2026-11-20T00:55:40.285442-03:00"
+    "sync": "23 months reconciled; 108 published clients; live billing hash and 20/11 load verified",
+    "local_smoke": "OK: November, October and Trans Box verified in Streamlit",
+    "github": "PENDING_PUSH",
+    "render": "PENDING_DEPLOY_AND_VERIFY"
   }
 }

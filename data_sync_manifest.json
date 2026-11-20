@@ -1,11 +1,11 @@
 {
-  "database_sha256": "f58462945ec2afc3cf0ba7770ae98b304d891ccb3acb84d06d567a3878399755",
+  "database_sha256": "58021c4fd9b4cab4e84f60590ee9dd28e0a569447924ee1fa4f7d468bf5361bb",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "98940d6190e50ffe03224fc63928c7b7dde07fe9df348b10bf8c50e96de4c8e9",
-    "data/billing_source.json": "ecbd19f0d5a2dea660d3f40daf78d8533e728e859cf58be4cacfaea55c0f728f",
-    "manual_rentability_operations.csv": "3fb1dda55cc5ea303bf77cd8ac5c0894ad8e064865cf4b7d88c4503228b13a0a",
+    "data/FACTURACION OCTOPUS.xlsx": "aac3cb28b22267b60185dae7da1c91d8f9e7e154d1e25ad6c969aaab07c25ec4",
+    "data/billing_source.json": "61c3c574b97c6eaaf6f020d705175fd23ab53c4617273262399ab0d67eccead8",
+    "manual_rentability_operations.csv": "4cb570d9e1d5cd1ca029f9f0a128bcf6b1c7132dc0e4e44b5af1ac6b7ad58af6",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "7d00fef3205d555b6ae990e149c24efe776731c8f893f7c7eeef0d94dfb729b6"
+    "source_documents.csv": "7d0b2c5408f2d87d4ac66f4c5ebd1b14c7926ad0756c9af5b1279bb1d2fbd164"
   },
   "controls": {
     "as_of": "2026-11-20",
@@ -3537,12 +3537,12 @@
         ]
       },
       "2026-11": {
-        "billing_total": 3178014728.98,
-        "billing_records": 185,
-        "validated_net": 1331336239.0,
-        "profit": 82226843.0,
-        "profitability": 0.06176264161618754,
-        "valid_operations": 56,
+        "billing_total": 3220185174.26,
+        "billing_records": 186,
+        "validated_net": 1665255734.0,
+        "profit": 101866091.0,
+        "profitability": 0.06117143986966749,
+        "valid_operations": 64,
         "rentability_ranking": [
           {
             "client_name": "DGSAPIENS S.A.S",
@@ -3563,18 +3563,18 @@
           {
             "client_name": "Medipremium",
             "client_key": "MEDIPREMIUM",
-            "facturacion_validada": 24598209.0,
-            "ganancia_octopus": 2077566.0,
-            "rentabilidad": 0.08446005154277696,
-            "operaciones": 1
+            "facturacion_validada": 43538159.0,
+            "ganancia_octopus": 3676217.0,
+            "rentabilidad": 0.08443666623570371,
+            "operaciones": 2
           },
           {
             "client_name": "Cemair",
             "client_key": "CEMAIR",
-            "facturacion_validada": 17222703.0,
-            "ganancia_octopus": 1453303.0,
-            "rentabilidad": 0.0843829798377177,
-            "operaciones": 1
+            "facturacion_validada": 26008209.0,
+            "ganancia_octopus": 2192521.0,
+            "rentabilidad": 0.08430111431356153,
+            "operaciones": 2
           },
           {
             "client_name": "El Perro de la Luna",
@@ -3587,10 +3587,10 @@
           {
             "client_name": "Medical Cross",
             "client_key": "MEDICAL CROSS",
-            "facturacion_validada": 2905300.0,
-            "ganancia_octopus": 241478.0,
-            "rentabilidad": 0.08311637352424879,
-            "operaciones": 1
+            "facturacion_validada": 5716250.0,
+            "ganancia_octopus": 474971.0,
+            "rentabilidad": 0.08309136234419419,
+            "operaciones": 2
           },
           {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
@@ -3651,10 +3651,10 @@
           {
             "client_name": "LABORATORIOS JAYOR S.R.L.",
             "client_key": "LABORATORIOS JAYOR",
-            "facturacion_validada": 201627141.0,
-            "ganancia_octopus": 14113899.0,
-            "rentabilidad": 0.06999999568510472,
-            "operaciones": 3
+            "facturacion_validada": 297783995.0,
+            "ganancia_octopus": 20844879.0,
+            "rentabilidad": 0.06999999781720975,
+            "operaciones": 5
           },
           {
             "client_name": "TRICO",
@@ -3797,6 +3797,12 @@
             "registros": 4
           },
           {
+            "client_name": "COMPLEJO AKIRA SA",
+            "client_key": "COMPLEJO AKIRA",
+            "facturacion": 42170445.28,
+            "registros": 1
+          },
+          {
             "client_name": "FORAIN S. A.",
             "client_key": "FORAIN",
             "facturacion": 40446170.72,
@@ -3819,21 +3825,15 @@
             "client_key": "MINETECH",
             "facturacion": 19024240.35,
             "registros": 3
-          },
-          {
-            "client_name": "FUNDACION SOLDADOS FUNDASOL",
-            "client_key": "FUNDACION SOLDADOS FUNDASOL",
-            "facturacion": 15165294.39,
-            "registros": 1
           }
         ]
       }
     },
-    "published_clients": 107,
-    "valid_operations_all_dates": 392,
+    "published_clients": 108,
+    "valid_operations_all_dates": 403,
     "operation_states": {
       "OK": 275,
-      "OK_FC_NETA": 82,
+      "OK_FC_NETA": 93,
       "OK_TRANSFERENCIA_1_2": 23,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
