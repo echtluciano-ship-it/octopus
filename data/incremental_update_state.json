@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-18T21:15:41.225845Z",
+  "last_successful_scan": "2026-11-20T03:34:51.217904Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -12483,30 +12483,327 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1z5aAZtXXD7HQ4rcTndB8akl7QkLv6KRK/view"
+    },
+    "178ykmWPkTiZTdxZ5ggvzwLYz5d-YKkke": {
+      "drive_id": "178ykmWPkTiZTdxZ5ggvzwLYz5d-YKkke",
+      "name": "Dottori tambien va a mi favor\n.txt",
+      "mime_type": "text/plain",
+      "size_bytes": 30,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/178ykmWPkTiZTdxZ5ggvzwLYz5d-YKkke/view"
+    },
+    "1EOwGF278SMA516-v6XWzJ371houtBHJh": {
+      "drive_id": "1EOwGF278SMA516-v6XWzJ371houtBHJh",
+      "name": "IMG_7502.PNG",
+      "mime_type": "image/png",
+      "size_bytes": 3736552,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1EOwGF278SMA516-v6XWzJ371houtBHJh/view"
+    },
+    "1VUzFpmK52dwGISOXcuXi5e-CNHBYktfi": {
+      "drive_id": "1VUzFpmK52dwGISOXcuXi5e-CNHBYktfi",
+      "name": "IMG_7503.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 91353,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1VUzFpmK52dwGISOXcuXi5e-CNHBYktfi/view"
+    },
+    "1azs_UZ8pPIrCLviJATaRzTjEJfPq6dRp": {
+      "drive_id": "1azs_UZ8pPIrCLviJATaRzTjEJfPq6dRp",
+      "name": "IMG_7504.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 33893,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1azs_UZ8pPIrCLviJATaRzTjEJfPq6dRp/view"
+    },
+    "1EN7ymhet7jY5VfL9Os3FHG7vkvLLwqiY": {
+      "drive_id": "1EN7ymhet7jY5VfL9Os3FHG7vkvLLwqiY",
+      "name": "IMG_7505.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 120680,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1EN7ymhet7jY5VfL9Os3FHG7vkvLLwqiY/view"
+    },
+    "1gFXCwUm4djPl__Nq-ciLGQG5YDEjOFOb": {
+      "drive_id": "1gFXCwUm4djPl__Nq-ciLGQG5YDEjOFOb",
+      "name": "PHOTO-2026-11-19-02-39-15.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 253567,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1gFXCwUm4djPl__Nq-ciLGQG5YDEjOFOb/view"
+    },
+    "125TJkMMGnooFSILRWzl9CVx7CC-8EXnT": {
+      "drive_id": "125TJkMMGnooFSILRWzl9CVx7CC-8EXnT",
+      "name": "PHOTO-2026-11-19-15-01-40.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 462801,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/125TJkMMGnooFSILRWzl9CVx7CC-8EXnT/view"
+    },
+    "1ubuXmSK4cn83Je6FsvD239ovM0eKjwIF": {
+      "drive_id": "1ubuXmSK4cn83Je6FsvD239ovM0eKjwIF",
+      "name": "PHOTO-2026-11-19-15-22-49.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 313877,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ubuXmSK4cn83Je6FsvD239ovM0eKjwIF/view"
+    },
+    "13SO24_s58-a0HpRf7Ct3GIi9ZzhSuZIB": {
+      "drive_id": "13SO24_s58-a0HpRf7Ct3GIi9ZzhSuZIB",
+      "name": "PHOTO-2026-11-19-15-24-30.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 109452,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/13SO24_s58-a0HpRf7Ct3GIi9ZzhSuZIB/view"
+    },
+    "1u7dZEa4lhRXZ3jY9bySqOu8-bcUD6gEl": {
+      "drive_id": "1u7dZEa4lhRXZ3jY9bySqOu8-bcUD6gEl",
+      "name": "PHOTO-2026-11-19-15-33-57.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 428558,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1u7dZEa4lhRXZ3jY9bySqOu8-bcUD6gEl/view"
+    },
+    "1anQrK8qevhHQi9-F41iIiy4ihmtvGwwn": {
+      "drive_id": "1anQrK8qevhHQi9-F41iIiy4ihmtvGwwn",
+      "name": "PHOTO-2026-11-19-15-59-53.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 388267,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1anQrK8qevhHQi9-F41iIiy4ihmtvGwwn/view"
+    },
+    "1ugW-zwyguSmY6S-C8_65vItM6wAorRyw": {
+      "drive_id": "1ugW-zwyguSmY6S-C8_65vItM6wAorRyw",
+      "name": "PHOTO-2026-11-19-16-40-43.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 365492,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1ugW-zwyguSmY6S-C8_65vItM6wAorRyw/view"
+    },
+    "1JKsK1Oo7qk2tB15F7LcujOfo1ujuCfRn": {
+      "drive_id": "1JKsK1Oo7qk2tB15F7LcujOfo1ujuCfRn",
+      "name": "PHOTO-2026-11-19-16-40-43.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 385941,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1JKsK1Oo7qk2tB15F7LcujOfo1ujuCfRn/view"
+    },
+    "1KUeuW0J5zw2ZRD6P9ve-1VwzlZHnZqBr": {
+      "drive_id": "1KUeuW0J5zw2ZRD6P9ve-1VwzlZHnZqBr",
+      "name": "19112026_emitir_echeq.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 92141,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1KUeuW0J5zw2ZRD6P9ve-1VwzlZHnZqBr/view"
+    },
+    "1w2c1-NpHMVtpFS5NYl2x8K1zKDPURl1E": {
+      "drive_id": "1w2c1-NpHMVtpFS5NYl2x8K1zKDPURl1E",
+      "name": "certret cemair h yf 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10613,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1w2c1-NpHMVtpFS5NYl2x8K1zKDPURl1E/view"
+    },
+    "18iOyJmxT1pCTrS2u7A5SEtYySM7JVUUa": {
+      "drive_id": "18iOyJmxT1pCTrS2u7A5SEtYySM7JVUUa",
+      "name": "certret mc hyf 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10623,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/18iOyJmxT1pCTrS2u7A5SEtYySM7JVUUa/view"
+    },
+    "1HpsJQC9WQCSKVpV1V41M-kmqLukcLCEc": {
+      "drive_id": "1HpsJQC9WQCSKVpV1V41M-kmqLukcLCEc",
+      "name": "certret mp hyf 112026.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 10607,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1HpsJQC9WQCSKVpV1V41M-kmqLukcLCEc/view"
+    },
+    "1Hr5VZ29zViAqOCoALkTIcc29X2Zk4BAl": {
+      "drive_id": "1Hr5VZ29zViAqOCoALkTIcc29X2Zk4BAl",
+      "name": "comprobante50057218019261119.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 23219,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Hr5VZ29zViAqOCoALkTIcc29X2Zk4BAl/view"
+    },
+    "1TTY81qdydK1KWOCf90WeGV2ocspnpaWi": {
+      "drive_id": "1TTY81qdydK1KWOCf90WeGV2ocspnpaWi",
+      "name": "DISTRIBUIDORA ESPORA SRL OP CMF ECHEQ 25.11.26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 398973,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1TTY81qdydK1KWOCf90WeGV2ocspnpaWi/view"
+    },
+    "11ClyIiFK3vB7MfmlmYoVLDY7u4rHwEo1": {
+      "drive_id": "11ClyIiFK3vB7MfmlmYoVLDY7u4rHwEo1",
+      "name": "DISTRIBUIDORA ESPORA SRL RET GCIAS ECHEQ 25.11.26.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 160969,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/11ClyIiFK3vB7MfmlmYoVLDY7u4rHwEo1/view"
+    },
+    "1mDhwORWxFRLnBzg2lmyeCscdZiHef0O7": {
+      "drive_id": "1mDhwORWxFRLnBzg2lmyeCscdZiHef0O7",
+      "name": "HYF DISTRIBUCIONES SA OP CMF ECHEQ 27.11.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 399538,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1mDhwORWxFRLnBzg2lmyeCscdZiHef0O7/view"
+    },
+    "1gzr6v4hAAh_zSRd0n69pyB8dVkw7d7N0": {
+      "drive_id": "1gzr6v4hAAh_zSRd0n69pyB8dVkw7d7N0",
+      "name": "HYF DISTRIBUCIONES SA RET GCIAS ECHEQ 27.11.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 161667,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1gzr6v4hAAh_zSRd0n69pyB8dVkw7d7N0/view"
+    },
+    "1wkX7wFlw9MHdbAc77CJI1hlXOx-iuhij": {
+      "drive_id": "1wkX7wFlw9MHdbAc77CJI1hlXOx-iuhij",
+      "name": "PAGO EL FARO DIECHIOCHO ECHEQ.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 12349,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1wkX7wFlw9MHdbAc77CJI1hlXOx-iuhij/view"
+    },
+    "1FPoSVPVH5BRNLQu9zIpz0B6hPRGm_IUB": {
+      "drive_id": "1FPoSVPVH5BRNLQu9zIpz0B6hPRGm_IUB",
+      "name": "PHOTO-2026-11-19-15-23-07.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 118771,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1FPoSVPVH5BRNLQu9zIpz0B6hPRGm_IUB/view"
+    },
+    "17lFj_WJTVuweWFzY7IIA8ltV6uBkIWJP": {
+      "drive_id": "17lFj_WJTVuweWFzY7IIA8ltV6uBkIWJP",
+      "name": "PHOTO-2026-11-19-15-28-21.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 101320,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/17lFj_WJTVuweWFzY7IIA8ltV6uBkIWJP/view"
+    },
+    "1Hwhgf1YWNKp0UCAzQ-LssoZq6mvPn1bZ": {
+      "drive_id": "1Hwhgf1YWNKp0UCAzQ-LssoZq6mvPn1bZ",
+      "name": "PHOTO-2026-11-19-15-34-20.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 113289,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1Hwhgf1YWNKp0UCAzQ-LssoZq6mvPn1bZ/view"
+    },
+    "1lB6N-PvTJOZivCSoTxEU-IfToDJaefNF": {
+      "drive_id": "1lB6N-PvTJOZivCSoTxEU-IfToDJaefNF",
+      "name": "Retenciones - Pago N° C-0401-00011320.pdf",
+      "mime_type": "application/pdf",
+      "size_bytes": 3272,
+      "modified_time": "",
+      "folder_id": "1wN4I1kRPqUWaqJUT7q02Kmc4X4CPM6Ye",
+      "folder_period": "2026-11",
+      "source_type": "pagos",
+      "url": "https://drive.google.com/file/d/1lB6N-PvTJOZivCSoTxEU-IfToDJaefNF/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 488516,
+      "size_bytes": 489653,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "fa9eaca10298be83009c8a0aedd98dbdb0784fc66f8e5f4cb374a58eb428e025",
+      "sha256": "98940d6190e50ffe03224fc63928c7b7dde07fe9df348b10bf8c50e96de4c8e9",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
   "source_baseline": {
     "manual_legacy_sha256": "aef0c86c22e8578b12c69824cce51a78144177c59991df191a79114a1a14d181",
-    "recorded_at": "2026-11-18T21:23:23+00:00"
+    "recorded_at": "2026-11-20T03:43:44+00:00"
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-18T18:25:44.298670-03:00",
-    "reason": "Official billing workbook added 14 rows loaded 2026-11-18 and one historical October row, plus eight new rentability documents and eleven payment supports",
+    "at": "2026-11-20T00:46:09.635757-03:00",
+    "reason": "Official billing workbook added seven November rows loaded 2026-11-19; eight rentability operations and nineteen instruction/payment supports were reconciled",
     "new_valid_operations": 8,
     "new_review_operations": 0,
-    "updated_source_documents": 19
+    "updated_source_documents": 27
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -12515,81 +12812,90 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-18T18:25:44.298670-03:00",
+    "at": "2026-11-20T00:46:09.635757-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
-    "source_stability": "two consecutive identical billing scans; stable SHA-256 verified live",
-    "detected_files": 172,
-    "known_unchanged": 153,
-    "new_files": 19,
+    "source_stability": "two consecutive identical Drive scans; stable billing SHA-256 verified live",
+    "detected_files": 199,
+    "known_unchanged": 172,
+    "new_files": 27,
     "modified_files": 0,
     "duplicates_confirmed": 0,
     "rentability_operations_added": 8,
-    "payment_support_documents_added": 11,
+    "instruction_support_documents_added": 5,
+    "payment_support_documents_added": 14,
     "review_documents_added": 0,
     "billing_changed": true,
     "billing_data_changed": true,
-    "billing_rows_added": 15,
-    "billing_valid_rows_added": 15,
-    "billing_rows_corrected": 0,
+    "billing_rows_added": 7,
+    "billing_valid_rows_added": 7,
+    "billing_rows_corrected": 1,
     "billing_load_dates": {
-      "2026-11-18": {
-        "rows": 14,
-        "valid_rows": 14,
-        "net_amount": 257037342.84
+      "2026-11-19": {
+        "rows": 7,
+        "valid_rows": 7,
+        "net_amount": 105687593.07
       },
-      "historical_without_load_date": {
+      "2026-11-18_metadata_only": {
         "rows": 1,
-        "month": "2026-10",
         "client": "MUTUAL ASOCIACION DE CONDUCTORES",
-        "net_amount": 42975206.82
+        "net_amount_change": 0,
+        "note": "The existing historical October row received its load date; amount unchanged."
       }
     },
-    "newly_effective_operations": {
-      "2026-11-17": 4
+    "previous_operations_now_effective": {
+      "2026-11-19": 5,
+      "2026-11-20": 2
+    },
+    "new_operations_effective": {
+      "2026-10-08": 1,
+      "2026-11-19": 5
     },
     "future_operations": {
-      "2026-11-19": 3,
-      "2026-11-20": 1
+      "2026-11-25": 1,
+      "2026-11-27": 1
     },
     "affected_months": [
       "2026-10",
       "2026-11"
     ],
     "affected_clients": [
-      "PIRCA SERVICIOS",
+      "GYULAND",
+      "DOTTORI EZEQUIEL",
+      "NEW GATE",
+      "MEDICAL CROSS",
+      "MEDIPREMIUM",
+      "CEMAIR",
+      "IT PATAGONIA",
+      "MINETECH",
       "HASAR",
-      "MASIVO",
-      "EXPANSION",
       "DRACONIS",
-      "ESCALUM",
       "APR ENERGY",
-      "DAUMAS MOTOFLEX",
-      "FOCUS VISION",
-      "MUTUAL ASOCIACION DE CONDUCTORES"
+      "DGSAPIENS",
+      "ESCALUM",
+      "VEGA Y CAMJI"
     ],
     "reviews": [],
     "october": {
       "billing_total": 5728471132.87,
       "billing_records": 381,
-      "validated_net": 3818507163.9,
-      "profit": 235596956.76,
-      "profitability": 0.06169870754396465,
-      "valid_operations": 90
+      "validated_net": 3955747459.9,
+      "profit": 242458971.76,
+      "profitability": 0.06129283383680142,
+      "valid_operations": 91
     },
     "november": {
-      "billing_total": 3072327135.91,
-      "billing_records": 178,
-      "validated_net": 1105051953.0,
-      "profit": 64659598.0,
-      "profitability": 0.05851272225207316,
-      "valid_operations": 44
+      "billing_total": 3178014728.98,
+      "billing_records": 185,
+      "validated_net": 1331336239.0,
+      "profit": 82226843.0,
+      "profitability": 0.06176264161618754,
+      "valid_operations": 56
     },
     "tests": "29 passed",
-    "sync": "23 months reconciled; 105 published clients; live billing hash and 14-row load verified",
-    "local_smoke": "OK: November, October and Pirca verified in Streamlit",
-    "github": "OK: data commit 699b484 pushed to origin/main",
-    "render": "OK: production verified for November, October and Pirca",
-    "production_verified_at": "2026-11-18T18:37:17.757703-03:00"
+    "sync": "23 months reconciled; 107 published clients; live billing hash and seven-row load verified",
+    "local_smoke": "OK: November, October and Gyuland verified in Streamlit",
+    "github": "PENDING",
+    "render": "PENDING"
   }
 }

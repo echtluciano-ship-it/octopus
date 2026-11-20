@@ -2,8 +2,8 @@
   "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
   "name": "FACTURACION OCTOPUS.xlsx",
   "modified_time": null,
-  "checked_on": "2026-11-18",
-  "sha256": "fa9eaca10298be83009c8a0aedd98dbdb0784fc66f8e5f4cb374a58eb428e025",
+  "checked_on": "2026-11-20",
+  "sha256": "98940d6190e50ffe03224fc63928c7b7dde07fe9df348b10bf8c50e96de4c8e9",
   "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit",
-  "verification": "Live bytes stable in two consecutive scans on 2026-11-18; 14 rows loaded 2026-11-18 for November net $257.037.342,84, plus one historical October row for Mutual Asociacion de Conductores net $42.975.206,82"
+  "verification": "Live bytes stable in two consecutive scans on 2026-11-20; seven rows loaded 2026-11-19 for November net $105.687.593,07, plus the existing Mutual Asociacion de Conductores historical row received load date 2026-11-18 without changing its October amount."
 }

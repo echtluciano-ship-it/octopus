@@ -1,14 +1,14 @@
 {
-  "database_sha256": "1f1577c69b4bf490b8bd942146c585642b6ba005eed7f5fc5cc2fa1c20c9ab00",
+  "database_sha256": "f58462945ec2afc3cf0ba7770ae98b304d891ccb3acb84d06d567a3878399755",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "fa9eaca10298be83009c8a0aedd98dbdb0784fc66f8e5f4cb374a58eb428e025",
-    "data/billing_source.json": "fea005db49e7029a2cf337e153ea8cb988ebe7acd20ed643223f6fa7729cbc2f",
-    "manual_rentability_operations.csv": "5c592c382b2090142b543a18e6725307b157c91f1f2d65d88c61290870d84610",
+    "data/FACTURACION OCTOPUS.xlsx": "98940d6190e50ffe03224fc63928c7b7dde07fe9df348b10bf8c50e96de4c8e9",
+    "data/billing_source.json": "ecbd19f0d5a2dea660d3f40daf78d8533e728e859cf58be4cacfaea55c0f728f",
+    "manual_rentability_operations.csv": "3fb1dda55cc5ea303bf77cd8ac5c0894ad8e064865cf4b7d88c4503228b13a0a",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "025a047829e4588cca3d7a5ec1225cd3b212fe45e10d889b133b10a7ecf2027f"
+    "source_documents.csv": "7d00fef3205d555b6ae990e149c24efe776731c8f893f7c7eeef0d94dfb729b6"
   },
   "controls": {
-    "as_of": "2026-11-18",
+    "as_of": "2026-11-20",
     "months": {
       "2025-01": {
         "billing_total": 1734932092.47,
@@ -3247,10 +3247,10 @@
       "2026-10": {
         "billing_total": 5728471132.87,
         "billing_records": 381,
-        "validated_net": 3818507163.9,
-        "profit": 235596956.76,
-        "profitability": 0.06169870754396465,
-        "valid_operations": 90,
+        "validated_net": 3955747459.9,
+        "profit": 242458971.76,
+        "profitability": 0.06129283383680142,
+        "valid_operations": 91,
         "rentability_ranking": [
           {
             "client_name": "GUSTAVO QUIROGA E. P. M. SA",
@@ -3537,19 +3537,43 @@
         ]
       },
       "2026-11": {
-        "billing_total": 3072327135.91,
-        "billing_records": 178,
-        "validated_net": 1105051953.0,
-        "profit": 64659598.0,
-        "profitability": 0.05851272225207316,
-        "valid_operations": 44,
+        "billing_total": 3178014728.98,
+        "billing_records": 185,
+        "validated_net": 1331336239.0,
+        "profit": 82226843.0,
+        "profitability": 0.06176264161618754,
+        "valid_operations": 56,
         "rentability_ranking": [
+          {
+            "client_name": "DGSAPIENS S.A.S",
+            "client_key": "DGSAPIENS",
+            "facturacion_validada": 23003930.0,
+            "ganancia_octopus": 2048517.0,
+            "rentabilidad": 0.08905074046043437,
+            "operaciones": 2
+          },
           {
             "client_name": "FORMAS ARGENTINAS SR",
             "client_key": "FORMAS ARGENTINAS SR",
             "facturacion_validada": 283012.0,
             "ganancia_octopus": 23963.0,
             "rentabilidad": 0.08467132135739827,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Medipremium",
+            "client_key": "MEDIPREMIUM",
+            "facturacion_validada": 24598209.0,
+            "ganancia_octopus": 2077566.0,
+            "rentabilidad": 0.08446005154277696,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Cemair",
+            "client_key": "CEMAIR",
+            "facturacion_validada": 17222703.0,
+            "ganancia_octopus": 1453303.0,
+            "rentabilidad": 0.0843829798377177,
             "operaciones": 1
           },
           {
@@ -3561,6 +3585,14 @@
             "operaciones": 1
           },
           {
+            "client_name": "Medical Cross",
+            "client_key": "MEDICAL CROSS",
+            "facturacion_validada": 2905300.0,
+            "ganancia_octopus": 241478.0,
+            "rentabilidad": 0.08311637352424879,
+            "operaciones": 1
+          },
+          {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion_validada": 77037200.0,
@@ -3569,11 +3601,35 @@
             "operaciones": 3
           },
           {
+            "client_name": "Draconis",
+            "client_key": "DRACONIS",
+            "facturacion_validada": 25130735.0,
+            "ganancia_octopus": 2001810.0,
+            "rentabilidad": 0.0796558477099854,
+            "operaciones": 1
+          },
+          {
+            "client_name": "Escalum",
+            "client_key": "ESCALUM",
+            "facturacion_validada": 54282551.0,
+            "ganancia_octopus": 4320866.0,
+            "rentabilidad": 0.07959953834888858,
+            "operaciones": 1
+          },
+          {
             "client_name": "Imágenes del Parque",
             "client_key": "IMAGENES DEL PARQUE",
             "facturacion_validada": 8601126.0,
             "ganancia_octopus": 683608.0,
             "rentabilidad": 0.07947889613522695,
+            "operaciones": 1
+          },
+          {
+            "client_name": "APR Energy",
+            "client_key": "APR ENERGY",
+            "facturacion_validada": 16712051.0,
+            "ganancia_octopus": 1327324.0,
+            "rentabilidad": 0.07942316595371807,
             "operaciones": 1
           },
           {
@@ -3635,10 +3691,10 @@
           {
             "client_name": "Vega y Camji",
             "client_key": "VEGA Y CAMJI",
-            "facturacion_validada": 86666830.0,
-            "ganancia_octopus": 6007612.0,
-            "rentabilidad": 0.06931846936134621,
-            "operaciones": 3
+            "facturacion_validada": 113648320.0,
+            "ganancia_octopus": 7878509.0,
+            "rentabilidad": 0.06932358524965437,
+            "operaciones": 4
           },
           {
             "client_name": "Aeronáuticos",
@@ -3646,62 +3702,6 @@
             "facturacion_validada": 19155761.0,
             "ganancia_octopus": 1326314.0,
             "rentabilidad": 0.06923838734467401,
-            "operaciones": 2
-          },
-          {
-            "client_name": "Mas Metros",
-            "client_key": "MAS METROS",
-            "facturacion_validada": 5012830.0,
-            "ganancia_octopus": 344891.0,
-            "rentabilidad": 0.06880165495338961,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Chahab Myrtha",
-            "client_key": "CHAHAB MYRTHA",
-            "facturacion_validada": 5011790.0,
-            "ganancia_octopus": 323361.0,
-            "rentabilidad": 0.06452006169452432,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Nuevas Charcas",
-            "client_key": "NUEVAS CHARCAS",
-            "facturacion_validada": 3004880.0,
-            "ganancia_octopus": 193875.0,
-            "rentabilidad": 0.06452004738957962,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Clan Est S.A.",
-            "client_key": "CLAN EST",
-            "facturacion_validada": 7502360.0,
-            "ganancia_octopus": 484052.0,
-            "rentabilidad": 0.06451996438454033,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Sigma Line",
-            "client_key": "SIGMA LINE",
-            "facturacion_validada": 12002130.0,
-            "ganancia_octopus": 720848.0,
-            "rentabilidad": 0.060060006015598896,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Ovniplast",
-            "client_key": "OVNIPLAST",
-            "facturacion_validada": 35075578.0,
-            "ganancia_octopus": 2083910.0,
-            "rentabilidad": 0.05941199315375501,
-            "operaciones": 1
-          },
-          {
-            "client_name": "Centro Médico Amenabar",
-            "client_key": "CENTRO MEDICO AMENABAR",
-            "facturacion_validada": 100002806.0,
-            "ganancia_octopus": 5702446.0,
-            "rentabilidad": 0.05702285993855012,
             "operaciones": 2
           }
         ],
@@ -3761,6 +3761,12 @@
             "registros": 3
           },
           {
+            "client_name": "IT Patagonia",
+            "client_key": "IT PATAGONIA",
+            "facturacion": 86663352.72,
+            "registros": 4
+          },
+          {
             "client_name": "SAENZ VALIENTE & ASOCIADOS",
             "client_key": "SAENZ VALIENTE ASOCIADOS",
             "facturacion": 77037200.86,
@@ -3809,31 +3815,25 @@
             "registros": 5
           },
           {
+            "client_name": "MINETECH SRL",
+            "client_key": "MINETECH",
+            "facturacion": 19024240.35,
+            "registros": 3
+          },
+          {
             "client_name": "FUNDACION SOLDADOS FUNDASOL",
             "client_key": "FUNDACION SOLDADOS FUNDASOL",
             "facturacion": 15165294.39,
-            "registros": 1
-          },
-          {
-            "client_name": "HT CONTENIDOS S. A.",
-            "client_key": "HT CONTENIDOS",
-            "facturacion": 14485000.0,
-            "registros": 1
-          },
-          {
-            "client_name": "ASOCIACION DEL PERSONAL AERONAUTICO",
-            "client_key": "ASOCIACION DEL PERSONAL AERONAUTICO",
-            "facturacion": 14319743.86,
             "registros": 1
           }
         ]
       }
     },
-    "published_clients": 105,
-    "valid_operations_all_dates": 384,
+    "published_clients": 107,
+    "valid_operations_all_dates": 392,
     "operation_states": {
-      "OK": 274,
-      "OK_FC_NETA": 75,
+      "OK": 275,
+      "OK_FC_NETA": 82,
       "OK_TRANSFERENCIA_1_2": 23,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,
