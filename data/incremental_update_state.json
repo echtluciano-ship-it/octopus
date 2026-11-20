@@ -12895,7 +12895,8 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; 107 published clients; live billing hash and seven-row load verified",
     "local_smoke": "OK: November, October and Gyuland verified in Streamlit",
-    "github": "PENDING",
-    "render": "PENDING"
+    "github": "OK: data commit 8fa646a pushed to origin/main",
+    "render": "OK: production verified for November, October and Gyuland",
+    "production_verified_at": "2026-11-20T00:55:40.285442-03:00"
   }
 }
