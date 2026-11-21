@@ -1,11 +1,11 @@
 {
-  "database_sha256": "58021c4fd9b4cab4e84f60590ee9dd28e0a569447924ee1fa4f7d468bf5361bb",
+  "database_sha256": "15aaa214779517cd213b08552b1a60569828774a23d4fcfb05155344b043d3e8",
   "source_sha256": {
-    "data/FACTURACION OCTOPUS.xlsx": "aac3cb28b22267b60185dae7da1c91d8f9e7e154d1e25ad6c969aaab07c25ec4",
-    "data/billing_source.json": "61c3c574b97c6eaaf6f020d705175fd23ab53c4617273262399ab0d67eccead8",
-    "manual_rentability_operations.csv": "4cb570d9e1d5cd1ca029f9f0a128bcf6b1c7132dc0e4e44b5af1ac6b7ad58af6",
+    "data/FACTURACION OCTOPUS.xlsx": "4d915ccda074fc2e26dd84da44c3a72c14e8d2ec2bd52ee10fa18c39a918b10e",
+    "data/billing_source.json": "e71c3d91ecee774fde4bde421f265fde1cc723dea735bcb77d14fcce7614a891",
+    "manual_rentability_operations.csv": "a29e7c7083d812a69a0286ae0e00450d5d977b4d202629f384260fc6fb502a14",
     "client_aliases.csv": "f0d17526d75f91bd23de4be98a0c78266868fb2c6a801df0acddcd5857acb343",
-    "source_documents.csv": "7d0b2c5408f2d87d4ac66f4c5ebd1b14c7926ad0756c9af5b1279bb1d2fbd164"
+    "source_documents.csv": "e4d4bb36d1f40cdc20ab2d3665ed4e3744f4c32337d791945b66efc1de66e92c"
   },
   "controls": {
     "as_of": "2026-11-20",
@@ -3539,10 +3539,10 @@
       "2026-11": {
         "billing_total": 3220185174.26,
         "billing_records": 186,
-        "validated_net": 1665255734.0,
-        "profit": 101866091.0,
-        "profitability": 0.06117143986966749,
-        "valid_operations": 64,
+        "validated_net": 1704639081.0,
+        "profit": 104613473.0,
+        "profitability": 0.06136986659875833,
+        "valid_operations": 65,
         "rentability_ranking": [
           {
             "client_name": "DGSAPIENS S.A.S",
@@ -3830,10 +3830,10 @@
       }
     },
     "published_clients": 108,
-    "valid_operations_all_dates": 403,
+    "valid_operations_all_dates": 404,
     "operation_states": {
       "OK": 275,
-      "OK_FC_NETA": 93,
+      "OK_FC_NETA": 94,
       "OK_TRANSFERENCIA_1_2": 23,
       "DUPLICADO": 14,
       "OK_MULTI_MONTH_SPLIT": 12,

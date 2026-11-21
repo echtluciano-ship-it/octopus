@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_successful_scan": "2026-11-20T22:45:43.535167Z",
+  "last_successful_scan": "2026-11-21T01:48:33.268722Z",
   "folders": {
     "pendientes/2026-07": "1osCORCkNaQC6YwtD5slDIHgDC5u823cn",
     "pendientes/2026-08": "1ZjwyNrRSLepLwt1oRlNAp4tnD_7zPxJY",
@@ -13033,16 +13033,27 @@
       "folder_period": "2026-11",
       "source_type": "pagos",
       "url": "https://drive.google.com/file/d/1vhEvkxrK4-x1UIyuMVAmONtqX2XnQSPZ/view"
+    },
+    "1szhNWB8xPEiJX4rkNzk7Zvx4VttyG9bj": {
+      "drive_id": "1szhNWB8xPEiJX4rkNzk7Zvx4VttyG9bj",
+      "name": "PHOTO-2026-11-20-21-53-19.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 17547,
+      "modified_time": "",
+      "folder_id": "1OnlY_sVlEO_mgtIi8HCfh4WuU1D7qkCF",
+      "folder_period": "2026-11",
+      "source_type": "pendientes",
+      "url": "https://drive.google.com/file/d/1szhNWB8xPEiJX4rkNzk7Zvx4VttyG9bj/view"
     }
   },
   "official_sources": {
     "facturacion_historica": {
       "drive_id": "13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV",
       "name": "FACTURACION OCTOPUS.xlsx",
-      "size_bytes": 488985,
+      "size_bytes": 489041,
       "modified_time": "",
       "local_path": "C:\\Users\\Luciano\\OneDrive\\Documentos\\OCTOPUS\\app_octopus\\outputs\\incremental-current\\FACTURACION OCTOPUS.xlsx",
-      "sha256": "aac3cb28b22267b60185dae7da1c91d8f9e7e154d1e25ad6c969aaab07c25ec4",
+      "sha256": "4d915ccda074fc2e26dd84da44c3a72c14e8d2ec2bd52ee10fa18c39a918b10e",
       "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit"
     }
   },
@@ -13052,11 +13063,11 @@
   },
   "last_database_refresh": {
     "mode": "full_atomic",
-    "at": "2026-11-20T19:56:35.072536-03:00",
-    "reason": "Official billing workbook changed; eleven rentability operations and twelve payment supports were reconciled",
-    "new_valid_operations": 11,
+    "at": "2026-11-20T22:55:06.466743-03:00",
+    "reason": "Official billing workbook binary changed with zero normalized data-row changes; one new rentability operation was reconciled",
+    "new_valid_operations": 1,
     "new_review_operations": 0,
-    "updated_source_documents": 23
+    "updated_source_documents": 1
   },
   "last_closure_inventory": {
     "period": "2026-10",
@@ -13065,59 +13076,31 @@
     "exact_modified_time_verified": false
   },
   "last_incremental_update": {
-    "at": "2026-11-20T19:56:35.072536-03:00",
+    "at": "2026-11-20T22:55:06.466743-03:00",
     "scan_method": "validated_public_fallback",
     "exact_modified_time_verified": false,
     "source_stability": "two consecutive identical Drive scans; stable billing SHA-256 verified live",
-    "detected_files": 222,
-    "known_unchanged": 199,
-    "new_files": 23,
+    "detected_files": 223,
+    "known_unchanged": 222,
+    "new_files": 1,
     "modified_files": 0,
     "duplicates_confirmed": 0,
-    "rentability_operations_added": 11,
-    "payment_support_documents_added": 12,
+    "rentability_operations_added": 1,
+    "payment_support_documents_added": 0,
     "review_documents_added": 0,
     "billing_changed": true,
-    "billing_data_changed": true,
-    "billing_rows_completed": 2,
-    "billing_rows_effective_today": 1,
-    "billing_rows_future_load": 1,
-    "billing_load_dates": {
-      "2026-11-20": {
-        "rows": 1,
-        "client": "COMPLEJO AKIRA SA",
-        "net_amount": 42170445.28
-      },
-      "2026-11-21_future": {
-        "rows": 1,
-        "client": "SOLMARA S.A",
-        "net_amount": 35186496.14,
-        "note": "Excluded from the 20/11 cutoff until its load date."
-      }
-    },
+    "billing_data_changed": false,
+    "billing_rows_changed": 0,
+    "billing_rows_total": 5907,
     "new_operations_effective": {
-      "2026-11-19": 1,
-      "2026-11-20": 7
+      "2026-11-20": 1
     },
-    "new_future_operations": {
-      "2026-11-26": 1,
-      "2026-11-27": 2
-    },
+    "new_future_operations": {},
     "affected_months": [
       "2026-11"
     ],
     "affected_clients": [
-      "EXPANSION S.A.S.",
-      "VEGA Y CAMJI",
-      "TRANS BOX",
-      "MEDICAL CROSS",
-      "MEDIPREMIUM",
-      "CEMAIR",
-      "COMITE EJECUTIVO",
-      "DROGUERIA VARADERO",
-      "LABORATORIOS JAYOR S.R.L.",
-      "COMPLEJO AKIRA SA",
-      "SOLMARA S.A"
+      "DAUMAS MOTOFLEX S.R.L."
     ],
     "reviews": [],
     "october": {
@@ -13131,37 +13114,15 @@
     "november": {
       "billing_total": 3220185174.26,
       "billing_records": 186,
-      "validated_net": 1665255734.0,
-      "profit": 101866091.0,
-      "profitability": 0.06117143986966749,
-      "valid_operations": 64
+      "validated_net": 1704639081.0,
+      "profit": 104613473.0,
+      "profitability": 0.06136986659875833,
+      "valid_operations": 65
     },
     "tests": "29 passed",
     "sync": "23 months reconciled; 108 published clients; live billing hash and 20/11 load verified",
-    "local_smoke": "OK: November, October and Trans Box verified in Streamlit",
-    "github": "OK: data commit 9716b6d pushed to origin/main",
-    "render": "OK: production verified for November, October and Trans Box",
-    "production_verified_at": "2026-11-20T21:55:29.210938-03:00",
-    "production_verification": {
-      "url": "https://octopus-clientes.onrender.com/#base-de-clientes",
-      "http_status": 200,
-      "november": {
-        "billing_total": 3220185174.26,
-        "billing_records": 186,
-        "validated_net": 1665255734.0,
-        "profit": 101866091.0,
-        "profitability": 0.06117143986966749,
-        "valid_operations": 64
-      },
-      "october": {
-        "billing_total": 5728471132.87,
-        "billing_records": 381,
-        "validated_net": 3955747459.9,
-        "profit": 242458971.76,
-        "profitability": 0.06129283383680142,
-        "valid_operations": 91
-      },
-      "client_checked": "TRANS BOX"
-    }
+    "local_smoke": "OK: November, October and Daumas verified in Streamlit",
+    "github": "PENDING: data commit not yet created",
+    "render": "PENDING: deploy after GitHub push"
   }
 }

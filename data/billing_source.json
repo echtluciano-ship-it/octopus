@@ -3,7 +3,7 @@
   "name": "FACTURACION OCTOPUS.xlsx",
   "modified_time": null,
   "checked_on": "2026-11-20",
-  "sha256": "aac3cb28b22267b60185dae7da1c91d8f9e7e154d1e25ad6c969aaab07c25ec4",
+  "sha256": "4d915ccda074fc2e26dd84da44c3a72c14e8d2ec2bd52ee10fa18c39a918b10e",
   "url": "https://docs.google.com/spreadsheets/d/13LybCGEaAD6e6cn9VTdoXD3N_-kbBjeV/edit",
-  "verification": "Live bytes stable in two consecutive scans on 2026-11-20; two newly completed November rows were found. Complejo Akira has load date 20/11/2026 and is included in the current cutoff for net $42.170.445,28; Solmara has load date 21/11/2026 and remains excluded until that date."
+  "verification": "Live bytes stable in two consecutive scans on 2026-11-20. The workbook binary changed, but all 5907 normalized data rows are identical to the previously published version; no billing values changed."
 }
