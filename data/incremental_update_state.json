@@ -13139,7 +13139,29 @@
     "tests": "29 passed",
     "sync": "23 months reconciled; 108 published clients; live billing hash and 20/11 load verified",
     "local_smoke": "OK: November, October and Trans Box verified in Streamlit",
-    "github": "PENDING_PUSH",
-    "render": "PENDING_DEPLOY_AND_VERIFY"
+    "github": "OK: data commit 9716b6d pushed to origin/main",
+    "render": "OK: production verified for November, October and Trans Box",
+    "production_verified_at": "2026-11-20T21:55:29.210938-03:00",
+    "production_verification": {
+      "url": "https://octopus-clientes.onrender.com/#base-de-clientes",
+      "http_status": 200,
+      "november": {
+        "billing_total": 3220185174.26,
+        "billing_records": 186,
+        "validated_net": 1665255734.0,
+        "profit": 101866091.0,
+        "profitability": 0.06117143986966749,
+        "valid_operations": 64
+      },
+      "october": {
+        "billing_total": 5728471132.87,
+        "billing_records": 381,
+        "validated_net": 3955747459.9,
+        "profit": 242458971.76,
+        "profitability": 0.06129283383680142,
+        "valid_operations": 91
+      },
+      "client_checked": "TRANS BOX"
+    }
   }
 }
